@@ -1,4 +1,4 @@
-Shader "Custom/Outline"
+﻿Shader "Custom/Outline"
 {
     Properties
     {
@@ -7,7 +7,7 @@ Shader "Custom/Outline"
 		_NormalMap("Normal Map", 2D) = "bump" {}
 		_OutlineColor("Outline Color", Color) = (1,1,1,1)
 	}
-
+	
     HLSLINCLUDE
     #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Core.hlsl"
     ENDHLSL
@@ -47,7 +47,7 @@ Shader "Custom/Outline"
 				half2 lightingUV 	: TEXCOORD1;
 			};
 
-			#include "Include/LightingUtility.hlsl"
+			#include "Packages/com.unity.render-pipelines.lightweight/Shaders/2D/Include/LightingUtility.hlsl"
 
 			TEXTURE2D(_MainTex);
 			SAMPLER(sampler_MainTex);
@@ -80,7 +80,7 @@ Shader "Custom/Outline"
 
 				o.positionCS = TransformObjectToHClip(v.positionOS);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				float4 clipVertex = o.posionCS / o.positionCS.w;
+				float4 clipVertex = o.positionCS / o.positionCS.w;
 				o.lightingUV = ComputeScreenPos(clipVertex).xy;
 
 				#if UNITY_UV_STARTS_AT_TOP
@@ -91,28 +91,28 @@ Shader "Custom/Outline"
 				return o;
 			}
 
-			#include "Include/CombinedShapeLightShared.hlsl"
+			#include "Packages/com.unity.render-pipelines.lightweight/Shaders/2D/Include/CombinedShapeLightShared.hlsl"
 
-			fixed4 _Color;
-			float4 _MainTex_TexelSize;
+			half4 _OutlineColor;
+			half4 _MainTex_TexelSize;
 
-			fixed4 Frag(Varyings i) : SV_Target
+			half4 Frag(Varyings i) : SV_Target
 			{
-				half4 c = tex2D(_MainTex, i.uv);
+				half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
 				c.rgb *= c.a;
-				half4 outlineC = _Color;
+				half4 outlineC = _OutlineColor;
 				outlineC.a *= ceil(c.a);
 
-				fixed upAlpha = tex2D(_MainTex, i.uv + fixed2(0, _MainTex_TexelSize.y)).a;
-				fixed downAlpha = tex2D(_MainTex, i.uv - fixed2(0, _MainTex_TexelSize.y)).a;
-				fixed rightAlpha = tex2D(_MainTex, i.uv + fixed2(_MainTex_TexelSize.x, 0)).a;
-				fixed leftAlpha = tex2D(_MainTex, i.uv - fixed2(_MainTex_TexelSize.x, 0)).a;
+				half upAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv + half2(0, _MainTex_TexelSize.y)).a;
+				half downAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv - half2(0, _MainTex_TexelSize.y)).a;
+				half rightAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv + half2(_MainTex_TexelSize.x, 0)).a;
+				half leftAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv - half2(_MainTex_TexelSize.x, 0)).a;
 
-				half4 main = lerp(outlineC, c, ceil(upAlpha * downAlpha * rightAlpha * leftAlpha))
-				main *= SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
-				half mask = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, i.uv);
+				half4 main = c * i.color;
+				half4 outlineTex = lerp(outlineC, c, ceil(upAlpha * downAlpha * rightAlpha * leftAlpha));
 
-				return CombinedShapeLightShared(main, mask, i.lightingUV);
+				half4 mask = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, i.uv);
+				return CombinedShapeLightShared(outlineTex, mask, i.lightingUV);
 			}
 			ENDHLSL
 		}
@@ -165,24 +165,28 @@ Shader "Custom/Outline"
                 return o;
             }
 
-            #include "Include/NormalsRenderingShared.hlsl"
+            #include "Packages/com.unity.render-pipelines.lightweight/Shaders/2D/Include/NormalsRenderingShared.hlsl"
+
+			half4 _OutlineColor;
+			half4 _MainTex_TexelSize;
 
 			float4 Frag(Varyings i) : SV_Target
 			{
-				half4 c = tex2D(_MainTex, i.uv);
+				half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
 				c.rgb *= c.a;
-				half4 outlineC = _Color;
+				half4 outlineC = _OutlineColor;
 				outlineC.a *= ceil(c.a);
 
-				fixed upAlpha = tex2D(_MainTex, i.uv + fixed2(0, _MainTex_TexelSize.y)).a;
-				fixed downAlpha = tex2D(_MainTex, i.uv - fixed2(0, _MainTex_TexelSize.y)).a;
-				fixed rightAlpha = tex2D(_MainTex, i.uv + fixed2(_MainTex_TexelSize.x, 0)).a;
-				fixed leftAlpha = tex2D(_MainTex, i.uv - fixed2(_MainTex_TexelSize.x, 0)).a;
+				half upAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv + half2(0, _MainTex_TexelSize.y)).a;
+				half downAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv - half2(0, _MainTex_TexelSize.y)).a;
+				half rightAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv + half2(_MainTex_TexelSize.x, 0)).a;
+				half leftAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv - half2(_MainTex_TexelSize.x, 0)).a;
 
-				half4 mainTex = lerp(outlineC, c, ceil(upAlpha * downAlpha * rightAlpha * leftAlpha))
-				mainTex *= SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
+				half4 mainTex = c * i.color;
+				half4 outlineTex = lerp(outlineC, c, ceil(upAlpha * downAlpha * rightAlpha * leftAlpha));
+
 				float3 normalTS = UnpackNormal(SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, i.uv));
-                return NormalsRenderingShared(mainTex, normalTS, i.tangentWS.xyz, i.bitangentWS.xyz, -i.normalWS.xyz);
+                return NormalsRenderingShared(outlineTex, normalTS, i.tangentWS.xyz, i.bitangentWS.xyz, -i.normalWS.xyz) * outlineC;
 			}
 			ENDHLSL
 		}
