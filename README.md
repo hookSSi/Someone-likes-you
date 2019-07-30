@@ -12,5 +12,10 @@ Windows10 Unity 2019.1.12f1 (64-bit)
 ## 기획
    기획 관련 문서들 모아두는 곳
    
-# [TO DO LIST](https://github.com/hookSSi/Someone-likes-you/tree/master/기획/일의 운선순위 부록.docx)
-  
+# TO DO LIST
+  1.	플레이어의 이동
+  2.	스위치에 작동에 따른 작동
+  3.	배고픔 수치
+  4.	망치를 들고 때리고 부서지는 물체들
+  5.	열쇠, 식량 얻어서 사용
+
