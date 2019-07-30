@@ -12,5 +12,5 @@ Windows10 Unity 2019.1.12f1 (64-bit)
 ## 기획
    기획 관련 문서들 모아두는 곳
    
-# TO DO LIST
+# [TO DO LIST](https://github.com/hookSSi/Someone-likes-you/tree/master/기획/일의 운선순위 부록.docx)
   
