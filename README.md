@@ -2,7 +2,7 @@
 제목은 Someone likes you
 
 # 개발 환경
-Windows10 Unity 2019.1.12f1 (64-bit)
+Windows10 Unity 2019.2.0b1 (64-bit)
 
 # 폴더의 용도
 ## Someone likes you
