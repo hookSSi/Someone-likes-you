@@ -25,8 +25,8 @@
 			Tags { "LightMode" = "CombinedShapeLight" }
 			HLSLPROGRAM
 			#pragma prefer_hlslcc gles
-			#pragma vertex Vert
-            #pragma fragment Frag
+			#pragma vertex Vert // 정점을 처리하는 함수
+            #pragma fragment Frag // 픽셀을 처리하는 함수
             #pragma multi_compile USE_SHAPE_LIGHT_TYPE_0 __
             #pragma multi_compile USE_SHAPE_LIGHT_TYPE_1 __
             #pragma multi_compile USE_SHAPE_LIGHT_TYPE_2 __
@@ -99,7 +99,7 @@
 			half4 Frag(Varyings i) : SV_Target
 			{
 				half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
-				c.rgb *= c.a;
+				c.rgb *= c.a; // 0
 				half4 outlineC = _OutlineColor;
 				outlineC.a *= ceil(c.a);
 
@@ -109,7 +109,7 @@
 				half leftAlpha = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv - half2(_MainTex_TexelSize.x, 0)).a;
 
 				half4 main = c * i.color;
-				half4 outlineTex = lerp(outlineC, c, ceil(upAlpha * downAlpha * rightAlpha * leftAlpha));
+				half4 outlineTex = lerp(outlineC, c, ceil(upAlpha * downAlpha * rightAlpha * leftAlpha)); // 외곽선 칠하는 것
 
 				half4 mask = SAMPLE_TEXTURE2D(_MaskTex, sampler_MaskTex, i.uv);
 				return CombinedShapeLightShared(outlineTex, mask, i.lightingUV);
