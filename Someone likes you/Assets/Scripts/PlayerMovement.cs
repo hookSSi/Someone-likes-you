@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping = false;
     public bool isGround = false;
 
+    public Tool currentTool;
+
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
@@ -30,6 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
         // 무기 스왑
         // 작성 중
+        if (Input.GetAxisRaw("ScrollWheel") < 0)
+        {
+            ItemDatabase.GetInstance().currentTool++;
+            //currentTool = ItemDatabase.GetInstance().CurrentTool();
+        }
+        if (Input.GetAxisRaw("ScrollWheel") > 0)
+        { Debug.Log("삐빅 위 휠"); }
     }
 
     private void FixedUpdate()
@@ -85,4 +94,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "Ground")
             isGround = true;
     }
+
+    
 }
