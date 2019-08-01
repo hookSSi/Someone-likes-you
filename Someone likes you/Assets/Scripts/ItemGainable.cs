@@ -14,7 +14,7 @@ public class ItemGainable : MonoBehaviour, IInteractable
     {
         // Debug.Log(name + "다!");
 
-        ItemDatabase.GetInstance().Add(itemName, itemDescription, gainHungry, itemType);
+        ItemDatabase.GetInstance().AddItem(itemName, itemDescription, gainHungry, itemType);
 
         gameObject.SetActive(false);
     }

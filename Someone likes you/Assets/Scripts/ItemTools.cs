@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ItemTools : MonoBehaviour, IInteractable
 {
+    public string toolName;
+    public Tool.ToolType toolType;
+
     public void Interact()
     {
-        Debug.Log("망치 나가신다!");
+        ItemDatabase.GetInstance().AddTools(toolName, toolType);
         gameObject.SetActive(false);
     }
 }

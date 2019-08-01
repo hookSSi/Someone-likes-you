@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d49177f7dbff7248861f223e84a88f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 0
+  killAction: 0
   wordBubble: {fileID: 1335791088}
   dialogueText: {fileID: 984678370}
 --- !u!1 &984678370
