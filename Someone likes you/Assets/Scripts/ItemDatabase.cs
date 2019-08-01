@@ -54,5 +54,11 @@ public class ItemDatabase : MonoBehaviour
 #endif
         AddTool("맨손", Tool.ToolType.Melee);
     }
-    
+
+    //인벤토리 시각화
+
+    void drawInventory()
+    {
+
+    }
 }

@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-    public enum DialogueStatus {END, TYPING, WAIT}
+    private enum DialogueStatus {END, TYPING, WAIT}
 
-    public DialogueStatus status = DialogueStatus.END;
+    private DialogueStatus status = DialogueStatus.END;
 
     public GameObject wordBubble;
 
@@ -24,6 +24,12 @@ public class Dialogue : MonoBehaviour
     {
        
     }
+
+    public void Dialog(string text)
+    {
+        StartCoroutine(dialogue(text));
+    }
+
     private IEnumerator dialogue(string text)
     {
         status = DialogueStatus.TYPING;
