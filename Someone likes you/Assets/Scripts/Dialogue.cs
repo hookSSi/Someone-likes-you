@@ -17,13 +17,19 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(dialogue("테스트 테스트 \n Test Test \n 테테테테테스트트트트트"));
+       
     }
 
     void Update()
     {
        
     }
+
+    public void dialog(string text)
+    {
+        StartCoroutine(dialogue(text));
+    }
+
     private IEnumerator dialogue(string text)
     {
         status = DialogueStatus.TYPING;
