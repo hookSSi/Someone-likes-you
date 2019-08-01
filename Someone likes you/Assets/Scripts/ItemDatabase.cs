@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemDatabase : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ItemDatabase : MonoBehaviour
     public List<Tool> tools = new List<Tool>(); // 도구 리스트
     public int currentTool = 0;
 
+    public GameObject inventoryLocation;
 
     public static ItemDatabase GetInstance() // 싱글톤 패턴
     {
@@ -31,6 +33,8 @@ public class ItemDatabase : MonoBehaviour
     {
         Debug.Log(itemName + "를 획득했다!(아이템)");
         items.Add(new Item(itemName, itemDescription, gainHungry, itemType, Resources.Load<Sprite>("ItemImages/" + itemName)));
+
+        drawInventory();
     }
 
     public void AddTool(string toolName, Tool.ToolType toolType)
@@ -59,6 +63,40 @@ public class ItemDatabase : MonoBehaviour
 
     void drawInventory()
     {
+        //모든 자식 제거
+        Transform[] childList = inventoryLocation.transform.GetComponentsInChildren<RectTransform>();
 
+        if (childList != null)
+        {
+            for (int i = 0; i < childList.Length; i++)
+            {
+                if (childList[i] != transform && !childList[i].name.Contains("Inventory"))
+                {                       
+                    Destroy(childList[i].gameObject);
+                }
+            }
+        }
+        //
+
+        float X = 200f;
+
+        float Y = 75f;
+
+        GameObject temp;
+
+        foreach (Item i in items)
+        {
+            temp = GameObject.Instantiate(Resources.Load("Prefabs/Item") as GameObject, new Vector3(0, 0, 0), Quaternion.identity);
+
+            temp.transform.SetParent( inventoryLocation.transform);
+
+            temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(X, Y);
+
+            temp.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
+
+            temp.GetComponent<Image>().overrideSprite = Resources.Load("InventoryIcon/Can") as Sprite;
+
+            X += 50f;
+        }
     }
 }
