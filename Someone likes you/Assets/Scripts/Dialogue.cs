@@ -3,29 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class Dialogue : MonoBehaviour
 {
-    public bool killAction = false;
+    public enum DialogueStatus {END, TYPING, WAIT}
+
+    public DialogueStatus status = DialogueStatus.END;
 
     public GameObject wordBubble;
 
-    public GameObject dialogText;
+    public GameObject dialogueText;
 
     void Start()
     {
-        StartCoroutine(NonStopTalk("테스트 테스트 \n Test Test"));
+        StartCoroutine(dialogue("테스트 테스트 \n Test Test \n 테테테테테스트트트트트"));
     }
 
     void Update()
     {
-        
+       
     }
-
-    private IEnumerator NonStopTalk(string text)
+    private IEnumerator dialogue(string text)
     {
-        TextMesh dialogue = dialogText.GetComponent<TextMesh>();
+        status = DialogueStatus.TYPING;
+
+        StartCoroutine(keyDownCheck());
+
+        TextMesh dialogue = dialogueText.GetComponent<TextMesh>();
 
         dialogue.text = "";
+
         if (!wordBubble.activeSelf)
         {
             wordBubble.SetActive(true);
@@ -37,7 +45,7 @@ public class Dialogue : MonoBehaviour
 
             yield return new WaitForSeconds(0.05f);
 
-            if (killAction)
+            if (status == DialogueStatus.WAIT)
             {
                 dialogue.text = text;
 
@@ -45,8 +53,53 @@ public class Dialogue : MonoBehaviour
             }
         }
 
-        killAction = false;
+        status = DialogueStatus.WAIT;
+
+        while (status == DialogueStatus.WAIT)
+        {
+            yield return null;
+        }
+
+        wordBubble.SetActive(false);
 
         yield return new WaitForSeconds(0.2f);
+    }
+
+    private IEnumerator keyDownCheck()
+    {
+        while (status == DialogueStatus.TYPING)
+        {
+            if (Input.anyKeyDown)
+            {
+                status = DialogueStatus.WAIT;
+
+                break;
+            }
+
+            yield return null;
+        }
+
+        Debug.Log("TYPING -> WAIT");
+
+        while (Input.anyKeyDown)
+        {
+            yield return null;
+        }
+
+        while (status == DialogueStatus.WAIT)
+        {
+            if (Input.anyKeyDown)
+            {
+                status = DialogueStatus.END;
+
+                break;
+            }
+
+            yield return null;
+        }
+
+        Debug.Log("WAIT -> END");
+
+        yield return null;
     }
 }

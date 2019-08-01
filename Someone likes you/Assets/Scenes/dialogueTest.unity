@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killAction: 0
   wordBubble: {fileID: 1335791088}
-  dialogText: {fileID: 984678370}
+  dialogueText: {fileID: 984678370}
 --- !u!1 &984678370
 GameObject:
   m_ObjectHideFlags: 0
