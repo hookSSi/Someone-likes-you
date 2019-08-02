@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rigid;
+    Collider2D playerCollider;
 
     public float moveSpeed = 2.67f;
     public float jumpPower = 5.1f;
+    public float lengthHangable = 0.4f; // 머리 크기인 20 픽셀 * 2(올라탈 수 있는 범위)(1 픽셀 : 0.01)
 
     private bool isJumping = false;
     public bool isGround = false;
@@ -20,12 +22,24 @@ public class PlayerMovement : MonoBehaviour
         Moving,
         Jump,
         Hang,
-        Attack
+        Attack,
+        Throw,
+        UnderAttack
     }
 
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
+
+        Collider2D[] tempColList = GetComponents<Collider2D>();
+        for (int i = 0; i < tempColList.Length; i++)
+        {
+            if (tempColList[i].isTrigger == false)
+            {
+                playerCollider = tempColList[i];
+                break;
+            }
+        }
     }
 
     private void Update()
@@ -107,6 +121,23 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ground" && collision.transform.position.y < transform.position.y)
+        {
+            if (!isGround)
+            {
+                float colHeight = ((BoxCollider2D)collision.collider).size.y;
+                float deltaHeight = collision.transform.position.y + colHeight / 2f - (playerCollider.offset.y + playerCollider.transform.position.y);
+                float playerHeight = ((BoxCollider2D)playerCollider).size.y;
+                if (deltaHeight <= playerHeight / 2f && deltaHeight >= playerHeight / 2f - lengthHangable) // 올라탈 수 있는 가능 범위
+                {
+                    Debug.Log("올라갈 수 있을 것 같다.");
+                }
+            }
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Ground")
@@ -118,5 +149,5 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "Ground")
             isGround = false;
     }
-    
+
 }
