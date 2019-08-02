@@ -14,8 +14,12 @@ public class Interaction : MonoBehaviour
     public Image indicator;
     double distanceObjNearestSqr = 0;
 
+    public Camera camera;
+
     private void Start()
     {
+
+
         //Debug.Log("테스트");
     }
     private void Update()
@@ -39,7 +43,7 @@ public class Interaction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B))
         {
-
+            throwStone();
         }
     }
 
@@ -106,8 +110,28 @@ public class Interaction : MonoBehaviour
     //돌 던지기관련
     private void throwStone()
     {
+        Item stoneItem = ItemDatabase.GetInstance().items.Find(x => x.itemName.Equals("돌"));
 
+        if (stoneItem == null)
+        {
+            return;
+        }
+
+        ItemDatabase.GetInstance().items.Remove(stoneItem);
+
+        Debug.Log("돌 던짐");
+
+        Vector3 mousePos = camera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+
+        mousePos.z = 0;
+
+        GameObject temp = GameObject.Instantiate(Resources.Load("Prefabs/Stone") as GameObject, transform.position, Quaternion.identity);
+
+        Vector3 dir = mousePos - transform.position;
+
+        dir.z = 0;
+
+        temp.GetComponent<Rigidbody2D>().AddForce(dir * 200);
     }
-
 
 }
