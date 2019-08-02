@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // 캐릭터에 부착될 컴포넌트
 // 상호작용 : Interactable 태그 오브젝트만
@@ -10,6 +11,7 @@ public class Interaction : MonoBehaviour
 {
     public Collider2D[] objCollider = new Collider2D[10]; // 상호작용 가능한 오브젝트를 등록하는 배열(자동등록)
     public Collider2D objNearest = null;
+    public Image indicator;
     double distanceObjNearestSqr = 0;
 
     private void Start()
@@ -21,7 +23,9 @@ public class Interaction : MonoBehaviour
         checkNearestObject();
 
         // objNearest.gameObject에 Shader 적용(방법을 모르겠음)
-        
+
+        DrawInteractable();
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             //checkNearestObject();
@@ -61,6 +65,11 @@ public class Interaction : MonoBehaviour
                 distanceObjNearestSqr = distanceObjSqr;
             }
         }
+    }
+
+    private void DrawInteractable()
+    {
+        
     }
 
     // 상호작용 가능한 오브젝트의 콜라이더를 등록한다

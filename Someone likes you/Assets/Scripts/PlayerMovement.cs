@@ -14,6 +14,15 @@ public class PlayerMovement : MonoBehaviour
 
     public Tool currentTool;
 
+    public enum State
+    {
+        Idle,
+        Moving,
+        Jump,
+        Hang,
+        Attack
+    }
+
     private void Start()
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
@@ -93,11 +102,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Hang()
+    {
+
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Ground")
             isGround = true;
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Ground")
+            isGround = false;
+    }
     
 }
