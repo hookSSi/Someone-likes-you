@@ -30,7 +30,7 @@ public class Interaction : MonoBehaviour
 
         DrawInteractable();
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Interact"))
         {
             //checkNearestObject();
             // 가장 가까운 상호작용 오브젝트와 상호작용
