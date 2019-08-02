@@ -12,7 +12,8 @@ public class ItemDatabase : MonoBehaviour
     public List<Tool> tools = new List<Tool>(); // 도구 리스트
     public int currentTool = 0;
 
-    public GameObject inventoryLocation;
+    public GameObject inventory1; // 도구와 먹을 것
+    public GameObject inventory2; // 그 외
 
     public static ItemDatabase GetInstance() // 싱글톤 패턴
     {
@@ -63,8 +64,11 @@ public class ItemDatabase : MonoBehaviour
 
     void drawInventory()
     {
-        //모든 자식 제거
-        Transform[] childList = inventoryLocation.transform.GetComponentsInChildren<RectTransform>();
+        int canNum = 0;
+        int chocoNum = 0;
+
+        //inventory2 모든 자식 제거
+        Transform[] childList = inventory2.transform.GetComponentsInChildren<RectTransform>();
 
         if (childList != null)
         {
@@ -84,19 +88,42 @@ public class ItemDatabase : MonoBehaviour
 
         GameObject temp;
 
+        Sprite tempSprite;
+
         foreach (Item i in items)
         {
+            if (i.itemType == Item.ItemType.Food)
+            {
+                if (i.itemName.Equals("초코바"))
+                {
+                    chocoNum++;
+                }
+                else if (i.itemName.Equals("음료수"))
+                {
+                    canNum++;
+                }
+
+                continue;
+            }
+
             temp = GameObject.Instantiate(Resources.Load("Prefabs/Item") as GameObject, new Vector3(0, 0, 0), Quaternion.identity);
 
-            temp.transform.SetParent( inventoryLocation.transform);
+            temp.transform.SetParent( inventory2.transform);
 
             temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(X, Y);
 
             temp.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
 
-            temp.GetComponent<Image>().overrideSprite = Resources.Load("InventoryIcon/Can") as Sprite;
+            //tempSprite = Resources.Load<Sprite>("InventoryIconRaw/Can");
+
+            tempSprite = i.itemImage;
+
+            temp.GetComponent<Image>().overrideSprite = tempSprite;
 
             X += 50f;
         }
+
+        inventory1.transform.Find("Can").transform.Find("CanNum").GetComponent<Text>().text = canNum.ToString();
+        inventory1.transform.Find("ChocoBar").transform.Find("ChocoNum").GetComponent<Text>().text = chocoNum.ToString();
     }
 }
