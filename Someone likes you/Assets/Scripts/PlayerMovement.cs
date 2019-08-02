@@ -37,8 +37,12 @@ public class PlayerMovement : MonoBehaviour
             ItemDatabase.GetInstance().currentTool++;
             //currentTool = ItemDatabase.GetInstance().CurrentTool();
         }
+
         if (Input.GetAxisRaw("ScrollWheel") > 0)
-        { Debug.Log("삐빅 위 휠"); }
+        {
+            Debug.Log("삐빅 위 휠");
+        }
+
     }
 
     private void FixedUpdate()

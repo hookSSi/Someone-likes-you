@@ -32,8 +32,14 @@ public class Interaction : MonoBehaviour
                 objInteractable.Interact();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+
+        }
     }
 
+    //상호작용(E)관련
     private void checkNearestObject() // 가장 가까운 상호작용 오브젝트 찾기(거리 짧은 것을 objNearest로 함)
     {
         objNearest = null;
@@ -86,4 +92,13 @@ public class Interaction : MonoBehaviour
             }
         }
     }
+
+
+    //돌 던지기관련
+    private void throwStone()
+    {
+
+    }
+
+
 }

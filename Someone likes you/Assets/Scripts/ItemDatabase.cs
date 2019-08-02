@@ -67,8 +67,6 @@ public class ItemDatabase : MonoBehaviour
         int canNum = 0;
         int chocoNum = 0;
 
-
-
         //inventory2 모든 자식 제거
         Transform[] childList = inventory2.transform.GetComponentsInChildren<RectTransform>();
 
@@ -110,7 +108,7 @@ public class ItemDatabase : MonoBehaviour
 
             temp = GameObject.Instantiate(Resources.Load("Prefabs/Item") as GameObject, new Vector3(0, 0, 0), Quaternion.identity);
 
-            temp.transform.SetParent( inventory1.transform);
+            temp.transform.SetParent( inventory2.transform);
 
             temp.GetComponent<RectTransform>().anchoredPosition = new Vector2(X, Y);
 
