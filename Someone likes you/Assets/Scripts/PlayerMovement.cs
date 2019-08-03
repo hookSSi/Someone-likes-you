@@ -85,12 +85,12 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetAxisRaw("Horizontal") < 0)
             {
-                Move(Vector3.left);
+                Move(Vector3.left * Input.GetAxis("Horizontal")*(-1));
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
             }
             else if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                Move(Vector3.right);
+                Move(Vector3.right * Input.GetAxis("Horizontal"));
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
             }
             Jump();
@@ -141,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator Climb(float deltaHeight, float xCollider) // 파쿠르 강제 올라가기
+    IEnumerator Climb(float deltaHeight, Collision2D collision) // 파쿠르 강제 올라가기
     {
         // Debug.Log("올라간다!!");
         Vector3 startPosition = transform.position;
@@ -151,14 +151,13 @@ public class PlayerMovement : MonoBehaviour
         float distance = deltaHeight + playerCollider.bounds.size.y / 2;
         float timeExpected = distance / climbSpeed;
 
-        if(xCollider > transform.position.x) dir = Vector3.right;
-        else dir = Vector3.left;
         isClimbing = true;
         rigid.simulated = false;
         rigid.velocity = Vector2.zero;
 
         while (true) // y 좌표 이동
         {
+            transform.parent = collision.transform;
             yield return new WaitForFixedUpdate();
             transform.position += Vector3.up * (climbSpeed * Time.fixedDeltaTime);
             time += Time.fixedDeltaTime;
@@ -182,11 +181,15 @@ public class PlayerMovement : MonoBehaviour
         timeExpected = - rigid.velocity.y * 2 / (rigid.gravityScale * Physics2D.gravity.y);
         _moveSpeed = distance / timeExpected;
 
+        if(collision.transform.position.x > transform.position.x) dir = Vector3.right;
+        else dir = Vector3.left;
+
         while (true) // x 좌표 이동
         {
             if (Input.GetAxisRaw("Horizontal") != 0)
                 break;
 
+            transform.parent = collision.transform;
             yield return new WaitForFixedUpdate();
             
             transform.position += dir * _moveSpeed * Time.fixedDeltaTime;
@@ -200,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
         isClimbing = false;
         // rigid.simulated = true;
         yield return new WaitUntil(()=>(isGround));
+        transform.parent = null;
         isJumpCancelable = true;
     }
 
@@ -215,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
                 float playerHeight = playerCollider.bounds.size.y;
                 if (deltaHeight >= (minLengthHangable - 0.5f) * playerHeight && deltaHeight <= (maxLengthHangable - 0.5f) * playerHeight) // 올라탈 수 있는 가능 범위
                 {
-                    StartCoroutine(Climb(deltaHeight, collision.transform.position.x));
+                    StartCoroutine(Climb(deltaHeight, collision));
                 }
             }
         }
@@ -224,16 +228,18 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         float y = collision.transform.position.y + collision.bounds.size.y / 2f;
-        float yPlayer = playerCollider.transform.position.y - collision.bounds.size.y / 2f;
-        if (collision.tag == "Ground" && yPlayer >= y - 0.05f)
+        float playerY = transform.position.y + playerCollider.offset.y * transform.localScale.y - playerCollider.bounds.size.y / 2f;
+        if (collision.tag == "Ground" && playerY >= y - 0.05f)
+        {
             isGround = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         float y = collision.transform.position.y + collision.bounds.size.y / 2f;
-        float yPlayer = playerCollider.transform.position.y - collision.bounds.size.y / 2f;
-        if (collision.tag == "Ground" && yPlayer >= y - 0.05f)
+        float playerY = transform.position.y + playerCollider.offset.y * transform.localScale.y - playerCollider.bounds.size.y / 2f;
+        if (collision.tag == "Ground" && playerY >= y - 0.05f)
             isGround = false;
     }
 
