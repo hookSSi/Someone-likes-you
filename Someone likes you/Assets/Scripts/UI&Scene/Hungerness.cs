@@ -35,5 +35,16 @@ public class Hungerness : MonoBehaviour
     public void Eat()
     {
         Debug.Log("음식 먹기");
+        
+        ItemDatabase db = ItemDatabase.GetInstance();
+
+        for(int i = 0; i < db.items.Count; i++)
+        {
+            if(db.items[i].itemType == Item.ItemType.Food)
+            {
+                _hungerness += db.items[i].gainHungry;
+                db.RemoveItem(db.items[i].itemName);
+            }
+        }
     }
 }
