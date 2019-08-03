@@ -10,13 +10,15 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 2.67f;
     public float jumpPower = 5.1f;
     public float climbSpeed = 2f;
+    public float climbJumpPower = 1.8f;
+
     public float minLengthHangable = 0.4f; // collider 가장 위에서부터 아래로 길이 - 머리 크기인 20 픽셀 * 2(올라탈 수 있는 범위)(1 픽셀 : 0.01)
     public float maxLengthHangable = 0.2f; // collider 가장 위에서부터 위로의 길이
 
-    bool isClimbing = false;
-
     private bool isJumping = false;
     public bool isGround = false;
+    private bool isClimbing = false;
+    private bool isJumpCancelable = false;
 
     public Tool currentTool;
 
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigid = gameObject.GetComponent<Rigidbody2D>();
 
+        // PlayerCollider 가져오기(isTrigger == false)
         Collider2D[] tempColList = GetComponents<Collider2D>();
         for (int i = 0; i < tempColList.Length; i++)
         {
@@ -55,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") && isGround == true)
+        if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
             _animator.SetBool("isJumping", isJumping);
@@ -116,8 +119,21 @@ public class PlayerMovement : MonoBehaviour
         isGround = false;
     }
 
+    private void Jump(float _jumpPower) // 강제 점프
+    {
+        rigid.velocity = Vector2.zero;
+
+        rigid.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+
+        isJumping = false;
+        isGround = false;
+    }
+
     private void JumpCut()
     {
+        if (!isJumpCancelable)
+            return;
+
         float velocityY = -0.1f;
 
         if (rigid.velocity.y > velocityY)
@@ -132,18 +148,15 @@ public class PlayerMovement : MonoBehaviour
         // - 오브젝트의 Scale을 강제로 조절해도, Collider의 수치 상의 offset과 size는 변하지 않기 때문!
         // - 해결법 1. size에 scale을 강제로 곱하여 해결한다.
         // (굉장히 단순하지만 효과적인 방법, 하지만 상당히 귀찮고 코드를 알아보기 힘들 것 같습니다.)(아직 미적용)
+        Vector3 startPosition = transform.position;
+        float time = 0;
+        float _moveSpeed;
+        float distance = deltaHeight + ((BoxCollider2D)playerCollider).size.y / 2; // 올라가야 하는 거리
+        float timeExpected = distance / climbSpeed;
 
         isClimbing = true;
-        Debug.Log("삐빅 올라갑니다");
         rigid.simulated = false;
         rigid.velocity = Vector2.zero;
-        float time = 0;
-
-        float length = deltaHeight + ((BoxCollider2D)playerCollider).size.y / 2;
-        Vector3 startPosition = transform.position;
-
-        float timeExpected = length / (climbSpeed);
-        // Debug.Log("예상 시간은 " + timeExpected + "초");
 
         while (true) // y 좌표 이동
         {
@@ -153,44 +166,50 @@ public class PlayerMovement : MonoBehaviour
 
             time += Time.fixedDeltaTime;
 
-            if (time > timeExpected) // 어느 정도의 시간이 흐르면
+            if (time >= timeExpected) // 어느 정도의 시간이 흐르면
             {
-                transform.position = startPosition + Vector3.up * length;
                 break;
             }
         }
 
         time = 0;
-        length = ((BoxCollider2D)playerCollider).size.x;
-        timeExpected = length / climbSpeed;
-        if (!isRight) length *= -1;
+        distance = ((BoxCollider2D)playerCollider).size.x; // 플레이어 사이즈 만큼 x축으로 이동
+
+        if (!isRight) distance *= -1;
+
+        yield return new WaitForFixedUpdate();
+        rigid.simulated = true;
+        isJumpCancelable = false;
+        Jump(climbJumpPower);
+        //Debug.Log("현재 속도: " + rigid.velocity.y);
+        yield return new WaitForFixedUpdate();
+
+        timeExpected = - rigid.velocity.y * 2 / (rigid.gravityScale * Physics2D.gravity.y);
+        _moveSpeed = distance / timeExpected;
 
         while (true) // x 좌표 이동
         {
-            if (isRight)
-                transform.position += Vector3.right * climbSpeed * Time.fixedDeltaTime;
-            else
-                transform.position += Vector3.left * climbSpeed * Time.fixedDeltaTime;
+            if (Input.GetAxisRaw("Horizontal") != 0)
+                break;
+
+            transform.position += Vector3.right * _moveSpeed * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
 
             time += Time.fixedDeltaTime;
 
-            if (time > timeExpected)
-            {
-                transform.position = new Vector3(startPosition.x + length, transform.position.y, transform.position.z);
+            if (time >= timeExpected)
                 break;
-            }
         }
-
-        rigid.velocity = Vector3.zero;
-        rigid.simulated = true;
+        
         isClimbing = false;
+        yield return new WaitUntil(()=>(isGround));
+        isJumpCancelable = true;
     }
 
     private void OnCollisionStay2D(Collision2D collision) // 벽 타고 오르기
     {
-        if (collision.collider.tag == "Ground" && collision.transform.position.y < transform.position.y) // 넓게 범위 설정
+        if (collision.collider.tag == "Ground"/*&& collision.transform.position.y < transform.position.y*/)
         {
             if (!isGround)
             {
@@ -199,8 +218,6 @@ public class PlayerMovement : MonoBehaviour
                 float playerHeight = ((BoxCollider2D)playerCollider).size.y;
                 if (deltaHeight <= playerHeight / 2f + maxLengthHangable && deltaHeight >= playerHeight / 2f - minLengthHangable) // 올라탈 수 있는 가능 범위
                 {
-                    Debug.Log("올라갈 수 있을 것 같다.");
-
                     StartCoroutine(Climb(deltaHeight, collision.transform.position.x > transform.position.x));
                 }
             }
