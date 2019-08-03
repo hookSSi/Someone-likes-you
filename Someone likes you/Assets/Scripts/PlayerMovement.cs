@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move(Vector3 dir) // Move 함수가 position을 이동시키는 것 때문에, 관통 현상이 일어나는 것 같음. AddForce나 Velocity를 이용할 순 없을까?
     {
         Vector3 vel = dir * moveSpeed;
-        rigid.velocity = vel;
+        rigid.velocity = vel + Vector3.up * rigid.velocity.y;
     }
 
     private void Jump()
@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
 
         rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
 
+        isJumpCancelable = true;
         isJumping = false;
         isGround = false;
     }
