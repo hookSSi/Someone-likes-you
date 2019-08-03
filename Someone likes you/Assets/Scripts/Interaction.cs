@@ -117,7 +117,7 @@ public class Interaction : MonoBehaviour
             return;
         }
 
-        ItemDatabase.GetInstance().items.Remove(stoneItem);
+        ItemDatabase.GetInstance().RemoveItem("돌") ;
 
         Debug.Log("돌 던짐");
 

@@ -43,7 +43,14 @@ public class ItemDatabase : MonoBehaviour
         Debug.Log(toolName + "를 주웠다!(도구)");
         tools.Add(new Tool(toolName, toolType, Resources.Load<Sprite>("ItemImages/" + toolName)));
     }
-    
+
+    public void RemoveItem(string itemName)
+    {
+        items.Remove(items.Find(x => x.itemName.Equals(itemName)));
+
+        drawInventory();
+    }
+
     /*
     public Tool CurrentTool()
     {
