@@ -10,14 +10,14 @@ public class Movement : MonoBehaviour
 {
     public static void MoveVertical(GameObject obj, float value, float time = 1, bool moveType = true)
     {
-        Vector3 origin = obj.gameObject.transform.position;
+        Vector3 origin = obj.transform.position;
         Vector3 dest = new Vector3(origin.x, origin.y + value, origin.z);
 
         MoveToDest(obj, dest, time, moveType);
     }
     public static void MoveHorizontal(GameObject obj, float value, float time = 1, bool moveType = true)
     {
-        Vector3 origin = obj.gameObject.transform.position;
+        Vector3 origin = obj.transform.position;
         Vector3 dest = new Vector3(origin.x + value, origin.y, origin.z);
 
         MoveToDest(obj, dest, time, moveType);

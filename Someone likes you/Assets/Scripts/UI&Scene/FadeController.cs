@@ -14,10 +14,12 @@ public class FadeController : MonoBehaviour
 
     public void FadeIn(float fadeTime, System.Action nextEvent = null)
     {
+        Debug.Log("페이드 인");
         StartCoroutine(CoFadeIn(fadeTime, nextEvent));
     }
     public void FadeOut(float fadeTime, System.Action nextEvent = null)
     {
+        Debug.Log("페이드 아웃");
         StartCoroutine(CoFadeOut(fadeTime, nextEvent));
     }
 
@@ -32,6 +34,8 @@ public class FadeController : MonoBehaviour
             yield return null;
         }
 
+        tempColor.a = 1f;
+        _sprite.color = tempColor;
         if(nextEvent != null) nextEvent();
     }
 
@@ -46,6 +50,8 @@ public class FadeController : MonoBehaviour
             yield return null;
         }
 
+        tempColor.a = 0f;
+        _sprite.color = tempColor;
         if(nextEvent != null) nextEvent();
     }
 

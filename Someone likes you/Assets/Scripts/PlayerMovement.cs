@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Tool currentTool;
 
+    public Animator _animator;
+
     public enum State
     {
         Idle,
@@ -44,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
                 break;
             }
         }
+
+        if(_animator == null)
+        {
+            _animator = this.gameObject.GetComponent<Animator>();
+        } 
     }
 
     private void Update()
@@ -51,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGround == true)
         {
             isJumping = true;
+            _animator.SetBool("isJumping", isJumping);
         }
         if (!Input.GetButton("Jump"))
         {
@@ -70,35 +78,27 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("삐빅 위 휠");
         }
 
-    }
-
-    private void FixedUpdate()
-    {
         if (!isClimbing)
         {
-            Move();
+            if (Input.GetAxisRaw("Horizontal") < 0)
+            {
+                Move(Vector3.left);
+                transform.localScale = new Vector3(-1f, 1f, 1f); // 강제로 스프라이트를 뒤집는 방법
+            }
+            else if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                Move(Vector3.right);
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
             Jump();
+            _animator.SetFloat("speed", Mathf.Abs(rigid.velocity.x));
         }
     }
 
-    private void Move() // Move 함수가 position을 이동시키는 것 때문에, 관통 현상이 일어나는 것 같음. AddForce나 Velocity를 이용할 순 없을까?
+    private void Move(Vector3 dir) // Move 함수가 position을 이동시키는 것 때문에, 관통 현상이 일어나는 것 같음. AddForce나 Velocity를 이용할 순 없을까?
     {
-        Vector3 moveVelocity = new Vector3();
-
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            moveVelocity = Vector3.left;
-            
-
-            transform.localScale = new Vector3(-1f, 1f, 1f); // 강제로 스프라이트를 뒤집는 방법
-        }
-        else if (Input.GetAxisRaw("Horizontal")>0)
-        {
-            moveVelocity = Vector3.right;
-
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-        transform.position += moveVelocity * Time.deltaTime * moveSpeed;
+        Vector3 vel = dir * moveSpeed;
+        rigid.velocity = vel;
     }
 
     private void Jump()

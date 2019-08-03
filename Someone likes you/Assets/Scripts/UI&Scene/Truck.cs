@@ -35,6 +35,7 @@ public class Truck : MonoBehaviour
 
     IEnumerator Act(float range, Action action)
     {
+        Debug.Log("움직이는 중");
         while(range > this._t)
         {
             this._t += Time.deltaTime;
