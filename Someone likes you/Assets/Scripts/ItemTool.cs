@@ -5,11 +5,12 @@ using UnityEngine;
 public class ItemTool : MonoBehaviour, IInteractable
 {
     public string toolName;
-    public Tool.ToolType toolType;
+
+    public Tool tool;
 
     public void Interact()
     {
-        ItemDatabase.GetInstance().AddTool(toolName, toolType);
+        ItemDatabase.GetInstance().AddTool(tool);
         gameObject.SetActive(false);
     }
 }

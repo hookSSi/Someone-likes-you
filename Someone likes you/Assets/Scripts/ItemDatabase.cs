@@ -10,7 +10,7 @@ public class ItemDatabase : MonoBehaviour
     private static ItemDatabase instance;
     public List<Item> items = new List<Item>(); // 인벤토리
     public List<Tool> tools = new List<Tool>(); // 도구 리스트
-    public int currentTool = 0;
+    public Tool currentTool;
 
     public GameObject inventory1; // 도구와 먹을 것
     public GameObject inventory2; // 그 외
@@ -38,10 +38,13 @@ public class ItemDatabase : MonoBehaviour
         drawInventory();
     }
 
-    public void AddTool(string toolName, Tool.ToolType toolType)
+    public void AddTool(Tool tool)
     {
-        Debug.Log(toolName + "를 주웠다!(도구)");
-        tools.Add(new Tool(toolName, toolType, Resources.Load<Sprite>("ItemImages/" + toolName)));
+        Debug.Log(tool.name + "를 주웠다!(도구)");
+        tools.Add(tool);
+        currentTool = tool;
+
+        drawInventory();
     }
 
     public void RemoveItem(string itemName)
@@ -64,7 +67,7 @@ public class ItemDatabase : MonoBehaviour
         AddItem("열쇠", "문을 열 수 있다. 맛은... 있을리가.", 0, Item.ItemType.Key);
         AddItem("초코바", "맛있다. 군인의 영원한 친구.", 50, Item.ItemType.Food);
 #endif
-        AddTool("맨손", Tool.ToolType.Melee);
+        AddTool(new Tool("손", Resources.Load<Sprite>("InventoryIconRaw/Hand"), ToolEnum.HAND));
     }
 
     //인벤토리 시각화
@@ -132,5 +135,7 @@ public class ItemDatabase : MonoBehaviour
 
         inventory1.transform.Find("Can").transform.Find("CanNum").GetComponent<Text>().text = canNum.ToString();
         inventory1.transform.Find("ChocoBar").transform.Find("ChocoNum").GetComponent<Text>().text = chocoNum.ToString();
+
+        inventory1.transform.Find("Tool").GetComponent<Image>().sprite = currentTool.toolImage;
     }
 }
