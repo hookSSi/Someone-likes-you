@@ -1836,13 +1836,15 @@ MonoBehaviour:
   moveSpeed: 2.67
   jumpPower: 5.1
   climbSpeed: 2
-  minLengthHangable: 0.4
-  maxLengthHangable: 0.2
+  climbJumpPower: 2.5
+  minLengthHangable: 0.6
+  maxLengthHangable: 1.2
   isGround: 0
   currentTool:
     toolName: 
     toolType: 0
     toolImage: {fileID: 0}
+  _animator: {fileID: 0}
 --- !u!61 &953819775
 BoxCollider2D:
   m_ObjectHideFlags: 0
