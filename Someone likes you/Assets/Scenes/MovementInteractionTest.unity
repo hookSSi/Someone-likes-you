@@ -870,7 +870,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41d83ba035fddb640a8f1caaa5024065, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90112631668697549a906d3d72dbd41d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -911,6 +911,7 @@ MonoBehaviour:
   itemDescription: "\uB9DB\uC788\uB2E4. \uAD70\uC778\uC758 \uC601\uC6D0\uD55C \uCE5C\uAD6C."
   gainHungry: 50
   itemType: 2
+  itemImageName: chocobar
 --- !u!58 &647107405
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1526,7 +1527,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1b1de8373d9c8b48baa962579fecc4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb819040ea5db47469ed37ba44d88f42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1568,6 +1569,7 @@ MonoBehaviour:
     \uC774\uB7F0 \uAC8C \uC624\uD788\uB824 \uC720\uD589\uC77C\uC9C0\uB3C4 \uBAA8\uB978\uB2E4."
   gainHungry: 0
   itemType: 0
+  itemImageName: key
 --- !u!58 &903170520
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1762,10 +1764,7 @@ MonoBehaviour:
   minLengthHangable: 0.6
   maxLengthHangable: 1.1
   isGround: 0
-  currentTool:
-    name: 
-    toolImage: {fileID: 0}
-    toolEnum: 0
+  isClimbing: 0
   _animator: {fileID: 0}
 --- !u!61 &953819775
 BoxCollider2D:
@@ -2155,7 +2154,7 @@ GameObject:
   - component: {fileID: 1246508058}
   - component: {fileID: 1246508059}
   m_Layer: 0
-  m_Name: Obj_Switch
+  m_Name: Switch
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2236,9 +2235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42709ceee8a451a40884a96b6f4e8ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteDeactivative: {fileID: 21300000, guid: 27fb1e88eb2765c42971fa7747976dc0, type: 3}
-  SpriteActivative: {fileID: 21300000, guid: f6f4f51b1854ae44f9707f7d22357909, type: 3}
-  door: {fileID: 1636859272}
+  isOn: 1
+  SpriteOn: {fileID: 21300000, guid: f6f4f51b1854ae44f9707f7d22357909, type: 3}
+  SpriteOff: {fileID: 21300000, guid: 27fb1e88eb2765c42971fa7747976dc0, type: 3}
+  Object: {fileID: 1636859269}
 --- !u!58 &1246508059
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3247,7 +3247,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a253ba63b82487644ba131b7b478acf0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e81d816d40cc5a147a9feaea8428d406, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3287,7 +3287,7 @@ MonoBehaviour:
   toolName: "\uB9DD\uCE58"
   tool:
     name: "\uB9DD\uCE58"
-    toolImage: {fileID: 21300000, guid: a253ba63b82487644ba131b7b478acf0, type: 3}
+    toolImage: {fileID: 21300000, guid: e81d816d40cc5a147a9feaea8428d406, type: 3}
     toolEnum: 1
 --- !u!58 &1713469984
 CircleCollider2D:
@@ -3909,6 +3909,7 @@ MonoBehaviour:
   itemDescription: "\uC5B4\uCA4C\uAD6C \uC800\uCA4C\uAD6C"
   gainHungry: 50
   itemType: 2
+  itemImageName: coke
 --- !u!212 &1955866485
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3947,7 +3948,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6921d763a2e6824fabf3bde2d264963, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a85f23c1a81aa94d9f58346b8641e34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

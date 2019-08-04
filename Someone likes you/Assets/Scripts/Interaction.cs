@@ -41,7 +41,7 @@ public class Interaction : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetButtonDown("Fire2"))
         {
             throwStone();
         }

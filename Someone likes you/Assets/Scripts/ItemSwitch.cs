@@ -2,30 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSwitch : MonoBehaviour, IInteractable
+public class Switch : MonoBehaviour, IInteractable
 {
-    public Sprite SpriteDeactivative;
-    public Sprite SpriteActivative;
-    private SpriteRenderer spriteRenderer;
-    public Door door;
+    public bool isOn = false;
+
+    public Sprite SpriteOn;
+    public Sprite SpriteOff;
+    private SpriteRenderer renderer;
+    
+    public GameObject Object;
 
     void Start()
     {
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = SpriteDeactivative;
+        renderer = gameObject.GetComponent<SpriteRenderer>();
+        
+        if (isOn)
+            renderer.sprite = SpriteOn;
+        else
+            renderer.sprite = SpriteOff;
     }
 
     public void Interact()
     {
-        if (spriteRenderer.sprite == SpriteDeactivative)
+        Switching();
+    }
+
+    public void Switching()
+    {
+        if (isOn)
         {
-            spriteRenderer.sprite = SpriteActivative;
-            door.Open();
+            isOn = false;
+            renderer.sprite = SpriteOff;
+            Object.SetActive(false);
         }
         else
         {
-            spriteRenderer.sprite = SpriteDeactivative;
-            door.Close();
+            isOn = true;
+            renderer.sprite = SpriteOn;
+            Object.SetActive(true);
         }
     }
 }

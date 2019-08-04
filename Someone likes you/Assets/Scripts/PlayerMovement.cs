@@ -17,10 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
     public bool isGround = false;
-    private bool isClimbing = false;
+    public bool isClimbing = false;
     private bool isJumpCancelable = false;
-
-    public Tool currentTool;
 
     public Animator _animator;
 
@@ -71,13 +69,14 @@ public class PlayerMovement : MonoBehaviour
         // 작성 중
         if (Input.GetAxisRaw("ScrollWheel") < 0)
         {
-            //ItemDatabase.GetInstance().currentTool++;
-            //currentTool = ItemDatabase.GetInstance().CurrentTool();
+            ItemDatabase.GetInstance().PreviousTool();
+            // currentTool = ItemDatabase.GetInstance().CurrentTool;
         }
 
         if (Input.GetAxisRaw("ScrollWheel") > 0)
         {
-            Debug.Log("삐빅 위 휠");
+            ItemDatabase.GetInstance().NextTool();
+            // currentTool = ItemDatabase.GetInstance().CurrentTool;
         }
 
         if (!isClimbing)
@@ -91,9 +90,9 @@ public class PlayerMovement : MonoBehaviour
                 Move(Vector3.right /* * Input.GetAxis("Horizontal")*/);
             }
             Jump();
-            _animator.SetFloat("x_speed", Mathf.Abs(rigid.velocity.x));
-            _animator.SetFloat("y_speed", rigid.velocity.y);
         }
+        _animator.SetFloat("x_speed", Mathf.Abs(rigid.velocity.x));
+        _animator.SetFloat("y_speed", rigid.velocity.y);
         _animator.SetBool("isGround", isGround);
     }
 
@@ -110,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
         if (!isJumping || !isGround) // 점프 커맨드 입력
             return;
 
-        _animator.SetTrigger("isJumping");
         rigid.velocity = Vector2.zero;
 
         rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -118,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         isJumpCancelable = true;
         isJumping = false;
         isGround = false;
+        _animator.SetTrigger("isJumping");
     }
 
     private void Jump(float _jumpPower) // 강제 점프
