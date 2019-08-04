@@ -61,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
-            _animator.SetBool("isJumping", isJumping);
         }
         if (!Input.GetButton("Jump"))
         {
@@ -85,23 +84,25 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetAxisRaw("Horizontal") < 0)
             {
-                Move(Vector3.left * Input.GetAxis("Horizontal")*(-1));
-                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+                Move(Vector3.left /* * Input.GetAxis("Horizontal")*(-1)*/);
             }
             else if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                Move(Vector3.right * Input.GetAxis("Horizontal"));
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+                Move(Vector3.right /* * Input.GetAxis("Horizontal")*/);
             }
             Jump();
-            _animator.SetFloat("speed", Mathf.Abs(rigid.velocity.x));
+            _animator.SetFloat("x_speed", Mathf.Abs(rigid.velocity.x));
+            _animator.SetFloat("y_speed", rigid.velocity.y);
         }
+        _animator.SetBool("isGround", isGround);
     }
 
     private void Move(Vector3 dir)
     {
         Vector3 vel = dir * moveSpeed;
         rigid.velocity = vel + Vector3.up * rigid.velocity.y;
+        if(vel.x != 0)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * vel.normalized.x, transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
     }
 
     private void Jump()
@@ -109,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isJumping || !isGround) // 점프 커맨드 입력
             return;
 
+        _animator.SetTrigger("isJumping");
         rigid.velocity = Vector2.zero;
 
         rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
@@ -152,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
         float timeExpected = distance / climbSpeed;
 
         isClimbing = true;
+        _animator.SetBool("isClimbing", isClimbing);
         rigid.simulated = false;
         rigid.velocity = Vector2.zero;
 
@@ -203,6 +206,7 @@ public class PlayerMovement : MonoBehaviour
         isClimbing = false;
         // rigid.simulated = true;
         yield return new WaitUntil(()=>(isGround));
+        _animator.SetBool("isClimbing", isClimbing);
         transform.parent = null;
         isJumpCancelable = true;
     }
@@ -240,7 +244,9 @@ public class PlayerMovement : MonoBehaviour
         float y = collision.transform.position.y + collision.bounds.size.y / 2f;
         float playerY = transform.position.y + playerCollider.offset.y * transform.localScale.y - playerCollider.bounds.size.y / 2f;
         if (collision.tag == "Ground" && playerY >= y - 0.05f)
+        {
             isGround = false;
+        }
     }
 
 }
