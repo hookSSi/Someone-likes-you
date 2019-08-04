@@ -133,7 +133,9 @@ public class ItemDatabase : MonoBehaviour
         int chocoNum = 0;
 
         //inventory2 모든 자식 제거
-        Transform[] childList = inventory2.transform.GetComponentsInChildren<RectTransform>();
+        Transform[] childList = null;
+        if(inventory2 != null)
+            childList = inventory2.transform.GetComponentsInChildren<RectTransform>();
 
         if (childList != null)
         {

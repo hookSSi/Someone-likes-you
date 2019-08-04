@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     //private bool isWalking = false;
 
     public Animator _animator;
+    public GameObject _sprite;
 
     public enum State
     {
@@ -101,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 vel = dir * moveSpeed;
         rigid.velocity = vel + Vector3.up * rigid.velocity.y;
         if(vel.x != 0)
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * vel.normalized.x, transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+            _sprite.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * vel.normalized.x, transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
 
 
         //효과음
