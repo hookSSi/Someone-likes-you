@@ -9,7 +9,7 @@ public class Switch : MonoBehaviour, IInteractable
     public Sprite SpriteOn;
     public Sprite SpriteOff;
     private SpriteRenderer renderer;
-    
+
     public GameObject Object;
 
     void Start()
@@ -30,6 +30,8 @@ public class Switch : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        GetComponent<AudioSource>().Play();
+
         Switching();
     }
 
