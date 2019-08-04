@@ -8,32 +8,40 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public static void MoveVertical(GameObject obj, float value, float time = 1, bool moveType = true)
+    public void MoveVertical(GameObject obj, float value, float time = 1, bool moveType = true)
     {
         Vector3 origin = obj.transform.position;
         Vector3 dest = new Vector3(origin.x, origin.y + value, origin.z);
 
-        MoveToDest(obj, dest, time, moveType);
+        StartCoroutine(Co_Move(obj, dest, time, moveType));
     }
-    public static void MoveHorizontal(GameObject obj, float value, float time = 1, bool moveType = true)
+    public void MoveHorizontal(GameObject obj, float value, float time = 1, bool moveType = true)
     {
         Vector3 origin = obj.transform.position;
         Vector3 dest = new Vector3(origin.x + value, origin.y, origin.z);
 
-        MoveToDest(obj, dest, time, moveType);
+        StartCoroutine(Co_Move(obj, dest, time, moveType));
     }
 
-    public static void MoveToDest(GameObject obj ,Vector3 dest, float time = 1, bool moveType = true)
+    public IEnumerator Co_Move(GameObject obj, Vector3 dest, float time = 1, bool moveType = true)
     {
-        if(moveType) // 시간에 따라 천천히 이동
-        {
-            Vector3 origin = obj.transform.position;
+        float t = 0;
+        Vector3 origin = obj.transform.position;
 
-            obj.transform.position = Vector3.Lerp(origin, dest, Time.deltaTime / time);
+        if(moveType)
+        {
+            while(t < time)
+            {
+                t += Time.deltaTime;
+                obj.transform.position = Vector3.Lerp(origin, dest, t / time);
+                yield return null;
+            }
         }
-        else // 바로 이동
+        else
         {
             obj.transform.position = dest;
+            yield break;
         }
     }
+
 }
