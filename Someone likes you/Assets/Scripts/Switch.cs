@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemSwitch : MonoBehaviour, IInteractable
+public class Switch : MonoBehaviour, IInteractable
 {
-    public Sprite SpriteOff;
+    public bool isOn = false;
+
     public Sprite SpriteOn;
+    public Sprite SpriteOff;
     private SpriteRenderer renderer;
     
     public GameObject Object;
@@ -13,20 +15,37 @@ public class ItemSwitch : MonoBehaviour, IInteractable
     void Start()
     {
         renderer = gameObject.GetComponent<SpriteRenderer>();
-        renderer.sprite = SpriteOff;
+        
+        if (isOn)
+        {
+            Object.SetActive(true);
+            renderer.sprite = SpriteOn;
+        }
+        else
+        {
+            Object.SetActive(false);
+            renderer.sprite = SpriteOff;
+        }
     }
 
     public void Interact()
     {
-        if (renderer.sprite == SpriteOff)
+        Switching();
+    }
+
+    public void Switching()
+    {
+        if (isOn)
         {
-            renderer.sprite = SpriteOn;
-            Object.SetActive(true);
+            isOn = false;
+            renderer.sprite = SpriteOff;
+            Object.SetActive(false);
         }
         else
         {
-            renderer.sprite = SpriteOff;
-            Object.SetActive(false);
+            isOn = true;
+            renderer.sprite = SpriteOn;
+            Object.SetActive(true);
         }
     }
 }

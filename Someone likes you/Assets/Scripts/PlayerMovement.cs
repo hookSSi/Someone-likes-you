@@ -66,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // 무기 스왑
-        // 작성 중
         if (Input.GetAxisRaw("ScrollWheel") < 0)
         {
             ItemDatabase.GetInstance().PreviousTool();
@@ -90,10 +89,10 @@ public class PlayerMovement : MonoBehaviour
                 Move(Vector3.right /* * Input.GetAxis("Horizontal")*/);
             }
             Jump();
+            _animator.SetBool("isGround", isGround);
         }
         _animator.SetFloat("x_speed", Mathf.Abs(rigid.velocity.x));
         _animator.SetFloat("y_speed", rigid.velocity.y);
-        _animator.SetBool("isGround", isGround);
     }
 
     private void Move(Vector3 dir)
@@ -230,8 +229,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        float y = collision.transform.position.y + collision.bounds.size.y / 2f;
+        float y = collision.transform.position.y + collision.offset.y * collision.transform.localScale.y + collision.bounds.size.y / 2f;
         float playerY = transform.position.y + playerCollider.offset.y * transform.localScale.y - playerCollider.bounds.size.y / 2f;
+        // Debug.Log("y : " + y + ", playerY : " + playerY);
         if (collision.tag == "Ground" && playerY >= y - 0.05f)
         {
             isGround = true;
@@ -240,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        float y = collision.transform.position.y + collision.bounds.size.y / 2f;
+        float y = collision.transform.position.y + collision.offset.y * collision.transform.localScale.y + collision.bounds.size.y / 2f;
         float playerY = transform.position.y + playerCollider.offset.y * transform.localScale.y - playerCollider.bounds.size.y / 2f;
         if (collision.tag == "Ground" && playerY >= y - 0.05f)
         {
