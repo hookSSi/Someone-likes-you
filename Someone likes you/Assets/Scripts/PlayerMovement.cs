@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGround = false;
     public bool isClimbing = false;
     private bool isJumpCancelable = false;
+    //private bool isWalking = false;
 
     public Animator _animator;
 
@@ -101,6 +102,18 @@ public class PlayerMovement : MonoBehaviour
         rigid.velocity = vel + Vector3.up * rigid.velocity.y;
         if(vel.x != 0)
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * vel.normalized.x, transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+
+
+        //효과음
+        AudioSource audioPlayer = gameObject.GetComponent<AudioSource>();
+        if (!audioPlayer.isPlaying)
+        {
+            audioPlayer.loop = false;
+            audioPlayer.clip = Resources.Load<AudioClip>("soundEffects/walk");
+            audioPlayer.Play();
+        }
+        //
+
     }
 
     private void Jump()
@@ -116,6 +129,14 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
         isGround = false;
         _animator.SetTrigger("isJumping");
+        
+        //효과음
+        AudioSource audioPlayer = gameObject.GetComponent<AudioSource>();
+        audioPlayer.loop = false;
+        audioPlayer.clip = Resources.Load<AudioClip>("soundEffects/jump");
+        audioPlayer.Play();
+        //
+
     }
 
     private void Jump(float _jumpPower) // 강제 점프
