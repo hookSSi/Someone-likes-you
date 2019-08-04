@@ -374,12 +374,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6446d38f33cc5464b8b677f69d1cbe16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.67
-  jumpPower: 1
-  climbSpeed: 2
+  moveSpeed: 4.7
+  jumpPower: 0.9
+  climbSpeed: 6
   climbJumpPower: 0.4
-  minLengthHangable: 0.4
-  maxLengthHangable: 0.2
+  minLengthHangable: 0.6
+  maxLengthHangable: 1.2
   isGround: 0
   isClimbing: 0
   _animator: {fileID: 6762651961823710144}
