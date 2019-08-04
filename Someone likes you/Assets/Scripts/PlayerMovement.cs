@@ -17,10 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isJumping = false;
     public bool isGround = false;
-    private bool isClimbing = false;
+    public bool isClimbing = false;
     private bool isJumpCancelable = false;
-
-    public Tool currentTool;
 
     public Animator _animator;
 
@@ -61,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
-            _animator.SetBool("isJumping", isJumping);
         }
         if (!Input.GetButton("Jump"))
         {
@@ -72,36 +69,39 @@ public class PlayerMovement : MonoBehaviour
         // 작성 중
         if (Input.GetAxisRaw("ScrollWheel") < 0)
         {
-            //ItemDatabase.GetInstance().currentTool++;
-            //currentTool = ItemDatabase.GetInstance().CurrentTool();
+            ItemDatabase.GetInstance().PreviousTool();
+            // currentTool = ItemDatabase.GetInstance().CurrentTool;
         }
 
         if (Input.GetAxisRaw("ScrollWheel") > 0)
         {
-            Debug.Log("삐빅 위 휠");
+            ItemDatabase.GetInstance().NextTool();
+            // currentTool = ItemDatabase.GetInstance().CurrentTool;
         }
 
         if (!isClimbing)
         {
             if (Input.GetAxisRaw("Horizontal") < 0)
             {
-                Move(Vector3.left * Input.GetAxis("Horizontal")*(-1));
-                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+                Move(Vector3.left /* * Input.GetAxis("Horizontal")*(-1)*/);
             }
             else if (Input.GetAxisRaw("Horizontal") > 0)
             {
-                Move(Vector3.right * Input.GetAxis("Horizontal"));
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+                Move(Vector3.right /* * Input.GetAxis("Horizontal")*/);
             }
             Jump();
-            _animator.SetFloat("speed", Mathf.Abs(rigid.velocity.x));
         }
+        _animator.SetFloat("x_speed", Mathf.Abs(rigid.velocity.x));
+        _animator.SetFloat("y_speed", rigid.velocity.y);
+        _animator.SetBool("isGround", isGround);
     }
 
     private void Move(Vector3 dir)
     {
         Vector3 vel = dir * moveSpeed;
         rigid.velocity = vel + Vector3.up * rigid.velocity.y;
+        if(vel.x != 0)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * vel.normalized.x, transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
     }
 
     private void Jump()
@@ -116,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         isJumpCancelable = true;
         isJumping = false;
         isGround = false;
+        _animator.SetTrigger("isJumping");
     }
 
     private void Jump(float _jumpPower) // 강제 점프
@@ -152,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
         float timeExpected = distance / climbSpeed;
 
         isClimbing = true;
+        _animator.SetBool("isClimbing", isClimbing);
         rigid.simulated = false;
         rigid.velocity = Vector2.zero;
 
@@ -203,6 +205,7 @@ public class PlayerMovement : MonoBehaviour
         isClimbing = false;
         // rigid.simulated = true;
         yield return new WaitUntil(()=>(isGround));
+        _animator.SetBool("isClimbing", isClimbing);
         transform.parent = null;
         isJumpCancelable = true;
     }
@@ -240,7 +243,9 @@ public class PlayerMovement : MonoBehaviour
         float y = collision.transform.position.y + collision.bounds.size.y / 2f;
         float playerY = transform.position.y + playerCollider.offset.y * transform.localScale.y - playerCollider.bounds.size.y / 2f;
         if (collision.tag == "Ground" && playerY >= y - 0.05f)
+        {
             isGround = false;
+        }
     }
 
 }

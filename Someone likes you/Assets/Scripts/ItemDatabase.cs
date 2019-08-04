@@ -30,10 +30,10 @@ public class ItemDatabase : MonoBehaviour
         return instance;
     }
 
-    public void AddItem(string itemName, string itemDescription, int gainHungry, Item.ItemType itemType)
+    public void AddItem(string itemName, string itemDescription, int gainHungry, Item.ItemType itemType, string itemImageName)
     {
         Debug.Log(itemName + "를 획득했다!(아이템)");
-        items.Add(new Item(itemName, itemDescription, gainHungry, itemType, Resources.Load<Sprite>("ItemImages/" + itemName)));
+        items.Add(new Item(itemName, itemDescription, gainHungry, itemType, Resources.Load<Sprite>("Sprites/Items" + itemImageName)));
 
         drawInventory();
     }
@@ -54,12 +54,67 @@ public class ItemDatabase : MonoBehaviour
         drawInventory();
     }
 
-    /*
+    
     public Tool CurrentTool()
     {
-        if (tools.Count == 1) return tools[0];
+        return currentTool;
     }
-    */
+
+    public void PreviousTool()
+    {
+        if(tools.Count < 2) return;
+       
+        int i;
+        for(i = 0; i < tools.Count; i++)
+        {
+            if(tools[i] != currentTool)
+            {
+                if(i == tools.Count - 1)
+                    return;
+                continue;
+            }
+            break; // tools[i] == currentTool;
+        }
+
+        if(i == 0)
+        {
+            currentTool = tools[tools.Count - 1];
+        }
+        else
+        {
+            currentTool = tools[i - 1];
+        }
+
+        drawInventory();
+    }
+
+    public void NextTool()
+    {
+        if(tools.Count < 2) return;
+       
+        int i;
+        for(i = 0; i < tools.Count; i++)
+        {
+            if(tools[i] != currentTool)
+            {
+                if(i == tools.Count - 1)
+                    return;
+                continue;
+            }
+            break; // tools[i] == currentTool;
+        }
+
+        if(i == tools.Count - 1)
+        {
+            currentTool = tools[0];
+        }
+        else
+        {
+            currentTool = tools[i + 1];
+        }
+
+        drawInventory();
+    }
 
     private void Start()
     {

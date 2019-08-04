@@ -8,7 +8,7 @@ public class BreakableWall : MonoBehaviour, IInteractable
     {
         if (ItemDatabase.GetInstance().currentTool.toolEnum == ToolEnum.HAMMER)
         {
-            ItemDatabase.GetInstance().AddItem("돌","",0,Item.ItemType.Consumable);
+            ItemDatabase.GetInstance().AddItem("돌","",0,Item.ItemType.Consumable, "pebble2");
         }
         else
         {
