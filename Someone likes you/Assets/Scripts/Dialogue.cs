@@ -1,49 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
-
 
 public class Dialogue : MonoBehaviour
 {
-    private enum DialogueStatus {END, TYPING, WAIT}
+    private enum DialogueStatus { NULL, END, TYPING, WAIT }
 
-    private DialogueStatus status = DialogueStatus.END;
-
-    public GameObject wordBubble;
-
-    public GameObject dialogueText;
-
-    void Start()
-    {
-        StartCoroutine(dialogue("테스트 테스트 \n Test Test \n 테테테테테스트트트트트"));
-    }
-
-    void Update()
-    {
-       
-    }
+    private DialogueStatus status = DialogueStatus.NULL;
 
     public void Dialog(string text)
     {
         StartCoroutine(dialogue(text));
     }
 
-    private IEnumerator dialogue(string text)
+    public IEnumerator dialogue(string text)
     {
         status = DialogueStatus.TYPING;
 
         StartCoroutine(keyDownCheck());
 
-        TextMesh dialogue = dialogueText.GetComponent<TextMesh>();
+        TMP_Text dialogue = gameObject.GetComponent<RectTransform>().Find("Text").GetComponent<TMP_Text>();
 
         dialogue.text = "";
-
-        if (!wordBubble.activeSelf)
-        {
-            wordBubble.SetActive(true);
-        }
 
         foreach (char letter in text.ToCharArray())
         {
@@ -66,9 +45,7 @@ public class Dialogue : MonoBehaviour
             yield return null;
         }
 
-        wordBubble.SetActive(false);
-
-        yield return new WaitForSeconds(0.2f);
+        yield return null;
     }
 
     private IEnumerator keyDownCheck()
@@ -84,8 +61,6 @@ public class Dialogue : MonoBehaviour
 
             yield return null;
         }
-
-        Debug.Log("TYPING -> WAIT");
 
         while (Input.anyKeyDown)
         {
@@ -104,8 +79,7 @@ public class Dialogue : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("WAIT -> END");
-
         yield return null;
     }
+
 }
