@@ -1,0 +1,5 @@
+﻿Truck	어...어디 가세요?
+Player	아바인시
+Truck	그...그럼! 태워 드릴게요!
+Truck	하하...하하...
+Player	?

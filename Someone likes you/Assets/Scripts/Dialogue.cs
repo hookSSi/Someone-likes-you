@@ -20,22 +20,23 @@ public class Dialogue : MonoBehaviour
 
         StartCoroutine(keyDownCheck());
 
-        TMP_Text dialogue = gameObject.GetComponent<RectTransform>().Find("Text").GetComponent<TMP_Text>();
+        TMP_Text dialogue = gameObject.transform.GetChild(0).Find("Text").GetComponent<TMP_Text>();
+        dialogue.text = text;
 
-        dialogue.text = "";
+        TMP_TextInfo textInfo = dialogue.textInfo;
+        int totalVisibleCharacters = textInfo.characterCount; // Get # of Visible Character in text object
+        int visibleCount = 0;
 
-        foreach (char letter in text.ToCharArray())
+        while(true)
         {
-            dialogue.text += letter;
-
-            yield return new WaitForSeconds(0.05f);
-
-            if (status == DialogueStatus.WAIT)
+            if (visibleCount > totalVisibleCharacters)
             {
-                dialogue.text = text;
-
                 break;
             }
+
+            dialogue.maxVisibleCharacters = visibleCount; // How many characters should TextMeshPro display?
+            visibleCount += 1;
+            yield return null;
         }
 
         status = DialogueStatus.WAIT;

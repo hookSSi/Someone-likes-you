@@ -63,6 +63,8 @@ public class StageManager : MonoBehaviour
             subject_script.SetSoftness(1f);
         }
         subject_script.FadeinShow(5f);
+        yield return new WaitForSeconds(7f);
+        this.NextScene("Intro");
     }
     public IEnumerator Intro()
     {
@@ -90,10 +92,11 @@ public class StageManager : MonoBehaviour
         while(_tutorialController._isRunning){ yield return null;}
 
         Debug.Log("튜토리얼 완료");
+        this.NextScene("1-1");
         // 잠시후 전화가 옴
-        yield return new WaitForSeconds(3f);
-        _phoneController.Load(3); yield return new WaitForSeconds(3f);
-        _phoneController.Called("힐다");
+        //yield return new WaitForSeconds(3f);
+        //_phoneController.Load(3); yield return new WaitForSeconds(3f);
+        //_phoneController.Called("힐다");
         //     yield return new WaitForSeconds(5f);
         // _phoneController.Fold(1); yield return new WaitForSeconds(3f);
         // _phoneController.Load(3); yield return new WaitForSeconds(3f);
@@ -108,6 +111,11 @@ public class StageManager : MonoBehaviour
         // // 플레이어가 트럭에 타면 트럭이 출발
         // _truckController.Done();
         yield return null;
+    }
+    public void NextScene(string sceneName)
+    {
+        _fadeController.FadeIn(0.0001f);
+        SceneManager.LoadScene(sceneName);
     }
 
     private void DisableObjects(UI sender, GameObject[] obj)

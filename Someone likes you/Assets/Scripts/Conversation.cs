@@ -11,14 +11,11 @@ using UnityEngine.UI;
 1. 이 스크립트를 가지는 게임 오브젝트를 만든다.
 2. 사용할 대화가 표시될 Canvas와 Main Camera를 붙인다.
 3. startConversation("대화가 있는 txt 파일의 경로")를 호출한다.
-
 대화 txt 파일 작성법
-
 대사를 말할 오브젝트명 대사
 즉
 오브젝트명'\t'대사
 예시) Assets\Resources\DialogueText\TextDT.txt
-
 주의!
 1. 오브젝트명이 대사 txt 파일에 없으면 오류남!
 2. UTF-8로 인코딩 할 것!
@@ -29,6 +26,11 @@ public class Conversation : MonoBehaviour
     public Canvas canvas;
 
     public Camera camera;
+    public string text;
+
+    private void Awake() {
+        startConversation(text);
+    }
 
     public void startConversation(string Path)
     {

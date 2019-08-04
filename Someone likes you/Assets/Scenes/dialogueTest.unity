@@ -557,9 +557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d49177f7dbff7248861f223e84a88f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testOBJ: {fileID: 2116840891}
   canvas: {fileID: 116552833}
   camera: {fileID: 1300796861}
+  text: Assets\Resources\DialogueText\Intro_Hilda.txt
 --- !u!4 &2071757625
 Transform:
   m_ObjectHideFlags: 0

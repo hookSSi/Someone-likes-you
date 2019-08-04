@@ -1,5 +1,0 @@
-﻿Player	This text is for testing purposes only.
-testA	이 문장은 테스트용입니다.
-testC	TESTTTTTT!!!!!!!!
-Player	테스트 테스트 테스트
-testA	이 문장은 테스트용입니다.2222

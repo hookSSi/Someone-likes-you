@@ -6,12 +6,13 @@ using TMPro;
 public class UITextScript : MonoBehaviour
 {
     public delegate void TextShowMode(TMP_Text textComponent);
-    private TMP_Text _textMesh;
+    public TMP_Text _textMesh;
     public bool _isRunning = false;
 
     public void Awake() 
     {
-        _textMesh = GetComponent<TMP_Text>();
+        if(_textMesh == null)
+            _textMesh = this.GetComponent<TMP_Text>();
     }
 
     public void ShowTextByPage(float waitRange = 0, TextShowMode mode = null)
@@ -24,6 +25,11 @@ public class UITextScript : MonoBehaviour
     public void RevealCharacters(TMP_Text textComponent)
     {
         StartCoroutine(Co_RevealCharacters(textComponent));
+    }
+    public void RevealCharacters(string text)
+    {
+        _textMesh.text = text;
+        RevealCharacters(_textMesh);
     }
     public void FadeinShow(float rangeTime)
     {

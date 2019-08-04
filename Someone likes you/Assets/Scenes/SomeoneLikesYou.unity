@@ -289,7 +289,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 36
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_textAlignment: 513
@@ -361,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7297c0dca0dc51943b6794d0d168c61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textMesh: {fileID: 0}
   _isRunning: 0
 --- !u!222 &395411852
 CanvasRenderer:
@@ -381,6 +382,7 @@ GameObject:
   - component: {fileID: 439166724}
   - component: {fileID: 439166723}
   - component: {fileID: 439166722}
+  - component: {fileID: 439166725}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -453,6 +455,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439166725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439166721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97eabc08b06a34498cbc3033243bc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1268160778
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7297c0dca0dc51943b6794d0d168c61f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textMesh: {fileID: 0}
   _isRunning: 0
 --- !u!1 &1414164290
 GameObject:
@@ -835,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -857,12 +872,12 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 439166723}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: -1
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
