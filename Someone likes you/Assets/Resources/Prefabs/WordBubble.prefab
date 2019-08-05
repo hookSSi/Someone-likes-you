@@ -142,7 +142,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\uC544\uB2C8 \uC774\uAC74 \uBCF4\uC774\uC9C0\uB3C4 \uC54A\uB0D0 \uC9C4\uC9DC
-    \uC5B4\uC774\uAC00 \uC5C6\uB124 "
+    \uC5B4\uC774\uAC00 \uC5C6\uB124"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89166fb4bc7411c468f5291b1bade678, type: 2}
   m_sharedMaterial: {fileID: -3137662804339988522, guid: 89166fb4bc7411c468f5291b1bade678,
@@ -212,9 +212,9 @@ MonoBehaviour:
   m_margin: {x: 6.7293024, y: 0, z: 7.520967, w: 0}
   m_textInfo:
     textComponent: {fileID: 6749130097692123706}
-    characterCount: 24
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 7
+    spaceCount: 6
     wordCount: 7
     linkCount: 0
     lineCount: 2

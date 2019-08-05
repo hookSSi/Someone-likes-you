@@ -23,13 +23,33 @@ using UnityEngine.UI;
 
 public class Conversation : MonoBehaviour
 {
+    private static Conversation instance;
+
     public Canvas canvas;
 
     public Camera camera;
+
+    /*
     public string text;
 
     private void Awake() {
         startConversation(text);
+    }
+    */
+
+    public static Conversation GetInstance() // 싱글톤 패턴
+    {
+        if (instance == null)
+        {
+            instance = GameObject.FindObjectOfType<Conversation>();
+            if (instance == null)
+            {
+
+                instance = new GameObject().AddComponent<Conversation>();
+                instance.gameObject.name = "ConversationManager";
+            }
+        }
+        return instance;
     }
 
     public void startConversation(string Path)
@@ -58,7 +78,9 @@ public class Conversation : MonoBehaviour
 
             GameObject temp = GameObject.Instantiate(Resources.Load("Prefabs/WordBubble") as GameObject, transform.position, Quaternion.identity);
 
-            temp.GetComponent<RectTransform>().SetParent(canvas.transform);
+            //temp.GetComponent<RectTransform>().SetParent(canvas.transform);
+
+            temp.transform.SetParent(canvas.transform);
 
             temp.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
