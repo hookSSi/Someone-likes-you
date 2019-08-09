@@ -1,0 +1,5 @@
+<map id="StageManager.NextScene" name="StageManager.NextScene">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$d3/dd7/class_fade_controller.html#a1548aeda608cc1dba1db3adaeff20430" title=" " alt="" coords="228,5,377,32"/>
+<area shape="rect" id="node3" href="$d3/dd7/class_fade_controller.html#ae01cc471bb439aa20b036ec93e6371b6" title=" " alt="" coords="425,5,591,32"/>
+</map>

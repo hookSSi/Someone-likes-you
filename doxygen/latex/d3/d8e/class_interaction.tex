@@ -1,0 +1,354 @@
+\hypertarget{class_interaction}{}\section{Interaction 클래스 참조}
+\label{class_interaction}\index{Interaction@{Interaction}}
+
+
+Interaction에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d1/d7f/class_interaction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Interaction에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d6/d06/class_interaction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Collider2D \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{obj\+Collider}} = new Collider2D\mbox{[}10\mbox{]}
+\item 
+Collider2D \mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{obj\+Nearest}} = null
+\item 
+Image \mbox{\hyperlink{class_interaction_ab757635fb5137d0da6ced4a50b1ef612}{indicator}}
+\item 
+Camera \mbox{\hyperlink{class_interaction_a7c2a3d3cca0528ce35017a3f6c5f7822}{camera}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_interaction_a01ca462a3b63fa7b3f58def0dcc5d8c9}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_interaction_a411a0868d034a972335ede1c42088c5e}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_interaction_a57f6e82265f1099e49b7429615ff593f}{check\+Nearest\+Object}} ()
+\item 
+void \mbox{\hyperlink{class_interaction_a99a346f8b614166a70976db9c7829d83}{Draw\+Interactable}} ()
+\item 
+void \mbox{\hyperlink{class_interaction_ac6a15155873618a49f8762db31645e9a}{On\+Trigger\+Enter2D}} (Collider2D other)
+\item 
+void \mbox{\hyperlink{class_interaction_ac372c750eadae87cb84a5505d92edc43}{On\+Trigger\+Exit2D}} (Collider2D other)
+\item 
+void \mbox{\hyperlink{class_interaction_a306fd6f3cfc49c1a74221277785579ba}{throw\+Stone}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_interaction_ab33e183d729a0910ff6dfe3271fff3b3}{distance\+Obj\+Nearest\+Sqr}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Interaction.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_interaction_a57f6e82265f1099e49b7429615ff593f}\label{class_interaction_a57f6e82265f1099e49b7429615ff593f}} 
+\index{Interaction@{Interaction}!checkNearestObject@{checkNearestObject}}
+\index{checkNearestObject@{checkNearestObject}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{checkNearestObject()}{checkNearestObject()}}
+{\footnotesize\ttfamily void Interaction.\+check\+Nearest\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 51 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{54         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}.Length; i++)}
+\DoxyCodeLine{55         \{}
+\DoxyCodeLine{56             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i] == \textcolor{keyword}{null})}
+\DoxyCodeLine{57                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{58             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{59             \{}
+\DoxyCodeLine{60                 \mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}} = \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i];}
+\DoxyCodeLine{61                 \mbox{\hyperlink{class_interaction_ab33e183d729a0910ff6dfe3271fff3b3}{distanceObjNearestSqr}} = ((Vector2)(\mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}}.transform.position - \textcolor{keyword}{this}.transform.position)).sqrMagnitude;}
+\DoxyCodeLine{62                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{63             \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65             \textcolor{keywordtype}{double} distanceObjSqr = ((Vector2)(\mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i].transform.position - \textcolor{keyword}{this}.transform.position)).sqrMagnitude;}
+\DoxyCodeLine{66             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_interaction_ab33e183d729a0910ff6dfe3271fff3b3}{distanceObjNearestSqr}} > distanceObjSqr)}
+\DoxyCodeLine{67             \{}
+\DoxyCodeLine{68                 \mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}} = \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i];}
+\DoxyCodeLine{69                 \mbox{\hyperlink{class_interaction_ab33e183d729a0910ff6dfe3271fff3b3}{distanceObjNearestSqr}} = distanceObjSqr;}
+\DoxyCodeLine{70             \}}
+\DoxyCodeLine{71         \}}
+\DoxyCodeLine{72     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d3/d8e/class_interaction_a57f6e82265f1099e49b7429615ff593f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interaction_a99a346f8b614166a70976db9c7829d83}\label{class_interaction_a99a346f8b614166a70976db9c7829d83}} 
+\index{Interaction@{Interaction}!DrawInteractable@{DrawInteractable}}
+\index{DrawInteractable@{DrawInteractable}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{DrawInteractable()}{DrawInteractable()}}
+{\footnotesize\ttfamily void Interaction.\+Draw\+Interactable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 74 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75     \{}
+\DoxyCodeLine{76         }
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{d3/d8e/class_interaction_a99a346f8b614166a70976db9c7829d83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interaction_ac6a15155873618a49f8762db31645e9a}\label{class_interaction_ac6a15155873618a49f8762db31645e9a}} 
+\index{Interaction@{Interaction}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Interaction.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 80 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81     \{}
+\DoxyCodeLine{82         \textcolor{keywordflow}{if} (other.tag == \textcolor{stringliteral}{"Interactable"})}
+\DoxyCodeLine{83         \{}
+\DoxyCodeLine{84             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}.Length; i++)}
+\DoxyCodeLine{85             \{}
+\DoxyCodeLine{86                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i] != \textcolor{keyword}{null})}
+\DoxyCodeLine{87                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{88                 \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i] = other;}
+\DoxyCodeLine{89                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91         \}}
+\DoxyCodeLine{92     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_interaction_ac372c750eadae87cb84a5505d92edc43}\label{class_interaction_ac372c750eadae87cb84a5505d92edc43}} 
+\index{Interaction@{Interaction}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Interaction.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 95 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         \textcolor{keywordflow}{if} (other.tag == \textcolor{stringliteral}{"Interactable"})}
+\DoxyCodeLine{98         \{}
+\DoxyCodeLine{99             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}.Length; i++)}
+\DoxyCodeLine{100             \{}
+\DoxyCodeLine{101                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i] != other)}
+\DoxyCodeLine{102                     \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{103                 \mbox{\hyperlink{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}{objCollider}}[i] = \textcolor{keyword}{null};}
+\DoxyCodeLine{104                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{105             \}}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_interaction_a01ca462a3b63fa7b3f58def0dcc5d8c9}\label{class_interaction_a01ca462a3b63fa7b3f58def0dcc5d8c9}} 
+\index{Interaction@{Interaction}!Start@{Start}}
+\index{Start@{Start}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Interaction.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 19 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{comment}{//Debug.Log("테스트");}}
+\DoxyCodeLine{24     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_interaction_a306fd6f3cfc49c1a74221277785579ba}\label{class_interaction_a306fd6f3cfc49c1a74221277785579ba}} 
+\index{Interaction@{Interaction}!throwStone@{throwStone}}
+\index{throwStone@{throwStone}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{throwStone()}{throwStone()}}
+{\footnotesize\ttfamily void Interaction.\+throw\+Stone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 111 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112     \{}
+\DoxyCodeLine{113         \mbox{\hyperlink{class_item}{Item}} stoneItem = \mbox{\hyperlink{class_item_database}{ItemDatabase}}.\mbox{\hyperlink{class_item_database_a5312023347462b5af9c545c42934d26b}{GetInstance}}().\mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}}.Find(x => x.itemName.Equals(\textcolor{stringliteral}{"돌"}));}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115         \textcolor{keywordflow}{if} (stoneItem == \textcolor{keyword}{null})}
+\DoxyCodeLine{116         \{}
+\DoxyCodeLine{117             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{118         \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120         \mbox{\hyperlink{class_item_database}{ItemDatabase}}.\mbox{\hyperlink{class_item_database_a5312023347462b5af9c545c42934d26b}{GetInstance}}().\mbox{\hyperlink{class_item_database_a86349d3b40c7195b530638ffd0d5d958}{RemoveItem}}(\textcolor{stringliteral}{"돌"}) ;}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122         Debug.Log(\textcolor{stringliteral}{"돌 던짐"});}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124         Vector3 mousePos = \mbox{\hyperlink{class_interaction_a7c2a3d3cca0528ce35017a3f6c5f7822}{camera}}.GetComponent<Camera>().ScreenToWorldPoint(\textcolor{keyword}{new} Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126         mousePos.z = 0;}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128         GameObject temp = GameObject.Instantiate(Resources.Load(\textcolor{stringliteral}{"Prefabs/Stone"}) as GameObject, transform.position, Quaternion.identity);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130         Vector3 dir = mousePos - transform.position;}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132         dir.z = 0;}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134         temp.GetComponent<Rigidbody2D>().AddForce(dir * 200);}
+\DoxyCodeLine{135     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d8e/class_interaction_a306fd6f3cfc49c1a74221277785579ba_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{d3/d8e/class_interaction_a306fd6f3cfc49c1a74221277785579ba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_interaction_a411a0868d034a972335ede1c42088c5e}\label{class_interaction_a411a0868d034a972335ede1c42088c5e}} 
+\index{Interaction@{Interaction}!Update@{Update}}
+\index{Update@{Update}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Interaction.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 25 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_interaction_a57f6e82265f1099e49b7429615ff593f}{checkNearestObject}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{comment}{// objNearest.gameObject에 Shader 적용(방법을 모르겠음)}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \mbox{\hyperlink{class_interaction_a99a346f8b614166a70976db9c7829d83}{DrawInteractable}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} (Input.GetButtonDown(\textcolor{stringliteral}{"Interact"}))}
+\DoxyCodeLine{34         \{}
+\DoxyCodeLine{35             \textcolor{comment}{//checkNearestObject();}}
+\DoxyCodeLine{36             \textcolor{comment}{// 가장 가까운 상호작용 오브젝트와 상호작용}}
+\DoxyCodeLine{37             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}} != \textcolor{keyword}{null})}
+\DoxyCodeLine{38             \{}
+\DoxyCodeLine{39                 \mbox{\hyperlink{interface_i_interactable}{IInteractable}} objInteractable = \mbox{\hyperlink{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}{objNearest}}.GetComponent<\mbox{\hyperlink{interface_i_interactable}{IInteractable}}>();}
+\DoxyCodeLine{40                 objInteractable.\mbox{\hyperlink{interface_i_interactable_a6e8c9bc1f27bc2a5c81f674ceeac024c}{Interact}}();}
+\DoxyCodeLine{41             \}}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \textcolor{keywordflow}{if} (Input.GetButtonDown(\textcolor{stringliteral}{"Fire2"}))}
+\DoxyCodeLine{45         \{}
+\DoxyCodeLine{46             \mbox{\hyperlink{class_interaction_a306fd6f3cfc49c1a74221277785579ba}{throwStone}}();}
+\DoxyCodeLine{47         \}}
+\DoxyCodeLine{48     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d8e/class_interaction_a411a0868d034a972335ede1c42088c5e_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_interaction_a7c2a3d3cca0528ce35017a3f6c5f7822}\label{class_interaction_a7c2a3d3cca0528ce35017a3f6c5f7822}} 
+\index{Interaction@{Interaction}!camera@{camera}}
+\index{camera@{camera}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily Camera Interaction.\+camera}
+
+
+
+Interaction.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_interaction_ab33e183d729a0910ff6dfe3271fff3b3}\label{class_interaction_ab33e183d729a0910ff6dfe3271fff3b3}} 
+\index{Interaction@{Interaction}!distanceObjNearestSqr@{distanceObjNearestSqr}}
+\index{distanceObjNearestSqr@{distanceObjNearestSqr}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{distanceObjNearestSqr}{distanceObjNearestSqr}}
+{\footnotesize\ttfamily double Interaction.\+distance\+Obj\+Nearest\+Sqr = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interaction.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_interaction_ab757635fb5137d0da6ced4a50b1ef612}\label{class_interaction_ab757635fb5137d0da6ced4a50b1ef612}} 
+\index{Interaction@{Interaction}!indicator@{indicator}}
+\index{indicator@{indicator}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{indicator}{indicator}}
+{\footnotesize\ttfamily Image Interaction.\+indicator}
+
+
+
+Interaction.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}\label{class_interaction_a90d58795726d44ab3a4ba263d4bb232f}} 
+\index{Interaction@{Interaction}!objCollider@{objCollider}}
+\index{objCollider@{objCollider}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{objCollider}{objCollider}}
+{\footnotesize\ttfamily Collider2D \mbox{[}$\,$\mbox{]} Interaction.\+obj\+Collider = new Collider2D\mbox{[}10\mbox{]}}
+
+
+
+Interaction.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}\label{class_interaction_ae88d3a10f82937f62190d9a68e3e4fee}} 
+\index{Interaction@{Interaction}!objNearest@{objNearest}}
+\index{objNearest@{objNearest}!Interaction@{Interaction}}
+\subsubsection{\texorpdfstring{objNearest}{objNearest}}
+{\footnotesize\ttfamily Collider2D Interaction.\+obj\+Nearest = null}
+
+
+
+Interaction.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_interaction_8cs}{Interaction.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,336 @@
+\hypertarget{class_phone_controller}{}\section{Phone\+Controller 클래스 참조}
+\label{class_phone_controller}\index{PhoneController@{PhoneController}}
+
+
+Phone\+Controller에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d0/d64/class_phone_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Phone\+Controller에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{d2/dea/class_phone_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_phone_controller_ac71638a18a3f825bc2acc6d06a0b6d96}{Called}} (string sender)
+\item 
+void \mbox{\hyperlink{class_phone_controller_ac7b30cfeb29ad0f4a1b5602105c10a73}{Messaged}} (string sender, string text)
+\item 
+void \mbox{\hyperlink{class_phone_controller_a4ed186c0bf78d2a95be61cef1dae7553}{Fold}} (float range)
+\item 
+void \mbox{\hyperlink{class_phone_controller_ad37fb645609c73334c2992d0bb8909c2}{Load}} (float range)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_phone_controller_ad9d36449378663ab0cd0eff387064549}{\+\_\+load\+Distance}}
+\item 
+float \mbox{\hyperlink{class_phone_controller_ab5c361d8cd617d9f2c8042895e78f994}{\+\_\+fold\+Distance}}
+\item 
+Game\+Object \mbox{\hyperlink{class_phone_controller_a8811f718e73a667a613b36eb5c9adeb4}{\+\_\+message\+UI}}
+\item 
+T\+M\+P\+\_\+\+Text \mbox{\hyperlink{class_phone_controller_a0ed3e219aab6580a863eecf02d7b1445}{\+\_\+message\+Text}}
+\item 
+T\+M\+P\+\_\+\+Text \mbox{\hyperlink{class_phone_controller_a23a70ce5943f407c7127900c4adf8948}{\+\_\+message\+Sender}}
+\item 
+Game\+Object \mbox{\hyperlink{class_phone_controller_a9d65dc970e4d83bc27fd134876cdb89e}{\+\_\+call\+UI}}
+\item 
+T\+M\+P\+\_\+\+Text \mbox{\hyperlink{class_phone_controller_a6b16e54feee37a4f2b10e80aeb987cfb}{\+\_\+call\+Sender}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_phone_controller_afbe67357f6ee7c8cd0d7cb7465cc8673}{Awake}} ()
+\item 
+I\+Enumerator \mbox{\hyperlink{class_phone_controller_a70b2b14d4c9dd2b09f1a91a6229d5ade}{Co\+\_\+\+Reveal\+Characters}} (T\+M\+P\+\_\+\+Text text\+Component)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_phone_controller_ac77b92e249c4d33f97abb1d98fab21b3}{\+\_\+t}} = 0
+\item 
+\mbox{\hyperlink{class_movement}{Movement}} \mbox{\hyperlink{class_phone_controller_a84eaea2042a921af0db16b3f1ea5229c}{\+\_\+movement}}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Phone\+Controller.\+cs 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_phone_controller_afbe67357f6ee7c8cd0d7cb7465cc8673}\label{class_phone_controller_afbe67357f6ee7c8cd0d7cb7465cc8673}} 
+\index{PhoneController@{PhoneController}!Awake@{Awake}}
+\index{Awake@{Awake}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Phone\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Phone\+Controller.\+cs 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_phone_controller_a84eaea2042a921af0db16b3f1ea5229c}{\_movement}} = this.gameObject.AddComponent<\mbox{\hyperlink{class_movement}{Movement}}>();}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_phone_controller_a0ed3e219aab6580a863eecf02d7b1445}{\_messageText}}.maxVisibleCharacters = 0;}
+\DoxyCodeLine{24     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phone_controller_ac71638a18a3f825bc2acc6d06a0b6d96}\label{class_phone_controller_ac71638a18a3f825bc2acc6d06a0b6d96}} 
+\index{PhoneController@{PhoneController}!Called@{Called}}
+\index{Called@{Called}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{Called()}{Called()}}
+{\footnotesize\ttfamily void Phone\+Controller.\+Called (\begin{DoxyParamCaption}\item[{string}]{sender }\end{DoxyParamCaption})}
+
+
+
+Phone\+Controller.\+cs 파일의 25 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         Debug.Log(\textcolor{stringliteral}{"전화 옴"});}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_phone_controller_a6b16e54feee37a4f2b10e80aeb987cfb}{\_callSender}}.text = sender;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \mbox{\hyperlink{class_phone_controller_a9d65dc970e4d83bc27fd134876cdb89e}{\_callUI}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_phone_controller_a8811f718e73a667a613b36eb5c9adeb4}{\_messageUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_phone_controller_a70b2b14d4c9dd2b09f1a91a6229d5ade}\label{class_phone_controller_a70b2b14d4c9dd2b09f1a91a6229d5ade}} 
+\index{PhoneController@{PhoneController}!Co\_RevealCharacters@{Co\_RevealCharacters}}
+\index{Co\_RevealCharacters@{Co\_RevealCharacters}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{Co\_RevealCharacters()}{Co\_RevealCharacters()}}
+{\footnotesize\ttfamily I\+Enumerator Phone\+Controller.\+Co\+\_\+\+Reveal\+Characters (\begin{DoxyParamCaption}\item[{T\+M\+P\+\_\+\+Text}]{text\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Phone\+Controller.\+cs 파일의 59 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         textComponent.ForceMeshUpdate();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         TMP\_TextInfo textInfo = textComponent.textInfo;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{keywordtype}{int} totalVisibleCharacters = textInfo.characterCount; \textcolor{comment}{// Get \# of Visible Character in text object}}
+\DoxyCodeLine{66         \textcolor{keywordtype}{int} visibleCount = 0;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70             \textcolor{keywordflow}{if} (visibleCount > totalVisibleCharacters)}
+\DoxyCodeLine{71             \{}
+\DoxyCodeLine{72                 yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73             \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75             textComponent.maxVisibleCharacters = visibleCount; \textcolor{comment}{// How many characters should TextMeshPro display?}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77             visibleCount += 1;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dfb/class_phone_controller_a70b2b14d4c9dd2b09f1a91a6229d5ade_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_phone_controller_a4ed186c0bf78d2a95be61cef1dae7553}\label{class_phone_controller_a4ed186c0bf78d2a95be61cef1dae7553}} 
+\index{PhoneController@{PhoneController}!Fold@{Fold}}
+\index{Fold@{Fold}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{Fold()}{Fold()}}
+{\footnotesize\ttfamily void Phone\+Controller.\+Fold (\begin{DoxyParamCaption}\item[{float}]{range }\end{DoxyParamCaption})}
+
+
+
+Phone\+Controller.\+cs 파일의 44 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_phone_controller_a8811f718e73a667a613b36eb5c9adeb4}{\_messageUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{47         \mbox{\hyperlink{class_phone_controller_a9d65dc970e4d83bc27fd134876cdb89e}{\_callUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         Debug.Log(\textcolor{stringliteral}{"휴대폰 닫기"});}
+\DoxyCodeLine{50         \mbox{\hyperlink{class_phone_controller_a84eaea2042a921af0db16b3f1ea5229c}{\_movement}}.\mbox{\hyperlink{class_movement_a2984f510496fd8a5df663ad68e0fab17}{MoveVertical}}(this.gameObject, \mbox{\hyperlink{class_phone_controller_ab5c361d8cd617d9f2c8042895e78f994}{\_foldDistance}}, range);}
+\DoxyCodeLine{51     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dfb/class_phone_controller_a4ed186c0bf78d2a95be61cef1dae7553_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_phone_controller_ad37fb645609c73334c2992d0bb8909c2}\label{class_phone_controller_ad37fb645609c73334c2992d0bb8909c2}} 
+\index{PhoneController@{PhoneController}!Load@{Load}}
+\index{Load@{Load}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Phone\+Controller.\+Load (\begin{DoxyParamCaption}\item[{float}]{range }\end{DoxyParamCaption})}
+
+
+
+Phone\+Controller.\+cs 파일의 53 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         Debug.Log(\textcolor{stringliteral}{"휴대폰 열기"});}
+\DoxyCodeLine{56         \mbox{\hyperlink{class_phone_controller_a84eaea2042a921af0db16b3f1ea5229c}{\_movement}}.\mbox{\hyperlink{class_movement_a2984f510496fd8a5df663ad68e0fab17}{MoveVertical}}(this.gameObject, \mbox{\hyperlink{class_phone_controller_ad9d36449378663ab0cd0eff387064549}{\_loadDistance}}, range);}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dfb/class_phone_controller_ad37fb645609c73334c2992d0bb8909c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_phone_controller_ac7b30cfeb29ad0f4a1b5602105c10a73}\label{class_phone_controller_ac7b30cfeb29ad0f4a1b5602105c10a73}} 
+\index{PhoneController@{PhoneController}!Messaged@{Messaged}}
+\index{Messaged@{Messaged}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{Messaged()}{Messaged()}}
+{\footnotesize\ttfamily void Phone\+Controller.\+Messaged (\begin{DoxyParamCaption}\item[{string}]{sender,  }\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+Phone\+Controller.\+cs 파일의 33 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         Debug.Log(\textcolor{stringliteral}{"메시지 옴"});}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_phone_controller_a0ed3e219aab6580a863eecf02d7b1445}{\_messageText}}.text = text;}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_phone_controller_a23a70ce5943f407c7127900c4adf8948}{\_messageSender}}.text = sender;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \mbox{\hyperlink{class_phone_controller_a8811f718e73a667a613b36eb5c9adeb4}{\_messageUI}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_phone_controller_a9d65dc970e4d83bc27fd134876cdb89e}{\_callUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         StartCoroutine(\mbox{\hyperlink{class_phone_controller_a70b2b14d4c9dd2b09f1a91a6229d5ade}{Co\_RevealCharacters}}(\mbox{\hyperlink{class_phone_controller_a0ed3e219aab6580a863eecf02d7b1445}{\_messageText}}));}
+\DoxyCodeLine{43     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dfb/class_phone_controller_ac7b30cfeb29ad0f4a1b5602105c10a73_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_phone_controller_a6b16e54feee37a4f2b10e80aeb987cfb}\label{class_phone_controller_a6b16e54feee37a4f2b10e80aeb987cfb}} 
+\index{PhoneController@{PhoneController}!\_callSender@{\_callSender}}
+\index{\_callSender@{\_callSender}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_callSender}{\_callSender}}
+{\footnotesize\ttfamily T\+M\+P\+\_\+\+Text Phone\+Controller.\+\_\+call\+Sender}
+
+
+
+Phone\+Controller.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_a9d65dc970e4d83bc27fd134876cdb89e}\label{class_phone_controller_a9d65dc970e4d83bc27fd134876cdb89e}} 
+\index{PhoneController@{PhoneController}!\_callUI@{\_callUI}}
+\index{\_callUI@{\_callUI}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_callUI}{\_callUI}}
+{\footnotesize\ttfamily Game\+Object Phone\+Controller.\+\_\+call\+UI}
+
+
+
+Phone\+Controller.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_ab5c361d8cd617d9f2c8042895e78f994}\label{class_phone_controller_ab5c361d8cd617d9f2c8042895e78f994}} 
+\index{PhoneController@{PhoneController}!\_foldDistance@{\_foldDistance}}
+\index{\_foldDistance@{\_foldDistance}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_foldDistance}{\_foldDistance}}
+{\footnotesize\ttfamily float Phone\+Controller.\+\_\+fold\+Distance}
+
+
+
+Phone\+Controller.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_ad9d36449378663ab0cd0eff387064549}\label{class_phone_controller_ad9d36449378663ab0cd0eff387064549}} 
+\index{PhoneController@{PhoneController}!\_loadDistance@{\_loadDistance}}
+\index{\_loadDistance@{\_loadDistance}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_loadDistance}{\_loadDistance}}
+{\footnotesize\ttfamily float Phone\+Controller.\+\_\+load\+Distance}
+
+
+
+Phone\+Controller.\+cs 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_a23a70ce5943f407c7127900c4adf8948}\label{class_phone_controller_a23a70ce5943f407c7127900c4adf8948}} 
+\index{PhoneController@{PhoneController}!\_messageSender@{\_messageSender}}
+\index{\_messageSender@{\_messageSender}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_messageSender}{\_messageSender}}
+{\footnotesize\ttfamily T\+M\+P\+\_\+\+Text Phone\+Controller.\+\_\+message\+Sender}
+
+
+
+Phone\+Controller.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_a0ed3e219aab6580a863eecf02d7b1445}\label{class_phone_controller_a0ed3e219aab6580a863eecf02d7b1445}} 
+\index{PhoneController@{PhoneController}!\_messageText@{\_messageText}}
+\index{\_messageText@{\_messageText}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_messageText}{\_messageText}}
+{\footnotesize\ttfamily T\+M\+P\+\_\+\+Text Phone\+Controller.\+\_\+message\+Text}
+
+
+
+Phone\+Controller.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_a8811f718e73a667a613b36eb5c9adeb4}\label{class_phone_controller_a8811f718e73a667a613b36eb5c9adeb4}} 
+\index{PhoneController@{PhoneController}!\_messageUI@{\_messageUI}}
+\index{\_messageUI@{\_messageUI}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_messageUI}{\_messageUI}}
+{\footnotesize\ttfamily Game\+Object Phone\+Controller.\+\_\+message\+UI}
+
+
+
+Phone\+Controller.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_a84eaea2042a921af0db16b3f1ea5229c}\label{class_phone_controller_a84eaea2042a921af0db16b3f1ea5229c}} 
+\index{PhoneController@{PhoneController}!\_movement@{\_movement}}
+\index{\_movement@{\_movement}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_movement}{\_movement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_movement}{Movement}} Phone\+Controller.\+\_\+movement\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Phone\+Controller.\+cs 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_phone_controller_ac77b92e249c4d33f97abb1d98fab21b3}\label{class_phone_controller_ac77b92e249c4d33f97abb1d98fab21b3}} 
+\index{PhoneController@{PhoneController}!\_t@{\_t}}
+\index{\_t@{\_t}!PhoneController@{PhoneController}}
+\subsubsection{\texorpdfstring{\_t}{\_t}}
+{\footnotesize\ttfamily float Phone\+Controller.\+\_\+t = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Phone\+Controller.\+cs 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+U\+I\&\+Scene/\mbox{\hyperlink{_phone_controller_8cs}{Phone\+Controller.\+cs}}\end{DoxyCompactItemize}

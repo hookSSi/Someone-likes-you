@@ -1,0 +1,5 @@
+<map id="PlayerMovement.OnCollisionStay2D" name="PlayerMovement.OnCollisionStay2D">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a6ff1fb59f41c43876325fe8eee66a2cc" title=" " alt="" coords="241,13,396,39"/>
+<area shape="rect" id="node3" href="$d0/d3d/class_player_movement.html#addc5f78eff185c73ab0a77cc04f13bd9" title=" " alt="" coords="444,13,597,39"/>
+</map>

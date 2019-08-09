@@ -1,0 +1,12 @@
+<map id="StageManager.Intro" name="StageManager.Intro">
+<area shape="rect" id="node1" title=" " alt="" coords="5,165,140,192"/>
+<area shape="rect" id="node2" href="$d3/dd7/class_fade_controller.html#a1548aeda608cc1dba1db3adaeff20430" title=" " alt="" coords="455,199,604,225"/>
+<area shape="rect" id="node4" href="$d3/dd7/class_fade_controller.html#a0f5a8752a7f7cefa8e81b845b21b3f4a" title=" " alt="" coords="211,5,371,32"/>
+<area shape="rect" id="node6" href="$d6/d14/class_tutorial_manager.html#ad25e4771d3c09099d066991bca8c1203" title=" " alt="" coords="217,107,365,133"/>
+<area shape="rect" id="node7" href="$d6/d14/class_tutorial_manager.html#ab5c041496c132c994a47cb144cae521d" title=" " alt="" coords="201,158,381,199"/>
+<area shape="rect" id="node8" href="$d6/d14/class_tutorial_manager.html#a852b4a32183004ef9513d7e43b99c247" title=" " alt="" coords="205,223,376,265"/>
+<area shape="rect" id="node9" href="$d6/d14/class_tutorial_manager.html#a11eddc71a4c6be52e2e52bbe0357afe4" title=" " alt="" coords="188,289,393,316"/>
+<area shape="rect" id="node10" href="$da/de4/class_stage_manager.html#a10d59cedf36dae5138eb9622088fa3dc" title=" " alt="" coords="203,340,378,367"/>
+<area shape="rect" id="node3" href="$d3/dd7/class_fade_controller.html#ae01cc471bb439aa20b036ec93e6371b6" title=" " alt="" coords="665,199,831,225"/>
+<area shape="rect" id="node5" href="$d3/dd7/class_fade_controller.html#acb1828a03e8bb69d90e1b2db32135882" title=" " alt="" coords="441,5,617,32"/>
+</map>

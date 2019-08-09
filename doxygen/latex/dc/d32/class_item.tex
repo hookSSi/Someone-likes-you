@@ -1,0 +1,171 @@
+\hypertarget{class_item}{}\section{Item 클래스 참조}
+\label{class_item}\index{Item@{Item}}
+
+
+Item에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{d2/d8b/class_item__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item\+Type}} \{ \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a897356954c2cd3d41b221e3f24f99bba}{Item\+Type.\+Key}}, 
+\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a56fed3bd1057fee3027e20901d42f19e}{Item\+Type.\+Consumable}}, 
+\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a0a38e7286ebbb560354992b3ce62be67}{Item\+Type.\+Food}}, 
+\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a7fe00998fa483a8ddbf6ed3fc10b9939}{Item\+Type.\+Story\+Item}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_item_af80ecbe70d40d1fe662e9e2d507b68b3}{Item}} (string \mbox{\hyperlink{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}{item\+Name}}, string \mbox{\hyperlink{class_item_a1e47deb8739893cbfa26460cf4be4f00}{item\+Description}}, int \mbox{\hyperlink{class_item_abc2de92b7661dbc05ff5b7d445cae487}{gain\+Hungry}}, \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item\+Type}} \mbox{\hyperlink{class_item_adbecc774c576b08f57f32655acf7363d}{item\+Type}}, Sprite \mbox{\hyperlink{class_item_aa189431b0e859890a3b9118da64cc484}{item\+Image}})
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}{item\+Name}}
+\item 
+string \mbox{\hyperlink{class_item_a1e47deb8739893cbfa26460cf4be4f00}{item\+Description}}
+\item 
+int \mbox{\hyperlink{class_item_abc2de92b7661dbc05ff5b7d445cae487}{gain\+Hungry}}
+\item 
+\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item\+Type}} \mbox{\hyperlink{class_item_adbecc774c576b08f57f32655acf7363d}{item\+Type}}
+\item 
+Sprite \mbox{\hyperlink{class_item_aa189431b0e859890a3b9118da64cc484}{item\+Image}}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Item.\+cs 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 열거형 문서화}
+\mbox{\Hypertarget{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}\label{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}} 
+\index{Item@{Item}!ItemType@{ItemType}}
+\index{ItemType@{ItemType}!Item@{Item}}
+\subsubsection{\texorpdfstring{ItemType}{ItemType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item.\+Item\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key@{Key}!Item@{Item}}\index{Item@{Item}!Key@{Key}}}\mbox{\Hypertarget{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a897356954c2cd3d41b221e3f24f99bba}\label{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a897356954c2cd3d41b221e3f24f99bba}} 
+Key&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Consumable@{Consumable}!Item@{Item}}\index{Item@{Item}!Consumable@{Consumable}}}\mbox{\Hypertarget{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a56fed3bd1057fee3027e20901d42f19e}\label{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a56fed3bd1057fee3027e20901d42f19e}} 
+Consumable&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Food@{Food}!Item@{Item}}\index{Item@{Item}!Food@{Food}}}\mbox{\Hypertarget{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a0a38e7286ebbb560354992b3ce62be67}\label{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a0a38e7286ebbb560354992b3ce62be67}} 
+Food&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StoryItem@{StoryItem}!Item@{Item}}\index{Item@{Item}!StoryItem@{StoryItem}}}\mbox{\Hypertarget{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a7fe00998fa483a8ddbf6ed3fc10b9939}\label{class_item_ab5eeb575e9d66ebcfef9b58b667fad05a7fe00998fa483a8ddbf6ed3fc10b9939}} 
+Story\+Item&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Item.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         Key,}
+\DoxyCodeLine{18         Consumable,}
+\DoxyCodeLine{19         Food,}
+\DoxyCodeLine{20         StoryItem}
+\DoxyCodeLine{21     \}}
+
+\end{DoxyCode}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_item_af80ecbe70d40d1fe662e9e2d507b68b3}\label{class_item_af80ecbe70d40d1fe662e9e2d507b68b3}} 
+\index{Item@{Item}!Item@{Item}}
+\index{Item@{Item}!Item@{Item}}
+\subsubsection{\texorpdfstring{Item()}{Item()}}
+{\footnotesize\ttfamily Item.\+Item (\begin{DoxyParamCaption}\item[{string}]{item\+Name,  }\item[{string}]{item\+Description,  }\item[{int}]{gain\+Hungry,  }\item[{\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item\+Type}}}]{item\+Type,  }\item[{Sprite}]{item\+Image }\end{DoxyParamCaption})}
+
+
+
+Item.\+cs 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         this.\mbox{\hyperlink{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}{itemName}} = \mbox{\hyperlink{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}{itemName}};}
+\DoxyCodeLine{27         this.\mbox{\hyperlink{class_item_a1e47deb8739893cbfa26460cf4be4f00}{itemDescription}} = \mbox{\hyperlink{class_item_a1e47deb8739893cbfa26460cf4be4f00}{itemDescription}};}
+\DoxyCodeLine{28         this.\mbox{\hyperlink{class_item_abc2de92b7661dbc05ff5b7d445cae487}{gainHungry}} = 0;}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_item_adbecc774c576b08f57f32655acf7363d}{itemType}} == \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{ItemType}}.Food) \textcolor{comment}{// 음식 타입이 아닐 경우 gainHungry는 0으로 설정함.}}
+\DoxyCodeLine{30             this.\mbox{\hyperlink{class_item_abc2de92b7661dbc05ff5b7d445cae487}{gainHungry}} = \mbox{\hyperlink{class_item_abc2de92b7661dbc05ff5b7d445cae487}{gainHungry}};}
+\DoxyCodeLine{31         this.\mbox{\hyperlink{class_item_adbecc774c576b08f57f32655acf7363d}{itemType}} = \mbox{\hyperlink{class_item_adbecc774c576b08f57f32655acf7363d}{itemType}};}
+\DoxyCodeLine{32         this.\mbox{\hyperlink{class_item_aa189431b0e859890a3b9118da64cc484}{itemImage}} = \mbox{\hyperlink{class_item_aa189431b0e859890a3b9118da64cc484}{itemImage}};}
+\DoxyCodeLine{33     \}}
+
+\end{DoxyCode}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_item_abc2de92b7661dbc05ff5b7d445cae487}\label{class_item_abc2de92b7661dbc05ff5b7d445cae487}} 
+\index{Item@{Item}!gainHungry@{gainHungry}}
+\index{gainHungry@{gainHungry}!Item@{Item}}
+\subsubsection{\texorpdfstring{gainHungry}{gainHungry}}
+{\footnotesize\ttfamily int Item.\+gain\+Hungry}
+
+
+
+Item.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_a1e47deb8739893cbfa26460cf4be4f00}\label{class_item_a1e47deb8739893cbfa26460cf4be4f00}} 
+\index{Item@{Item}!itemDescription@{itemDescription}}
+\index{itemDescription@{itemDescription}!Item@{Item}}
+\subsubsection{\texorpdfstring{itemDescription}{itemDescription}}
+{\footnotesize\ttfamily string Item.\+item\+Description}
+
+
+
+Item.\+cs 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_aa189431b0e859890a3b9118da64cc484}\label{class_item_aa189431b0e859890a3b9118da64cc484}} 
+\index{Item@{Item}!itemImage@{itemImage}}
+\index{itemImage@{itemImage}!Item@{Item}}
+\subsubsection{\texorpdfstring{itemImage}{itemImage}}
+{\footnotesize\ttfamily Sprite Item.\+item\+Image}
+
+
+
+Item.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}\label{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}} 
+\index{Item@{Item}!itemName@{itemName}}
+\index{itemName@{itemName}!Item@{Item}}
+\subsubsection{\texorpdfstring{itemName}{itemName}}
+{\footnotesize\ttfamily string Item.\+item\+Name}
+
+
+
+Item.\+cs 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_adbecc774c576b08f57f32655acf7363d}\label{class_item_adbecc774c576b08f57f32655acf7363d}} 
+\index{Item@{Item}!itemType@{itemType}}
+\index{itemType@{itemType}!Item@{Item}}
+\subsubsection{\texorpdfstring{itemType}{itemType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item\+Type}} Item.\+item\+Type}
+
+
+
+Item.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_item_8cs}{Item.\+cs}}\end{DoxyCompactItemize}

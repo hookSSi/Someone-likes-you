@@ -1,0 +1,283 @@
+\hypertarget{class_conversation}{}\section{Conversation 클래스 참조}
+\label{class_conversation}\index{Conversation@{Conversation}}
+
+
+Conversation에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{dc/d8a/class_conversation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Conversation에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{d8/d54/class_conversation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_conversation_a3822a8973deb8b3bcf00bbca652f5989}{start\+Conversation}} (string Path)
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_conversation}{Conversation}} \mbox{\hyperlink{class_conversation_abdff2391f9a6c8a1ec35a0dc074fb48d}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Canvas \mbox{\hyperlink{class_conversation_ae4e6edf2f8277a7d878de37494e4f9ab}{canvas}}
+\item 
+Camera \mbox{\hyperlink{class_conversation_a922d9a7686e8ffebe30a93e32bffc197}{camera}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_conversation_aaf0ecb8e30c248e7f8bf29cc7fe14678}{world\+To\+Canvas}} (Vector3 input)
+\item 
+I\+Enumerator \mbox{\hyperlink{class_conversation_a11eb2e1944c3a857ac1447288d89fc39}{conversation}} (List$<$ \mbox{\hyperlink{classcharacter__line}{character\+\_\+line}} $>$ lines)
+\item 
+List$<$ \mbox{\hyperlink{classcharacter__line}{character\+\_\+line}} $>$ \mbox{\hyperlink{class_conversation_a628e4549b4d58692992c6d9026699c5f}{load\+Conversation}} (string path)
+\end{DoxyCompactItemize}
+\subsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_conversation}{Conversation}} \mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Conversation.\+cs 파일의 24 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_conversation_a11eb2e1944c3a857ac1447288d89fc39}\label{class_conversation_a11eb2e1944c3a857ac1447288d89fc39}} 
+\index{Conversation@{Conversation}!conversation@{conversation}}
+\index{conversation@{conversation}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{conversation()}{conversation()}}
+{\footnotesize\ttfamily I\+Enumerator Conversation.\+conversation (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcharacter__line}{character\+\_\+line}} $>$}]{lines }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conversation.\+cs 파일의 73 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74     \{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{classcharacter__line}{character\_line}} i \textcolor{keywordflow}{in} lines)}
+\DoxyCodeLine{76         \{}
+\DoxyCodeLine{77             Vector2 canvasPos = \mbox{\hyperlink{class_conversation_aaf0ecb8e30c248e7f8bf29cc7fe14678}{worldToCanvas}}(i.\mbox{\hyperlink{classcharacter__line_a4a1026262ac1e5c5eb266c1bc1432d2c}{character}}.transform.position);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79             GameObject temp = GameObject.Instantiate(Resources.Load(\textcolor{stringliteral}{"Prefabs/WordBubble"}) as GameObject, transform.position, Quaternion.identity);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81             \textcolor{comment}{//temp.GetComponent<RectTransform>().SetParent(canvas.transform);}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83             temp.transform.SetParent(\mbox{\hyperlink{class_conversation_ae4e6edf2f8277a7d878de37494e4f9ab}{canvas}}.transform);}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85             temp.GetComponent<RectTransform>().localScale = \textcolor{keyword}{new} Vector3(1, 1, 1);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87             temp.GetComponent<RectTransform>().anchoredPosition = canvasPos;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             temp.transform.localPosition = \textcolor{keyword}{new} Vector3(canvasPos.x, canvasPos.y + 120, 0);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91             yield \textcolor{keywordflow}{return} StartCoroutine(temp.GetComponent<\mbox{\hyperlink{class_dialogue}{Dialogue}}>().\mbox{\hyperlink{class_dialogue_af18f0f9a1ab343d1c870f63e05b765a6}{dialogue}}(i.\mbox{\hyperlink{classcharacter__line_a088bbc85d8d168464f1e76262690413b}{line}}));}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93             Destroy(temp);}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96         yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{97     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d94/class_conversation_a11eb2e1944c3a857ac1447288d89fc39_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d94/class_conversation_a11eb2e1944c3a857ac1447288d89fc39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_conversation_abdff2391f9a6c8a1ec35a0dc074fb48d}\label{class_conversation_abdff2391f9a6c8a1ec35a0dc074fb48d}} 
+\index{Conversation@{Conversation}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_conversation}{Conversation}} Conversation.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Conversation.\+cs 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{43         \{}
+\DoxyCodeLine{44             \mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}} = GameObject.FindObjectOfType<\mbox{\hyperlink{class_conversation}{Conversation}}>();}
+\DoxyCodeLine{45             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{46             \{}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48                 \mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}} = \textcolor{keyword}{new} GameObject().AddComponent<\mbox{\hyperlink{class_conversation}{Conversation}}>();}
+\DoxyCodeLine{49                 \mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}}.gameObject.name = \textcolor{stringliteral}{"ConversationManager"};}
+\DoxyCodeLine{50             \}}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_conversation_a4dff96bb1448dc4396b031d8062461a9}{instance}};}
+\DoxyCodeLine{53     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{d2/d94/class_conversation_abdff2391f9a6c8a1ec35a0dc074fb48d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_conversation_a628e4549b4d58692992c6d9026699c5f}\label{class_conversation_a628e4549b4d58692992c6d9026699c5f}} 
+\index{Conversation@{Conversation}!loadConversation@{loadConversation}}
+\index{loadConversation@{loadConversation}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{loadConversation()}{loadConversation()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcharacter__line}{character\+\_\+line}}$>$ Conversation.\+load\+Conversation (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conversation.\+cs 파일의 99 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100     \{}
+\DoxyCodeLine{101         List<character\_line> output = \textcolor{keyword}{new} List<character\_line>();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103         \textcolor{keywordtype}{string}[] lines = File.ReadAllLines(path);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} i \textcolor{keywordflow}{in} lines)}
+\DoxyCodeLine{106         \{}
+\DoxyCodeLine{107             \textcolor{keywordtype}{string}[] result = i.Split(\textcolor{keyword}{new} \textcolor{keywordtype}{char}[] \{ \textcolor{charliteral}{'\(\backslash\)t'} \});}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109             output.Add(\textcolor{keyword}{new} \mbox{\hyperlink{classcharacter__line}{character\_line}}(GameObject.Find(result[0]), result[1]));}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} output;}
+\DoxyCodeLine{113     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d94/class_conversation_a628e4549b4d58692992c6d9026699c5f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_conversation_a3822a8973deb8b3bcf00bbca652f5989}\label{class_conversation_a3822a8973deb8b3bcf00bbca652f5989}} 
+\index{Conversation@{Conversation}!startConversation@{startConversation}}
+\index{startConversation@{startConversation}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{startConversation()}{startConversation()}}
+{\footnotesize\ttfamily void Conversation.\+start\+Conversation (\begin{DoxyParamCaption}\item[{string}]{Path }\end{DoxyParamCaption})}
+
+
+
+Conversation.\+cs 파일의 55 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         StartCoroutine(\mbox{\hyperlink{class_conversation_a11eb2e1944c3a857ac1447288d89fc39}{conversation}}(\mbox{\hyperlink{class_conversation_a628e4549b4d58692992c6d9026699c5f}{loadConversation}}(Path)));}
+\DoxyCodeLine{58     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d94/class_conversation_a3822a8973deb8b3bcf00bbca652f5989_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d94/class_conversation_a3822a8973deb8b3bcf00bbca652f5989_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_conversation_aaf0ecb8e30c248e7f8bf29cc7fe14678}\label{class_conversation_aaf0ecb8e30c248e7f8bf29cc7fe14678}} 
+\index{Conversation@{Conversation}!worldToCanvas@{worldToCanvas}}
+\index{worldToCanvas@{worldToCanvas}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{worldToCanvas()}{worldToCanvas()}}
+{\footnotesize\ttfamily Vector2 Conversation.\+world\+To\+Canvas (\begin{DoxyParamCaption}\item[{Vector3}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conversation.\+cs 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         RectTransform CanvasRect = \mbox{\hyperlink{class_conversation_ae4e6edf2f8277a7d878de37494e4f9ab}{canvas}}.GetComponent<RectTransform>();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         Vector2 ViewportPosition = \mbox{\hyperlink{class_conversation_a922d9a7686e8ffebe30a93e32bffc197}{camera}}.WorldToViewportPoint(input);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         Vector2 WorldObject\_ScreenPosition = \textcolor{keyword}{new} Vector2(}
+\DoxyCodeLine{67         ((ViewportPosition.x * CanvasRect.sizeDelta.x) - (CanvasRect.sizeDelta.x * 0.5f)),}
+\DoxyCodeLine{68         ((ViewportPosition.y * CanvasRect.sizeDelta.y) - (CanvasRect.sizeDelta.y * 0.5f)));}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} WorldObject\_ScreenPosition;}
+\DoxyCodeLine{71     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d94/class_conversation_aaf0ecb8e30c248e7f8bf29cc7fe14678_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_conversation_a922d9a7686e8ffebe30a93e32bffc197}\label{class_conversation_a922d9a7686e8ffebe30a93e32bffc197}} 
+\index{Conversation@{Conversation}!camera@{camera}}
+\index{camera@{camera}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily Camera Conversation.\+camera}
+
+
+
+Conversation.\+cs 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_conversation_ae4e6edf2f8277a7d878de37494e4f9ab}\label{class_conversation_ae4e6edf2f8277a7d878de37494e4f9ab}} 
+\index{Conversation@{Conversation}!canvas@{canvas}}
+\index{canvas@{canvas}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily Canvas Conversation.\+canvas}
+
+
+
+Conversation.\+cs 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_conversation_a4dff96bb1448dc4396b031d8062461a9}\label{class_conversation_a4dff96bb1448dc4396b031d8062461a9}} 
+\index{Conversation@{Conversation}!instance@{instance}}
+\index{instance@{instance}!Conversation@{Conversation}}
+\subsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_conversation}{Conversation}} Conversation.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Conversation.\+cs 파일의 26 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_conversation_8cs}{Conversation.\+cs}}\end{DoxyCompactItemize}

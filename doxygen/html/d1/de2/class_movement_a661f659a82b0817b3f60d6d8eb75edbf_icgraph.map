@@ -1,0 +1,8 @@
+<map id="Movement.Co_Move" name="Movement.Co_Move">
+<area shape="rect" id="node1" title=" " alt="" coords="421,81,560,108"/>
+<area shape="rect" id="node2" href="$d1/de2/class_movement.html#a2984f510496fd8a5df663ad68e0fab17" title=" " alt="" coords="207,56,366,83"/>
+<area shape="rect" id="node5" href="$d1/de2/class_movement.html#a35adeccf74f9c659ac5c15f6ef239919" title=" " alt="" coords="200,107,373,133"/>
+<area shape="rect" id="node3" href="$db/dfb/class_phone_controller.html#a4ed186c0bf78d2a95be61cef1dae7553" title=" " alt="" coords="7,5,150,32"/>
+<area shape="rect" id="node4" href="$db/dfb/class_phone_controller.html#ad37fb645609c73334c2992d0bb8909c2" title=" " alt="" coords="5,56,152,83"/>
+<area shape="rect" id="node6" href="$d2/d37/class_truck_controller.html#a590a6a8f18b118d2d13fea1abb92c7e3" title=" " alt="" coords="7,107,150,133"/>
+</map>

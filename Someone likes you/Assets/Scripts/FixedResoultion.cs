@@ -2,14 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ *      @brief 카메라를 16:9 종회비로 맞추는 클래스
+ *      @detail 다른 종회비는 귀찮아서 구현하지 않을 예정
+ */
 public class FixedResoultion : MonoBehaviour
 {
-    // Start is called before the first frame update
+    /**
+     *      @brief ResolutionFix 실행
+     *      @detail GameObject의 컴포넌트가 아니면 실행되지 않음
+     *      @return void
+     */
     void Start()
     {
         ResolutionFix();
     }
 
+    /**
+     *      @brief 카메라를 16:9 종회비로 맞추는 함수
+     *      @return void
+     */
     private void ResolutionFix()
     {
         // 가로 세로 비율

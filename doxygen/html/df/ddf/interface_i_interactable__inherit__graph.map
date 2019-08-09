@@ -1,0 +1,9 @@
+<map id="IInteractable" name="IInteractable">
+<area shape="rect" id="node1" title=" " alt="" coords="359,5,451,83"/>
+<area shape="rect" id="node2" href="$d6/df4/class_breakable_wall.html" title=" " alt="" coords="5,182,112,259"/>
+<area shape="rect" id="node3" href="$da/d30/class_door.html" title=" " alt="" coords="136,138,251,303"/>
+<area shape="rect" id="node4" href="$d5/dc8/class_item_gainable.html" title=" " alt="" coords="275,153,403,289"/>
+<area shape="rect" id="node5" href="$d3/df3/class_item_tool.html" title=" " alt="" coords="427,175,517,267"/>
+<area shape="rect" id="node6" href="$d9/d47/class_switch.html" title=" " alt="" coords="541,138,640,303"/>
+<area shape="rect" id="node7" href="$d2/da6/class_switch1__1.html" title=" " alt="" coords="664,131,763,311"/>
+</map>

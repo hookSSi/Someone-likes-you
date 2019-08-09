@@ -1,0 +1,363 @@
+\hypertarget{class_moving_platform}{}\section{Moving\+Platform 클래스 참조}
+\label{class_moving_platform}\index{MovingPlatform@{MovingPlatform}}
+
+
+Moving\+Platform에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{d8/ddd/class_moving_platform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Moving\+Platform에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{df/d56/class_moving_platform__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}} \{ \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acca43c7582c40594c3fe32a6634ef9dcb07}{State.\+Deactivated}}, 
+\mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123accae599161956d626eda4cb0a5ffb85271c}{State.\+Idle}}, 
+\mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123accacb456215c3333db0551bd0788bc258c7}{State.\+Activated}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_moving_platform_adf2e0e70bbc8733f8a4e8992ce2447da}{speed}} = 2f
+\item 
+float \mbox{\hyperlink{class_moving_platform_a489629e7e4703ea543f2931265d7fc2d}{idle\+Time}} = 2.\+4f
+\item 
+Vector3 \mbox{\hyperlink{class_moving_platform_ace8d255e601925ab820d5e64a9e62db9}{dir}} = Vector3.\+right
+\item 
+Rigidbody2D \mbox{\hyperlink{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}{rigid}}
+\item 
+\mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}} \mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_moving_platform_aec6412bf79a5d4fdec57da2e3b390b93}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_moving_platform_a6042324f3ff144a49863cd515eabfbbb}{Move}} ()
+\item 
+void \mbox{\hyperlink{class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce}{On\+Trigger\+Enter2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_moving_platform_a65ae3244849025ffa7505d5d77601a89}{On\+Trigger\+Stay2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_moving_platform_aef43c6c16b01647d14cfc0a2c9710729}{On\+Trigger\+Exit2D}} (Collider2D collision)
+\item 
+void \mbox{\hyperlink{class_moving_platform_a98f73c545d68839bcb755a4b638422b5}{Change\+Direction}} ()
+\item 
+I\+Enumerator \mbox{\hyperlink{class_moving_platform_abb283e05e71fe1fd320d051fdd580b33}{Wait\+Idle\+Time}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Moving\+Platform.\+cs 파일의 5 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 열거형 문서화}
+\mbox{\Hypertarget{class_moving_platform_af3735076efde22951ec5f5fed6123acc}\label{class_moving_platform_af3735076efde22951ec5f5fed6123acc}} 
+\index{MovingPlatform@{MovingPlatform}!State@{State}}
+\index{State@{State}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{Moving\+Platform.\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Deactivated@{Deactivated}!MovingPlatform@{MovingPlatform}}\index{MovingPlatform@{MovingPlatform}!Deactivated@{Deactivated}}}\mbox{\Hypertarget{class_moving_platform_af3735076efde22951ec5f5fed6123acca43c7582c40594c3fe32a6634ef9dcb07}\label{class_moving_platform_af3735076efde22951ec5f5fed6123acca43c7582c40594c3fe32a6634ef9dcb07}} 
+Deactivated&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!MovingPlatform@{MovingPlatform}}\index{MovingPlatform@{MovingPlatform}!Idle@{Idle}}}\mbox{\Hypertarget{class_moving_platform_af3735076efde22951ec5f5fed6123accae599161956d626eda4cb0a5ffb85271c}\label{class_moving_platform_af3735076efde22951ec5f5fed6123accae599161956d626eda4cb0a5ffb85271c}} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Activated@{Activated}!MovingPlatform@{MovingPlatform}}\index{MovingPlatform@{MovingPlatform}!Activated@{Activated}}}\mbox{\Hypertarget{class_moving_platform_af3735076efde22951ec5f5fed6123accacb456215c3333db0551bd0788bc258c7}\label{class_moving_platform_af3735076efde22951ec5f5fed6123accacb456215c3333db0551bd0788bc258c7}} 
+Activated&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Moving\+Platform.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         Deactivated, Idle, Activated}
+\DoxyCodeLine{18     \}}
+
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_moving_platform_aec6412bf79a5d4fdec57da2e3b390b93}\label{class_moving_platform_aec6412bf79a5d4fdec57da2e3b390b93}} 
+\index{MovingPlatform@{MovingPlatform}!Awake@{Awake}}
+\index{Awake@{Awake}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}} = \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Activated;}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}{rigid}} = GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{24         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}{rigid}})}
+\DoxyCodeLine{25         \{}
+\DoxyCodeLine{26             \mbox{\hyperlink{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}{rigid}} = gameObject.AddComponent<Rigidbody2D>();}
+\DoxyCodeLine{27         \}}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}{rigid}}.bodyType = RigidbodyType2D.Kinematic;}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_moving_platform_a98f73c545d68839bcb755a4b638422b5}\label{class_moving_platform_a98f73c545d68839bcb755a4b638422b5}} 
+\index{MovingPlatform@{MovingPlatform}!ChangeDirection@{ChangeDirection}}
+\index{ChangeDirection@{ChangeDirection}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{ChangeDirection()}{ChangeDirection()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+Change\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 79 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80     \{}
+\DoxyCodeLine{81         \mbox{\hyperlink{class_moving_platform_ace8d255e601925ab820d5e64a9e62db9}{dir}} *= -1;}
+\DoxyCodeLine{82         StartCoroutine(\textcolor{stringliteral}{"WaitIdleTime"});}
+\DoxyCodeLine{83     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d42/class_moving_platform_a98f73c545d68839bcb755a4b638422b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c}\label{class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c}} 
+\index{MovingPlatform@{MovingPlatform}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 31 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}})}
+\DoxyCodeLine{34         \{}
+\DoxyCodeLine{35             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Activated:}
+\DoxyCodeLine{36                 \mbox{\hyperlink{class_moving_platform_a6042324f3ff144a49863cd515eabfbbb}{Move}}();}
+\DoxyCodeLine{37                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Idle:}
+\DoxyCodeLine{40                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Deactivated:}
+\DoxyCodeLine{43                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d42/class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_moving_platform_a6042324f3ff144a49863cd515eabfbbb}\label{class_moving_platform_a6042324f3ff144a49863cd515eabfbbb}} 
+\index{MovingPlatform@{MovingPlatform}!Move@{Move}}
+\index{Move@{Move}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 47 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         transform.position += \mbox{\hyperlink{class_moving_platform_ace8d255e601925ab820d5e64a9e62db9}{dir}} * \mbox{\hyperlink{class_moving_platform_adf2e0e70bbc8733f8a4e8992ce2447da}{speed}} * Time.fixedDeltaTime; \textcolor{comment}{// fixed? original? 뭘 써야 할까?}}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d42/class_moving_platform_a6042324f3ff144a49863cd515eabfbbb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce}\label{class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce}} 
+\index{MovingPlatform@{MovingPlatform}!OnTriggerEnter2D@{OnTriggerEnter2D}}
+\index{OnTriggerEnter2D@{OnTriggerEnter2D}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{OnTriggerEnter2D()}{OnTriggerEnter2D()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+On\+Trigger\+Enter2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 52 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         \textcolor{keywordflow}{if}(collision.tag == \textcolor{stringliteral}{"PlatformPath"} || collision.tag == \textcolor{stringliteral}{"Ground"})}
+\DoxyCodeLine{55         \{}
+\DoxyCodeLine{56             \mbox{\hyperlink{class_moving_platform_a98f73c545d68839bcb755a4b638422b5}{ChangeDirection}}();}
+\DoxyCodeLine{57         \}}
+\DoxyCodeLine{58     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d42/class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_moving_platform_aef43c6c16b01647d14cfc0a2c9710729}\label{class_moving_platform_aef43c6c16b01647d14cfc0a2c9710729}} 
+\index{MovingPlatform@{MovingPlatform}!OnTriggerExit2D@{OnTriggerExit2D}}
+\index{OnTriggerExit2D@{OnTriggerExit2D}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if}(collision.tag == \textcolor{stringliteral}{"Player"} \&\& collision.transform.parent == transform)}
+\DoxyCodeLine{72         \{}
+\DoxyCodeLine{73             collision.transform.parent = \textcolor{keyword}{null};}
+\DoxyCodeLine{74             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}} == \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Activated)}
+\DoxyCodeLine{75                collision.GetComponent<Rigidbody2D>().velocity += (Vector2)\mbox{\hyperlink{class_moving_platform_ace8d255e601925ab820d5e64a9e62db9}{dir}} * \mbox{\hyperlink{class_moving_platform_adf2e0e70bbc8733f8a4e8992ce2447da}{speed}};}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_moving_platform_a65ae3244849025ffa7505d5d77601a89}\label{class_moving_platform_a65ae3244849025ffa7505d5d77601a89}} 
+\index{MovingPlatform@{MovingPlatform}!OnTriggerStay2D@{OnTriggerStay2D}}
+\index{OnTriggerStay2D@{OnTriggerStay2D}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{OnTriggerStay2D()}{OnTriggerStay2D()}}
+{\footnotesize\ttfamily void Moving\+Platform.\+On\+Trigger\+Stay2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{if}(collision.tag == \textcolor{stringliteral}{"Player"})}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             \textcolor{comment}{// Attach}}
+\DoxyCodeLine{65             collision.transform.parent = transform;}
+\DoxyCodeLine{66         \}}
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_moving_platform_abb283e05e71fe1fd320d051fdd580b33}\label{class_moving_platform_abb283e05e71fe1fd320d051fdd580b33}} 
+\index{MovingPlatform@{MovingPlatform}!WaitIdleTime@{WaitIdleTime}}
+\index{WaitIdleTime@{WaitIdleTime}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{WaitIdleTime()}{WaitIdleTime()}}
+{\footnotesize\ttfamily I\+Enumerator Moving\+Platform.\+Wait\+Idle\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Moving\+Platform.\+cs 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86     \{}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}} != \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Activated) yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{88         \mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}} = \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Idle;}
+\DoxyCodeLine{89         \textcolor{comment}{// Wait Idle Time();}}
+\DoxyCodeLine{90         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(\mbox{\hyperlink{class_moving_platform_a489629e7e4703ea543f2931265d7fc2d}{idleTime}});}
+\DoxyCodeLine{91         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}} == \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Idle)}
+\DoxyCodeLine{92         \{}
+\DoxyCodeLine{93             \mbox{\hyperlink{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}{state}} = \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}}.Activated;}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95     \}}
+
+\end{DoxyCode}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_moving_platform_ace8d255e601925ab820d5e64a9e62db9}\label{class_moving_platform_ace8d255e601925ab820d5e64a9e62db9}} 
+\index{MovingPlatform@{MovingPlatform}!dir@{dir}}
+\index{dir@{dir}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily Vector3 Moving\+Platform.\+dir = Vector3.\+right}
+
+
+
+Moving\+Platform.\+cs 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_moving_platform_a489629e7e4703ea543f2931265d7fc2d}\label{class_moving_platform_a489629e7e4703ea543f2931265d7fc2d}} 
+\index{MovingPlatform@{MovingPlatform}!idleTime@{idleTime}}
+\index{idleTime@{idleTime}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{idleTime}{idleTime}}
+{\footnotesize\ttfamily float Moving\+Platform.\+idle\+Time = 2.\+4f}
+
+
+
+Moving\+Platform.\+cs 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}\label{class_moving_platform_a724607bdb66234b3b0760c8d27cc143d}} 
+\index{MovingPlatform@{MovingPlatform}!rigid@{rigid}}
+\index{rigid@{rigid}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{rigid}{rigid}}
+{\footnotesize\ttfamily Rigidbody2D Moving\+Platform.\+rigid}
+
+
+
+Moving\+Platform.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_moving_platform_adf2e0e70bbc8733f8a4e8992ce2447da}\label{class_moving_platform_adf2e0e70bbc8733f8a4e8992ce2447da}} 
+\index{MovingPlatform@{MovingPlatform}!speed@{speed}}
+\index{speed@{speed}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Moving\+Platform.\+speed = 2f}
+
+
+
+Moving\+Platform.\+cs 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}\label{class_moving_platform_a145ecedbfee379139ca60f04ecfe7d18}} 
+\index{MovingPlatform@{MovingPlatform}!state@{state}}
+\index{state@{state}!MovingPlatform@{MovingPlatform}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_moving_platform_af3735076efde22951ec5f5fed6123acc}{State}} Moving\+Platform.\+state}
+
+
+
+Moving\+Platform.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_moving_platform_8cs}{Moving\+Platform.\+cs}}\end{DoxyCompactItemize}

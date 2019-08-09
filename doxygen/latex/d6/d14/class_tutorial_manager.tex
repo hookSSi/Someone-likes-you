@@ -1,0 +1,502 @@
+\hypertarget{class_tutorial_manager}{}\section{Tutorial\+Manager 클래스 참조}
+\label{class_tutorial_manager}\index{TutorialManager@{TutorialManager}}
+
+
+Tutorial\+Manager에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d7/d3b/class_tutorial_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Tutorial\+Manager에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d8/de9/class_tutorial_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_ad25e4771d3c09099d066991bca8c1203}{Clear}} ()
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_ab5c041496c132c994a47cb144cae521d}{Show\+Right\+Move\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_a852b4a32183004ef9513d7e43b99c247}{Show\+Left\+Move\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_a11eddc71a4c6be52e2e52bbe0357afe4}{Show\+Interect\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_a1afb4727c17e0b78186a92ce48bebace}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_a09cf95368e659b0c1833572420b51257}{Fix\+Position}} (Game\+Object obj, Vector3 dest)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_tutorial_manager_a838caaf12f20fdcfce77cd55b9771073}{\+\_\+right\+U\+I\+Pos}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}{\+\_\+right\+Move\+UI}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tutorial_manager_a0c22170975645ba9a1679a952e3ac1f2}{\+\_\+left\+U\+I\+Pos}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}{\+\_\+left\+Move\+UI}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tutorial_manager_a5c9726a561fe99901f13a34684b14984}{\+\_\+up\+U\+I\+Pos}}
+\item 
+Game\+Object \mbox{\hyperlink{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}{\+\_\+interect\+UI}}
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_a808970672c69ff7258a661970ddb049a}{\+\_\+is\+Move\+Right}}
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_a1f9d9119b781b616ac5c9e698f65769a}{\+\_\+is\+Move\+Left}}
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_ab20f75bf65dd2f48852adbaf97285137}{\+\_\+is\+Jump}}
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_a19143aca94b5058a57a3db41d31d2a57}{\+\_\+is\+Interect}}
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\+\_\+is\+Running}} = false
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tutorial_manager_a51ab9e8dbee6bbd7a9e59a1e86c62c72}{Start}} ()
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_a725025cd876fbd907721145acc30aa90}{Right\+Move\+Check}} ()
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_af3e698dd38b14d5d9dd076947bed6f71}{Left\+Move\+Check}} ()
+\item 
+bool \mbox{\hyperlink{class_tutorial_manager_a2e63bc12fb25813fa5b32f82b4eeed6a}{Interect\+Check}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Tutorial\+Manager.\+cs 파일의 5 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_tutorial_manager_ad25e4771d3c09099d066991bca8c1203}\label{class_tutorial_manager_ad25e4771d3c09099d066991bca8c1203}} 
+\index{TutorialManager@{TutorialManager}!Clear@{Clear}}
+\index{Clear@{Clear}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tutorial\+Manager.\+cs 파일의 27 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_tutorial_manager_a808970672c69ff7258a661970ddb049a}{\_isMoveRight}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{30         \mbox{\hyperlink{class_tutorial_manager_a1f9d9119b781b616ac5c9e698f65769a}{\_isMoveLeft}}  = \textcolor{keyword}{false};}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_tutorial_manager_ab20f75bf65dd2f48852adbaf97285137}{\_isJump}}      = \textcolor{keyword}{false};}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_tutorial_manager_a19143aca94b5058a57a3db41d31d2a57}{\_isInterect}}  = \textcolor{keyword}{false};}
+\DoxyCodeLine{33         \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}}   = \textcolor{keyword}{false};}
+\DoxyCodeLine{34     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_ad25e4771d3c09099d066991bca8c1203_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a09cf95368e659b0c1833572420b51257}\label{class_tutorial_manager_a09cf95368e659b0c1833572420b51257}} 
+\index{TutorialManager@{TutorialManager}!FixPosition@{FixPosition}}
+\index{FixPosition@{FixPosition}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{FixPosition()}{FixPosition()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Fix\+Position (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj,  }\item[{Vector3}]{dest }\end{DoxyParamCaption})}
+
+
+
+Tutorial\+Manager.\+cs 파일의 106 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{107     \{}
+\DoxyCodeLine{108         obj.transform.position = dest;}
+\DoxyCodeLine{109     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a09cf95368e659b0c1833572420b51257_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a2e63bc12fb25813fa5b32f82b4eeed6a}\label{class_tutorial_manager_a2e63bc12fb25813fa5b32f82b4eeed6a}} 
+\index{TutorialManager@{TutorialManager}!InterectCheck@{InterectCheck}}
+\index{InterectCheck@{InterectCheck}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{InterectCheck()}{InterectCheck()}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+Interect\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tutorial\+Manager.\+cs 파일의 81 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82     \{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{if}(Input.GetKeyDown(KeyCode.E) \&\& \mbox{\hyperlink{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}{\_interectUI}}.activeInHierarchy)}
+\DoxyCodeLine{84         \{}
+\DoxyCodeLine{85             \mbox{\hyperlink{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}{\_interectUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{86             \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{87             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{90         \{}
+\DoxyCodeLine{91             \mbox{\hyperlink{class_tutorial_manager_a09cf95368e659b0c1833572420b51257}{FixPosition}}(\mbox{\hyperlink{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}{\_interectUI}}, \mbox{\hyperlink{class_tutorial_manager_a5c9726a561fe99901f13a34684b14984}{\_upUIPos}}.transform.position);}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{94     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a2e63bc12fb25813fa5b32f82b4eeed6a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a2e63bc12fb25813fa5b32f82b4eeed6a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_af3e698dd38b14d5d9dd076947bed6f71}\label{class_tutorial_manager_af3e698dd38b14d5d9dd076947bed6f71}} 
+\index{TutorialManager@{TutorialManager}!LeftMoveCheck@{LeftMoveCheck}}
+\index{LeftMoveCheck@{LeftMoveCheck}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{LeftMoveCheck()}{LeftMoveCheck()}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+Left\+Move\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tutorial\+Manager.\+cs 파일의 61 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62     \{}
+\DoxyCodeLine{63         \textcolor{keywordflow}{if}(Input.GetKeyDown(KeyCode.A) \&\& \mbox{\hyperlink{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}{\_leftMoveUI}}.activeInHierarchy)}
+\DoxyCodeLine{64         \{}
+\DoxyCodeLine{65             \mbox{\hyperlink{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}{\_leftMoveUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{66             \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{67             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{70         \{}
+\DoxyCodeLine{71             \mbox{\hyperlink{class_tutorial_manager_a09cf95368e659b0c1833572420b51257}{FixPosition}}(\mbox{\hyperlink{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}{\_leftMoveUI}}, \mbox{\hyperlink{class_tutorial_manager_a0c22170975645ba9a1679a952e3ac1f2}{\_leftUIPos}}.transform.position);}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{74     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_af3e698dd38b14d5d9dd076947bed6f71_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_af3e698dd38b14d5d9dd076947bed6f71_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a725025cd876fbd907721145acc30aa90}\label{class_tutorial_manager_a725025cd876fbd907721145acc30aa90}} 
+\index{TutorialManager@{TutorialManager}!RightMoveCheck@{RightMoveCheck}}
+\index{RightMoveCheck@{RightMoveCheck}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{RightMoveCheck()}{RightMoveCheck()}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+Right\+Move\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tutorial\+Manager.\+cs 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if}(Input.GetKeyDown(KeyCode.D) \&\& \mbox{\hyperlink{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}{\_rightMoveUI}}.activeInHierarchy)}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \mbox{\hyperlink{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}{\_rightMoveUI}}.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{46             \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{47             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{50         \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{class_tutorial_manager_a09cf95368e659b0c1833572420b51257}{FixPosition}}(\mbox{\hyperlink{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}{\_rightMoveUI}}, \mbox{\hyperlink{class_tutorial_manager_a838caaf12f20fdcfce77cd55b9771073}{\_rightUIPos}}.transform.position);}
+\DoxyCodeLine{52         \}}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{54     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a725025cd876fbd907721145acc30aa90_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a725025cd876fbd907721145acc30aa90_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a11eddc71a4c6be52e2e52bbe0357afe4}\label{class_tutorial_manager_a11eddc71a4c6be52e2e52bbe0357afe4}} 
+\index{TutorialManager@{TutorialManager}!ShowInterectUI@{ShowInterectUI}}
+\index{ShowInterectUI@{ShowInterectUI}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{ShowInterectUI()}{ShowInterectUI()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Show\+Interect\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tutorial\+Manager.\+cs 파일의 76 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77     \{}
+\DoxyCodeLine{78         \mbox{\hyperlink{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}{\_interectUI}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{79         \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{80     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a11eddc71a4c6be52e2e52bbe0357afe4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a852b4a32183004ef9513d7e43b99c247}\label{class_tutorial_manager_a852b4a32183004ef9513d7e43b99c247}} 
+\index{TutorialManager@{TutorialManager}!ShowLeftMoveUI@{ShowLeftMoveUI}}
+\index{ShowLeftMoveUI@{ShowLeftMoveUI}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{ShowLeftMoveUI()}{ShowLeftMoveUI()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Show\+Left\+Move\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tutorial\+Manager.\+cs 파일의 56 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \mbox{\hyperlink{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}{\_leftMoveUI}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{60     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a852b4a32183004ef9513d7e43b99c247_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_ab5c041496c132c994a47cb144cae521d}\label{class_tutorial_manager_ab5c041496c132c994a47cb144cae521d}} 
+\index{TutorialManager@{TutorialManager}!ShowRightMoveUI@{ShowRightMoveUI}}
+\index{ShowRightMoveUI@{ShowRightMoveUI}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{ShowRightMoveUI()}{ShowRightMoveUI()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Show\+Right\+Move\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tutorial\+Manager.\+cs 파일의 36 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37     \{}
+\DoxyCodeLine{38         \mbox{\hyperlink{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}{\_rightMoveUI}}.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{40     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_ab5c041496c132c994a47cb144cae521d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a51ab9e8dbee6bbd7a9e59a1e86c62c72}\label{class_tutorial_manager_a51ab9e8dbee6bbd7a9e59a1e86c62c72}} 
+\index{TutorialManager@{TutorialManager}!Start@{Start}}
+\index{Start@{Start}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tutorial\+Manager.\+cs 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24         \mbox{\hyperlink{class_tutorial_manager_ad25e4771d3c09099d066991bca8c1203}{Clear}}();}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{d6/d14/class_tutorial_manager_a51ab9e8dbee6bbd7a9e59a1e86c62c72_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tutorial_manager_a1afb4727c17e0b78186a92ce48bebace}\label{class_tutorial_manager_a1afb4727c17e0b78186a92ce48bebace}} 
+\index{TutorialManager@{TutorialManager}!Update@{Update}}
+\index{Update@{Update}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Tutorial\+Manager.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tutorial\+Manager.\+cs 파일의 96 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{97     \{}
+\DoxyCodeLine{98         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}})}
+\DoxyCodeLine{99         \{}
+\DoxyCodeLine{100             \mbox{\hyperlink{class_tutorial_manager_a808970672c69ff7258a661970ddb049a}{\_isMoveRight}} = \mbox{\hyperlink{class_tutorial_manager_a725025cd876fbd907721145acc30aa90}{RightMoveCheck}}();}
+\DoxyCodeLine{101             \mbox{\hyperlink{class_tutorial_manager_a1f9d9119b781b616ac5c9e698f65769a}{\_isMoveLeft}}  = \mbox{\hyperlink{class_tutorial_manager_af3e698dd38b14d5d9dd076947bed6f71}{LeftMoveCheck}}();}
+\DoxyCodeLine{102             \mbox{\hyperlink{class_tutorial_manager_a19143aca94b5058a57a3db41d31d2a57}{\_isInterect}}  = \mbox{\hyperlink{class_tutorial_manager_a2e63bc12fb25813fa5b32f82b4eeed6a}{InterectCheck}}();}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d14/class_tutorial_manager_a1afb4727c17e0b78186a92ce48bebace_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}\label{class_tutorial_manager_a4a15e2de791bbeec4dfff6ec9660603f}} 
+\index{TutorialManager@{TutorialManager}!\_interectUI@{\_interectUI}}
+\index{\_interectUI@{\_interectUI}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_interectUI}{\_interectUI}}
+{\footnotesize\ttfamily Game\+Object Tutorial\+Manager.\+\_\+interect\+UI}
+
+
+
+Tutorial\+Manager.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a19143aca94b5058a57a3db41d31d2a57}\label{class_tutorial_manager_a19143aca94b5058a57a3db41d31d2a57}} 
+\index{TutorialManager@{TutorialManager}!\_isInterect@{\_isInterect}}
+\index{\_isInterect@{\_isInterect}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_isInterect}{\_isInterect}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+\_\+is\+Interect}
+
+
+
+Tutorial\+Manager.\+cs 파일의 19 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_ab20f75bf65dd2f48852adbaf97285137}\label{class_tutorial_manager_ab20f75bf65dd2f48852adbaf97285137}} 
+\index{TutorialManager@{TutorialManager}!\_isJump@{\_isJump}}
+\index{\_isJump@{\_isJump}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_isJump}{\_isJump}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+\_\+is\+Jump}
+
+
+
+Tutorial\+Manager.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a1f9d9119b781b616ac5c9e698f65769a}\label{class_tutorial_manager_a1f9d9119b781b616ac5c9e698f65769a}} 
+\index{TutorialManager@{TutorialManager}!\_isMoveLeft@{\_isMoveLeft}}
+\index{\_isMoveLeft@{\_isMoveLeft}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_isMoveLeft}{\_isMoveLeft}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+\_\+is\+Move\+Left}
+
+
+
+Tutorial\+Manager.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a808970672c69ff7258a661970ddb049a}\label{class_tutorial_manager_a808970672c69ff7258a661970ddb049a}} 
+\index{TutorialManager@{TutorialManager}!\_isMoveRight@{\_isMoveRight}}
+\index{\_isMoveRight@{\_isMoveRight}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_isMoveRight}{\_isMoveRight}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+\_\+is\+Move\+Right}
+
+
+
+Tutorial\+Manager.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}\label{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}} 
+\index{TutorialManager@{TutorialManager}!\_isRunning@{\_isRunning}}
+\index{\_isRunning@{\_isRunning}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_isRunning}{\_isRunning}}
+{\footnotesize\ttfamily bool Tutorial\+Manager.\+\_\+is\+Running = false}
+
+
+
+Tutorial\+Manager.\+cs 파일의 20 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}\label{class_tutorial_manager_a11eb25af75cf96158815fe023bd168ac}} 
+\index{TutorialManager@{TutorialManager}!\_leftMoveUI@{\_leftMoveUI}}
+\index{\_leftMoveUI@{\_leftMoveUI}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_leftMoveUI}{\_leftMoveUI}}
+{\footnotesize\ttfamily Game\+Object Tutorial\+Manager.\+\_\+left\+Move\+UI}
+
+
+
+Tutorial\+Manager.\+cs 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a0c22170975645ba9a1679a952e3ac1f2}\label{class_tutorial_manager_a0c22170975645ba9a1679a952e3ac1f2}} 
+\index{TutorialManager@{TutorialManager}!\_leftUIPos@{\_leftUIPos}}
+\index{\_leftUIPos@{\_leftUIPos}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_leftUIPos}{\_leftUIPos}}
+{\footnotesize\ttfamily Game\+Object Tutorial\+Manager.\+\_\+left\+U\+I\+Pos}
+
+
+
+Tutorial\+Manager.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}\label{class_tutorial_manager_a5c25f48e6be1940caa239b2fb0f311f6}} 
+\index{TutorialManager@{TutorialManager}!\_rightMoveUI@{\_rightMoveUI}}
+\index{\_rightMoveUI@{\_rightMoveUI}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_rightMoveUI}{\_rightMoveUI}}
+{\footnotesize\ttfamily Game\+Object Tutorial\+Manager.\+\_\+right\+Move\+UI}
+
+
+
+Tutorial\+Manager.\+cs 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a838caaf12f20fdcfce77cd55b9771073}\label{class_tutorial_manager_a838caaf12f20fdcfce77cd55b9771073}} 
+\index{TutorialManager@{TutorialManager}!\_rightUIPos@{\_rightUIPos}}
+\index{\_rightUIPos@{\_rightUIPos}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_rightUIPos}{\_rightUIPos}}
+{\footnotesize\ttfamily Game\+Object Tutorial\+Manager.\+\_\+right\+U\+I\+Pos}
+
+
+
+Tutorial\+Manager.\+cs 파일의 7 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_tutorial_manager_a5c9726a561fe99901f13a34684b14984}\label{class_tutorial_manager_a5c9726a561fe99901f13a34684b14984}} 
+\index{TutorialManager@{TutorialManager}!\_upUIPos@{\_upUIPos}}
+\index{\_upUIPos@{\_upUIPos}!TutorialManager@{TutorialManager}}
+\subsubsection{\texorpdfstring{\_upUIPos}{\_upUIPos}}
+{\footnotesize\ttfamily Game\+Object Tutorial\+Manager.\+\_\+up\+U\+I\+Pos}
+
+
+
+Tutorial\+Manager.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_tutorial_manager_8cs}{Tutorial\+Manager.\+cs}}\end{DoxyCompactItemize}

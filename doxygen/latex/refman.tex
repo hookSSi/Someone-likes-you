@@ -1,0 +1,244 @@
+\let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+\usepackage{ifpdf,ifxetex}
+
+% NLS support packages
+\usepackage{kotex}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Arguments of doxygenemoji:
+% 1) ':<text>:' form of the emoji, already "LaTeX"-escaped
+% 2) file with the name of the emoji without the .png extension
+% in case image exist use this otherwise use the ':<text>:' form
+\newcommand{\doxygenemoji}[2]{%
+  \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+}
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+\newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+\doxynormalparskip
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
+% Hyperlinks (required, but should be loaded last)
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \ifxetex
+    \usepackage[pagebackref=true]{hyperref}
+  \else
+    \usepackage[ps2pdf,pagebackref=true]{hyperref}
+  \fi
+\fi
+
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+\usepackage{etoc}
+\etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+\renewcommand{\numberline}[1]{#1~}
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Someone\+Likes\+You\+Unity\+Script \\[1ex]\large 1.\+0.\+0 }\\
+\vspace*{1cm}
+{\large 다음에 의해 생성됨 \+:  Doxygen 1.8.15}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{계통도 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{파일 색인}
+\input{files}
+\chapter{클래스 문서화}
+\input{d6/df4/class_breakable_wall}
+\input{d2/d23/class_camera_manager}
+\input{df/d1a/classcharacter__line}
+\input{d2/d94/class_conversation}
+\input{d0/d9d/class_dialogue}
+\input{dd/d62/class_dialogue_test}
+\input{da/d30/class_door}
+\input{d6/d58/class_effect}
+\input{d3/dd7/class_fade_controller}
+\input{d3/d6d/class_fixed_resoultion}
+\input{db/d74/class_hungerness}
+\input{d2/df1/interface_i_interactable}
+\input{d3/d8e/class_interaction}
+\input{dc/d32/class_item}
+\input{d0/dc6/class_item_database}
+\input{d5/dc8/class_item_gainable}
+\input{d3/df3/class_item_tool}
+\input{d1/de2/class_movement}
+\input{df/d42/class_moving_platform}
+\input{db/dfb/class_phone_controller}
+\input{d0/d3d/class_player_movement}
+\input{da/de4/class_stage_manager}
+\input{d7/d17/class_stone}
+\input{d5/df7/class_stone_trigger}
+\input{d9/d47/class_switch}
+\input{d2/da6/class_switch1__1}
+\input{da/db7/class_tool}
+\input{d2/d37/class_truck_controller}
+\input{d6/d14/class_tutorial_manager}
+\input{d8/de6/class_u_i}
+\input{da/d8d/class_u_i_text_script}
+\chapter{파일 문서화}
+\input{d2/da6/_breakable_wall_8cs}
+\input{df/def/_conversation_8cs}
+\input{d1/d76/_dialogue_8cs}
+\input{d4/d65/_dialogue_test_8cs}
+\input{d8/d32/_door_8cs}
+\input{d9/df6/_fixed_resoultion_8cs}
+\input{d0/d69/_i_interactable_8cs}
+\input{d6/d06/_interaction_8cs}
+\input{df/d01/_item_8cs}
+\input{dd/d2b/_item_database_8cs}
+\input{d5/d54/_item_gainable_8cs}
+\input{d7/db9/_item_tool_8cs}
+\input{d9/d78/_moving_platform_8cs}
+\input{de/d53/_player_movement_8cs}
+\input{d4/d42/_stone_8cs}
+\input{d1/d18/_stone_trigger_8cs}
+\input{d4/d94/_switch_8cs}
+\input{db/d7a/_switch1__1_8cs}
+\input{d9/d54/_tool__legacy_8cs}
+\input{df/db5/_tutorial_manager_8cs}
+\input{d3/df0/_camera_manager_8cs}
+\input{d0/d0a/_effect_8cs}
+\input{d8/d23/_fade_controller_8cs}
+\input{db/d37/_hungerness_8cs}
+\input{d1/daf/_movement_8cs}
+\input{d3/d40/_phone_controller_8cs}
+\input{da/d14/_stage_manager_8cs}
+\input{d6/d13/_truck_controller_8cs}
+\input{d6/da6/_u_i_8cs}
+\input{d9/d8f/_u_i_text_script_8cs}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+\end{document}

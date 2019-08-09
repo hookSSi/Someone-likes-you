@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SomeoneLikesYouUnityScript: C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/Scripts/UI&amp;Scene/TruckController.cs 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SomeoneLikesYouUnityScript
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d6/d13/_truck_controller_8cs_source.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TruckController.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d13/_truck_controller_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html">    5</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="../../d2/d37/class_truck_controller.html">TruckController</a> : MonoBehaviour</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">public</span> delegate <span class="keywordtype">void</span> <a class="code" href="../../d2/d37/class_truck_controller.html#ac29bd47e974e18d696bae4ee586e9083">Action</a>(GameObject obj, <span class="keywordtype">float</span> value, <span class="keywordtype">float</span> time = 1, <span class="keywordtype">bool</span> moveType = <span class="keyword">true</span>);</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#aac64df395a019ed3a6ebd50728e4190b">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="../../d2/d37/class_truck_controller.html#aac64df395a019ed3a6ebd50728e4190b">_isDone</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#a0d7eb82e03d2f76581072996494b720a">    9</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code" href="../../d2/d37/class_truck_controller.html#a0d7eb82e03d2f76581072996494b720a">_t</a> = 0;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#a796611411cda1af4b4f01ca3543b2d5e">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="../../d2/d37/class_truck_controller.html#a796611411cda1af4b4f01ca3543b2d5e">_waitRange</a>; <span class="comment">// 기다리는 시간</span></div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#a938ec7adb51988affca922566d56a402">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="../../d2/d37/class_truck_controller.html#a938ec7adb51988affca922566d56a402">_distance</a>;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#a7203e966d38b303e9156e10e4167197e">   13</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="../../d1/de2/class_movement.html">Movement</a> <a class="code" href="../../d2/d37/class_truck_controller.html#a7203e966d38b303e9156e10e4167197e">_movement</a>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#ae262698bc9cadb7e91b85b9126913554">   15</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d37/class_truck_controller.html#ae262698bc9cadb7e91b85b9126913554">Awake</a>() </div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="../../d2/d37/class_truck_controller.html#a7203e966d38b303e9156e10e4167197e">_movement</a> = this.gameObject.AddComponent&lt;<a class="code" href="../../d1/de2/class_movement.html">Movement</a>&gt;();</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#a590a6a8f18b118d2d13fea1abb92c7e3">   20</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d37/class_truck_controller.html#a590a6a8f18b118d2d13fea1abb92c7e3">Move</a>()</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d2/d37/class_truck_controller.html#a7203e966d38b303e9156e10e4167197e">_movement</a>.<a class="code" href="../../d1/de2/class_movement.html#a35adeccf74f9c659ac5c15f6ef239919">MoveHorizontal</a>(this.gameObject, <a class="code" href="../../d2/d37/class_truck_controller.html#a938ec7adb51988affca922566d56a402">_distance</a>, <a class="code" href="../../d2/d37/class_truck_controller.html#a796611411cda1af4b4f01ca3543b2d5e">_waitRange</a>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#af325273a29ea814c8401d5d4372f577f">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d37/class_truck_controller.html#af325273a29ea814c8401d5d4372f577f">Clear</a>()</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this._isDone = <span class="keyword">false</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this._t = 0;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d2/d37/class_truck_controller.html#a23970b6ea18c06eadb82692a9cca5129">   29</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d37/class_truck_controller.html#a23970b6ea18c06eadb82692a9cca5129">Done</a>()</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        Debug.Log(<span class="stringliteral">&quot;트럭 출발!&quot;</span>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this._isDone = <span class="keyword">true</span>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div><div class="ttc" id="class_movement_html_a35adeccf74f9c659ac5c15f6ef239919"><div class="ttname"><a href="../../d1/de2/class_movement.html#a35adeccf74f9c659ac5c15f6ef239919">Movement.MoveHorizontal</a></div><div class="ttdeci">void MoveHorizontal(GameObject obj, float value, float time=1, bool moveType=true)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00018">Movement.cs:18</a></div></div>
+<div class="ttc" id="class_movement_html"><div class="ttname"><a href="../../d1/de2/class_movement.html">Movement</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00009">Movement.cs:9</a></div></div>
+<div class="ttc" id="class_truck_controller_html_ac29bd47e974e18d696bae4ee586e9083"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#ac29bd47e974e18d696bae4ee586e9083">TruckController.Action</a></div><div class="ttdeci">delegate void Action(GameObject obj, float value, float time=1, bool moveType=true)</div></div>
+<div class="ttc" id="class_truck_controller_html_af325273a29ea814c8401d5d4372f577f"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#af325273a29ea814c8401d5d4372f577f">TruckController.Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00024">TruckController.cs:24</a></div></div>
+<div class="ttc" id="class_truck_controller_html_ae262698bc9cadb7e91b85b9126913554"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#ae262698bc9cadb7e91b85b9126913554">TruckController.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00015">TruckController.cs:15</a></div></div>
+<div class="ttc" id="class_truck_controller_html_a0d7eb82e03d2f76581072996494b720a"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#a0d7eb82e03d2f76581072996494b720a">TruckController._t</a></div><div class="ttdeci">float _t</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00009">TruckController.cs:9</a></div></div>
+<div class="ttc" id="class_truck_controller_html_a796611411cda1af4b4f01ca3543b2d5e"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#a796611411cda1af4b4f01ca3543b2d5e">TruckController._waitRange</a></div><div class="ttdeci">float _waitRange</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00011">TruckController.cs:11</a></div></div>
+<div class="ttc" id="class_truck_controller_html_a590a6a8f18b118d2d13fea1abb92c7e3"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#a590a6a8f18b118d2d13fea1abb92c7e3">TruckController.Move</a></div><div class="ttdeci">void Move()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00020">TruckController.cs:20</a></div></div>
+<div class="ttc" id="class_truck_controller_html_aac64df395a019ed3a6ebd50728e4190b"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#aac64df395a019ed3a6ebd50728e4190b">TruckController._isDone</a></div><div class="ttdeci">bool _isDone</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00008">TruckController.cs:8</a></div></div>
+<div class="ttc" id="class_truck_controller_html"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html">TruckController</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00005">TruckController.cs:5</a></div></div>
+<div class="ttc" id="class_truck_controller_html_a7203e966d38b303e9156e10e4167197e"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#a7203e966d38b303e9156e10e4167197e">TruckController._movement</a></div><div class="ttdeci">Movement _movement</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00013">TruckController.cs:13</a></div></div>
+<div class="ttc" id="class_truck_controller_html_a23970b6ea18c06eadb82692a9cca5129"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#a23970b6ea18c06eadb82692a9cca5129">TruckController.Done</a></div><div class="ttdeci">void Done()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00029">TruckController.cs:29</a></div></div>
+<div class="ttc" id="class_truck_controller_html_a938ec7adb51988affca922566d56a402"><div class="ttname"><a href="../../d2/d37/class_truck_controller.html#a938ec7adb51988affca922566d56a402">TruckController._distance</a></div><div class="ttdeci">float _distance</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d13/_truck_controller_8cs_source.html#l00012">TruckController.cs:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3beff099619fdbea60c5d5ad06b6665f.html">Someone likes you</a></li><li class="navelem"><a class="el" href="../../dir_08e9473894999c0a2b821effc5369fad.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_f1ece73058bd159467cee7546f4c1ce5.html">Scripts</a></li><li class="navelem"><a class="el" href="../../dir_e8f11738cc84397b2efe72a28aaf20cf.html">UI&amp;Scene</a></li><li class="navelem"><a class="el" href="../../d6/d13/_truck_controller_8cs.html">TruckController.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

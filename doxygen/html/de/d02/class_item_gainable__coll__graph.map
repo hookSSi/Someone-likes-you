@@ -1,0 +1,6 @@
+<map id="ItemGainable" name="ItemGainable">
+<area shape="rect" id="node1" title=" " alt="" coords="122,204,250,325"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,35,116,112"/>
+<area shape="rect" id="node3" href="$d2/df1/interface_i_interactable.html" title=" " alt="" coords="140,35,232,112"/>
+<area shape="rect" id="node4" href="$dc/d32/class_item.html" title=" " alt="" coords="256,5,380,141"/>
+</map>

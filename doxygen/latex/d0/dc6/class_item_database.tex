@@ -1,0 +1,520 @@
+\hypertarget{class_item_database}{}\section{Item\+Database 클래스 참조}
+\label{class_item_database}\index{ItemDatabase@{ItemDatabase}}
+
+
+Item\+Database에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{d7/d58/class_item_database__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Item\+Database에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{da/d81/class_item_database__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_item_database_a20404bd6d9530cff940b950b9a89ef4e}{Add\+Item}} (string item\+Name, string item\+Description, int gain\+Hungry, \mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item.\+Item\+Type}} item\+Type, string item\+Image\+Name)
+\item 
+void \mbox{\hyperlink{class_item_database_a7e3a74f7eb19ce5f1e9015945668afb3}{Add\+Tool}} (\mbox{\hyperlink{class_tool}{Tool}} tool)
+\item 
+void \mbox{\hyperlink{class_item_database_a86349d3b40c7195b530638ffd0d5d958}{Remove\+Item}} (string item\+Name)
+\item 
+\mbox{\hyperlink{class_tool}{Tool}} \mbox{\hyperlink{class_item_database_a972de3b38a572cf25163d0834c68430c}{Current\+Tool}} ()
+\item 
+void \mbox{\hyperlink{class_item_database_aa47d8d6f06cb4aff0254dca75e48ec48}{Previous\+Tool}} ()
+\item 
+void \mbox{\hyperlink{class_item_database_a2b0614a3fd6d0fa04b8a378156c66525}{Next\+Tool}} ()
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_item_database}{Item\+Database}} \mbox{\hyperlink{class_item_database_a5312023347462b5af9c545c42934d26b}{Get\+Instance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_item}{Item}} $>$ \mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}} = new List$<$\mbox{\hyperlink{class_item}{Item}}$>$()
+\item 
+List$<$ \mbox{\hyperlink{class_tool}{Tool}} $>$ \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}} = new List$<$\mbox{\hyperlink{class_tool}{Tool}}$>$()
+\item 
+\mbox{\hyperlink{class_tool}{Tool}} \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{current\+Tool}}
+\item 
+Game\+Object \mbox{\hyperlink{class_item_database_a12b041c3f602e7bb9b176de5d29237d5}{inventory1}}
+\item 
+Game\+Object \mbox{\hyperlink{class_item_database_a1cffd11f7e1826753626508420992544}{inventory2}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_item_database_a0891a7bd4b3213485d52e7b0fcbde30b}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}{draw\+Inventory}} ()
+\end{DoxyCompactItemize}
+\subsection*{정적 Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_item_database}{Item\+Database}} \mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}}
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Item\+Database.\+cs 파일의 7 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_item_database_a20404bd6d9530cff940b950b9a89ef4e}\label{class_item_database_a20404bd6d9530cff940b950b9a89ef4e}} 
+\index{ItemDatabase@{ItemDatabase}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily void Item\+Database.\+Add\+Item (\begin{DoxyParamCaption}\item[{string}]{item\+Name,  }\item[{string}]{item\+Description,  }\item[{int}]{gain\+Hungry,  }\item[{\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{Item.\+Item\+Type}}}]{item\+Type,  }\item[{string}]{item\+Image\+Name }\end{DoxyParamCaption})}
+
+
+
+Item\+Database.\+cs 파일의 33 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         Debug.Log(itemName + \textcolor{stringliteral}{"를 획득했다!(아이템)"});}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}}.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_item}{Item}}(itemName, itemDescription, gainHungry, itemType, Resources.Load<Sprite>(\textcolor{stringliteral}{"Sprites/Items"} + itemImageName)));}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \mbox{\hyperlink{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}{drawInventory}}();}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a20404bd6d9530cff940b950b9a89ef4e_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{d0/dc6/class_item_database_a20404bd6d9530cff940b950b9a89ef4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_a7e3a74f7eb19ce5f1e9015945668afb3}\label{class_item_database_a7e3a74f7eb19ce5f1e9015945668afb3}} 
+\index{ItemDatabase@{ItemDatabase}!AddTool@{AddTool}}
+\index{AddTool@{AddTool}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{AddTool()}{AddTool()}}
+{\footnotesize\ttfamily void Item\+Database.\+Add\+Tool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tool}{Tool}}}]{tool }\end{DoxyParamCaption})}
+
+
+
+Item\+Database.\+cs 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         Debug.Log(tool.\mbox{\hyperlink{class_tool_ae98511e0d3cb8d545901b16d7862ec5b}{name}} + \textcolor{stringliteral}{"를 주웠다!(도구)"});}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Add(tool);}
+\DoxyCodeLine{45         \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}} = tool;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \mbox{\hyperlink{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}{drawInventory}}();}
+\DoxyCodeLine{48     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a7e3a74f7eb19ce5f1e9015945668afb3_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{d0/dc6/class_item_database_a7e3a74f7eb19ce5f1e9015945668afb3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_a972de3b38a572cf25163d0834c68430c}\label{class_item_database_a972de3b38a572cf25163d0834c68430c}} 
+\index{ItemDatabase@{ItemDatabase}!CurrentTool@{CurrentTool}}
+\index{CurrentTool@{CurrentTool}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{CurrentTool()}{CurrentTool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tool}{Tool}} Item\+Database.\+Current\+Tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Item\+Database.\+cs 파일의 58 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}};}
+\DoxyCodeLine{61     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}\label{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}} 
+\index{ItemDatabase@{ItemDatabase}!drawInventory@{drawInventory}}
+\index{drawInventory@{drawInventory}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{drawInventory()}{drawInventory()}}
+{\footnotesize\ttfamily void Item\+Database.\+draw\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Item\+Database.\+cs 파일의 130 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131     \{}
+\DoxyCodeLine{132         \textcolor{keywordtype}{int} canNum = 0;}
+\DoxyCodeLine{133         \textcolor{keywordtype}{int} chocoNum = 0;}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135         \textcolor{comment}{//inventory2 모든 자식 제거}}
+\DoxyCodeLine{136         Transform[] childList = \textcolor{keyword}{null};}
+\DoxyCodeLine{137         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_item_database_a1cffd11f7e1826753626508420992544}{inventory2}} != \textcolor{keyword}{null})}
+\DoxyCodeLine{138             childList = \mbox{\hyperlink{class_item_database_a1cffd11f7e1826753626508420992544}{inventory2}}.transform.GetComponentsInChildren<RectTransform>();}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140         \textcolor{keywordflow}{if} (childList != \textcolor{keyword}{null})}
+\DoxyCodeLine{141         \{}
+\DoxyCodeLine{142             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < childList.Length; i++)}
+\DoxyCodeLine{143             \{}
+\DoxyCodeLine{144                 \textcolor{keywordflow}{if} (childList[i] != transform \&\& !childList[i].name.Contains(\textcolor{stringliteral}{"Inventory"}))}
+\DoxyCodeLine{145                 \{                       }
+\DoxyCodeLine{146                     Destroy(childList[i].gameObject);}
+\DoxyCodeLine{147                 \}}
+\DoxyCodeLine{148             \}}
+\DoxyCodeLine{149         \}}
+\DoxyCodeLine{150         \textcolor{comment}{//}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152         \textcolor{keywordtype}{float} X = 200f;}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{154         \textcolor{keywordtype}{float} Y = 75f;}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156         GameObject temp;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158         Sprite tempSprite;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{class_item}{Item}} i \textcolor{keywordflow}{in} \mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}})}
+\DoxyCodeLine{161         \{}
+\DoxyCodeLine{162             \textcolor{keywordflow}{if} (i.\mbox{\hyperlink{class_item_adbecc774c576b08f57f32655acf7363d}{itemType}} == \mbox{\hyperlink{class_item}{Item}}.\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{ItemType}}.Food)}
+\DoxyCodeLine{163             \{}
+\DoxyCodeLine{164                 \textcolor{keywordflow}{if} (i.\mbox{\hyperlink{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}{itemName}}.Equals(\textcolor{stringliteral}{"초코바"}))}
+\DoxyCodeLine{165                 \{}
+\DoxyCodeLine{166                     chocoNum++;}
+\DoxyCodeLine{167                 \}}
+\DoxyCodeLine{168                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i.\mbox{\hyperlink{class_item_a8c54f77a262b1ffd78c1cd8cbed86ae0}{itemName}}.Equals(\textcolor{stringliteral}{"음료수"}))}
+\DoxyCodeLine{169                 \{}
+\DoxyCodeLine{170                     canNum++;}
+\DoxyCodeLine{171                 \}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{174             \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176             temp = GameObject.Instantiate(Resources.Load(\textcolor{stringliteral}{"Prefabs/Item"}) as GameObject, \textcolor{keyword}{new} Vector3(0, 0, 0), Quaternion.identity);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178             temp.transform.SetParent( \mbox{\hyperlink{class_item_database_a1cffd11f7e1826753626508420992544}{inventory2}}.transform);}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180             temp.GetComponent<RectTransform>().anchoredPosition = \textcolor{keyword}{new} Vector2(X, Y);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182             temp.GetComponent<RectTransform>().localScale = \textcolor{keyword}{new} Vector3(1,1,1);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184             \textcolor{comment}{//tempSprite = Resources.Load<Sprite>("InventoryIconRaw/Can");}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186             tempSprite = i.\mbox{\hyperlink{class_item_aa189431b0e859890a3b9118da64cc484}{itemImage}};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188             temp.GetComponent<Image>().overrideSprite = tempSprite;}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190             X += 50f;}
+\DoxyCodeLine{191         \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193         \mbox{\hyperlink{class_item_database_a12b041c3f602e7bb9b176de5d29237d5}{inventory1}}.transform.Find(\textcolor{stringliteral}{"Can"}).transform.Find(\textcolor{stringliteral}{"CanNum"}).GetComponent<Text>().text = canNum.ToString();}
+\DoxyCodeLine{194         \mbox{\hyperlink{class_item_database_a12b041c3f602e7bb9b176de5d29237d5}{inventory1}}.transform.Find(\textcolor{stringliteral}{"ChocoBar"}).transform.Find(\textcolor{stringliteral}{"ChocoNum"}).GetComponent<Text>().text = chocoNum.ToString();}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196         \mbox{\hyperlink{class_item_database_a12b041c3f602e7bb9b176de5d29237d5}{inventory1}}.transform.Find(\textcolor{stringliteral}{"Tool"}).GetComponent<Image>().sprite = \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}}.\mbox{\hyperlink{class_tool_a219661f916e81a5de0411c1beda81d54}{toolImage}};}
+\DoxyCodeLine{197     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a587c4dbaea6399d804f3bb0d0ca377df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_a5312023347462b5af9c545c42934d26b}\label{class_item_database_a5312023347462b5af9c545c42934d26b}} 
+\index{ItemDatabase@{ItemDatabase}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_item_database}{Item\+Database}} Item\+Database.\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Item\+Database.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{21         \{}
+\DoxyCodeLine{22             \mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}} = GameObject.FindObjectOfType<\mbox{\hyperlink{class_item_database}{ItemDatabase}}>();}
+\DoxyCodeLine{23             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{24             \{}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26                 \mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}} = \textcolor{keyword}{new} GameObject().AddComponent<\mbox{\hyperlink{class_item_database}{ItemDatabase}}>();}
+\DoxyCodeLine{27                 \mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}}.gameObject.name = \textcolor{stringliteral}{"Database"};}
+\DoxyCodeLine{28             \}}
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}{instance}};}
+\DoxyCodeLine{31     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a5312023347462b5af9c545c42934d26b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_a2b0614a3fd6d0fa04b8a378156c66525}\label{class_item_database_a2b0614a3fd6d0fa04b8a378156c66525}} 
+\index{ItemDatabase@{ItemDatabase}!NextTool@{NextTool}}
+\index{NextTool@{NextTool}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{NextTool()}{NextTool()}}
+{\footnotesize\ttfamily void Item\+Database.\+Next\+Tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Item\+Database.\+cs 파일의 91 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count < 2) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{94        }
+\DoxyCodeLine{95         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{96         \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count; i++)}
+\DoxyCodeLine{97         \{}
+\DoxyCodeLine{98             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}[i] != \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}})}
+\DoxyCodeLine{99             \{}
+\DoxyCodeLine{100                 \textcolor{keywordflow}{if}(i == \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count - 1)}
+\DoxyCodeLine{101                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{102                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{103             \}}
+\DoxyCodeLine{104             \textcolor{keywordflow}{break}; \textcolor{comment}{// tools[i] == currentTool;}}
+\DoxyCodeLine{105         \}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107         \textcolor{keywordflow}{if}(i == \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count - 1)}
+\DoxyCodeLine{108         \{}
+\DoxyCodeLine{109             \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}} = \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}[0];}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{112         \{}
+\DoxyCodeLine{113             \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}} = \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}[i + 1];}
+\DoxyCodeLine{114         \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116         \mbox{\hyperlink{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}{drawInventory}}();}
+\DoxyCodeLine{117     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a2b0614a3fd6d0fa04b8a378156c66525_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a2b0614a3fd6d0fa04b8a378156c66525_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_aa47d8d6f06cb4aff0254dca75e48ec48}\label{class_item_database_aa47d8d6f06cb4aff0254dca75e48ec48}} 
+\index{ItemDatabase@{ItemDatabase}!PreviousTool@{PreviousTool}}
+\index{PreviousTool@{PreviousTool}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{PreviousTool()}{PreviousTool()}}
+{\footnotesize\ttfamily void Item\+Database.\+Previous\+Tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Item\+Database.\+cs 파일의 63 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count < 2) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{66        }
+\DoxyCodeLine{67         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{68         \textcolor{keywordflow}{for}(i = 0; i < \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count; i++)}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}[i] != \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}})}
+\DoxyCodeLine{71             \{}
+\DoxyCodeLine{72                 \textcolor{keywordflow}{if}(i == \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count - 1)}
+\DoxyCodeLine{73                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{74                 \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{75             \}}
+\DoxyCodeLine{76             \textcolor{keywordflow}{break}; \textcolor{comment}{// tools[i] == currentTool;}}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{keywordflow}{if}(i == 0)}
+\DoxyCodeLine{80         \{}
+\DoxyCodeLine{81             \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}} = \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}[\mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}.Count - 1];}
+\DoxyCodeLine{82         \}}
+\DoxyCodeLine{83         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{84         \{}
+\DoxyCodeLine{85             \mbox{\hyperlink{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}{currentTool}} = \mbox{\hyperlink{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}{tools}}[i - 1];}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88         \mbox{\hyperlink{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}{drawInventory}}();}
+\DoxyCodeLine{89     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_aa47d8d6f06cb4aff0254dca75e48ec48_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_aa47d8d6f06cb4aff0254dca75e48ec48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_a86349d3b40c7195b530638ffd0d5d958}\label{class_item_database_a86349d3b40c7195b530638ffd0d5d958}} 
+\index{ItemDatabase@{ItemDatabase}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{RemoveItem()}{RemoveItem()}}
+{\footnotesize\ttfamily void Item\+Database.\+Remove\+Item (\begin{DoxyParamCaption}\item[{string}]{item\+Name }\end{DoxyParamCaption})}
+
+
+
+Item\+Database.\+cs 파일의 50 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51     \{}
+\DoxyCodeLine{52         \mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}}.Remove(\mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}}.Find(x => x.itemName.Equals(itemName)));}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \mbox{\hyperlink{class_item_database_a587c4dbaea6399d804f3bb0d0ca377df}{drawInventory}}();}
+\DoxyCodeLine{55     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a86349d3b40c7195b530638ffd0d5d958_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a86349d3b40c7195b530638ffd0d5d958_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_item_database_a0891a7bd4b3213485d52e7b0fcbde30b}\label{class_item_database_a0891a7bd4b3213485d52e7b0fcbde30b}} 
+\index{ItemDatabase@{ItemDatabase}!Start@{Start}}
+\index{Start@{Start}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Item\+Database.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Item\+Database.\+cs 파일의 119 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{120     \{}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#if TEST}}
+\DoxyCodeLine{122         \mbox{\hyperlink{class_item_database_a20404bd6d9530cff940b950b9a89ef4e}{AddItem}}(\textcolor{stringliteral}{"열쇠"}, \textcolor{stringliteral}{"문을 열 수 있다. 맛은... 있을리가."}, 0, \mbox{\hyperlink{class_item}{Item}}.\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{ItemType}}.Key);}
+\DoxyCodeLine{123         \mbox{\hyperlink{class_item_database_a20404bd6d9530cff940b950b9a89ef4e}{AddItem}}(\textcolor{stringliteral}{"초코바"}, \textcolor{stringliteral}{"맛있다. 군인의 영원한 친구."}, 50, \mbox{\hyperlink{class_item}{Item}}.\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{ItemType}}.Food);}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125         \mbox{\hyperlink{class_item_database_a7e3a74f7eb19ce5f1e9015945668afb3}{AddTool}}(\textcolor{keyword}{new} \mbox{\hyperlink{class_tool}{Tool}}(\textcolor{stringliteral}{"손"}, Resources.Load<Sprite>(\textcolor{stringliteral}{"InventoryIconRaw/Hand"}), \mbox{\hyperlink{_tool__legacy_8cs_a47994263d1ab331c1e5d3e7ac555271a}{ToolEnum}}.HAND));}
+\DoxyCodeLine{126     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dc6/class_item_database_a0891a7bd4b3213485d52e7b0fcbde30b_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}\label{class_item_database_ae47115d7b28e0c2f0dec2b1fba016ce1}} 
+\index{ItemDatabase@{ItemDatabase}!currentTool@{currentTool}}
+\index{currentTool@{currentTool}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{currentTool}{currentTool}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tool}{Tool}} Item\+Database.\+current\+Tool}
+
+
+
+Item\+Database.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}\label{class_item_database_ae47c35933c266fb0ef04d3dfaf880b1c}} 
+\index{ItemDatabase@{ItemDatabase}!instance@{instance}}
+\index{instance@{instance}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_item_database}{Item\+Database}} Item\+Database.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Item\+Database.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_database_a12b041c3f602e7bb9b176de5d29237d5}\label{class_item_database_a12b041c3f602e7bb9b176de5d29237d5}} 
+\index{ItemDatabase@{ItemDatabase}!inventory1@{inventory1}}
+\index{inventory1@{inventory1}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{inventory1}{inventory1}}
+{\footnotesize\ttfamily Game\+Object Item\+Database.\+inventory1}
+
+
+
+Item\+Database.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_database_a1cffd11f7e1826753626508420992544}\label{class_item_database_a1cffd11f7e1826753626508420992544}} 
+\index{ItemDatabase@{ItemDatabase}!inventory2@{inventory2}}
+\index{inventory2@{inventory2}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{inventory2}{inventory2}}
+{\footnotesize\ttfamily Game\+Object Item\+Database.\+inventory2}
+
+
+
+Item\+Database.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_database_aae8743202dc6def3345a1a6b400e70e4}\label{class_item_database_aae8743202dc6def3345a1a6b400e70e4}} 
+\index{ItemDatabase@{ItemDatabase}!items@{items}}
+\index{items@{items}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_item}{Item}}$>$ Item\+Database.\+items = new List$<$\mbox{\hyperlink{class_item}{Item}}$>$()}
+
+
+
+Item\+Database.\+cs 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}\label{class_item_database_a7cf2df2f86c863834ff3379c46748fb8}} 
+\index{ItemDatabase@{ItemDatabase}!tools@{tools}}
+\index{tools@{tools}!ItemDatabase@{ItemDatabase}}
+\subsubsection{\texorpdfstring{tools}{tools}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_tool}{Tool}}$>$ Item\+Database.\+tools = new List$<$\mbox{\hyperlink{class_tool}{Tool}}$>$()}
+
+
+
+Item\+Database.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_item_database_8cs}{Item\+Database.\+cs}}\end{DoxyCompactItemize}

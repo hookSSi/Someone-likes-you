@@ -1,0 +1,6 @@
+<map id="PlayerMovement.Jump" name="PlayerMovement.Jump">
+<area shape="rect" id="node1" title=" " alt="" coords="452,31,605,57"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#aaf9b77d7177d538be9c1447d08191322" title=" " alt="" coords="241,5,404,32"/>
+<area shape="rect" id="node3" href="$d0/d3d/class_player_movement.html#a6ff1fb59f41c43876325fe8eee66a2cc" title=" " alt="" coords="245,56,400,83"/>
+<area shape="rect" id="node4" href="$d0/d3d/class_player_movement.html#a66307ea038b50ef0f1ea1276507cc66c" title=" " alt="" coords="5,49,193,90"/>
+</map>

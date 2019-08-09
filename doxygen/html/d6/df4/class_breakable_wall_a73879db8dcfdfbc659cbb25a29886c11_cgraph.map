@@ -1,0 +1,6 @@
+<map id="BreakableWall.Interact" name="BreakableWall.Interact">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,159,57"/>
+<area shape="rect" id="node2" href="$d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b" title=" " alt="" coords="207,5,383,32"/>
+<area shape="rect" id="node3" href="$d0/dc6/class_item_database.html#a20404bd6d9530cff940b950b9a89ef4e" title=" " alt="" coords="217,56,372,83"/>
+<area shape="rect" id="node4" href="$d0/dc6/class_item_database.html#a587c4dbaea6399d804f3bb0d0ca377df" title=" " alt="" coords="431,56,615,83"/>
+</map>

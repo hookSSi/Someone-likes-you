@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SomeoneLikesYouUnityScript: C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/Scripts/ItemGainable.cs 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SomeoneLikesYouUnityScript
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d5/d54/_item_gainable_8cs_source.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ItemGainable.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d54/_item_gainable_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html">    5</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="../../d5/dc8/class_item_gainable.html">ItemGainable</a> : MonoBehaviour, <a class="code" href="../../d2/df1/interface_i_interactable.html">IInteractable</a></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html#a3affbda30d99a3ef6bb2be55ed27784b">    7</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="../../d5/dc8/class_item_gainable.html#a3affbda30d99a3ef6bb2be55ed27784b">itemName</a>;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html#ab02884b73669e6b16be637e13809099e">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="../../d5/dc8/class_item_gainable.html#ab02884b73669e6b16be637e13809099e">itemDescription</a>;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html#aad6231e1e649c4ad31fa2114d4c2ff84">    9</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/dc8/class_item_gainable.html#aad6231e1e649c4ad31fa2114d4c2ff84">gainHungry</a>;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html#a4e67d5e2a3aa8a8f4f15d7aa45880eda">   10</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="../../dc/d32/class_item.html">Item</a>.<a class="code" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a> <a class="code" href="../../d5/dc8/class_item_gainable.html#a4e67d5e2a3aa8a8f4f15d7aa45880eda">itemType</a>;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html#a134053b3639f136a434f1331c15cbc53">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="../../d5/dc8/class_item_gainable.html#a134053b3639f136a434f1331c15cbc53">itemImageName</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d5/dc8/class_item_gainable.html#a693eecdbed67e3edfcbd838f1496095c">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/dc8/class_item_gainable.html#a693eecdbed67e3edfcbd838f1496095c">Interact</a>()</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">// Debug.Log(name + &quot;다!&quot;);</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d0/dc6/class_item_database.html">ItemDatabase</a>.<a class="code" href="../../d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b">GetInstance</a>().<a class="code" href="../../d0/dc6/class_item_database.html#a20404bd6d9530cff940b950b9a89ef4e">AddItem</a>(<a class="code" href="../../d5/dc8/class_item_gainable.html#a3affbda30d99a3ef6bb2be55ed27784b">itemName</a>, <a class="code" href="../../d5/dc8/class_item_gainable.html#ab02884b73669e6b16be637e13809099e">itemDescription</a>, <a class="code" href="../../d5/dc8/class_item_gainable.html#aad6231e1e649c4ad31fa2114d4c2ff84">gainHungry</a>, <a class="code" href="../../d5/dc8/class_item_gainable.html#a4e67d5e2a3aa8a8f4f15d7aa45880eda">itemType</a>, <a class="code" href="../../d5/dc8/class_item_gainable.html#a134053b3639f136a434f1331c15cbc53">itemImageName</a>);</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        gameObject.SetActive(<span class="keyword">false</span>);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="ttc" id="class_item_html_ab5eeb575e9d66ebcfef9b58b667fad05"><div class="ttname"><a href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">Item.ItemType</a></div><div class="ttdeci">ItemType</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00015">Item.cs:15</a></div></div>
+<div class="ttc" id="class_item_gainable_html_a693eecdbed67e3edfcbd838f1496095c"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html#a693eecdbed67e3edfcbd838f1496095c">ItemGainable.Interact</a></div><div class="ttdeci">void Interact()</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00014">ItemGainable.cs:14</a></div></div>
+<div class="ttc" id="class_item_html"><div class="ttname"><a href="../../dc/d32/class_item.html">Item</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00006">Item.cs:6</a></div></div>
+<div class="ttc" id="class_item_gainable_html_ab02884b73669e6b16be637e13809099e"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html#ab02884b73669e6b16be637e13809099e">ItemGainable.itemDescription</a></div><div class="ttdeci">string itemDescription</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00008">ItemGainable.cs:8</a></div></div>
+<div class="ttc" id="class_item_database_html_a5312023347462b5af9c545c42934d26b"><div class="ttname"><a href="../../d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b">ItemDatabase.GetInstance</a></div><div class="ttdeci">static ItemDatabase GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/_item_database_8cs_source.html#l00018">ItemDatabase.cs:18</a></div></div>
+<div class="ttc" id="interface_i_interactable_html"><div class="ttname"><a href="../../d2/df1/interface_i_interactable.html">IInteractable</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d69/_i_interactable_8cs_source.html#l00005">IInteractable.cs:5</a></div></div>
+<div class="ttc" id="class_item_gainable_html_aad6231e1e649c4ad31fa2114d4c2ff84"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html#aad6231e1e649c4ad31fa2114d4c2ff84">ItemGainable.gainHungry</a></div><div class="ttdeci">int gainHungry</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00009">ItemGainable.cs:9</a></div></div>
+<div class="ttc" id="class_item_gainable_html"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html">ItemGainable</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00005">ItemGainable.cs:5</a></div></div>
+<div class="ttc" id="class_item_gainable_html_a3affbda30d99a3ef6bb2be55ed27784b"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html#a3affbda30d99a3ef6bb2be55ed27784b">ItemGainable.itemName</a></div><div class="ttdeci">string itemName</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00007">ItemGainable.cs:7</a></div></div>
+<div class="ttc" id="class_item_gainable_html_a4e67d5e2a3aa8a8f4f15d7aa45880eda"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html#a4e67d5e2a3aa8a8f4f15d7aa45880eda">ItemGainable.itemType</a></div><div class="ttdeci">Item.ItemType itemType</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00010">ItemGainable.cs:10</a></div></div>
+<div class="ttc" id="class_item_gainable_html_a134053b3639f136a434f1331c15cbc53"><div class="ttname"><a href="../../d5/dc8/class_item_gainable.html#a134053b3639f136a434f1331c15cbc53">ItemGainable.itemImageName</a></div><div class="ttdeci">string itemImageName</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d54/_item_gainable_8cs_source.html#l00011">ItemGainable.cs:11</a></div></div>
+<div class="ttc" id="class_item_database_html"><div class="ttname"><a href="../../d0/dc6/class_item_database.html">ItemDatabase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/_item_database_8cs_source.html#l00007">ItemDatabase.cs:7</a></div></div>
+<div class="ttc" id="class_item_database_html_a20404bd6d9530cff940b950b9a89ef4e"><div class="ttname"><a href="../../d0/dc6/class_item_database.html#a20404bd6d9530cff940b950b9a89ef4e">ItemDatabase.AddItem</a></div><div class="ttdeci">void AddItem(string itemName, string itemDescription, int gainHungry, Item.ItemType itemType, string itemImageName)</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/_item_database_8cs_source.html#l00033">ItemDatabase.cs:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3beff099619fdbea60c5d5ad06b6665f.html">Someone likes you</a></li><li class="navelem"><a class="el" href="../../dir_08e9473894999c0a2b821effc5369fad.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_f1ece73058bd159467cee7546f4c1ce5.html">Scripts</a></li><li class="navelem"><a class="el" href="../../d5/d54/_item_gainable_8cs.html">ItemGainable.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

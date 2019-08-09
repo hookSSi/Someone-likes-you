@@ -1,0 +1,416 @@
+\hypertarget{class_stage_manager}{}\section{Stage\+Manager 클래스 참조}
+\label{class_stage_manager}\index{StageManager@{StageManager}}
+
+
+Stage\+Manager에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{d7/dcd/class_stage_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Stage\+Manager에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dcb/class_stage_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerator \mbox{\hyperlink{class_stage_manager_affba879c5906e1bbb53a18263449108c}{Someone\+Likes\+You}} ()
+\item 
+I\+Enumerator \mbox{\hyperlink{class_stage_manager_ae8747a960980738fdf6cbb6f542e69b3}{Intro}} ()
+\item 
+void \mbox{\hyperlink{class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc}{Next\+Scene}} (string scene\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fade_controller}{Fade\+Controller}} \mbox{\hyperlink{class_stage_manager_a90c76da0dbd44f1bf1c95f4209bb3a67}{\+\_\+fade\+Controller}}
+\item 
+\mbox{\hyperlink{class_phone_controller}{Phone\+Controller}} \mbox{\hyperlink{class_stage_manager_ab149ce928c50cb739755f24a532b373c}{\+\_\+phone\+Controller}}
+\item 
+\mbox{\hyperlink{class_truck_controller}{Truck\+Controller}} \mbox{\hyperlink{class_stage_manager_acb005133cca2300f649200ad843d49bf}{\+\_\+truck\+Controller}}
+\item 
+\mbox{\hyperlink{class_player_movement}{Player\+Movement}} \mbox{\hyperlink{class_stage_manager_ac6ae36d1451fad99c1a2320c975b0157}{\+\_\+player\+Movement}}
+\item 
+Game\+Object \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_stage_manager_a7569408c048126ff3953004fee6cbc47}{\+\_\+components}}
+\item 
+\mbox{\hyperlink{class_u_i_text_script}{U\+I\+Text\+Script}} \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_stage_manager_a50700b1afb580935b19b70cb70e404dd}{\+\_\+\+U\+I\+Texts}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_stage_manager_a1b43416bf411137f34909060d4325ec7}{Disable\+Objects}} (\mbox{\hyperlink{class_u_i}{UI}} sender, Game\+Object\mbox{[}$\,$\mbox{]} obj)
+\item 
+void \mbox{\hyperlink{class_stage_manager_ada6e7c6bb79b460b0be80bee74c3796d}{Enable\+Objects}} (\mbox{\hyperlink{class_u_i}{UI}} sender, Game\+Object\mbox{[}$\,$\mbox{]} obj)
+\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tutorial_manager}{Tutorial\+Manager}} \mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\+\_\+tutorial\+Controller}}
+\item 
+float \mbox{\hyperlink{class_stage_manager_a4796557b8f0bab78b236b17d5963a662}{\+\_\+cur\+Time}} = 0
+\item 
+float \mbox{\hyperlink{class_stage_manager_ab61fe24b15151c1255c90f1a7f2aab23}{\+\_\+prev\+Time}} = 0
+\item 
+bool \mbox{\hyperlink{class_stage_manager_aa20febcb86c58404afa0f580f98c48ca}{\+\_\+is\+Done}} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Stage\+Manager.\+cs 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_stage_manager_a1b43416bf411137f34909060d4325ec7}\label{class_stage_manager_a1b43416bf411137f34909060d4325ec7}} 
+\index{StageManager@{StageManager}!DisableObjects@{DisableObjects}}
+\index{DisableObjects@{DisableObjects}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{DisableObjects()}{DisableObjects()}}
+{\footnotesize\ttfamily void Stage\+Manager.\+Disable\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_i}{UI}}}]{sender,  }\item[{Game\+Object \mbox{[}$\,$\mbox{]}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 121 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122     \{}
+\DoxyCodeLine{123         \textcolor{keywordflow}{foreach} (GameObject item \textcolor{keywordflow}{in} obj)}
+\DoxyCodeLine{124         \{}
+\DoxyCodeLine{125             item.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stage_manager_ada6e7c6bb79b460b0be80bee74c3796d}\label{class_stage_manager_ada6e7c6bb79b460b0be80bee74c3796d}} 
+\index{StageManager@{StageManager}!EnableObjects@{EnableObjects}}
+\index{EnableObjects@{EnableObjects}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{EnableObjects()}{EnableObjects()}}
+{\footnotesize\ttfamily void Stage\+Manager.\+Enable\+Objects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_i}{UI}}}]{sender,  }\item[{Game\+Object \mbox{[}$\,$\mbox{]}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 128 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{129     \{}
+\DoxyCodeLine{130         \textcolor{keywordflow}{foreach} (GameObject item \textcolor{keywordflow}{in} obj)}
+\DoxyCodeLine{131         \{}
+\DoxyCodeLine{132             item.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{133         \}}
+\DoxyCodeLine{134     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_stage_manager_ae8747a960980738fdf6cbb6f542e69b3}\label{class_stage_manager_ae8747a960980738fdf6cbb6f542e69b3}} 
+\index{StageManager@{StageManager}!Intro@{Intro}}
+\index{Intro@{Intro}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{Intro()}{Intro()}}
+{\footnotesize\ttfamily I\+Enumerator Stage\+Manager.\+Intro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stage\+Manager.\+cs 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{comment}{// 어두웠던 화면이 페이드 아웃으로 밝아짐}}
+\DoxyCodeLine{72         \mbox{\hyperlink{class_stage_manager_a90c76da0dbd44f1bf1c95f4209bb3a67}{\_fadeController}}.\mbox{\hyperlink{class_fade_controller_a1548aeda608cc1dba1db3adaeff20430}{FadeIn}}(0.0001f);}
+\DoxyCodeLine{73         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(2f);}
+\DoxyCodeLine{74         \mbox{\hyperlink{class_stage_manager_a90c76da0dbd44f1bf1c95f4209bb3a67}{\_fadeController}}.\mbox{\hyperlink{class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a}{FadeOut}}(2f);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76         \textcolor{comment}{// 움직임 튜토리얼}}
+\DoxyCodeLine{77         GameObject tutorialObj = \mbox{\hyperlink{class_stage_manager_a7569408c048126ff3953004fee6cbc47}{\_components}}[0];}
+\DoxyCodeLine{78         tutorialObj.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{79         \mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}} = tutorialObj.GetComponent<\mbox{\hyperlink{class_tutorial_manager}{TutorialManager}}>();}
+\DoxyCodeLine{80         }
+\DoxyCodeLine{81         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(2f);}
+\DoxyCodeLine{82         \mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_ad25e4771d3c09099d066991bca8c1203}{Clear}}(); \textcolor{comment}{// 초기화}}
+\DoxyCodeLine{83         \textcolor{comment}{// Right Move tutorial}}
+\DoxyCodeLine{84        }
+\DoxyCodeLine{85         \mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_ab5c041496c132c994a47cb144cae521d}{ShowRightMoveUI}}();}
+\DoxyCodeLine{86         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}})\{ yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};\}}
+\DoxyCodeLine{87         \textcolor{comment}{// Left Move tutorial}}
+\DoxyCodeLine{88         \mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_a852b4a32183004ef9513d7e43b99c247}{ShowLeftMoveUI}}();}
+\DoxyCodeLine{89         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}})\{ yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};\}}
+\DoxyCodeLine{90         \textcolor{comment}{// Interect tutorial}}
+\DoxyCodeLine{91         \mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_a11eddc71a4c6be52e2e52bbe0357afe4}{ShowInterectUI}}();}
+\DoxyCodeLine{92         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}{\_tutorialController}}.\mbox{\hyperlink{class_tutorial_manager_acc9109b98a2e1f071427b7005fd94d45}{\_isRunning}})\{ yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};\}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94         Debug.Log(\textcolor{stringliteral}{"튜토리얼 완료"});}
+\DoxyCodeLine{95         this.\mbox{\hyperlink{class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc}{NextScene}}(\textcolor{stringliteral}{"1-1"});}
+\DoxyCodeLine{96         \textcolor{comment}{// 잠시후 전화가 옴}}
+\DoxyCodeLine{97         \textcolor{comment}{//yield return new WaitForSeconds(3f);}}
+\DoxyCodeLine{98         \textcolor{comment}{//\_phoneController.Load(3); yield return new WaitForSeconds(3f);}}
+\DoxyCodeLine{99         \textcolor{comment}{//\_phoneController.Called("힐다");}}
+\DoxyCodeLine{100         \textcolor{comment}{//     yield return new WaitForSeconds(5f);}}
+\DoxyCodeLine{101         \textcolor{comment}{// \_phoneController.Fold(1); yield return new WaitForSeconds(3f);}}
+\DoxyCodeLine{102         \textcolor{comment}{// \_phoneController.Load(3); yield return new WaitForSeconds(3f);}}
+\DoxyCodeLine{103         \textcolor{comment}{// \_phoneController.Messaged("브라이언","주저리 주저리 동창회에 올거야? 난 말이지");}}
+\DoxyCodeLine{104         \textcolor{comment}{//     yield return new WaitForSeconds(5f);}}
+\DoxyCodeLine{105         \textcolor{comment}{// \_phoneController.Fold(1);}}
+\DoxyCodeLine{106         \textcolor{comment}{// // 이동 튜토리얼 시작}}
+\DoxyCodeLine{107         \textcolor{comment}{// // 이동 튜토리얼이 끝났다 싶으면 트럭이 플레이어 쪽으로 옴}}
+\DoxyCodeLine{108         \textcolor{comment}{// yield return new WaitForSeconds(5f);}}
+\DoxyCodeLine{109         \textcolor{comment}{// \_truckController.Move();}}
+\DoxyCodeLine{110         \textcolor{comment}{// yield return new WaitForSeconds(5f);}}
+\DoxyCodeLine{111         \textcolor{comment}{// // 플레이어가 트럭에 타면 트럭이 출발}}
+\DoxyCodeLine{112         \textcolor{comment}{// \_truckController.Done();}}
+\DoxyCodeLine{113         yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{114     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de4/class_stage_manager_ae8747a960980738fdf6cbb6f542e69b3_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{da/de4/class_stage_manager_ae8747a960980738fdf6cbb6f542e69b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc}\label{class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc}} 
+\index{StageManager@{StageManager}!NextScene@{NextScene}}
+\index{NextScene@{NextScene}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{NextScene()}{NextScene()}}
+{\footnotesize\ttfamily void Stage\+Manager.\+Next\+Scene (\begin{DoxyParamCaption}\item[{string}]{scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Stage\+Manager.\+cs 파일의 115 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116     \{}
+\DoxyCodeLine{117         \mbox{\hyperlink{class_stage_manager_a90c76da0dbd44f1bf1c95f4209bb3a67}{\_fadeController}}.\mbox{\hyperlink{class_fade_controller_a1548aeda608cc1dba1db3adaeff20430}{FadeIn}}(0.0001f);}
+\DoxyCodeLine{118         SceneManager.LoadScene(sceneName);}
+\DoxyCodeLine{119     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de4/class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de4/class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_stage_manager_affba879c5906e1bbb53a18263449108c}\label{class_stage_manager_affba879c5906e1bbb53a18263449108c}} 
+\index{StageManager@{StageManager}!SomeoneLikesYou@{SomeoneLikesYou}}
+\index{SomeoneLikesYou@{SomeoneLikesYou}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{SomeoneLikesYou()}{SomeoneLikesYou()}}
+{\footnotesize\ttfamily I\+Enumerator Stage\+Manager.\+Someone\+Likes\+You (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stage\+Manager.\+cs 파일의 38 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         \textcolor{comment}{/* 0: Producer 오브젝트 */}}
+\DoxyCodeLine{41         \textcolor{comment}{/* 1: Subject  오브젝트  */}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         GameObject producer = \mbox{\hyperlink{class_stage_manager_a7569408c048126ff3953004fee6cbc47}{\_components}}[0];}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_u_i_text_script}{UITextScript}} producer\_script = \mbox{\hyperlink{class_stage_manager_a50700b1afb580935b19b70cb70e404dd}{\_UITexts}}[0];}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         GameObject subject = \mbox{\hyperlink{class_stage_manager_a7569408c048126ff3953004fee6cbc47}{\_components}}[1];}
+\DoxyCodeLine{47         \mbox{\hyperlink{class_u_i_text_script}{UITextScript}} subject\_script = \mbox{\hyperlink{class_stage_manager_a50700b1afb580935b19b70cb70e404dd}{\_UITexts}}[1];}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         producer.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{50         producer\_script.\mbox{\hyperlink{class_u_i_text_script_a5c785bc14de97738b65b70cd2e68d4f8}{Awake}}();}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{52         producer\_script.\mbox{\hyperlink{class_u_i_text_script_a97d0f33b8a4fcfee8143a79acd32b0d0}{ShowTextByPage}}(2f);}
+\DoxyCodeLine{53         \textcolor{keywordflow}{while}(producer\_script.\mbox{\hyperlink{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}{\_isRunning}})}
+\DoxyCodeLine{54         \{}
+\DoxyCodeLine{55             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57         \textcolor{keywordflow}{if}(!producer\_script.\mbox{\hyperlink{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}{\_isRunning}})}
+\DoxyCodeLine{58         \{}
+\DoxyCodeLine{59             yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(2f);}
+\DoxyCodeLine{60             producer.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{61             subject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{62             subject\_script.\mbox{\hyperlink{class_u_i_text_script_a5c785bc14de97738b65b70cd2e68d4f8}{Awake}}();}
+\DoxyCodeLine{63             subject\_script.\mbox{\hyperlink{class_u_i_text_script_a5f00904260cbba5fb285ee9b9a04b1c2}{SetSoftness}}(1f);}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         subject\_script.\mbox{\hyperlink{class_u_i_text_script_a0843c4fe533a5d83147b106a496c84ef}{FadeinShow}}(5f);}
+\DoxyCodeLine{66         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(7f);}
+\DoxyCodeLine{67         this.\mbox{\hyperlink{class_stage_manager_a10d59cedf36dae5138eb9622088fa3dc}{NextScene}}(\textcolor{stringliteral}{"Intro"});}
+\DoxyCodeLine{68     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de4/class_stage_manager_affba879c5906e1bbb53a18263449108c_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de4/class_stage_manager_affba879c5906e1bbb53a18263449108c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36}\label{class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36}} 
+\index{StageManager@{StageManager}!Start@{Start}}
+\index{Start@{Start}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Stage\+Manager.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{if}(SceneManager.GetActiveScene().name == \textcolor{stringliteral}{"SomeoneLikesYou"})}
+\DoxyCodeLine{29         \{}
+\DoxyCodeLine{30             StartCoroutine(\mbox{\hyperlink{class_stage_manager_affba879c5906e1bbb53a18263449108c}{SomeoneLikesYou}}());}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32         \textcolor{keywordflow}{if}(SceneManager.GetActiveScene().name == \textcolor{stringliteral}{"Intro"})}
+\DoxyCodeLine{33         \{}
+\DoxyCodeLine{34             StartCoroutine(\mbox{\hyperlink{class_stage_manager_ae8747a960980738fdf6cbb6f542e69b3}{Intro}}());}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de4/class_stage_manager_ac5b1a1bb9910775d93dd65bb4119cb36_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_stage_manager_a7569408c048126ff3953004fee6cbc47}\label{class_stage_manager_a7569408c048126ff3953004fee6cbc47}} 
+\index{StageManager@{StageManager}!\_components@{\_components}}
+\index{\_components@{\_components}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_components}{\_components}}
+{\footnotesize\ttfamily Game\+Object \mbox{[}$\,$\mbox{]} Stage\+Manager.\+\_\+components}
+
+
+
+Stage\+Manager.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_a4796557b8f0bab78b236b17d5963a662}\label{class_stage_manager_a4796557b8f0bab78b236b17d5963a662}} 
+\index{StageManager@{StageManager}!\_curTime@{\_curTime}}
+\index{\_curTime@{\_curTime}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_curTime}{\_curTime}}
+{\footnotesize\ttfamily float Stage\+Manager.\+\_\+cur\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 21 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_a90c76da0dbd44f1bf1c95f4209bb3a67}\label{class_stage_manager_a90c76da0dbd44f1bf1c95f4209bb3a67}} 
+\index{StageManager@{StageManager}!\_fadeController@{\_fadeController}}
+\index{\_fadeController@{\_fadeController}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_fadeController}{\_fadeController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fade_controller}{Fade\+Controller}} Stage\+Manager.\+\_\+fade\+Controller}
+
+
+
+Stage\+Manager.\+cs 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_aa20febcb86c58404afa0f580f98c48ca}\label{class_stage_manager_aa20febcb86c58404afa0f580f98c48ca}} 
+\index{StageManager@{StageManager}!\_isDone@{\_isDone}}
+\index{\_isDone@{\_isDone}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_isDone}{\_isDone}}
+{\footnotesize\ttfamily bool Stage\+Manager.\+\_\+is\+Done = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 23 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_ab149ce928c50cb739755f24a532b373c}\label{class_stage_manager_ab149ce928c50cb739755f24a532b373c}} 
+\index{StageManager@{StageManager}!\_phoneController@{\_phoneController}}
+\index{\_phoneController@{\_phoneController}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_phoneController}{\_phoneController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_phone_controller}{Phone\+Controller}} Stage\+Manager.\+\_\+phone\+Controller}
+
+
+
+Stage\+Manager.\+cs 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_ac6ae36d1451fad99c1a2320c975b0157}\label{class_stage_manager_ac6ae36d1451fad99c1a2320c975b0157}} 
+\index{StageManager@{StageManager}!\_playerMovement@{\_playerMovement}}
+\index{\_playerMovement@{\_playerMovement}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_playerMovement}{\_playerMovement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_movement}{Player\+Movement}} Stage\+Manager.\+\_\+player\+Movement}
+
+
+
+Stage\+Manager.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_ab61fe24b15151c1255c90f1a7f2aab23}\label{class_stage_manager_ab61fe24b15151c1255c90f1a7f2aab23}} 
+\index{StageManager@{StageManager}!\_prevTime@{\_prevTime}}
+\index{\_prevTime@{\_prevTime}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_prevTime}{\_prevTime}}
+{\footnotesize\ttfamily float Stage\+Manager.\+\_\+prev\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 22 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_acb005133cca2300f649200ad843d49bf}\label{class_stage_manager_acb005133cca2300f649200ad843d49bf}} 
+\index{StageManager@{StageManager}!\_truckController@{\_truckController}}
+\index{\_truckController@{\_truckController}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_truckController}{\_truckController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_truck_controller}{Truck\+Controller}} Stage\+Manager.\+\_\+truck\+Controller}
+
+
+
+Stage\+Manager.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}\label{class_stage_manager_a89bcfa1a4d5ca6a9135dfe051b4695a8}} 
+\index{StageManager@{StageManager}!\_tutorialController@{\_tutorialController}}
+\index{\_tutorialController@{\_tutorialController}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_tutorialController}{\_tutorialController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tutorial_manager}{Tutorial\+Manager}} Stage\+Manager.\+\_\+tutorial\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stage\+Manager.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_stage_manager_a50700b1afb580935b19b70cb70e404dd}\label{class_stage_manager_a50700b1afb580935b19b70cb70e404dd}} 
+\index{StageManager@{StageManager}!\_UITexts@{\_UITexts}}
+\index{\_UITexts@{\_UITexts}!StageManager@{StageManager}}
+\subsubsection{\texorpdfstring{\_UITexts}{\_UITexts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_text_script}{U\+I\+Text\+Script}} \mbox{[}$\,$\mbox{]} Stage\+Manager.\+\_\+\+U\+I\+Texts}
+
+
+
+Stage\+Manager.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+U\+I\&\+Scene/\mbox{\hyperlink{_stage_manager_8cs}{Stage\+Manager.\+cs}}\end{DoxyCompactItemize}

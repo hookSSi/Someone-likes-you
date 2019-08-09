@@ -1,0 +1,401 @@
+\hypertarget{class_u_i_text_script}{}\section{U\+I\+Text\+Script 클래스 참조}
+\label{class_u_i_text_script}\index{UITextScript@{UITextScript}}
+
+
+U\+I\+Text\+Script에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{db/d20/class_u_i_text_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+U\+I\+Text\+Script에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d1/d6a/class_u_i_text_script__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}{Text\+Show\+Mode}} (T\+M\+P\+\_\+\+Text text\+Component)
+\item 
+void \mbox{\hyperlink{class_u_i_text_script_a5c785bc14de97738b65b70cd2e68d4f8}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_text_script_a97d0f33b8a4fcfee8143a79acd32b0d0}{Show\+Text\+By\+Page}} (float wait\+Range=0, \mbox{\hyperlink{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}{Text\+Show\+Mode}} mode=null)
+\item 
+void \mbox{\hyperlink{class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8}{Reveal\+Characters}} (T\+M\+P\+\_\+\+Text text\+Component)
+\item 
+void \mbox{\hyperlink{class_u_i_text_script_a495e97bbed8219fa703953618f2948b8}{Reveal\+Characters}} (string text)
+\item 
+void \mbox{\hyperlink{class_u_i_text_script_a0843c4fe533a5d83147b106a496c84ef}{Fadein\+Show}} (float range\+Time)
+\item 
+void \mbox{\hyperlink{class_u_i_text_script_a5f00904260cbba5fb285ee9b9a04b1c2}{Set\+Softness}} (float softness)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+T\+M\+P\+\_\+\+Text \mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\+\_\+text\+Mesh}}
+\item 
+bool \mbox{\hyperlink{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}{\+\_\+is\+Running}} = false
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerator \mbox{\hyperlink{class_u_i_text_script_a1e3858f90c3f9c061fd820c85968f1fb}{Co\+\_\+\+Show\+Text\+By\+Page}} (T\+M\+P\+\_\+\+Text text\+Component, float wait\+Range=0, \mbox{\hyperlink{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}{Text\+Show\+Mode}} mode=null)
+\item 
+I\+Enumerator \mbox{\hyperlink{class_u_i_text_script_a9f99020bcd0deb15ab7e88b42a1f8384}{Co\+\_\+\+Reveal\+Characters}} (T\+M\+P\+\_\+\+Text text\+Component)
+\item 
+I\+Enumerator \mbox{\hyperlink{class_u_i_text_script_a620cc6b3ee518d128bd07469889fb042}{Co\+\_\+\+Fade\+In\+Show}} (T\+M\+P\+\_\+\+Text text\+Component, float range\+Time=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+U\+I\+Text\+Script.\+cs 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_u_i_text_script_a5c785bc14de97738b65b70cd2e68d4f8}\label{class_u_i_text_script_a5c785bc14de97738b65b70cd2e68d4f8}} 
+\index{UITextScript@{UITextScript}!Awake@{Awake}}
+\index{Awake@{Awake}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void U\+I\+Text\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13     \{}
+\DoxyCodeLine{14         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{15             \mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}} = this.GetComponent<TMP\_Text>();}
+\DoxyCodeLine{16     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a5c785bc14de97738b65b70cd2e68d4f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a620cc6b3ee518d128bd07469889fb042}\label{class_u_i_text_script_a620cc6b3ee518d128bd07469889fb042}} 
+\index{UITextScript@{UITextScript}!Co\_FadeInShow@{Co\_FadeInShow}}
+\index{Co\_FadeInShow@{Co\_FadeInShow}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{Co\_FadeInShow()}{Co\_FadeInShow()}}
+{\footnotesize\ttfamily I\+Enumerator U\+I\+Text\+Script.\+Co\+\_\+\+Fade\+In\+Show (\begin{DoxyParamCaption}\item[{T\+M\+P\+\_\+\+Text}]{text\+Component,  }\item[{float}]{range\+Time = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 95 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96     \{}
+\DoxyCodeLine{97         textComponent.ForceMeshUpdate();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99         Material mat = textComponent.font.material;}
+\DoxyCodeLine{100         \textcolor{keywordtype}{float} curSoftness = 0;}
+\DoxyCodeLine{101         \textcolor{keywordtype}{float} softness = 1;}
+\DoxyCodeLine{102         \textcolor{keywordtype}{float} t = 0;}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104         \textcolor{keywordflow}{while}(\textcolor{keyword}{true})}
+\DoxyCodeLine{105         \{}
+\DoxyCodeLine{106             \textcolor{keywordflow}{if}(softness <= curSoftness || t > rangeTime)}
+\DoxyCodeLine{107             \{}
+\DoxyCodeLine{108                 softness = curSoftness;}
+\DoxyCodeLine{109                 textComponent.font.material.SetFloat(\textcolor{stringliteral}{"\_OutlineSoftness"}, softness);}
+\DoxyCodeLine{110                 yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{111             \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113             textComponent.font.material.SetFloat(\textcolor{stringliteral}{"\_OutlineSoftness"}, softness);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115             t += Time.deltaTime;}
+\DoxyCodeLine{116             softness -= Time.deltaTime / rangeTime;}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a620cc6b3ee518d128bd07469889fb042_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a9f99020bcd0deb15ab7e88b42a1f8384}\label{class_u_i_text_script_a9f99020bcd0deb15ab7e88b42a1f8384}} 
+\index{UITextScript@{UITextScript}!Co\_RevealCharacters@{Co\_RevealCharacters}}
+\index{Co\_RevealCharacters@{Co\_RevealCharacters}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{Co\_RevealCharacters()}{Co\_RevealCharacters()}}
+{\footnotesize\ttfamily I\+Enumerator U\+I\+Text\+Script.\+Co\+\_\+\+Reveal\+Characters (\begin{DoxyParamCaption}\item[{T\+M\+P\+\_\+\+Text}]{text\+Component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 73 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74     \{}
+\DoxyCodeLine{75         textComponent.ForceMeshUpdate();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77         TMP\_TextInfo textInfo = textComponent.textInfo;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} totalVisibleCharacters = textInfo.characterCount; \textcolor{comment}{// Get \# of Visible Character in text object}}
+\DoxyCodeLine{80         \textcolor{keywordtype}{int} visibleCount = 0;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{83         \{}
+\DoxyCodeLine{84             \textcolor{keywordflow}{if} (visibleCount > totalVisibleCharacters)}
+\DoxyCodeLine{85             \{}
+\DoxyCodeLine{86                 yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{87             \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89             textComponent.maxVisibleCharacters = visibleCount; \textcolor{comment}{// How many characters should TextMeshPro display?}}
+\DoxyCodeLine{90             visibleCount += 1;}
+\DoxyCodeLine{91             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a9f99020bcd0deb15ab7e88b42a1f8384_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a1e3858f90c3f9c061fd820c85968f1fb}\label{class_u_i_text_script_a1e3858f90c3f9c061fd820c85968f1fb}} 
+\index{UITextScript@{UITextScript}!Co\_ShowTextByPage@{Co\_ShowTextByPage}}
+\index{Co\_ShowTextByPage@{Co\_ShowTextByPage}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{Co\_ShowTextByPage()}{Co\_ShowTextByPage()}}
+{\footnotesize\ttfamily I\+Enumerator U\+I\+Text\+Script.\+Co\+\_\+\+Show\+Text\+By\+Page (\begin{DoxyParamCaption}\item[{T\+M\+P\+\_\+\+Text}]{text\+Component,  }\item[{float}]{wait\+Range = {\ttfamily 0},  }\item[{\mbox{\hyperlink{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}{Text\+Show\+Mode}}}]{mode = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 44 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         this.\mbox{\hyperlink{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}{\_isRunning}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         textComponent.ForceMeshUpdate();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         TMP\_TextInfo textInfo = textComponent.textInfo;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{keywordtype}{int} totalPage = textInfo.pageInfo.Length;}
+\DoxyCodeLine{53         \textcolor{keywordtype}{int} curPage = 1;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordflow}{while}(\textcolor{keyword}{true})}
+\DoxyCodeLine{56         \{}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58             \textcolor{keywordflow}{if}(curPage > totalPage)}
+\DoxyCodeLine{59             \{}
+\DoxyCodeLine{60                 this.\mbox{\hyperlink{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}{\_isRunning}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{61                 yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{62             \}}
+\DoxyCodeLine{63             textComponent.pageToDisplay = curPage;}
+\DoxyCodeLine{64             \textcolor{keywordflow}{if}(mode != \textcolor{keyword}{null})}
+\DoxyCodeLine{65                 mode(textComponent);}
+\DoxyCodeLine{66             yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForSeconds(waitRange);}
+\DoxyCodeLine{67             curPage += 1;  }
+\DoxyCodeLine{68             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{69         \}        }
+\DoxyCodeLine{70     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a1e3858f90c3f9c061fd820c85968f1fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a0843c4fe533a5d83147b106a496c84ef}\label{class_u_i_text_script_a0843c4fe533a5d83147b106a496c84ef}} 
+\index{UITextScript@{UITextScript}!FadeinShow@{FadeinShow}}
+\index{FadeinShow@{FadeinShow}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{FadeinShow()}{FadeinShow()}}
+{\footnotesize\ttfamily void U\+I\+Text\+Script.\+Fadein\+Show (\begin{DoxyParamCaption}\item[{float}]{range\+Time }\end{DoxyParamCaption})}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         StartCoroutine(\mbox{\hyperlink{class_u_i_text_script_a620cc6b3ee518d128bd07469889fb042}{Co\_FadeInShow}}(this.\mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}}, rangeTime));}
+\DoxyCodeLine{37     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a0843c4fe533a5d83147b106a496c84ef_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a0843c4fe533a5d83147b106a496c84ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8}\label{class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8}} 
+\index{UITextScript@{UITextScript}!RevealCharacters@{RevealCharacters}}
+\index{RevealCharacters@{RevealCharacters}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{RevealCharacters()}{RevealCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void U\+I\+Text\+Script.\+Reveal\+Characters (\begin{DoxyParamCaption}\item[{T\+M\+P\+\_\+\+Text}]{text\+Component }\end{DoxyParamCaption})}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 25 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         StartCoroutine(\mbox{\hyperlink{class_u_i_text_script_a9f99020bcd0deb15ab7e88b42a1f8384}{Co\_RevealCharacters}}(textComponent));}
+\DoxyCodeLine{28     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a495e97bbed8219fa703953618f2948b8}\label{class_u_i_text_script_a495e97bbed8219fa703953618f2948b8}} 
+\index{UITextScript@{UITextScript}!RevealCharacters@{RevealCharacters}}
+\index{RevealCharacters@{RevealCharacters}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{RevealCharacters()}{RevealCharacters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void U\+I\+Text\+Script.\+Reveal\+Characters (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 29 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}}.text = text;}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8}{RevealCharacters}}(\mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}});}
+\DoxyCodeLine{33     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a495e97bbed8219fa703953618f2948b8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a5f00904260cbba5fb285ee9b9a04b1c2}\label{class_u_i_text_script_a5f00904260cbba5fb285ee9b9a04b1c2}} 
+\index{UITextScript@{UITextScript}!SetSoftness@{SetSoftness}}
+\index{SetSoftness@{SetSoftness}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{SetSoftness()}{SetSoftness()}}
+{\footnotesize\ttfamily void U\+I\+Text\+Script.\+Set\+Softness (\begin{DoxyParamCaption}\item[{float}]{softness }\end{DoxyParamCaption})}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 38 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}}.font.material.SetFloat(\textcolor{stringliteral}{"\_OutlineSoftness"}, softness);}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a5f00904260cbba5fb285ee9b9a04b1c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a97d0f33b8a4fcfee8143a79acd32b0d0}\label{class_u_i_text_script_a97d0f33b8a4fcfee8143a79acd32b0d0}} 
+\index{UITextScript@{UITextScript}!ShowTextByPage@{ShowTextByPage}}
+\index{ShowTextByPage@{ShowTextByPage}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{ShowTextByPage()}{ShowTextByPage()}}
+{\footnotesize\ttfamily void U\+I\+Text\+Script.\+Show\+Text\+By\+Page (\begin{DoxyParamCaption}\item[{float}]{wait\+Range = {\ttfamily 0},  }\item[{\mbox{\hyperlink{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}{Text\+Show\+Mode}}}]{mode = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{if}(mode == \textcolor{keyword}{null})}
+\DoxyCodeLine{21             StartCoroutine(\mbox{\hyperlink{class_u_i_text_script_a1e3858f90c3f9c061fd820c85968f1fb}{Co\_ShowTextByPage}}(this.\mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}}, waitRange, \mbox{\hyperlink{class_u_i_text_script_adfa2885d1c5654ce0a8da9fe0c5c15f8}{RevealCharacters}}));}
+\DoxyCodeLine{22         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{23             StartCoroutine(\mbox{\hyperlink{class_u_i_text_script_a1e3858f90c3f9c061fd820c85968f1fb}{Co\_ShowTextByPage}}(this.\mbox{\hyperlink{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}{\_textMesh}}, waitRange, mode));}
+\DoxyCodeLine{24     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a97d0f33b8a4fcfee8143a79acd32b0d0_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8d/class_u_i_text_script_a97d0f33b8a4fcfee8143a79acd32b0d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}\label{class_u_i_text_script_a0ecb940dec27ce92266d03cd4fd2042a}} 
+\index{UITextScript@{UITextScript}!TextShowMode@{TextShowMode}}
+\index{TextShowMode@{TextShowMode}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{TextShowMode()}{TextShowMode()}}
+{\footnotesize\ttfamily delegate void U\+I\+Text\+Script.\+Text\+Show\+Mode (\begin{DoxyParamCaption}\item[{T\+M\+P\+\_\+\+Text}]{text\+Component }\end{DoxyParamCaption})}
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}\label{class_u_i_text_script_af8a950f4500b100ffe89394102f2edbb}} 
+\index{UITextScript@{UITextScript}!\_isRunning@{\_isRunning}}
+\index{\_isRunning@{\_isRunning}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{\_isRunning}{\_isRunning}}
+{\footnotesize\ttfamily bool U\+I\+Text\+Script.\+\_\+is\+Running = false}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}\label{class_u_i_text_script_ac269c7294a861e6e87816d8257c6efc8}} 
+\index{UITextScript@{UITextScript}!\_textMesh@{\_textMesh}}
+\index{\_textMesh@{\_textMesh}!UITextScript@{UITextScript}}
+\subsubsection{\texorpdfstring{\_textMesh}{\_textMesh}}
+{\footnotesize\ttfamily T\+M\+P\+\_\+\+Text U\+I\+Text\+Script.\+\_\+text\+Mesh}
+
+
+
+U\+I\+Text\+Script.\+cs 파일의 9 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+U\+I\&\+Scene/\mbox{\hyperlink{_u_i_text_script_8cs}{U\+I\+Text\+Script.\+cs}}\end{DoxyCompactItemize}

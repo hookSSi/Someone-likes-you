@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['idletime',['idleTime',['../df/d42/class_moving_platform.html#a489629e7e4703ea543f2931265d7fc2d',1,'MovingPlatform']]],
+  ['indicator',['indicator',['../d3/d8e/class_interaction.html#ab757635fb5137d0da6ced4a50b1ef612',1,'Interaction']]],
+  ['instance',['instance',['../d2/d94/class_conversation.html#a4dff96bb1448dc4396b031d8062461a9',1,'Conversation.instance()'],['../d0/dc6/class_item_database.html#ae47c35933c266fb0ef04d3dfaf880b1c',1,'ItemDatabase.instance()']]],
+  ['inventory1',['inventory1',['../d0/dc6/class_item_database.html#a12b041c3f602e7bb9b176de5d29237d5',1,'ItemDatabase']]],
+  ['inventory2',['inventory2',['../d0/dc6/class_item_database.html#a1cffd11f7e1826753626508420992544',1,'ItemDatabase']]],
+  ['isclimbing',['isClimbing',['../d0/d3d/class_player_movement.html#a76950ad9ffc2ff1ea99617345eb3074e',1,'PlayerMovement']]],
+  ['isground',['isGround',['../d0/d3d/class_player_movement.html#a5272dbf3b96377dfecb127739bc7e639',1,'PlayerMovement']]],
+  ['isjumpcancelable',['isJumpCancelable',['../d0/d3d/class_player_movement.html#aff9c832db827f7af7d03c7c49842179f',1,'PlayerMovement']]],
+  ['isjumping',['isJumping',['../d0/d3d/class_player_movement.html#a1a59782fc52356398194e29255f1a0ae',1,'PlayerMovement']]],
+  ['ison',['isOn',['../d9/d47/class_switch.html#ab0eb51a8286838002553f383e8e6a2a9',1,'Switch.isOn()'],['../d2/da6/class_switch1__1.html#af6e2e065d1dda36fc6005b0952f13db9',1,'Switch1_1.isOn()']]],
+  ['isopenbykey',['isOpenByKey',['../da/d30/class_door.html#a8e16ffccc799c6f70e5540124df53f64',1,'Door']]],
+  ['itemdescription',['itemDescription',['../dc/d32/class_item.html#a1e47deb8739893cbfa26460cf4be4f00',1,'Item.itemDescription()'],['../d5/dc8/class_item_gainable.html#ab02884b73669e6b16be637e13809099e',1,'ItemGainable.itemDescription()']]],
+  ['itemimage',['itemImage',['../dc/d32/class_item.html#aa189431b0e859890a3b9118da64cc484',1,'Item']]],
+  ['itemimagename',['itemImageName',['../d5/dc8/class_item_gainable.html#a134053b3639f136a434f1331c15cbc53',1,'ItemGainable']]],
+  ['itemname',['itemName',['../dc/d32/class_item.html#a8c54f77a262b1ffd78c1cd8cbed86ae0',1,'Item.itemName()'],['../d5/dc8/class_item_gainable.html#a3affbda30d99a3ef6bb2be55ed27784b',1,'ItemGainable.itemName()']]],
+  ['items',['items',['../d0/dc6/class_item_database.html#aae8743202dc6def3345a1a6b400e70e4',1,'ItemDatabase']]],
+  ['itemtype',['itemType',['../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d',1,'Item.itemType()'],['../d5/dc8/class_item_gainable.html#a4e67d5e2a3aa8a8f4f15d7aa45880eda',1,'ItemGainable.itemType()']]]
+];

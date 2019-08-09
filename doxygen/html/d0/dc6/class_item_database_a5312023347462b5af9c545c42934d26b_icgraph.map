@@ -1,0 +1,13 @@
+<map id="ItemDatabase.GetInstance" name="ItemDatabase.GetInstance">
+<area shape="rect" id="node1" title=" " alt="" coords="607,157,783,184"/>
+<area shape="rect" id="node2" href="$d6/df4/class_breakable_wall.html#a73879db8dcfdfbc659cbb25a29886c11" title=" " alt="" coords="401,5,554,32"/>
+<area shape="rect" id="node3" href="$da/d30/class_door.html#af8fed06499c3e6ffe6d993b5b341c54f" title=" " alt="" coords="429,56,525,83"/>
+<area shape="rect" id="node4" href="$d3/d8e/class_interaction.html#a306fd6f3cfc49c1a74221277785579ba" title=" " alt="" coords="402,107,553,133"/>
+<area shape="rect" id="node6" href="$d5/dc8/class_item_gainable.html#a693eecdbed67e3edfcbd838f1496095c" title=" " alt="" coords="405,157,550,184"/>
+<area shape="rect" id="node7" href="$d3/df3/class_item_tool.html#aaf220012be263b22a8834bf48d6a032c" title=" " alt="" coords="418,208,537,235"/>
+<area shape="rect" id="node8" href="$d0/d3d/class_player_movement.html#aaf9b77d7177d538be9c1447d08191322" title=" " alt="" coords="396,259,559,285"/>
+<area shape="rect" id="node9" href="$db/d74/class_hungerness.html#a84a1577cd9995fa6b719e14295e8ee7d" title=" " alt="" coords="420,309,535,336"/>
+<area shape="rect" id="node5" href="$d3/d8e/class_interaction.html#a411a0868d034a972335ede1c42088c5e" title=" " alt="" coords="221,107,348,133"/>
+<area shape="rect" id="node10" href="$db/d74/class_hungerness.html#a3c2776ba20e8a72e763ad02ded86aad9" title=" " alt="" coords="221,309,348,336"/>
+<area shape="rect" id="node11" href="$db/d74/class_hungerness.html#a0d5665654ffa0599fa8d6eb9d86d4963" title=" " alt="" coords="5,309,173,336"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="StageManager.Start" name="StageManager.Start">
+<area shape="rect" id="node1" title=" " alt="" coords="5,221,144,248"/>
+<area shape="rect" id="node2" href="$da/de4/class_stage_manager.html#affba879c5906e1bbb53a18263449108c" title=" " alt="" coords="192,132,411,159"/>
+<area shape="rect" id="node14" href="$da/de4/class_stage_manager.html#ae8747a960980738fdf6cbb6f542e69b3" title=" " alt="" coords="234,335,369,361"/>
+<area shape="rect" id="node3" href="$da/d8d/class_u_i_text_script.html#a5c785bc14de97738b65b70cd2e68d4f8" title=" " alt="" coords="493,5,629,32"/>
+<area shape="rect" id="node4" href="$da/d8d/class_u_i_text_script.html#a97d0f33b8a4fcfee8143a79acd32b0d0" title=" " alt="" coords="461,56,661,83"/>
+<area shape="rect" id="node8" href="$da/d8d/class_u_i_text_script.html#a5f00904260cbba5fb285ee9b9a04b1c2" title=" " alt="" coords="477,107,645,133"/>
+<area shape="rect" id="node9" href="$da/d8d/class_u_i_text_script.html#a0843c4fe533a5d83147b106a496c84ef" title=" " alt="" coords="477,157,645,184"/>
+<area shape="rect" id="node11" href="$da/de4/class_stage_manager.html#a10d59cedf36dae5138eb9622088fa3dc" title=" " alt="" coords="474,208,649,235"/>
+<area shape="rect" id="node5" href="$da/d8d/class_u_i_text_script.html#a1e3858f90c3f9c061fd820c85968f1fb" title=" " alt="" coords="723,15,900,57"/>
+<area shape="rect" id="node6" href="$da/d8d/class_u_i_text_script.html#adfa2885d1c5654ce0a8da9fe0c5c15f8" title=" " alt="" coords="712,81,911,108"/>
+<area shape="rect" id="node7" href="$da/d8d/class_u_i_text_script.html#a9f99020bcd0deb15ab7e88b42a1f8384" title=" " alt="" coords="959,81,1180,108"/>
+<area shape="rect" id="node10" href="$da/d8d/class_u_i_text_script.html#a620cc6b3ee518d128bd07469889fb042" title=" " alt="" coords="716,157,907,184"/>
+<area shape="rect" id="node12" href="$d3/dd7/class_fade_controller.html#a1548aeda608cc1dba1db3adaeff20430" title=" " alt="" coords="737,233,886,260"/>
+<area shape="rect" id="node13" href="$d3/dd7/class_fade_controller.html#ae01cc471bb439aa20b036ec93e6371b6" title=" " alt="" coords="987,233,1152,260"/>
+<area shape="rect" id="node15" href="$d3/dd7/class_fade_controller.html#a0f5a8752a7f7cefa8e81b845b21b3f4a" title=" " alt="" coords="481,309,641,336"/>
+<area shape="rect" id="node17" href="$d6/d14/class_tutorial_manager.html#ad25e4771d3c09099d066991bca8c1203" title=" " alt="" coords="487,360,635,387"/>
+<area shape="rect" id="node18" href="$d6/d14/class_tutorial_manager.html#ab5c041496c132c994a47cb144cae521d" title=" " alt="" coords="471,411,651,453"/>
+<area shape="rect" id="node19" href="$d6/d14/class_tutorial_manager.html#a852b4a32183004ef9513d7e43b99c247" title=" " alt="" coords="476,477,647,518"/>
+<area shape="rect" id="node20" href="$d6/d14/class_tutorial_manager.html#a11eddc71a4c6be52e2e52bbe0357afe4" title=" " alt="" coords="459,543,664,569"/>
+<area shape="rect" id="node16" href="$d3/dd7/class_fade_controller.html#acb1828a03e8bb69d90e1b2db32135882" title=" " alt="" coords="723,309,899,336"/>
+</map>

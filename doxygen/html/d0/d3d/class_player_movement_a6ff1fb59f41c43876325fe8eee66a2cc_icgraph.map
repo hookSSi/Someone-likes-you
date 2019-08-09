@@ -1,0 +1,4 @@
+<map id="PlayerMovement.Climb" name="PlayerMovement.Climb">
+<area shape="rect" id="node1" title=" " alt="" coords="241,13,396,39"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a66307ea038b50ef0f1ea1276507cc66c" title=" " alt="" coords="5,5,193,47"/>
+</map>

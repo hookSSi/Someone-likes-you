@@ -1,0 +1,6 @@
+<map id="ItemDatabase.AddItem" name="ItemDatabase.AddItem">
+<area shape="rect" id="node1" title=" " alt="" coords="207,56,361,83"/>
+<area shape="rect" id="node2" href="$d6/df4/class_breakable_wall.html#a73879db8dcfdfbc659cbb25a29886c11" title=" " alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node3" href="$d0/dc6/class_item_database.html#a0891a7bd4b3213485d52e7b0fcbde30b" title=" " alt="" coords="15,56,149,83"/>
+<area shape="rect" id="node4" href="$d5/dc8/class_item_gainable.html#a693eecdbed67e3edfcbd838f1496095c" title=" " alt="" coords="9,107,155,133"/>
+</map>

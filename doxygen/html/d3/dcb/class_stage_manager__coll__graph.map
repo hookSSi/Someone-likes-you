@@ -1,0 +1,11 @@
+<map id="StageManager" name="StageManager">
+<area shape="rect" id="node1" title=" " alt="" coords="349,1032,500,1227"/>
+<area shape="rect" id="node2" title=" " alt="" coords="359,5,469,83"/>
+<area shape="rect" id="node3" href="$da/d8d/class_u_i_text_script.html" title=" " alt="" coords="43,380,207,604"/>
+<area shape="rect" id="node4" href="$d6/d14/class_tutorial_manager.html" title=" " alt="" coords="214,314,361,670"/>
+<area shape="rect" id="node5" href="$d2/d37/class_truck_controller.html" title=" " alt="" coords="370,753,479,933"/>
+<area shape="rect" id="node6" href="$d1/de2/class_movement.html" title=" " alt="" coords="418,147,549,253"/>
+<area shape="rect" id="node7" href="$d0/d3d/class_player_movement.html" title=" " alt="" coords="645,292,797,692"/>
+<area shape="rect" id="node8" href="$d3/dd7/class_fade_controller.html" title=" " alt="" coords="778,132,885,268"/>
+<area shape="rect" id="node9" href="$db/dfb/class_phone_controller.html" title=" " alt="" coords="503,716,666,969"/>
+</map>

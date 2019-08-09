@@ -1,0 +1,9 @@
+<map id="Dialogue.keyDownCheck" name="Dialogue.keyDownCheck">
+<area shape="rect" id="node1" title=" " alt="" coords="823,56,989,83"/>
+<area shape="rect" id="node2" href="$d0/d9d/class_dialogue.html#af18f0f9a1ab343d1c870f63e05b765a6" title=" " alt="" coords="651,56,775,83"/>
+<area shape="rect" id="node3" href="$d2/d94/class_conversation.html#a11eb2e1944c3a857ac1447288d89fc39" title=" " alt="" coords="431,31,603,57"/>
+<area shape="rect" id="node7" href="$d0/d9d/class_dialogue.html#ae229890e6405d952e2776a4d5410e29b" title=" " alt="" coords="461,81,573,108"/>
+<area shape="rect" id="node4" href="$d2/d94/class_conversation.html#a3822a8973deb8b3bcf00bbca652f5989" title=" " alt="" coords="183,31,383,57"/>
+<area shape="rect" id="node5" href="$dd/d62/class_dialogue_test.html#ac923cb2d975ec1c28e6b76277790af63" title=" " alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node6" href="$d2/da6/class_switch1__1.html#a7a6f57395627e79c54aadef96b614673" title=" " alt="" coords="5,56,135,83"/>
+</map>

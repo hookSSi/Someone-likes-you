@@ -1,0 +1,5 @@
+<map id="Door.Interact" name="Door.Interact">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b" title=" " alt="" coords="149,5,325,32"/>
+<area shape="rect" id="node3" href="$da/d30/class_door.html#a79629ef728511bbce03ebd1a3a133581" title=" " alt="" coords="195,56,279,83"/>
+</map>

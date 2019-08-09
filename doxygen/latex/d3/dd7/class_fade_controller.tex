@@ -1,0 +1,228 @@
+\hypertarget{class_fade_controller}{}\section{Fade\+Controller 클래스 참조}
+\label{class_fade_controller}\index{FadeController@{FadeController}}
+
+
+Fade\+Controller에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{d6/d9c/class_fade_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Fade\+Controller에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{dd/df8/class_fade_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fade_controller_a1548aeda608cc1dba1db3adaeff20430}{Fade\+In}} (float fade\+Time, System.\+Action next\+Event=null)
+\item 
+void \mbox{\hyperlink{class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a}{Fade\+Out}} (float fade\+Time, System.\+Action next\+Event=null)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Image \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\+\_\+sprite}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fade_controller_a0503954733cfa08c0442d9101c7c13a5}{Update}} ()
+\item 
+I\+Enumerator \mbox{\hyperlink{class_fade_controller_ae01cc471bb439aa20b036ec93e6371b6}{Co\+Fade\+In}} (float fade\+Time, System.\+Action next\+Event=null)
+\item 
+I\+Enumerator \mbox{\hyperlink{class_fade_controller_acb1828a03e8bb69d90e1b2db32135882}{Co\+Fade\+Out}} (float fade\+Time, System.\+Action next\+Event=null)
+\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Fade\+Controller.\+cs 파일의 6 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_fade_controller_ae01cc471bb439aa20b036ec93e6371b6}\label{class_fade_controller_ae01cc471bb439aa20b036ec93e6371b6}} 
+\index{FadeController@{FadeController}!CoFadeIn@{CoFadeIn}}
+\index{CoFadeIn@{CoFadeIn}!FadeController@{FadeController}}
+\subsubsection{\texorpdfstring{CoFadeIn()}{CoFadeIn()}}
+{\footnotesize\ttfamily I\+Enumerator Fade\+Controller.\+Co\+Fade\+In (\begin{DoxyParamCaption}\item[{float}]{fade\+Time,  }\item[{System.\+Action}]{next\+Event = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fade\+Controller.\+cs 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         Color tempColor = \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\_sprite}}.color;}
+\DoxyCodeLine{29         \textcolor{keywordflow}{while}(tempColor.a < 1f)}
+\DoxyCodeLine{30         \{}
+\DoxyCodeLine{31             tempColor.a += Time.deltaTime / fadeTime;}
+\DoxyCodeLine{32             \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\_sprite}}.color = tempColor;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         tempColor.a = 1f;}
+\DoxyCodeLine{38         \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\_sprite}}.color = tempColor;}
+\DoxyCodeLine{39         \textcolor{keywordflow}{if}(nextEvent != \textcolor{keyword}{null}) nextEvent();}
+\DoxyCodeLine{40     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_ae01cc471bb439aa20b036ec93e6371b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fade_controller_acb1828a03e8bb69d90e1b2db32135882}\label{class_fade_controller_acb1828a03e8bb69d90e1b2db32135882}} 
+\index{FadeController@{FadeController}!CoFadeOut@{CoFadeOut}}
+\index{CoFadeOut@{CoFadeOut}!FadeController@{FadeController}}
+\subsubsection{\texorpdfstring{CoFadeOut()}{CoFadeOut()}}
+{\footnotesize\ttfamily I\+Enumerator Fade\+Controller.\+Co\+Fade\+Out (\begin{DoxyParamCaption}\item[{float}]{fade\+Time,  }\item[{System.\+Action}]{next\+Event = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fade\+Controller.\+cs 파일의 42 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43     \{}
+\DoxyCodeLine{44         Color tempColor = \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\_sprite}}.color;}
+\DoxyCodeLine{45         \textcolor{keywordflow}{while}(tempColor.a > 0f)}
+\DoxyCodeLine{46         \{}
+\DoxyCodeLine{47             tempColor.a -= Time.deltaTime / fadeTime;}
+\DoxyCodeLine{48             \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\_sprite}}.color = tempColor;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50             yield \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         tempColor.a = 0f;}
+\DoxyCodeLine{54         \mbox{\hyperlink{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}{\_sprite}}.color = tempColor;}
+\DoxyCodeLine{55         \textcolor{keywordflow}{if}(nextEvent != \textcolor{keyword}{null}) nextEvent();}
+\DoxyCodeLine{56     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_acb1828a03e8bb69d90e1b2db32135882_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fade_controller_a1548aeda608cc1dba1db3adaeff20430}\label{class_fade_controller_a1548aeda608cc1dba1db3adaeff20430}} 
+\index{FadeController@{FadeController}!FadeIn@{FadeIn}}
+\index{FadeIn@{FadeIn}!FadeController@{FadeController}}
+\subsubsection{\texorpdfstring{FadeIn()}{FadeIn()}}
+{\footnotesize\ttfamily void Fade\+Controller.\+Fade\+In (\begin{DoxyParamCaption}\item[{float}]{fade\+Time,  }\item[{System.\+Action}]{next\+Event = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Fade\+Controller.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         Debug.Log(\textcolor{stringliteral}{"페이드 인"});}
+\DoxyCodeLine{18         StartCoroutine(\mbox{\hyperlink{class_fade_controller_ae01cc471bb439aa20b036ec93e6371b6}{CoFadeIn}}(fadeTime, nextEvent));}
+\DoxyCodeLine{19     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_a1548aeda608cc1dba1db3adaeff20430_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_a1548aeda608cc1dba1db3adaeff20430_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a}\label{class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a}} 
+\index{FadeController@{FadeController}!FadeOut@{FadeOut}}
+\index{FadeOut@{FadeOut}!FadeController@{FadeController}}
+\subsubsection{\texorpdfstring{FadeOut()}{FadeOut()}}
+{\footnotesize\ttfamily void Fade\+Controller.\+Fade\+Out (\begin{DoxyParamCaption}\item[{float}]{fade\+Time,  }\item[{System.\+Action}]{next\+Event = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Fade\+Controller.\+cs 파일의 20 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         Debug.Log(\textcolor{stringliteral}{"페이드 아웃"});}
+\DoxyCodeLine{23         StartCoroutine(\mbox{\hyperlink{class_fade_controller_acb1828a03e8bb69d90e1b2db32135882}{CoFadeOut}}(fadeTime, nextEvent));}
+\DoxyCodeLine{24     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_fade_controller_a0503954733cfa08c0442d9101c7c13a5}\label{class_fade_controller_a0503954733cfa08c0442d9101c7c13a5}} 
+\index{FadeController@{FadeController}!Update@{Update}}
+\index{Update@{Update}!FadeController@{FadeController}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Fade\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fade\+Controller.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                           \{}
+\DoxyCodeLine{11         \textcolor{keywordflow}{if}(Input.GetKeyUp(KeyCode.S)) \mbox{\hyperlink{class_fade_controller_a1548aeda608cc1dba1db3adaeff20430}{FadeIn}}(3);}
+\DoxyCodeLine{12         \textcolor{keywordflow}{if}(Input.GetKeyUp(KeyCode.A)) \mbox{\hyperlink{class_fade_controller_a0f5a8752a7f7cefa8e81b845b21b3f4a}{FadeOut}}(3);}
+\DoxyCodeLine{13     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dd7/class_fade_controller_a0503954733cfa08c0442d9101c7c13a5_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}\label{class_fade_controller_a8efb7f7bb8771b66806f30f4db5bd6d5}} 
+\index{FadeController@{FadeController}!\_sprite@{\_sprite}}
+\index{\_sprite@{\_sprite}!FadeController@{FadeController}}
+\subsubsection{\texorpdfstring{\_sprite}{\_sprite}}
+{\footnotesize\ttfamily Image Fade\+Controller.\+\_\+sprite}
+
+
+
+Fade\+Controller.\+cs 파일의 8 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+U\+I\&\+Scene/\mbox{\hyperlink{_fade_controller_8cs}{Fade\+Controller.\+cs}}\end{DoxyCompactItemize}
