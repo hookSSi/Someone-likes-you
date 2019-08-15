@@ -9,8 +9,8 @@ public class ItemDatabase : MonoBehaviour
     // 아이템들
     private static ItemDatabase instance;
     public List<Item> items = new List<Item>(); // 인벤토리
-    public List<Tool> tools = new List<Tool>(); // 도구 리스트
-    public Tool currentTool;
+    public List<Tool_legacy> tools = new List<Tool_legacy>(); // 도구 리스트
+    public Tool_legacy currentTool;
 
     public GameObject inventory1; // 도구와 먹을 것
     public GameObject inventory2; // 그 외
@@ -38,7 +38,7 @@ public class ItemDatabase : MonoBehaviour
         drawInventory();
     }
 
-    public void AddTool(Tool tool)
+    public void AddTool(Tool_legacy tool)
     {
         Debug.Log(tool.name + "를 주웠다!(도구)");
         tools.Add(tool);
@@ -55,7 +55,7 @@ public class ItemDatabase : MonoBehaviour
     }
 
     
-    public Tool CurrentTool()
+    public Tool_legacy CurrentTool()
     {
         return currentTool;
     }
@@ -122,7 +122,7 @@ public class ItemDatabase : MonoBehaviour
         AddItem("열쇠", "문을 열 수 있다. 맛은... 있을리가.", 0, Item.ItemType.Key);
         AddItem("초코바", "맛있다. 군인의 영원한 친구.", 50, Item.ItemType.Food);
 #endif
-        AddTool(new Tool("손", Resources.Load<Sprite>("InventoryIconRaw/Hand"), ToolEnum.HAND));
+        AddTool(new Tool_legacy("손", Resources.Load<Sprite>("InventoryIconRaw/Hand"), ToolEnum.HAND));
     }
 
     //인벤토리 시각화

@@ -22,8 +22,4 @@ public class CameraManager : MonoBehaviour
     {
         
     }
-    int GetKey()
-    {
-
-    }
 }

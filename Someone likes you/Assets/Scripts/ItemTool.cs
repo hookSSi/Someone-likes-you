@@ -6,7 +6,7 @@ public class ItemTool : MonoBehaviour, IInteractable
 {
     public string toolName;
 
-    public Tool tool;
+    public Tool_legacy tool;
 
     public void Interact()
     {
