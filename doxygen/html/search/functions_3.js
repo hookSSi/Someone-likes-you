@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['eat',['Eat',['../db/d74/class_hungerness.html#a84a1577cd9995fa6b719e14295e8ee7d',1,'Hungerness']]],
-  ['enableobjects',['EnableObjects',['../da/de4/class_stage_manager.html#ada6e7c6bb79b460b0be80bee74c3796d',1,'StageManager']]]
+  ['jump',['Jump',['../d1/de2/class_movement.html#a26c05ac46da17f2f8999f1cce7fa49b8',1,'Movement.Jump()'],['../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9',1,'PlayerController.Jump()']]]
 ];

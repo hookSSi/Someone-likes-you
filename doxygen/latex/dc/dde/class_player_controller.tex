@@ -1,0 +1,276 @@
+\hypertarget{class_player_controller}{}\section{Player\+Controller 클래스 참조}
+\label{class_player_controller}\index{PlayerController@{PlayerController}}
+
+
+플레이어 담당 일진 클래스  
+
+
+
+
+Player\+Controller에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{d1/dc2/class_player_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Player\+Controller에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{db/de2/class_player_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}{Notify\+Event}} (Game\+Object entity)
+\begin{DoxyCompactList}\small\item\em 플레이어는 Observer이자 Subject 부를 이벤트 형식을 delegate로 정의 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}{Handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 입력 처리 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a79dff0e97fa69f5f3660d65c2a32be39}{Move}} (Vector3 dir)
+\begin{DoxyCompactList}\small\item\em 입력 받은 방향에 따라 플레이어 이동을 담당하는 함수 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}{Attack}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 공격 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}{Jump}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 점프 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_ad27e790d9d27a02b497c41f668f1dc25}{Interct}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 상호작용 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_player_controller_ab4fed78a016e8baca12e50bb3d7f034a}{\+\_\+hungriness}}
+\begin{DoxyCompactList}\small\item\em 플레이어의 굶주림 정도 (0$\sim$1) = (먹어야함 $\sim$ 배가 꽉차 있음) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_controller_a1ab6a7892eecf1a9fa7b1a49842a3dd2}{\+\_\+walking\+Speed}}
+\begin{DoxyCompactList}\small\item\em 플레이어의 걷는 속도 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_controller_ad5b01cf8e0c714d76cbd667d4fab7c25}{\+\_\+jumping\+Power}}
+\begin{DoxyCompactList}\small\item\em 플레이어의 점프 크기 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{이벤트}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}{Notify\+Event}} \mbox{\hyperlink{class_player_controller_af13292e01756741118500035511fc88d}{Notify}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_controller_ae1117d9c4da3193181cddad2c814e467}{Start}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 클래스를 초기화하는 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+플레이어 담당 일진 클래스 
+
+\begin{DoxyAuthor}{작성자}
+문성후 
+\end{DoxyAuthor}
+\begin{DoxyDate}{날짜}
+2019.\+08.\+16 
+\end{DoxyDate}
+
+
+Player\+Controller.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}\label{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}} 
+\index{PlayerController@{PlayerController}!Attack@{Attack}}
+\index{Attack@{Attack}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 공격 
+
+
+
+Player\+Controller.\+cs 파일의 48 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}\label{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}} 
+\index{PlayerController@{PlayerController}!HandleInput@{HandleInput}}
+\index{HandleInput@{HandleInput}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{HandleInput()}{HandleInput()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 입력 처리 
+
+
+
+Player\+Controller.\+cs 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_controller_ad27e790d9d27a02b497c41f668f1dc25}\label{class_player_controller_ad27e790d9d27a02b497c41f668f1dc25}} 
+\index{PlayerController@{PlayerController}!Interct@{Interct}}
+\index{Interct@{Interct}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Interct()}{Interct()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Interct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 상호작용 
+
+
+
+Player\+Controller.\+cs 파일의 52 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}\label{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}} 
+\index{PlayerController@{PlayerController}!Jump@{Jump}}
+\index{Jump@{Jump}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Jump()}{Jump()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 점프 
+
+
+
+Player\+Controller.\+cs 파일의 50 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_controller_a79dff0e97fa69f5f3660d65c2a32be39}\label{class_player_controller_a79dff0e97fa69f5f3660d65c2a32be39}} 
+\index{PlayerController@{PlayerController}!Move@{Move}}
+\index{Move@{Move}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{dir }\end{DoxyParamCaption})}
+
+
+
+입력 받은 방향에 따라 플레이어 이동을 담당하는 함수 
+
+플레이어 이동 
+\begin{DoxyParams}{매개변수}
+{\em dir} & 이동 방향 Vector3(-\/1 or 1) \\
+\hline
+\end{DoxyParams}
+
+
+Player\+Controller.\+cs 파일의 46 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}\label{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}} 
+\index{PlayerController@{PlayerController}!NotifyEvent@{NotifyEvent}}
+\index{NotifyEvent@{NotifyEvent}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{NotifyEvent()}{NotifyEvent()}}
+{\footnotesize\ttfamily delegate void Player\+Controller.\+Notify\+Event (\begin{DoxyParamCaption}\item[{Game\+Object}]{entity }\end{DoxyParamCaption})}
+
+
+
+플레이어는 Observer이자 Subject 부를 이벤트 형식을 delegate로 정의 
+
+\begin{DoxySeeAlso}{참고}
+\href{https://boycoding.tistory.com/107}{\texttt{ https\+://boycoding.\+tistory.\+com/107}} 
+
+\href{https://hyunity3d.tistory.com/528}{\texttt{ https\+://hyunity3d.\+tistory.\+com/528}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_player_controller_ae1117d9c4da3193181cddad2c814e467}\label{class_player_controller_ae1117d9c4da3193181cddad2c814e467}} 
+\index{PlayerController@{PlayerController}!Start@{Start}}
+\index{Start@{Start}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+플레이어 클래스를 초기화하는 함수 
+
+플레이어 클래스 초기화 
+
+Player\+Controller.\+cs 파일의 35 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         }
+\DoxyCodeLine{38     \}}
+
+\end{DoxyCode}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_player_controller_ab4fed78a016e8baca12e50bb3d7f034a}\label{class_player_controller_ab4fed78a016e8baca12e50bb3d7f034a}} 
+\index{PlayerController@{PlayerController}!\_hungriness@{\_hungriness}}
+\index{\_hungriness@{\_hungriness}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_hungriness}{\_hungriness}}
+{\footnotesize\ttfamily float Player\+Controller.\+\_\+hungriness}
+
+
+
+플레이어의 굶주림 정도 (0$\sim$1) = (먹어야함 $\sim$ 배가 꽉차 있음) 
+
+
+
+Player\+Controller.\+cs 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_player_controller_ad5b01cf8e0c714d76cbd667d4fab7c25}\label{class_player_controller_ad5b01cf8e0c714d76cbd667d4fab7c25}} 
+\index{PlayerController@{PlayerController}!\_jumpingPower@{\_jumpingPower}}
+\index{\_jumpingPower@{\_jumpingPower}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_jumpingPower}{\_jumpingPower}}
+{\footnotesize\ttfamily float Player\+Controller.\+\_\+jumping\+Power}
+
+
+
+플레이어의 점프 크기 
+
+
+
+Player\+Controller.\+cs 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_player_controller_a1ab6a7892eecf1a9fa7b1a49842a3dd2}\label{class_player_controller_a1ab6a7892eecf1a9fa7b1a49842a3dd2}} 
+\index{PlayerController@{PlayerController}!\_walkingSpeed@{\_walkingSpeed}}
+\index{\_walkingSpeed@{\_walkingSpeed}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_walkingSpeed}{\_walkingSpeed}}
+{\footnotesize\ttfamily float Player\+Controller.\+\_\+walking\+Speed}
+
+
+
+플레이어의 걷는 속도 
+
+
+
+Player\+Controller.\+cs 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{이벤트 문서화}
+\mbox{\Hypertarget{class_player_controller_af13292e01756741118500035511fc88d}\label{class_player_controller_af13292e01756741118500035511fc88d}} 
+\index{PlayerController@{PlayerController}!Notify@{Notify}}
+\index{Notify@{Notify}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Notify}{Notify}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}{Notify\+Event}} Player\+Controller.\+Notify\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Player\+Controller.\+cs 파일의 23 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+New Scripts/\+Player/\mbox{\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}}\end{DoxyCompactItemize}

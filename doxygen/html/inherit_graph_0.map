@@ -1,31 +1,5 @@
 <map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
-<area shape="rect" id="node1" href="$d2/df1/interface_i_interactable.html" title=" " alt="" coords="15,132,107,159"/>
-<area shape="rect" id="node2" href="$d6/df4/class_breakable_wall.html" title=" " alt="" coords="170,157,277,184"/>
-<area shape="rect" id="node3" href="$da/d30/class_door.html" title=" " alt="" coords="199,208,248,235"/>
-<area shape="rect" id="node4" href="$d5/dc8/class_item_gainable.html" title=" " alt="" coords="174,259,273,285"/>
-<area shape="rect" id="node5" href="$d3/df3/class_item_tool.html" title=" " alt="" coords="188,5,259,32"/>
-<area shape="rect" id="node6" href="$d9/d47/class_switch.html" title=" " alt="" coords="193,56,254,83"/>
-<area shape="rect" id="node7" href="$d2/da6/class_switch1__1.html" title=" " alt="" coords="182,107,265,133"/>
-<area shape="rect" id="node8" title=" " alt="" coords="5,664,116,691"/>
-<area shape="rect" id="node9" href="$d2/d23/class_camera_manager.html" title=" " alt="" coords="165,1221,282,1248"/>
-<area shape="rect" id="node10" href="$d2/d94/class_conversation.html" title=" " alt="" coords="175,1272,271,1299"/>
-<area shape="rect" id="node11" href="$d0/d9d/class_dialogue.html" title=" " alt="" coords="187,1323,259,1349"/>
-<area shape="rect" id="node12" href="$dd/d62/class_dialogue_test.html" title=" " alt="" coords="175,309,272,336"/>
-<area shape="rect" id="node13" href="$d6/d58/class_effect.html" title=" " alt="" coords="196,360,251,387"/>
-<area shape="rect" id="node14" href="$d3/dd7/class_fade_controller.html" title=" " alt="" coords="170,411,277,437"/>
-<area shape="rect" id="node15" href="$d3/d6d/class_fixed_resoultion.html" title=" " alt="" coords="166,461,281,488"/>
-<area shape="rect" id="node16" href="$db/d74/class_hungerness.html" title=" " alt="" coords="178,512,269,539"/>
-<area shape="rect" id="node17" href="$d3/d8e/class_interaction.html" title=" " alt="" coords="182,563,265,589"/>
-<area shape="rect" id="node18" href="$d0/dc6/class_item_database.html" title=" " alt="" coords="172,613,275,640"/>
-<area shape="rect" id="node19" href="$d1/de2/class_movement.html" title=" " alt="" coords="183,664,264,691"/>
-<area shape="rect" id="node20" href="$df/d42/class_moving_platform.html" title=" " alt="" coords="168,715,279,741"/>
-<area shape="rect" id="node21" href="$db/dfb/class_phone_controller.html" title=" " alt="" coords="166,765,281,792"/>
-<area shape="rect" id="node22" href="$d0/d3d/class_player_movement.html" title=" " alt="" coords="164,816,283,843"/>
-<area shape="rect" id="node23" href="$da/de4/class_stage_manager.html" title=" " alt="" coords="170,867,277,893"/>
-<area shape="rect" id="node24" href="$d7/d17/class_stone.html" title=" " alt="" coords="195,917,251,944"/>
-<area shape="rect" id="node25" href="$d5/df7/class_stone_trigger.html" title=" " alt="" coords="176,968,271,995"/>
-<area shape="rect" id="node26" href="$d2/d37/class_truck_controller.html" title=" " alt="" coords="169,1019,278,1045"/>
-<area shape="rect" id="node27" href="$d6/d14/class_tutorial_manager.html" title=" " alt="" coords="166,1069,281,1096"/>
-<area shape="rect" id="node28" href="$d8/de6/class_u_i.html" title=" " alt="" coords="204,1120,243,1147"/>
-<area shape="rect" id="node29" href="$da/d8d/class_u_i_text_script.html" title=" " alt="" coords="177,1171,270,1197"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="181,5,262,32"/>
+<area shape="rect" id="node3" href="$dc/dde/class_player_controller.html" title="플레이어 담당 일진 클래스" alt="" coords="164,56,279,83"/>
 </map>

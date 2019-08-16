@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['breakablewall',['BreakableWall',['../d6/df4/class_breakable_wall.html',1,'']]],
-  ['breakablewall_2ecs',['BreakableWall.cs',['../d2/da6/_breakable_wall_8cs.html',1,'']]]
+  ['handleinput',['HandleInput',['../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883',1,'PlayerController']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['cameramanager_2ecs',['CameraManager.cs',['../d3/df0/_camera_manager_8cs.html',1,'']]],
-  ['conversation_2ecs',['Conversation.cs',['../df/def/_conversation_8cs.html',1,'']]]
+  ['playercontroller_2ecs',['PlayerController.cs',['../d3/d59/_player_controller_8cs.html',1,'']]]
 ];

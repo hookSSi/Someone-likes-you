@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SomeoneLikesYouUnityScript: C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/New Scripts/Player/PlayerController.cs 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SomeoneLikesYouUnityScript
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d3/d59/_player_controller_8cs_source.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlayerController.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/d59/_player_controller_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html">   12</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="../../dc/dde/class_player_controller.html">PlayerController</a> : MonoBehaviour</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span> delegate <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e">NotifyEvent</a>(GameObject entity);</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">event</span> <a class="code" href="../../dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e">NotifyEvent</a> <a class="code" href="../../dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d">Notify</a>;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="../../dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a">_hungriness</a>; </div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">_walkingSpeed</a>; </div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#ad5b01cf8e0c714d76cbd667d4fab7c25">   29</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="../../dc/dde/class_player_controller.html#ad5b01cf8e0c714d76cbd667d4fab7c25">_jumpingPower</a>; </div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467">   35</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467">Start</a>() </div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">HandleInput</a>(){}</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#a79dff0e97fa69f5f3660d65c2a32be39">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#a79dff0e97fa69f5f3660d65c2a32be39">Move</a>(Vector3 dir){}</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">Attack</a>(){}</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">   50</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">Jump</a>(){}</div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dc/dde/class_player_controller.html#ad27e790d9d27a02b497c41f668f1dc25">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/dde/class_player_controller.html#ad27e790d9d27a02b497c41f668f1dc25">Interct</a>(){}</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div><div class="ttc" id="class_player_controller_html_ae1117d9c4da3193181cddad2c814e467"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467">PlayerController.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">플레이어 클래스를 초기화하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00035">PlayerController.cs:35</a></div></div>
+<div class="ttc" id="class_player_controller_html"><div class="ttname"><a href="../../dc/dde/class_player_controller.html">PlayerController</a></div><div class="ttdoc">플레이어 담당 일진 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00012">PlayerController.cs:12</a></div></div>
+<div class="ttc" id="class_player_controller_html_af13292e01756741118500035511fc88d"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d">PlayerController.Notify</a></div><div class="ttdeci">static NotifyEvent Notify</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00023">PlayerController.cs:23</a></div></div>
+<div class="ttc" id="class_player_controller_html_a8a7010cb6f3c524737be3f6f77553df9"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">PlayerController.Jump</a></div><div class="ttdeci">void Jump()</div><div class="ttdoc">플레이어 점프</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00050">PlayerController.cs:50</a></div></div>
+<div class="ttc" id="class_player_controller_html_ad27e790d9d27a02b497c41f668f1dc25"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad27e790d9d27a02b497c41f668f1dc25">PlayerController.Interct</a></div><div class="ttdeci">void Interct()</div><div class="ttdoc">플레이어 상호작용</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00052">PlayerController.cs:52</a></div></div>
+<div class="ttc" id="class_player_controller_html_a5ebfe098b2dc258ca8349e6951766883"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">PlayerController.HandleInput</a></div><div class="ttdeci">void HandleInput()</div><div class="ttdoc">플레이어 입력 처리</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00040">PlayerController.cs:40</a></div></div>
+<div class="ttc" id="class_player_controller_html_ab4fed78a016e8baca12e50bb3d7f034a"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a">PlayerController._hungriness</a></div><div class="ttdeci">float _hungriness</div><div class="ttdoc">플레이어의 굶주림 정도 (0~1) = (먹어야함 ~ 배가 꽉차 있음)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00025">PlayerController.cs:25</a></div></div>
+<div class="ttc" id="class_player_controller_html_ad5b01cf8e0c714d76cbd667d4fab7c25"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad5b01cf8e0c714d76cbd667d4fab7c25">PlayerController._jumpingPower</a></div><div class="ttdeci">float _jumpingPower</div><div class="ttdoc">플레이어의 점프 크기</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00029">PlayerController.cs:29</a></div></div>
+<div class="ttc" id="class_player_controller_html_a1ab6a7892eecf1a9fa7b1a49842a3dd2"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">PlayerController._walkingSpeed</a></div><div class="ttdeci">float _walkingSpeed</div><div class="ttdoc">플레이어의 걷는 속도</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
+<div class="ttc" id="class_player_controller_html_a473a610cfe2a374d5cb39b3c44881d11"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">PlayerController.Attack</a></div><div class="ttdeci">void Attack()</div><div class="ttdoc">플레이어 공격</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00048">PlayerController.cs:48</a></div></div>
+<div class="ttc" id="class_player_controller_html_a79dff0e97fa69f5f3660d65c2a32be39"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a79dff0e97fa69f5f3660d65c2a32be39">PlayerController.Move</a></div><div class="ttdeci">void Move(Vector3 dir)</div><div class="ttdoc">입력 받은 방향에 따라 플레이어 이동을 담당하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00046">PlayerController.cs:46</a></div></div>
+<div class="ttc" id="class_player_controller_html_a934c7f80b80276620cd60eaaeea7520e"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e">PlayerController.NotifyEvent</a></div><div class="ttdeci">delegate void NotifyEvent(GameObject entity)</div><div class="ttdoc">플레이어는 Observer이자 Subject 부를 이벤트 형식을 delegate로 정의</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3beff099619fdbea60c5d5ad06b6665f.html">Someone likes you</a></li><li class="navelem"><a class="el" href="../../dir_08e9473894999c0a2b821effc5369fad.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_1928622b4a8e602b5cba7b024bde0020.html">New Scripts</a></li><li class="navelem"><a class="el" href="../../dir_58c21fd06aac66d5f6f7647599f6324d.html">Player</a></li><li class="navelem"><a class="el" href="../../d3/d59/_player_controller_8cs.html">PlayerController.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -813,7 +813,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = "C:\Users\HookSSi\Desktop\파티\게임잼\Someone-likes-you\Someone likes you\Assets\Scripts"
+INPUT                  = "../Someone likes you/Assets/New Scripts"
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

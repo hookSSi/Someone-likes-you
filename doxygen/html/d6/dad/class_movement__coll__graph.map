@@ -1,4 +1,4 @@
 <map id="Movement" name="Movement">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,136,237"/>
-<area shape="rect" id="node2" title=" " alt="" coords="15,5,126,83"/>
+<area shape="rect" id="node1" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="11,131,110,237"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,83"/>
 </map>
