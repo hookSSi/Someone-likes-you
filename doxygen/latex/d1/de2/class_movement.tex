@@ -12,7 +12,7 @@ Movement에 대한 상속 다이어그램 \+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{d8/d54/class_movement__inherit__graph}
+\includegraphics[width=169pt]{d8/d54/class_movement__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -28,11 +28,11 @@ Movement에 대한 협력 다이어그램\+:
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-Vector3 \mbox{\hyperlink{class_movement_a5557f0e70e137025e19e406472daf36c}{Move}} (Game\+Object obj, Vector3 dest, float speed, bool mode=false, bool is\+Debug=false)
+virtual Vector3 \mbox{\hyperlink{class_movement_ad400f155e0556a5e22a74cb77858460a}{Move}} (Transform obj, Vector3 dest, float speed, bool mode=false, bool is\+Debug=false)
 \begin{DoxyCompactList}\small\item\em 이동 관련 함수 \end{DoxyCompactList}\item 
-Vector3 \mbox{\hyperlink{class_movement_aa1074ce9eb9afd5fc151f7da66c0a4d3}{Add\+Force}} (Game\+Object obj, Vector3 dir, float amount)
+virtual Vector3 \mbox{\hyperlink{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}{Add\+Force}} (Rigidbody2D rigid, Vector3 dir, float amount, Force\+Mode2D mode)
 \item 
-void \mbox{\hyperlink{class_movement_a26c05ac46da17f2f8999f1cce7fa49b8}{Jump}} (Game\+Object obj, float amout)
+virtual void \mbox{\hyperlink{class_movement_a496c630807c87a286fb53070b4ed6cf1}{Jump}} (Game\+Object obj, float amout)
 \end{DoxyCompactItemize}
 
 
@@ -52,47 +52,58 @@ Movement.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 
 \subsection{멤버 함수 문서화}
-\mbox{\Hypertarget{class_movement_aa1074ce9eb9afd5fc151f7da66c0a4d3}\label{class_movement_aa1074ce9eb9afd5fc151f7da66c0a4d3}} 
+\mbox{\Hypertarget{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}\label{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}} 
 \index{Movement@{Movement}!AddForce@{AddForce}}
 \index{AddForce@{AddForce}!Movement@{Movement}}
 \subsubsection{\texorpdfstring{AddForce()}{AddForce()}}
-{\footnotesize\ttfamily Vector3 Movement.\+Add\+Force (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj,  }\item[{Vector3}]{dir,  }\item[{float}]{amount }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual Vector3 Movement.\+Add\+Force (\begin{DoxyParamCaption}\item[{Rigidbody2D}]{rigid,  }\item[{Vector3}]{dir,  }\item[{float}]{amount,  }\item[{Force\+Mode2D}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Movement.\+cs 파일의 41 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 44 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{42     \{}
-\DoxyCodeLine{43         Vector3 origin = Vector3.zero;}
-\DoxyCodeLine{44 }
-\DoxyCodeLine{45         \textcolor{keywordflow}{return} origin;}
-\DoxyCodeLine{46     \}}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         Vector3 origin = rigid.position;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         rigid.AddForce(dir.normalized * amount, mode);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{51     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_movement_a26c05ac46da17f2f8999f1cce7fa49b8}\label{class_movement_a26c05ac46da17f2f8999f1cce7fa49b8}} 
+\mbox{\Hypertarget{class_movement_a496c630807c87a286fb53070b4ed6cf1}\label{class_movement_a496c630807c87a286fb53070b4ed6cf1}} 
 \index{Movement@{Movement}!Jump@{Jump}}
 \index{Jump@{Jump}!Movement@{Movement}}
 \subsubsection{\texorpdfstring{Jump()}{Jump()}}
-{\footnotesize\ttfamily void Movement.\+Jump (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj,  }\item[{float}]{amout }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual void Movement.\+Jump (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj,  }\item[{float}]{amout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Movement.\+cs 파일의 47 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 52 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{48     \{}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50     \}}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         Rigidbody2D rigid = obj.GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{keywordflow}{if}(rigid)}
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             rigid.AddForce(Vector3.up, ForceMode2D.Impulse);}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{61         \{}
+\DoxyCodeLine{62             obj.transform.position += Vector3.up * amout;}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_movement_a5557f0e70e137025e19e406472daf36c}\label{class_movement_a5557f0e70e137025e19e406472daf36c}} 
+\mbox{\Hypertarget{class_movement_ad400f155e0556a5e22a74cb77858460a}\label{class_movement_ad400f155e0556a5e22a74cb77858460a}} 
 \index{Movement@{Movement}!Move@{Move}}
 \index{Move@{Move}!Movement@{Movement}}
 \subsubsection{\texorpdfstring{Move()}{Move()}}
-{\footnotesize\ttfamily Vector3 Movement.\+Move (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj,  }\item[{Vector3}]{dest,  }\item[{float}]{speed,  }\item[{bool}]{mode = {\ttfamily false},  }\item[{bool}]{is\+Debug = {\ttfamily false} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual Vector3 Movement.\+Move (\begin{DoxyParamCaption}\item[{Transform}]{obj,  }\item[{Vector3}]{dest,  }\item[{float}]{speed,  }\item[{bool}]{mode = {\ttfamily false},  }\item[{bool}]{is\+Debug = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
@@ -106,9 +117,9 @@ Movement.\+cs 파일의 47 번째 라인에서 정의되었습니다.
 \hline
 {\em speed} & 속도 \\
 \hline
-{\em mode} & 이동 모드 true = Velocity Move, false = Position Move \\
+{\em mode} & 이동 모드 (true = Velocity Move, false = Position Move) \\
 \hline
-{\em debug} & 디버그 사용여부 true = 디버그 사용, false = 디버그 사용안함 \\
+{\em debug} & 디버그 사용여부 (true = 디버그 사용, false = 디버그 사용안함) \\
 \hline
 \end{DoxyParams}
 
@@ -118,24 +129,35 @@ Movement.\+cs 파일의 23 번째 라인에서 정의되었습니다.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{24     \{}
-\DoxyCodeLine{25         Vector3 origin = obj.transform.position;}
+\DoxyCodeLine{25         Vector3 origin = obj.position;}
 \DoxyCodeLine{26 }
 \DoxyCodeLine{27         \textcolor{keywordflow}{if}(mode)}
 \DoxyCodeLine{28         \{}
-\DoxyCodeLine{29             obj.GetComponent<Rigidbody2D>().velocity = dest.normalized * speed;}
+\DoxyCodeLine{29             obj.position += dest.normalized * speed * Time.deltaTime;   }
 \DoxyCodeLine{30         \}}
 \DoxyCodeLine{31         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{32             obj.transform.position = dest;}
+\DoxyCodeLine{32             obj.position = dest;}
 \DoxyCodeLine{33 }
 \DoxyCodeLine{34         \textcolor{keywordflow}{if}(isDebug)}
 \DoxyCodeLine{35         \{}
-\DoxyCodeLine{36             }
-\DoxyCodeLine{37         \}}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39         \textcolor{keywordflow}{return} origin;}
-\DoxyCodeLine{40     \}}
+\DoxyCodeLine{36             \textcolor{keywordflow}{if}(mode)}
+\DoxyCodeLine{37                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}으로 \{2\}의 속도로 이동"}, origin, dest.normalized, speed));}
+\DoxyCodeLine{38             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{39                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}로 이동"}, origin, dest));}
+\DoxyCodeLine{40         \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{43     \}}
 
 \end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/de2/class_movement_ad400f155e0556a5e22a74cb77858460a_icgraph}
+\end{center}
+\end{figure}
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}

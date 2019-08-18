@@ -24,14 +24,17 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "SomeoneLikesYouUnityScript", "index.html", [
-    [ "클래스", "annotated.html", [
-      [ "클래스 목록", "annotated.html", "annotated_dup" ],
-      [ "클래스 색인", "classes.html", null ],
+    [ "할일 목록", "dd/da0/todo.html", null ],
+    [ "데이터 구조", "annotated.html", [
+      [ "데이터 구조", "annotated.html", "annotated_dup" ],
+      [ "데이터 구조 색인", "classes.html", null ],
       [ "클래스 계통도", "hierarchy.html", "hierarchy" ],
-      [ "클래스 멤버", "functions.html", [
+      [ "데이터 필드", "functions.html", [
         [ "모두", "functions.html", null ],
         [ "함수", "functions_func.html", null ],
         [ "변수", "functions_vars.html", null ],
+        [ "열거형 타입", "functions_enum.html", null ],
+        [ "속성", "functions_prop.html", null ],
         [ "이벤트", "functions_evnt.html", null ]
       ] ]
     ] ],

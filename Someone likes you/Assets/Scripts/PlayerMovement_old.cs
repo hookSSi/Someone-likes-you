@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement_old : MonoBehaviour
 {
     Rigidbody2D rigid;
     Collider2D playerCollider;

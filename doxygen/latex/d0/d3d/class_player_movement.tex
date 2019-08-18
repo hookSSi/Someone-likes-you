@@ -2,92 +2,32 @@
 \label{class_player_movement}\index{PlayerMovement@{PlayerMovement}}
 
 
-Player\+Movement에 대한 상속 다이어그램 \+: \nopagebreak
+Player\+Movement에 대한 상속 다이어그램 \+: 
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=194pt]{de/d46/class_player_movement__inherit__graph}
+\includegraphics[width=169pt]{de/d46/class_player_movement__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Player\+Movement에 대한 협력 다이어그램\+:\nopagebreak
+Player\+Movement에 대한 협력 다이어그램\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=194pt]{d5/df4/class_player_movement__coll__graph}
+\includegraphics[width=169pt]{d5/df4/class_player_movement__coll__graph}
 \end{center}
 \end{figure}
-\subsection*{Public 타입}
+\subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6f}{State}} \{ \newline
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6fae599161956d626eda4cb0a5ffb85271c}{State.\+Idle}}, 
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6fadefe967ad0373b2274fc298f19125ca7}{State.\+Moving}}, 
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6fa101f693f72287a2819a364f64ca1c0ed}{State.\+Jump}}, 
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6faab2455e33b8ddb6a9d2d41107a2ed4f6}{State.\+Hang}}, 
-\newline
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6fadcfafcb4323b102c7e204555d313ba0a}{State.\+Attack}}, 
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6fa8ce61dd2505effd96f937fa743b6491f}{State.\+Throw}}, 
-\mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6fa7f00296ed953c426cd7411d8a32eac49}{State.\+Under\+Attack}}
- \}
-\end{DoxyCompactItemize}
-\subsection*{Public 속성}
-\begin{DoxyCompactItemize}
+virtual Vector3 \mbox{\hyperlink{class_movement_ad400f155e0556a5e22a74cb77858460a}{Move}} (Transform obj, Vector3 dest, float speed, bool mode=false, bool is\+Debug=false)
+\begin{DoxyCompactList}\small\item\em 이동 관련 함수 \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}{Add\+Force}} (Rigidbody2D rigid, Vector3 dir, float amount, Force\+Mode2D mode)
 \item 
-float \mbox{\hyperlink{class_player_movement_a93207dc2742fe0f0b651a54d610b14aa}{move\+Speed}} = 4.\+7f
-\item 
-float \mbox{\hyperlink{class_player_movement_a7311cb033c65d133e59546388a1ad59d}{jump\+Power}} = 0.\+9f
-\item 
-float \mbox{\hyperlink{class_player_movement_a9f24ed81b8ddd8ad2bc4c9ae45203fcd}{climb\+Speed}} = 6f
-\item 
-float \mbox{\hyperlink{class_player_movement_a3b10fda58c5c9c3e0e00b34b531e8bf4}{climb\+Jump\+Power}} = 0.\+4f
-\item 
-float \mbox{\hyperlink{class_player_movement_ad37bd6a04342f85d26aa7c268a0c8c64}{min\+Length\+Hangable}} = 0.\+6f
-\item 
-float \mbox{\hyperlink{class_player_movement_afa2e0ac8637c0da3e1efa8191aac5433}{max\+Length\+Hangable}} = 1.\+2f
-\item 
-bool \mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{is\+Ground}} = false
-\item 
-bool \mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{is\+Climbing}} = false
-\item 
-Animator \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\+\_\+animator}}
-\item 
-Game\+Object \mbox{\hyperlink{class_player_movement_a8d5245144cd5777ff26b1f9f448796ff}{\+\_\+sprite}}
-\end{DoxyCompactItemize}
-\subsection*{Private 멤버 함수}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_player_movement_abf3660ca2b1a352b4a9da98437c61aa3}{Start}} ()
-\item 
-void \mbox{\hyperlink{class_player_movement_aaf9b77d7177d538be9c1447d08191322}{Update}} ()
-\item 
-void \mbox{\hyperlink{class_player_movement_a8dc9af4cb0a951c96b3faa37bab75ccd}{Move}} (Vector3 dir)
-\item 
-void \mbox{\hyperlink{class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9}{Jump}} ()
-\item 
-void \mbox{\hyperlink{class_player_movement_a8f312c0c10e3e9c978a6e1cd1bada492}{Jump}} (float \+\_\+jump\+Power)
-\item 
-void \mbox{\hyperlink{class_player_movement_ada23e8d376cdcca2ac7d87f3d05b52cf}{Jump\+Cut}} ()
-\item 
-I\+Enumerator \mbox{\hyperlink{class_player_movement_a6ff1fb59f41c43876325fe8eee66a2cc}{Climb}} (float delta\+Height, Collision2D collision)
-\item 
-void \mbox{\hyperlink{class_player_movement_a66307ea038b50ef0f1ea1276507cc66c}{On\+Collision\+Stay2D}} (Collision2D collision)
-\item 
-void \mbox{\hyperlink{class_player_movement_a5406d2bb56031c42b5d47431d6b47915}{On\+Trigger\+Stay2D}} (Collider2D collision)
-\item 
-void \mbox{\hyperlink{class_player_movement_acc95a5dd6a7b911666ed146fefb8d5b2}{On\+Trigger\+Exit2D}} (Collider2D collision)
-\end{DoxyCompactItemize}
-\subsection*{Private 속성}
-\begin{DoxyCompactItemize}
-\item 
-Rigidbody2D \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}
-\item 
-Collider2D \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{player\+Collider}}
-\item 
-bool \mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{is\+Jumping}} = false
-\item 
-bool \mbox{\hyperlink{class_player_movement_aff9c832db827f7af7d03c7c49842179f}{is\+Jump\+Cancelable}} = false
+virtual void \mbox{\hyperlink{class_movement_a496c630807c87a286fb53070b4ed6cf1}{Jump}} (Game\+Object obj, float amout)
 \end{DoxyCompactItemize}
 
 
@@ -98,612 +38,115 @@ Player\+Movement.\+cs 파일의 5 번째 라인에서 정의되었습니다.
 
 
 
-\subsection{멤버 열거형 문서화}
-\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6f}\label{class_player_movement_a0dc6677272370f08106ac49997853c6f}} 
-\index{PlayerMovement@{PlayerMovement}!State@{State}}
-\index{State@{State}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{State}{State}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{class_player_movement_a0dc6677272370f08106ac49997853c6f}{Player\+Movement.\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
-
-\begin{DoxyEnumFields}{열거형 멤버}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!Idle@{Idle}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6fae599161956d626eda4cb0a5ffb85271c}\label{class_player_movement_a0dc6677272370f08106ac49997853c6fae599161956d626eda4cb0a5ffb85271c}} 
-Idle&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Moving@{Moving}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!Moving@{Moving}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6fadefe967ad0373b2274fc298f19125ca7}\label{class_player_movement_a0dc6677272370f08106ac49997853c6fadefe967ad0373b2274fc298f19125ca7}} 
-Moving&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Jump@{Jump}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!Jump@{Jump}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6fa101f693f72287a2819a364f64ca1c0ed}\label{class_player_movement_a0dc6677272370f08106ac49997853c6fa101f693f72287a2819a364f64ca1c0ed}} 
-Jump&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Hang@{Hang}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!Hang@{Hang}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6faab2455e33b8ddb6a9d2d41107a2ed4f6}\label{class_player_movement_a0dc6677272370f08106ac49997853c6faab2455e33b8ddb6a9d2d41107a2ed4f6}} 
-Hang&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Attack@{Attack}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!Attack@{Attack}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6fadcfafcb4323b102c7e204555d313ba0a}\label{class_player_movement_a0dc6677272370f08106ac49997853c6fadcfafcb4323b102c7e204555d313ba0a}} 
-Attack&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{Throw@{Throw}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!Throw@{Throw}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6fa8ce61dd2505effd96f937fa743b6491f}\label{class_player_movement_a0dc6677272370f08106ac49997853c6fa8ce61dd2505effd96f937fa743b6491f}} 
-Throw&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{UnderAttack@{UnderAttack}!PlayerMovement@{PlayerMovement}}\index{PlayerMovement@{PlayerMovement}!UnderAttack@{UnderAttack}}}\mbox{\Hypertarget{class_player_movement_a0dc6677272370f08106ac49997853c6fa7f00296ed953c426cd7411d8a32eac49}\label{class_player_movement_a0dc6677272370f08106ac49997853c6fa7f00296ed953c426cd7411d8a32eac49}} 
-Under\+Attack&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-Player\+Movement.\+cs 파일의 27 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{28     \{}
-\DoxyCodeLine{29         Idle,}
-\DoxyCodeLine{30         Moving,}
-\DoxyCodeLine{31         \mbox{\hyperlink{class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9}{Jump}},}
-\DoxyCodeLine{32         Hang,}
-\DoxyCodeLine{33         Attack,}
-\DoxyCodeLine{34         Throw,}
-\DoxyCodeLine{35         UnderAttack}
-\DoxyCodeLine{36     \}}
-
-\end{DoxyCode}
-
-
 \subsection{멤버 함수 문서화}
-\mbox{\Hypertarget{class_player_movement_a6ff1fb59f41c43876325fe8eee66a2cc}\label{class_player_movement_a6ff1fb59f41c43876325fe8eee66a2cc}} 
-\index{PlayerMovement@{PlayerMovement}!Climb@{Climb}}
-\index{Climb@{Climb}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{Climb()}{Climb()}}
-{\footnotesize\ttfamily I\+Enumerator Player\+Movement.\+Climb (\begin{DoxyParamCaption}\item[{float}]{delta\+Height,  }\item[{Collision2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}\label{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}} 
+\index{PlayerMovement@{PlayerMovement}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!PlayerMovement@{PlayerMovement}}
+\subsubsection{\texorpdfstring{AddForce()}{AddForce()}}
+{\footnotesize\ttfamily virtual Vector3 Movement.\+Add\+Force (\begin{DoxyParamCaption}\item[{Rigidbody2D}]{rigid,  }\item[{Vector3}]{dir,  }\item[{float}]{amount,  }\item[{Force\+Mode2D}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
-Player\+Movement.\+cs 파일의 166 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 44 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{167     \{}
-\DoxyCodeLine{168         \textcolor{comment}{// Debug.Log("올라간다!!");}}
-\DoxyCodeLine{169         Vector3 startPosition = transform.position;}
-\DoxyCodeLine{170         Vector3 dir;}
-\DoxyCodeLine{171         \textcolor{keywordtype}{float} time = 0;}
-\DoxyCodeLine{172         \textcolor{keywordtype}{float} \_moveSpeed;}
-\DoxyCodeLine{173         \textcolor{keywordtype}{float} distance = deltaHeight + \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.bounds.size.y / 2;}
-\DoxyCodeLine{174         \textcolor{keywordtype}{float} timeExpected = distance / \mbox{\hyperlink{class_player_movement_a9f24ed81b8ddd8ad2bc4c9ae45203fcd}{climbSpeed}};}
-\DoxyCodeLine{175 }
-\DoxyCodeLine{176         \mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{isClimbing}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{177         \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}}.SetBool(\textcolor{stringliteral}{"isClimbing"}, \mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{isClimbing}});}
-\DoxyCodeLine{178         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.simulated = \textcolor{keyword}{false};}
-\DoxyCodeLine{179         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity = Vector2.zero;}
-\DoxyCodeLine{180 }
-\DoxyCodeLine{181         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \textcolor{comment}{// y 좌표 이동}}
-\DoxyCodeLine{182         \{}
-\DoxyCodeLine{183             transform.parent = collision.transform;}
-\DoxyCodeLine{184             yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
-\DoxyCodeLine{185             transform.position += Vector3.up * (\mbox{\hyperlink{class_player_movement_a9f24ed81b8ddd8ad2bc4c9ae45203fcd}{climbSpeed}} * Time.fixedDeltaTime);}
-\DoxyCodeLine{186             time += Time.fixedDeltaTime;}
-\DoxyCodeLine{187 }
-\DoxyCodeLine{188             \textcolor{keywordflow}{if} (time >= timeExpected) \textcolor{comment}{// 어느 정도의 시간이 흐르면}}
-\DoxyCodeLine{189             \{}
-\DoxyCodeLine{190                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{191             \}}
-\DoxyCodeLine{192         \}}
-\DoxyCodeLine{193 }
-\DoxyCodeLine{194         time = 0;}
-\DoxyCodeLine{195         distance = \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.bounds.size.x; \textcolor{comment}{// 플레이어 사이즈 만큼 x축으로 이동}}
-\DoxyCodeLine{196 }
-\DoxyCodeLine{197         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
-\DoxyCodeLine{198         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.simulated = \textcolor{keyword}{true};}
-\DoxyCodeLine{199         \mbox{\hyperlink{class_player_movement_aff9c832db827f7af7d03c7c49842179f}{isJumpCancelable}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{200         \mbox{\hyperlink{class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9}{Jump}}(\mbox{\hyperlink{class_player_movement_a3b10fda58c5c9c3e0e00b34b531e8bf4}{climbJumpPower}});}
-\DoxyCodeLine{201         \textcolor{comment}{//Debug.Log("현재 속도: " + rigid.velocity.y);}}
-\DoxyCodeLine{202         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
-\DoxyCodeLine{203 }
-\DoxyCodeLine{204         timeExpected = - \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity.y * 2 / (\mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.gravityScale * Physics2D.gravity.y);}
-\DoxyCodeLine{205         \_moveSpeed = distance / timeExpected;}
-\DoxyCodeLine{206 }
-\DoxyCodeLine{207         \textcolor{keywordflow}{if}(collision.transform.position.x > transform.position.x) dir = Vector3.right;}
-\DoxyCodeLine{208         \textcolor{keywordflow}{else} dir = Vector3.left;}
-\DoxyCodeLine{209 }
-\DoxyCodeLine{210         \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \textcolor{comment}{// x 좌표 이동}}
-\DoxyCodeLine{211         \{}
-\DoxyCodeLine{212             \textcolor{keywordflow}{if} (Input.GetAxisRaw(\textcolor{stringliteral}{"Horizontal"}) != 0)}
-\DoxyCodeLine{213                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{214 }
-\DoxyCodeLine{215             transform.parent = collision.transform;}
-\DoxyCodeLine{216             yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
-\DoxyCodeLine{217             }
-\DoxyCodeLine{218             transform.position += dir * \_moveSpeed * Time.fixedDeltaTime;}
-\DoxyCodeLine{219 }
-\DoxyCodeLine{220             time += Time.fixedDeltaTime;}
-\DoxyCodeLine{221 }
-\DoxyCodeLine{222             \textcolor{keywordflow}{if} (time >= timeExpected)}
-\DoxyCodeLine{223                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{224         \}}
-\DoxyCodeLine{225         }
-\DoxyCodeLine{226         \mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{isClimbing}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{227         \textcolor{comment}{// rigid.simulated = true;}}
-\DoxyCodeLine{228         yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitUntil(()=>(\mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}}));}
-\DoxyCodeLine{229         \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}}.SetBool(\textcolor{stringliteral}{"isClimbing"}, \mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{isClimbing}});}
-\DoxyCodeLine{230         transform.parent = \textcolor{keyword}{null};}
-\DoxyCodeLine{231         \mbox{\hyperlink{class_player_movement_aff9c832db827f7af7d03c7c49842179f}{isJumpCancelable}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{232     \}}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         Vector3 origin = rigid.position;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48         rigid.AddForce(dir.normalized * amount, mode);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{51     \}}
 
 \end{DoxyCode}
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=347pt]{d0/d3d/class_player_movement_a6ff1fb59f41c43876325fe8eee66a2cc_cgraph}
-\end{center}
-\end{figure}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/d3d/class_player_movement_a6ff1fb59f41c43876325fe8eee66a2cc_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9}\label{class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9}} 
+\mbox{\Hypertarget{class_movement_a496c630807c87a286fb53070b4ed6cf1}\label{class_movement_a496c630807c87a286fb53070b4ed6cf1}} 
 \index{PlayerMovement@{PlayerMovement}!Jump@{Jump}}
 \index{Jump@{Jump}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{Jump()}{Jump()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void Player\+Movement.\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\subsubsection{\texorpdfstring{Jump()}{Jump()}}
+{\footnotesize\ttfamily virtual void Movement.\+Jump (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj,  }\item[{float}]{amout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
-Player\+Movement.\+cs 파일의 120 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{121     \{}
-\DoxyCodeLine{122         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{isJumping}} || !\mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}}) \textcolor{comment}{// 점프 커맨드 입력}}
-\DoxyCodeLine{123             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{124 }
-\DoxyCodeLine{125         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity = Vector2.zero;}
-\DoxyCodeLine{126 }
-\DoxyCodeLine{127         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.AddForce(Vector2.up * \mbox{\hyperlink{class_player_movement_a7311cb033c65d133e59546388a1ad59d}{jumpPower}}, ForceMode2D.Impulse);}
-\DoxyCodeLine{128 }
-\DoxyCodeLine{129         \mbox{\hyperlink{class_player_movement_aff9c832db827f7af7d03c7c49842179f}{isJumpCancelable}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{130         \mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{isJumping}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{131         \mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{132         \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}}.SetTrigger(\textcolor{stringliteral}{"isJumping"});}
-\DoxyCodeLine{133         }
-\DoxyCodeLine{134         \textcolor{comment}{//효과음}}
-\DoxyCodeLine{135         AudioSource audioPlayer = gameObject.GetComponent<AudioSource>();}
-\DoxyCodeLine{136         audioPlayer.loop = \textcolor{keyword}{false};}
-\DoxyCodeLine{137         audioPlayer.clip = Resources.Load<AudioClip>(\textcolor{stringliteral}{"soundEffects/jump"});}
-\DoxyCodeLine{138         audioPlayer.Play();}
-\DoxyCodeLine{139         \textcolor{comment}{//}}
-\DoxyCodeLine{140 }
-\DoxyCodeLine{141     \}}
-
-\end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/d3d/class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_movement_a8f312c0c10e3e9c978a6e1cd1bada492}\label{class_player_movement_a8f312c0c10e3e9c978a6e1cd1bada492}} 
-\index{PlayerMovement@{PlayerMovement}!Jump@{Jump}}
-\index{Jump@{Jump}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{Jump()}{Jump()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Player\+Movement.\+Jump (\begin{DoxyParamCaption}\item[{float}]{\+\_\+jump\+Power }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 143 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 52 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{144     \{}
-\DoxyCodeLine{145         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity = Vector2.zero;}
-\DoxyCodeLine{146 }
-\DoxyCodeLine{147         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.AddForce(Vector2.up * \_jumpPower, ForceMode2D.Impulse);}
-\DoxyCodeLine{148 }
-\DoxyCodeLine{149         \mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{isJumping}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{150         \mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{151     \}}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         Rigidbody2D rigid = obj.GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{keywordflow}{if}(rigid)}
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             rigid.AddForce(Vector3.up, ForceMode2D.Impulse);}
+\DoxyCodeLine{59         \}}
+\DoxyCodeLine{60         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{61         \{}
+\DoxyCodeLine{62             obj.transform.position += Vector3.up * amout;}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_player_movement_ada23e8d376cdcca2ac7d87f3d05b52cf}\label{class_player_movement_ada23e8d376cdcca2ac7d87f3d05b52cf}} 
-\index{PlayerMovement@{PlayerMovement}!JumpCut@{JumpCut}}
-\index{JumpCut@{JumpCut}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{JumpCut()}{JumpCut()}}
-{\footnotesize\ttfamily void Player\+Movement.\+Jump\+Cut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 153 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{154     \{}
-\DoxyCodeLine{155         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_player_movement_aff9c832db827f7af7d03c7c49842179f}{isJumpCancelable}})}
-\DoxyCodeLine{156             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{157 }
-\DoxyCodeLine{158         \textcolor{keywordtype}{float} velocityY = -0.1f;}
-\DoxyCodeLine{159 }
-\DoxyCodeLine{160         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity.y > velocityY)}
-\DoxyCodeLine{161         \{}
-\DoxyCodeLine{162             \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity = \textcolor{keyword}{new} Vector2(\mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity.x, velocityY);}
-\DoxyCodeLine{163         \}}
-\DoxyCodeLine{164     \}}
-
-\end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/d3d/class_player_movement_ada23e8d376cdcca2ac7d87f3d05b52cf_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_movement_a8dc9af4cb0a951c96b3faa37bab75ccd}\label{class_player_movement_a8dc9af4cb0a951c96b3faa37bab75ccd}} 
+\mbox{\Hypertarget{class_movement_ad400f155e0556a5e22a74cb77858460a}\label{class_movement_ad400f155e0556a5e22a74cb77858460a}} 
 \index{PlayerMovement@{PlayerMovement}!Move@{Move}}
 \index{Move@{Move}!PlayerMovement@{PlayerMovement}}
 \subsubsection{\texorpdfstring{Move()}{Move()}}
-{\footnotesize\ttfamily void Player\+Movement.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily virtual Vector3 Movement.\+Move (\begin{DoxyParamCaption}\item[{Transform}]{obj,  }\item[{Vector3}]{dest,  }\item[{float}]{speed,  }\item[{bool}]{mode = {\ttfamily false},  }\item[{bool}]{is\+Debug = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
 
 
 
-Player\+Movement.\+cs 파일의 100 번째 라인에서 정의되었습니다.
+이동 관련 함수 
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{101     \{}
-\DoxyCodeLine{102         Vector3 vel = dir * \mbox{\hyperlink{class_player_movement_a93207dc2742fe0f0b651a54d610b14aa}{moveSpeed}};}
-\DoxyCodeLine{103         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity = vel + Vector3.up * \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity.y;}
-\DoxyCodeLine{104         \textcolor{keywordflow}{if}(vel.x != 0)}
-\DoxyCodeLine{105             \mbox{\hyperlink{class_player_movement_a8d5245144cd5777ff26b1f9f448796ff}{\_sprite}}.transform.localScale = \textcolor{keyword}{new} Vector3(Mathf.Abs(transform.localScale.x) * vel.normalized.x, transform.localScale.y, transform.localScale.z); \textcolor{comment}{// 스프라이트 좌우 교체}}
-\DoxyCodeLine{106 }
-\DoxyCodeLine{107 }
-\DoxyCodeLine{108         \textcolor{comment}{//효과음}}
-\DoxyCodeLine{109         AudioSource audioPlayer = gameObject.GetComponent<AudioSource>();}
-\DoxyCodeLine{110         \textcolor{keywordflow}{if} (!audioPlayer.isPlaying)}
-\DoxyCodeLine{111         \{}
-\DoxyCodeLine{112             audioPlayer.loop = \textcolor{keyword}{false};}
-\DoxyCodeLine{113             audioPlayer.clip = Resources.Load<AudioClip>(\textcolor{stringliteral}{"soundEffects/walk"});}
-\DoxyCodeLine{114             audioPlayer.Play();}
-\DoxyCodeLine{115         \}}
-\DoxyCodeLine{116         \textcolor{comment}{//}}
-\DoxyCodeLine{117 }
-\DoxyCodeLine{118     \}}
-
-\end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/d3d/class_player_movement_a8dc9af4cb0a951c96b3faa37bab75ccd_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_movement_a66307ea038b50ef0f1ea1276507cc66c}\label{class_player_movement_a66307ea038b50ef0f1ea1276507cc66c}} 
-\index{PlayerMovement@{PlayerMovement}!OnCollisionStay2D@{OnCollisionStay2D}}
-\index{OnCollisionStay2D@{OnCollisionStay2D}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{OnCollisionStay2D()}{OnCollisionStay2D()}}
-{\footnotesize\ttfamily void Player\+Movement.\+On\+Collision\+Stay2D (\begin{DoxyParamCaption}\item[{Collision2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\begin{DoxyParams}{매개변수}
+{\em obj} & 이동할 게임 오브젝트 \\
+\hline
+{\em dest} & 목표 위치 \\
+\hline
+{\em speed} & 속도 \\
+\hline
+{\em mode} & 이동 모드 (true = Velocity Move, false = Position Move) \\
+\hline
+{\em debug} & 디버그 사용여부 (true = 디버그 사용, false = 디버그 사용안함) \\
+\hline
+\end{DoxyParams}
 
 
-
-Player\+Movement.\+cs 파일의 234 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 23 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{235     \{}
-\DoxyCodeLine{236         \textcolor{keywordflow}{if} (collision.collider.tag == \textcolor{stringliteral}{"Ground"})}
-\DoxyCodeLine{237         \{}
-\DoxyCodeLine{238             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}} \&\& !\mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{isClimbing}})}
-\DoxyCodeLine{239             \{}
-\DoxyCodeLine{240                 \textcolor{comment}{// 벽 타고 오르기}}
-\DoxyCodeLine{241                 \textcolor{keywordtype}{float} colHeight = collision.collider.bounds.size.y;}
-\DoxyCodeLine{242                 \textcolor{keywordtype}{float} deltaHeight = collision.transform.position.y + colHeight / 2f - transform.position.y;}
-\DoxyCodeLine{243                 \textcolor{keywordtype}{float} playerHeight = \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.bounds.size.y;}
-\DoxyCodeLine{244                 \textcolor{keywordflow}{if} (deltaHeight >= (\mbox{\hyperlink{class_player_movement_ad37bd6a04342f85d26aa7c268a0c8c64}{minLengthHangable}} - 0.5f) * playerHeight \&\& deltaHeight <= (\mbox{\hyperlink{class_player_movement_afa2e0ac8637c0da3e1efa8191aac5433}{maxLengthHangable}} - 0.5f) * playerHeight) \textcolor{comment}{// 올라탈 수 있는 가능 범위}}
-\DoxyCodeLine{245                 \{}
-\DoxyCodeLine{246                     StartCoroutine(\mbox{\hyperlink{class_player_movement_a6ff1fb59f41c43876325fe8eee66a2cc}{Climb}}(deltaHeight, collision));}
-\DoxyCodeLine{247                 \}}
-\DoxyCodeLine{248             \}}
-\DoxyCodeLine{249         \}}
-\DoxyCodeLine{250     \}}
-
-\end{DoxyCode}
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/d3d/class_player_movement_a66307ea038b50ef0f1ea1276507cc66c_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_player_movement_acc95a5dd6a7b911666ed146fefb8d5b2}\label{class_player_movement_acc95a5dd6a7b911666ed146fefb8d5b2}} 
-\index{PlayerMovement@{PlayerMovement}!OnTriggerExit2D@{OnTriggerExit2D}}
-\index{OnTriggerExit2D@{OnTriggerExit2D}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{OnTriggerExit2D()}{OnTriggerExit2D()}}
-{\footnotesize\ttfamily void Player\+Movement.\+On\+Trigger\+Exit2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 263 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{264     \{}
-\DoxyCodeLine{265         \textcolor{keywordtype}{float} y = collision.transform.position.y + collision.offset.y * collision.transform.localScale.y + collision.bounds.size.y / 2f;}
-\DoxyCodeLine{266         \textcolor{keywordtype}{float} playerY = transform.position.y + \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.offset.y * transform.localScale.y - \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.bounds.size.y / 2f;}
-\DoxyCodeLine{267         \textcolor{keywordflow}{if} (collision.tag == \textcolor{stringliteral}{"Ground"} \&\& playerY >= y - 0.05f)}
-\DoxyCodeLine{268         \{}
-\DoxyCodeLine{269             \mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{270         \}}
-\DoxyCodeLine{271     \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_player_movement_a5406d2bb56031c42b5d47431d6b47915}\label{class_player_movement_a5406d2bb56031c42b5d47431d6b47915}} 
-\index{PlayerMovement@{PlayerMovement}!OnTriggerStay2D@{OnTriggerStay2D}}
-\index{OnTriggerStay2D@{OnTriggerStay2D}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{OnTriggerStay2D()}{OnTriggerStay2D()}}
-{\footnotesize\ttfamily void Player\+Movement.\+On\+Trigger\+Stay2D (\begin{DoxyParamCaption}\item[{Collider2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 252 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{253     \{}
-\DoxyCodeLine{254         \textcolor{keywordtype}{float} y = collision.transform.position.y + collision.offset.y * collision.transform.localScale.y + collision.bounds.size.y / 2f;}
-\DoxyCodeLine{255         \textcolor{keywordtype}{float} playerY = transform.position.y + \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.offset.y * transform.localScale.y - \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}}.bounds.size.y / 2f;}
-\DoxyCodeLine{256         \textcolor{comment}{// Debug.Log("y : " + y + ", playerY : " + playerY);}}
-\DoxyCodeLine{257         \textcolor{keywordflow}{if} (collision.tag == \textcolor{stringliteral}{"Ground"} \&\& playerY >= y - 0.05f)}
-\DoxyCodeLine{258         \{}
-\DoxyCodeLine{259             \mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{260         \}}
-\DoxyCodeLine{261     \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_player_movement_abf3660ca2b1a352b4a9da98437c61aa3}\label{class_player_movement_abf3660ca2b1a352b4a9da98437c61aa3}} 
-\index{PlayerMovement@{PlayerMovement}!Start@{Start}}
-\index{Start@{Start}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Player\+Movement.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 38 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{39     \{}
-\DoxyCodeLine{40         \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}} = gameObject.GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         Vector3 origin = obj.position;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{keywordflow}{if}(mode)}
+\DoxyCodeLine{28         \{}
+\DoxyCodeLine{29             obj.position += dest.normalized * speed * Time.deltaTime;   }
+\DoxyCodeLine{30         \}}
+\DoxyCodeLine{31         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{32             obj.position = dest;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34         \textcolor{keywordflow}{if}(isDebug)}
+\DoxyCodeLine{35         \{}
+\DoxyCodeLine{36             \textcolor{keywordflow}{if}(mode)}
+\DoxyCodeLine{37                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}으로 \{2\}의 속도로 이동"}, origin, dest.normalized, speed));}
+\DoxyCodeLine{38             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{39                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}로 이동"}, origin, dest));}
+\DoxyCodeLine{40         \}}
 \DoxyCodeLine{41 }
-\DoxyCodeLine{42         \textcolor{comment}{// PlayerCollider 가져오기(isTrigger == false)}}
-\DoxyCodeLine{43         Collider2D[] tempColList = GetComponents<Collider2D>();}
-\DoxyCodeLine{44         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < tempColList.Length; i++)}
-\DoxyCodeLine{45         \{}
-\DoxyCodeLine{46             \textcolor{keywordflow}{if} (tempColList[i].isTrigger == \textcolor{keyword}{false})}
-\DoxyCodeLine{47             \{}
-\DoxyCodeLine{48                 \mbox{\hyperlink{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}{playerCollider}} = tempColList[i];}
-\DoxyCodeLine{49                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{50             \}}
-\DoxyCodeLine{51         \}}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}} == \textcolor{keyword}{null})}
-\DoxyCodeLine{54         \{}
-\DoxyCodeLine{55             \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}} = this.gameObject.GetComponent<Animator>();}
-\DoxyCodeLine{56         \} }
-\DoxyCodeLine{57     \}}
+\DoxyCodeLine{42         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{43     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_player_movement_aaf9b77d7177d538be9c1447d08191322}\label{class_player_movement_aaf9b77d7177d538be9c1447d08191322}} 
-\index{PlayerMovement@{PlayerMovement}!Update@{Update}}
-\index{Update@{Update}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{Update()}{Update()}}
-{\footnotesize\ttfamily void Player\+Movement.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 59 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{60     \{}
-\DoxyCodeLine{61         \textcolor{keywordflow}{if} (Input.GetButtonDown(\textcolor{stringliteral}{"Jump"}))}
-\DoxyCodeLine{62         \{}
-\DoxyCodeLine{63             \mbox{\hyperlink{class_player_movement_a1a59782fc52356398194e29255f1a0ae}{isJumping}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{64         \}}
-\DoxyCodeLine{65         \textcolor{keywordflow}{if} (!Input.GetButton(\textcolor{stringliteral}{"Jump"}))}
-\DoxyCodeLine{66         \{}
-\DoxyCodeLine{67             \mbox{\hyperlink{class_player_movement_ada23e8d376cdcca2ac7d87f3d05b52cf}{JumpCut}}();}
-\DoxyCodeLine{68         \}}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{70         \textcolor{comment}{// 무기 스왑}}
-\DoxyCodeLine{71         \textcolor{keywordflow}{if} (Input.GetAxisRaw(\textcolor{stringliteral}{"ScrollWheel"}) < 0)}
-\DoxyCodeLine{72         \{}
-\DoxyCodeLine{73             \mbox{\hyperlink{class_item_database}{ItemDatabase}}.\mbox{\hyperlink{class_item_database_a5312023347462b5af9c545c42934d26b}{GetInstance}}().\mbox{\hyperlink{class_item_database_aa47d8d6f06cb4aff0254dca75e48ec48}{PreviousTool}}();}
-\DoxyCodeLine{74             \textcolor{comment}{// currentTool = ItemDatabase.GetInstance().CurrentTool;}}
-\DoxyCodeLine{75         \}}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77         \textcolor{keywordflow}{if} (Input.GetAxisRaw(\textcolor{stringliteral}{"ScrollWheel"}) > 0)}
-\DoxyCodeLine{78         \{}
-\DoxyCodeLine{79             \mbox{\hyperlink{class_item_database}{ItemDatabase}}.\mbox{\hyperlink{class_item_database_a5312023347462b5af9c545c42934d26b}{GetInstance}}().\mbox{\hyperlink{class_item_database_a2b0614a3fd6d0fa04b8a378156c66525}{NextTool}}();}
-\DoxyCodeLine{80             \textcolor{comment}{// currentTool = ItemDatabase.GetInstance().CurrentTool;}}
-\DoxyCodeLine{81         \}}
-\DoxyCodeLine{82 }
-\DoxyCodeLine{83         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}{isClimbing}})}
-\DoxyCodeLine{84         \{}
-\DoxyCodeLine{85             \textcolor{keywordflow}{if} (Input.GetAxisRaw(\textcolor{stringliteral}{"Horizontal"}) < 0)}
-\DoxyCodeLine{86             \{}
-\DoxyCodeLine{87                 \mbox{\hyperlink{class_player_movement_a8dc9af4cb0a951c96b3faa37bab75ccd}{Move}}(Vector3.left \textcolor{comment}{/* * Input.GetAxis("Horizontal")*(-1)*/});}
-\DoxyCodeLine{88             \}}
-\DoxyCodeLine{89             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (Input.GetAxisRaw(\textcolor{stringliteral}{"Horizontal"}) > 0)}
-\DoxyCodeLine{90             \{}
-\DoxyCodeLine{91                 \mbox{\hyperlink{class_player_movement_a8dc9af4cb0a951c96b3faa37bab75ccd}{Move}}(Vector3.right \textcolor{comment}{/* * Input.GetAxis("Horizontal")*/});}
-\DoxyCodeLine{92             \}}
-\DoxyCodeLine{93             \mbox{\hyperlink{class_player_movement_addc5f78eff185c73ab0a77cc04f13bd9}{Jump}}();}
-\DoxyCodeLine{94             \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}}.SetBool(\textcolor{stringliteral}{"isGround"}, \mbox{\hyperlink{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}{isGround}});}
-\DoxyCodeLine{95         \}}
-\DoxyCodeLine{96         \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}}.SetFloat(\textcolor{stringliteral}{"x\_speed"}, Mathf.Abs(\mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity.x));}
-\DoxyCodeLine{97         \mbox{\hyperlink{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}{\_animator}}.SetFloat(\textcolor{stringliteral}{"y\_speed"}, \mbox{\hyperlink{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}{rigid}}.velocity.y);}
-\DoxyCodeLine{98     \}}
-
-\end{DoxyCode}
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d0/d3d/class_player_movement_aaf9b77d7177d538be9c1447d08191322_cgraph}
+\includegraphics[width=350pt]{d1/de2/class_movement_ad400f155e0556a5e22a74cb77858460a_icgraph}
 \end{center}
 \end{figure}
-
-
-\subsection{멤버 데이터 문서화}
-\mbox{\Hypertarget{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}\label{class_player_movement_ab8ae14c08d4ca210762a89345ad33294}} 
-\index{PlayerMovement@{PlayerMovement}!\_animator@{\_animator}}
-\index{\_animator@{\_animator}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{\_animator}{\_animator}}
-{\footnotesize\ttfamily Animator Player\+Movement.\+\_\+animator}
-
-
-
-Player\+Movement.\+cs 파일의 24 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a8d5245144cd5777ff26b1f9f448796ff}\label{class_player_movement_a8d5245144cd5777ff26b1f9f448796ff}} 
-\index{PlayerMovement@{PlayerMovement}!\_sprite@{\_sprite}}
-\index{\_sprite@{\_sprite}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{\_sprite}{\_sprite}}
-{\footnotesize\ttfamily Game\+Object Player\+Movement.\+\_\+sprite}
-
-
-
-Player\+Movement.\+cs 파일의 25 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a3b10fda58c5c9c3e0e00b34b531e8bf4}\label{class_player_movement_a3b10fda58c5c9c3e0e00b34b531e8bf4}} 
-\index{PlayerMovement@{PlayerMovement}!climbJumpPower@{climbJumpPower}}
-\index{climbJumpPower@{climbJumpPower}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{climbJumpPower}{climbJumpPower}}
-{\footnotesize\ttfamily float Player\+Movement.\+climb\+Jump\+Power = 0.\+4f}
-
-
-
-Player\+Movement.\+cs 파일의 13 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a9f24ed81b8ddd8ad2bc4c9ae45203fcd}\label{class_player_movement_a9f24ed81b8ddd8ad2bc4c9ae45203fcd}} 
-\index{PlayerMovement@{PlayerMovement}!climbSpeed@{climbSpeed}}
-\index{climbSpeed@{climbSpeed}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{climbSpeed}{climbSpeed}}
-{\footnotesize\ttfamily float Player\+Movement.\+climb\+Speed = 6f}
-
-
-
-Player\+Movement.\+cs 파일의 12 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}\label{class_player_movement_a76950ad9ffc2ff1ea99617345eb3074e}} 
-\index{PlayerMovement@{PlayerMovement}!isClimbing@{isClimbing}}
-\index{isClimbing@{isClimbing}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{isClimbing}{isClimbing}}
-{\footnotesize\ttfamily bool Player\+Movement.\+is\+Climbing = false}
-
-
-
-Player\+Movement.\+cs 파일의 20 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}\label{class_player_movement_a5272dbf3b96377dfecb127739bc7e639}} 
-\index{PlayerMovement@{PlayerMovement}!isGround@{isGround}}
-\index{isGround@{isGround}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{isGround}{isGround}}
-{\footnotesize\ttfamily bool Player\+Movement.\+is\+Ground = false}
-
-
-
-Player\+Movement.\+cs 파일의 19 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_aff9c832db827f7af7d03c7c49842179f}\label{class_player_movement_aff9c832db827f7af7d03c7c49842179f}} 
-\index{PlayerMovement@{PlayerMovement}!isJumpCancelable@{isJumpCancelable}}
-\index{isJumpCancelable@{isJumpCancelable}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{isJumpCancelable}{isJumpCancelable}}
-{\footnotesize\ttfamily bool Player\+Movement.\+is\+Jump\+Cancelable = false\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 21 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a1a59782fc52356398194e29255f1a0ae}\label{class_player_movement_a1a59782fc52356398194e29255f1a0ae}} 
-\index{PlayerMovement@{PlayerMovement}!isJumping@{isJumping}}
-\index{isJumping@{isJumping}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{isJumping}{isJumping}}
-{\footnotesize\ttfamily bool Player\+Movement.\+is\+Jumping = false\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 18 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a7311cb033c65d133e59546388a1ad59d}\label{class_player_movement_a7311cb033c65d133e59546388a1ad59d}} 
-\index{PlayerMovement@{PlayerMovement}!jumpPower@{jumpPower}}
-\index{jumpPower@{jumpPower}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{jumpPower}{jumpPower}}
-{\footnotesize\ttfamily float Player\+Movement.\+jump\+Power = 0.\+9f}
-
-
-
-Player\+Movement.\+cs 파일의 11 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_afa2e0ac8637c0da3e1efa8191aac5433}\label{class_player_movement_afa2e0ac8637c0da3e1efa8191aac5433}} 
-\index{PlayerMovement@{PlayerMovement}!maxLengthHangable@{maxLengthHangable}}
-\index{maxLengthHangable@{maxLengthHangable}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{maxLengthHangable}{maxLengthHangable}}
-{\footnotesize\ttfamily float Player\+Movement.\+max\+Length\+Hangable = 1.\+2f}
-
-
-
-Player\+Movement.\+cs 파일의 16 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_ad37bd6a04342f85d26aa7c268a0c8c64}\label{class_player_movement_ad37bd6a04342f85d26aa7c268a0c8c64}} 
-\index{PlayerMovement@{PlayerMovement}!minLengthHangable@{minLengthHangable}}
-\index{minLengthHangable@{minLengthHangable}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{minLengthHangable}{minLengthHangable}}
-{\footnotesize\ttfamily float Player\+Movement.\+min\+Length\+Hangable = 0.\+6f}
-
-
-
-Player\+Movement.\+cs 파일의 15 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a93207dc2742fe0f0b651a54d610b14aa}\label{class_player_movement_a93207dc2742fe0f0b651a54d610b14aa}} 
-\index{PlayerMovement@{PlayerMovement}!moveSpeed@{moveSpeed}}
-\index{moveSpeed@{moveSpeed}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{moveSpeed}{moveSpeed}}
-{\footnotesize\ttfamily float Player\+Movement.\+move\+Speed = 4.\+7f}
-
-
-
-Player\+Movement.\+cs 파일의 10 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}\label{class_player_movement_ab59d00c7bd03ee76c94ece406698cdcb}} 
-\index{PlayerMovement@{PlayerMovement}!playerCollider@{playerCollider}}
-\index{playerCollider@{playerCollider}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{playerCollider}{playerCollider}}
-{\footnotesize\ttfamily Collider2D Player\+Movement.\+player\+Collider\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 8 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}\label{class_player_movement_a722cf27204e5c715e715d0bbe019f2d4}} 
-\index{PlayerMovement@{PlayerMovement}!rigid@{rigid}}
-\index{rigid@{rigid}!PlayerMovement@{PlayerMovement}}
-\subsubsection{\texorpdfstring{rigid}{rigid}}
-{\footnotesize\ttfamily Rigidbody2D Player\+Movement.\+rigid\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Player\+Movement.\+cs 파일의 7 번째 라인에서 정의되었습니다.
-
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_player_movement_8cs}{Player\+Movement.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+New Scripts/\+Player/\mbox{\hyperlink{_player_movement_8cs}{Player\+Movement.\+cs}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deactivated',['Deactivated',['../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acca43c7582c40594c3fe32a6634ef9dcb07',1,'MovingPlatform']]]
+  ['falling',['FALLING',['../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6',1,'State']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['idle',['Idle',['../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123accae599161956d626eda4cb0a5ffb85271c',1,'MovingPlatform.Idle()'],['../d0/d3d/class_player_movement.html#a0dc6677272370f08106ac49997853c6fae599161956d626eda4cb0a5ffb85271c',1,'PlayerMovement.Idle()']]]
+  ['walking',['WALKING',['../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3',1,'State']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['consumable',['Consumable',['../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05a56fed3bd1057fee3027e20901d42f19e',1,'Item']]]
+  ['climbing',['CLIMBING',['../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001bafc4db29e596cb9d0d1de3cdc00b982f1',1,'PlayerState']]]
 ];

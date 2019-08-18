@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jump',['Jump',['../d1/de2/class_movement.html#a26c05ac46da17f2f8999f1cce7fa49b8',1,'Movement.Jump()'],['../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9',1,'PlayerController.Jump()']]]
+  ['falling',['FALLING',['../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6',1,'State']]]
 ];

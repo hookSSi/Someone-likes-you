@@ -47,13 +47,13 @@ public class PhoneController : MonoBehaviour
         _callUI.SetActive(false);
 
         Debug.Log("휴대폰 닫기");
-        _movement.MoveVertical(this.gameObject, _foldDistance, range);
+        //_movement.MoveVertical(this.gameObject, _foldDistance, range);
     }
 
     public void Load(float range)
     {
         Debug.Log("휴대폰 열기");
-        _movement.MoveVertical(this.gameObject, _loadDistance, range);
+        //_movement.MoveVertical(this.gameObject, _loadDistance, range);
     }
 
     IEnumerator Co_RevealCharacters(TMP_Text textComponent)

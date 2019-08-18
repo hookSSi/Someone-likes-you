@@ -1,0 +1,6 @@
+<map id="Movement.Move" name="Movement.Move">
+<area shape="rect" id="node1" title="이동 관련 함수" alt="" coords="643,5,757,32"/>
+<area shape="rect" id="node2" href="$dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7" title="입력 받은 방향에 따라 플레이어 이동을 담당하는 함수" alt="" coords="447,5,595,32"/>
+<area shape="rect" id="node3" href="$dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883" title="플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다." alt="" coords="212,5,399,32"/>
+<area shape="rect" id="node4" href="$dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,164,32"/>
+</map>

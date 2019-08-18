@@ -1,4 +1,5 @@
 <map id="PlayerMovement" name="PlayerMovement">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,157,531"/>
-<area shape="rect" id="node2" title=" " alt="" coords="26,5,137,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,285,124,363"/>
+<area shape="rect" id="node2" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="15,131,114,237"/>
+<area shape="rect" id="node3" title=" " alt="" coords="9,5,120,83"/>
 </map>

@@ -19,7 +19,7 @@ public class TruckController : MonoBehaviour
 
     public void Move()
     {
-        _movement.MoveHorizontal(this.gameObject, _distance, _waitRange);
+        //_movement.MoveHorizontal(this.gameObject, _distance, _waitRange);
     }
     public void Clear()
     {
