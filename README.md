@@ -1,8 +1,7 @@
-# M.I.T. 게임잼 A조
-제목은 Someone likes you
+# Someone likes you
 
 # 개발 환경
-Windows10 Unity 2019.2.0b1 (64-bit)
+Windows10 Unity 2019.2.0f1 (64-bit)
 
 # 폴더의 용도
 ## Someone likes you
