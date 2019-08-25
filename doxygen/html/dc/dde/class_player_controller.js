@@ -1,19 +1,26 @@
 var class_player_controller =
 [
     [ "Attack", "dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11", null ],
+    [ "Awake", "dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1", null ],
+    [ "FixedUpdate", "dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4", null ],
     [ "HandleInput", "dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883", null ],
     [ "Interect", "dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1", null ],
     [ "Jump", "dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9", null ],
     [ "Move", "dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7", null ],
     [ "NotifyEvent", "dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e", null ],
-    [ "Start", "dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467", null ],
     [ "Update", "dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43", null ],
     [ "_animator", "dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae", null ],
+    [ "_ceilingCheck", "dc/dde/class_player_controller.html#a932dbf6c5cc4527856596dc1f9df1426", null ],
+    [ "_cellingRadius", "dc/dde/class_player_controller.html#a306070e77c6bcd09f4fed177c876684f", null ],
     [ "_commands", "dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe", null ],
+    [ "_groundCheck", "dc/dde/class_player_controller.html#ae4940f9e37dd5bf49788de933a833377", null ],
+    [ "_groundedRadius", "dc/dde/class_player_controller.html#a81d04f96edabfd06d6ba1ecb26322f6a", null ],
     [ "_hungriness", "dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a", null ],
-    [ "_jumpingPower", "dc/dde/class_player_controller.html#ad5b01cf8e0c714d76cbd667d4fab7c25", null ],
+    [ "_jumpForce", "dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c", null ],
     [ "_movement", "dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57", null ],
+    [ "_sprite", "dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307", null ],
     [ "_state", "dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb", null ],
     [ "_walkingSpeed", "dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2", null ],
+    [ "_whatIsGround", "dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d", null ],
     [ "Notify", "dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d", null ]
 ];

@@ -1,14 +1,23 @@
 var searchData=
 [
   ['_5fanimator',['_animator',['../dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae',1,'PlayerController']]],
+  ['_5fceilingcheck',['_ceilingCheck',['../dc/dde/class_player_controller.html#a932dbf6c5cc4527856596dc1f9df1426',1,'PlayerController']]],
+  ['_5fcellingradius',['_cellingRadius',['../dc/dde/class_player_controller.html#a306070e77c6bcd09f4fed177c876684f',1,'PlayerController']]],
   ['_5fcommands',['_commands',['../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe',1,'PlayerController']]],
+  ['_5fgroundcheck',['_groundCheck',['../dc/dde/class_player_controller.html#ae4940f9e37dd5bf49788de933a833377',1,'PlayerController']]],
+  ['_5fgroundedradius',['_groundedRadius',['../dc/dde/class_player_controller.html#a81d04f96edabfd06d6ba1ecb26322f6a',1,'PlayerController']]],
   ['_5fhungriness',['_hungriness',['../dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a',1,'PlayerController']]],
-  ['_5fjumpingpower',['_jumpingPower',['../dc/dde/class_player_controller.html#ad5b01cf8e0c714d76cbd667d4fab7c25',1,'PlayerController']]],
+  ['_5fisground',['_isGround',['../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852',1,'PlayerMovement']]],
+  ['_5fjumpforce',['_jumpForce',['../dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c',1,'PlayerController']]],
   ['_5fmovement',['_movement',['../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57',1,'PlayerController']]],
   ['_5fname',['_name',['../d5/d6a/class_command.html#a18a8a95d7f2c65bfa786fb525c42d0c4',1,'Command']]],
   ['_5foffgroundstate',['_offGroundState',['../d0/d8b/class_state.html#ad421039bfc35b46969f174c9617ab786',1,'State']]],
   ['_5fongroundstate',['_onGroundState',['../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443',1,'State']]],
   ['_5fplayerstate',['_playerState',['../d6/d23/class_player_state.html#a9492a14c13c0dc523c37cb44d334ab68',1,'PlayerState']]],
+  ['_5fprevdir',['_prevDir',['../d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4',1,'PlayerMovement']]],
+  ['_5frigid',['_rigid',['../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d',1,'Movement']]],
+  ['_5fsprite',['_sprite',['../dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307',1,'PlayerController']]],
   ['_5fstate',['_state',['../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb',1,'PlayerController']]],
-  ['_5fwalkingspeed',['_walkingSpeed',['../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2',1,'PlayerController']]]
+  ['_5fwalkingspeed',['_walkingSpeed',['../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2',1,'PlayerController']]],
+  ['_5fwhatisground',['_whatIsGround',['../dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d',1,'PlayerController']]]
 ];

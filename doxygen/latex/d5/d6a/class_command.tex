@@ -30,15 +30,15 @@ Command에 대한 협력 다이어그램\+:
 \item 
 delegate void \mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}} ()
 \item 
-\mbox{\hyperlink{class_command_a0c5e5c63b6f555eb858aabe5b0f695f4}{Command}} (Key\+Code key, \mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}} e, string name=\char`\"{}무제\char`\"{})
+\mbox{\hyperlink{class_command}{Command}} \mbox{\hyperlink{class_command_afc8d0350d5935d74a3685f427173d62e}{Init}} (Key\+Code key, \mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}} e, string name=\char`\"{}무제\char`\"{})
 \begin{DoxyCompactList}\small\item\em 생성자 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_command_a71194ef9a48838bbb99793535f64eb7b}{Command}} (\mbox{\hyperlink{class_command}{Command}} other)
+\mbox{\hyperlink{class_command}{Command}} \mbox{\hyperlink{class_command_a4f0000c27196a2cb5f5c3a38ce0ff952}{Init}} (\mbox{\hyperlink{class_command}{Command}} other)
 \begin{DoxyCompactList}\small\item\em 복사생성자 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_command_a306ef92268d70413bf59adaa36a35b07}{Set\+Event}} (\mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}} e)
 \begin{DoxyCompactList}\small\item\em Set Event \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_command_a1f9dcd759b1d51871f8a6efd30c3a721}{Check\+Key}} ()
 \begin{DoxyCompactList}\small\item\em 키 입력 체크하는 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{데이터 필드}
+\subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_command_a18a8a95d7f2c65bfa786fb525c42d0c4}{\+\_\+name}}
@@ -58,6 +58,9 @@ Key\+Code \mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\+\_
 \subsection{상세한 설명}
 플레이어 Hand\+Input()을 위한 중간 매개층 \mbox{\hyperlink{class_command}{Command}} 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨 @detail 어차피 게임에서 쓰일 일 없으니까 Scriptable\+Object를 상속받아 코드에서 객체를 유지할 수 있게 만듬 
 
+\begin{DoxySeeAlso}{참고}
+\href{https://blog.naver.com/hammerimpact/220770261760}{\texttt{ https\+://blog.\+naver.\+com/hammerimpact/220770261760}} 
+\end{DoxySeeAlso}
 \begin{DoxyAuthor}{작성자}
 문성후 
 \end{DoxyAuthor}
@@ -66,56 +69,8 @@ Key\+Code \mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\+\_
 \end{DoxyDate}
 
 
-Command.\+cs 파일의 15 번째 라인에서 정의되었습니다.
+Command.\+cs 파일의 16 번째 라인에서 정의되었습니다.
 
-
-
-\subsection{생성자 \& 소멸자 문서화}
-\mbox{\Hypertarget{class_command_a0c5e5c63b6f555eb858aabe5b0f695f4}\label{class_command_a0c5e5c63b6f555eb858aabe5b0f695f4}} 
-\index{Command@{Command}!Command@{Command}}
-\index{Command@{Command}!Command@{Command}}
-\subsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Command.\+Command (\begin{DoxyParamCaption}\item[{Key\+Code}]{key,  }\item[{\mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}}}]{e,  }\item[{string}]{name = {\ttfamily \char`\"{}무제\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-생성자 
-
-
-
-Command.\+cs 파일의 24 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{25     \{}
-\DoxyCodeLine{26         this.\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}} = key;}
-\DoxyCodeLine{27         this.\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}} += e;}
-\DoxyCodeLine{28         this.\mbox{\hyperlink{class_command_a18a8a95d7f2c65bfa786fb525c42d0c4}{\_name}} = name;}
-\DoxyCodeLine{29     \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_command_a71194ef9a48838bbb99793535f64eb7b}\label{class_command_a71194ef9a48838bbb99793535f64eb7b}} 
-\index{Command@{Command}!Command@{Command}}
-\index{Command@{Command}!Command@{Command}}
-\subsubsection{\texorpdfstring{Command()}{Command()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Command.\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command}{Command}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-복사생성자 
-
-
-
-Command.\+cs 파일의 31 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{32     \{}
-\DoxyCodeLine{33         this.\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}} = other.\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}};}
-\DoxyCodeLine{34         this.\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}} = other.\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}};}
-\DoxyCodeLine{35     \}}
-
-\end{DoxyCode}
 
 
 \subsection{멤버 함수 문서화}
@@ -123,7 +78,7 @@ Command.\+cs 파일의 31 번째 라인에서 정의되었습니다.
 \index{Command@{Command}!CheckKey@{CheckKey}}
 \index{CheckKey@{CheckKey}!Command@{Command}}
 \subsubsection{\texorpdfstring{CheckKey()}{CheckKey()}}
-{\footnotesize\ttfamily bool Command.\+Check\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool Command.\+Check\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -131,18 +86,18 @@ Command.\+cs 파일의 31 번째 라인에서 정의되었습니다.
 
 
 
-Command.\+cs 파일의 42 번째 라인에서 정의되었습니다.
+Command.\+cs 파일의 47 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{43     \{   }
-\DoxyCodeLine{44         \textcolor{keywordflow}{if}(Input.GetKeyDown(\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}}))}
-\DoxyCodeLine{45         \{}
-\DoxyCodeLine{46             \mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}}();}
-\DoxyCodeLine{47             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{48         \}}
-\DoxyCodeLine{49         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{50     \}}
+\DoxyCodeLine{48     \{   }
+\DoxyCodeLine{49         \textcolor{keywordflow}{if}(Input.GetKeyDown(\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}}))}
+\DoxyCodeLine{50         \{}
+\DoxyCodeLine{51             \mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}}();}
+\DoxyCodeLine{52             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{55     \}}
 
 \end{DoxyCode}
 이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
@@ -153,6 +108,63 @@ Command.\+cs 파일의 42 번째 라인에서 정의되었습니다.
 \includegraphics[width=350pt]{d5/d6a/class_command_a1f9dcd759b1d51871f8a6efd30c3a721_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_command_afc8d0350d5935d74a3685f427173d62e}\label{class_command_afc8d0350d5935d74a3685f427173d62e}} 
+\index{Command@{Command}!Init@{Init}}
+\index{Init@{Init}!Command@{Command}}
+\subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_command}{Command}} Command.\+Init (\begin{DoxyParamCaption}\item[{Key\+Code}]{key,  }\item[{\mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}}}]{e,  }\item[{string}]{name = {\ttfamily \char`\"{}무제\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+생성자 
+
+
+
+Command.\+cs 파일의 25 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         this.\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}} = key;}
+\DoxyCodeLine{28         this.\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}} += e;}
+\DoxyCodeLine{29         this.\mbox{\hyperlink{class_command_a18a8a95d7f2c65bfa786fb525c42d0c4}{\_name}} = name;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} \textcolor{keyword}{this};}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d5/d6a/class_command_afc8d0350d5935d74a3685f427173d62e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_command_a4f0000c27196a2cb5f5c3a38ce0ff952}\label{class_command_a4f0000c27196a2cb5f5c3a38ce0ff952}} 
+\index{Command@{Command}!Init@{Init}}
+\index{Init@{Init}!Command@{Command}}
+\subsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_command}{Command}} Command.\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command}{Command}}}]{other }\end{DoxyParamCaption})}
+
+
+
+복사생성자 
+
+
+
+Command.\+cs 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         this.\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}} = other.\mbox{\hyperlink{class_command_a85e9adc5f9994f8da6b21bbad6dfb13d}{\_key}};}
+\DoxyCodeLine{37         this.\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}} = other.\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{keywordflow}{return} \textcolor{keyword}{this};}
+\DoxyCodeLine{40     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_command_acc714b5e0de57b7f24b2619fff860b9d}\label{class_command_acc714b5e0de57b7f24b2619fff860b9d}} 
 \index{Command@{Command}!KeyDownEvent@{KeyDownEvent}}
 \index{KeyDownEvent@{KeyDownEvent}!Command@{Command}}
@@ -163,7 +175,7 @@ Command.\+cs 파일의 42 번째 라인에서 정의되었습니다.
 \index{Command@{Command}!SetEvent@{SetEvent}}
 \index{SetEvent@{SetEvent}!Command@{Command}}
 \subsubsection{\texorpdfstring{SetEvent()}{SetEvent()}}
-{\footnotesize\ttfamily void Command.\+Set\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily void Command.\+Set\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_command_acc714b5e0de57b7f24b2619fff860b9d}{Key\+Down\+Event}}}]{e }\end{DoxyParamCaption})}
 
 
 
@@ -171,16 +183,16 @@ Set Event
 
 
 
-Command.\+cs 파일의 37 번째 라인에서 정의되었습니다.
+Command.\+cs 파일의 42 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37 \{\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}} = e;\}}
+\DoxyCodeLine{42 \{\mbox{\hyperlink{class_command_a04f1a7e0dc8e999e0fca2aa9210f73a3}{\_event}} = e;\}}
 
 \end{DoxyCode}
 
 
-\subsection{필드 문서화}
+\subsection{멤버 데이터 문서화}
 \mbox{\Hypertarget{class_command_a18a8a95d7f2c65bfa786fb525c42d0c4}\label{class_command_a18a8a95d7f2c65bfa786fb525c42d0c4}} 
 \index{Command@{Command}!\_name@{\_name}}
 \index{\_name@{\_name}!Command@{Command}}
@@ -193,7 +205,7 @@ Command.\+cs 파일의 37 번째 라인에서 정의되었습니다.
 
 
 
-Command.\+cs 파일의 21 번째 라인에서 정의되었습니다.
+Command.\+cs 파일의 22 번째 라인에서 정의되었습니다.
 
 
 
@@ -206,11 +218,11 @@ Command.\+cs 파일의 21 번째 라인에서 정의되었습니다.
 
 
 
-Command.\+cs 파일의 22 번째 라인에서 정의되었습니다.
+Command.\+cs 파일의 23 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{22 \{\textcolor{keyword}{get}; \textcolor{keyword}{set};\}}
+\DoxyCodeLine{23 \{\textcolor{keyword}{get}; \textcolor{keyword}{set};\}}
 
 \end{DoxyCode}
 
@@ -228,7 +240,7 @@ Command.\+cs 파일의 22 번째 라인에서 정의되었습니다.
 
 
 
-Command.\+cs 파일의 19 번째 라인에서 정의되었습니다.
+Command.\+cs 파일의 20 번째 라인에서 정의되었습니다.
 
 
 

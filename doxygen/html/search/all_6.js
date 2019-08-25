@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['idle',['IDLE',['../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68eaa5daf7f2ebbba4975d61dab1c40188c7',1,'State']]],
-  ['interacting1',['INTERACTING1',['../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea0f85e9fa4c9d9011849fd3bfcae6a2c0',1,'State']]],
-  ['interect',['Interect',['../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1',1,'PlayerController']]]
+  ['handleanim',['HandleAnim',['../d6/d23/class_player_state.html#ae57c0c11c946d701bb1e0eb2bc7204dd',1,'PlayerState.HandleAnim()'],['../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b',1,'State.HandleAnim()']]],
+  ['handleinput',['HandleInput',['../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883',1,'PlayerController']]]
 ];

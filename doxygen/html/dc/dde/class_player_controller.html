@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
   </td>
  </tr>
@@ -89,9 +89,11 @@ $(document).ready(function(){initNavTree('dc/dde/class_player_controller.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
-<a href="#pub-attribs">데이터 필드</a> &#124;
+<a href="#pub-attribs">Public 속성</a> &#124;
 <a href="#events">이벤트</a> &#124;
-<a href="#pri-methods">Private 멤버 함수</a>  </div>
+<a href="#pri-methods">Private 멤버 함수</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
+<a href="../../d6/d63/class_player_controller-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle">
 <div class="title">PlayerController 클래스 참조</div>  </div>
 </div><!--header-->
@@ -104,8 +106,8 @@ PlayerController에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/dc2/class_player_controller__inherit__graph.png" border="0" usemap="#_player_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="_player_controller_inherit__map" id="_player_controller_inherit__map">
-<area shape="rect"  title="íë ì´ì´ ë´ë¹ ì¼ì§ í´ëì¤" alt="" coords="5,131,128,399"/>
-<area shape="rect"  title=" " alt="" coords="11,5,122,83"/>
+<area shape="rect"  title="íë ì´ì´ ë´ë¹ ì¼ì§ í´ëì¤" alt="" coords="5,131,136,501"/>
+<area shape="rect"  title=" " alt="" coords="15,5,126,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -113,12 +115,12 @@ PlayerController에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/de2/class_player_controller__coll__graph.png" border="0" usemap="#_player_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_controller_coll__map" id="_player_controller_coll__map">
-<area shape="rect"  title="íë ì´ì´ ë´ë¹ ì¼ì§ í´ëì¤" alt="" coords="36,487,159,725"/>
-<area shape="rect"  title=" " alt="" coords="42,5,153,83"/>
-<area shape="rect"  href="../../d1/de2/class_movement.html" title="ê³µíµì ì¸ ìì§ìì ì ìí  í¨ìë¥¼ ë´ë í´ëì¤" alt="" coords="48,161,147,268"/>
-<area shape="rect"  href="../../d0/d8b/class_state.html" title="ì ëë©ì´ìì´ ë¬ë¦° ê°ì²´ì ìí íìê²¸ ì ëë©ì´ì ì²ë¦¬ í´ëì¤" alt="" coords="171,132,301,297"/>
-<area shape="rect"  href="../../d0/d3d/class_player_movement.html" title=" " alt="" coords="38,347,157,424"/>
-<area shape="rect"  href="../../d6/d23/class_player_state.html" title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="181,347,293,424"/>
+<area shape="rect"  title="íë ì´ì´ ë´ë¹ ì¼ì§ í´ëì¤" alt="" coords="34,531,165,872"/>
+<area shape="rect"  title=" " alt="" coords="44,5,155,83"/>
+<area shape="rect"  href="../../d1/de2/class_movement.html" title="ê³µíµì ì¸ ìì§ìì ì ìí  í¨ìë¥¼ ë´ë í´ëì¤" alt="" coords="50,154,149,275"/>
+<area shape="rect"  href="../../d0/d8b/class_state.html" title="ì ëë©ì´ìì´ ë¬ë¦° ê°ì²´ì ìí íìê²¸ ì ëë©ì´ì ì²ë¦¬ í´ëì¤" alt="" coords="173,132,304,297"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html" title="@TODO JUMPING, FALLING ì²ë¦¬" alt="" coords="39,347,160,468"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html" title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="185,361,297,453"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -137,14 +139,34 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memdesc:a473a610cfe2a374d5cb39b3c44881d11"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 공격  <a href="#a473a610cfe2a374d5cb39b3c44881d11">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a473a610cfe2a374d5cb39b3c44881d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a7010cb6f3c524737be3f6f77553df9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">Jump</a> ()</td></tr>
-<tr class="memdesc:a8a7010cb6f3c524737be3f6f77553df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 점프  <a href="#a8a7010cb6f3c524737be3f6f77553df9">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a8a7010cb6f3c524737be3f6f77553df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2af84a2de0a9c5b304d91cc674e76fc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1">Interect</a> ()</td></tr>
 <tr class="memdesc:a2af84a2de0a9c5b304d91cc674e76fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 상호작용  <a href="#a2af84a2de0a9c5b304d91cc674e76fc1">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a2af84a2de0a9c5b304d91cc674e76fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-데이터 필드</h2></td></tr>
+Public 속성</h2></td></tr>
+<tr class="memitem:ab4fed78a016e8baca12e50bb3d7f034a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a">_hungriness</a></td></tr>
+<tr class="memdesc:ab4fed78a016e8baca12e50bb3d7f034a"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 굶주림 정도 (0~1) = (먹어야함 ~ 배가 꽉차 있음)  <a href="#ab4fed78a016e8baca12e50bb3d7f034a">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ab4fed78a016e8baca12e50bb3d7f034a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
+이벤트</h2></td></tr>
+<tr class="memitem:af13292e01756741118500035511fc88d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e">NotifyEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d">Notify</a></td></tr>
+<tr class="separator:af13292e01756741118500035511fc88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private 멤버 함수</h2></td></tr>
+<tr class="memitem:a050967f0e5c2340cb21861e4c8c788a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1">Awake</a> ()</td></tr>
+<tr class="memdesc:a050967f0e5c2340cb21861e4c8c788a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 클래스를 초기화하는 함수  <a href="#a050967f0e5c2340cb21861e4c8c788a1">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a050967f0e5c2340cb21861e4c8c788a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bdb1b48571f67c3f722a58b6f404d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4">FixedUpdate</a> ()</td></tr>
+<tr class="separator:ae5bdb1b48571f67c3f722a58b6f404d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bc83dffb99867a04be016473ed2c43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43">Update</a> ()</td></tr>
+<tr class="separator:ae8bc83dffb99867a04be016473ed2c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 속성</h2></td></tr>
 <tr class="memitem:ad788cfe2e37318d22d52010dc0fecd57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d3d/class_player_movement.html">PlayerMovement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a></td></tr>
 <tr class="memdesc:ad788cfe2e37318d22d52010dc0fecd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 움직임을 제어하는 클래스  <a href="#ad788cfe2e37318d22d52010dc0fecd57">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:ad788cfe2e37318d22d52010dc0fecd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,46 +176,43 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:ada29d77d333483963257e51a6e15b8ae"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">_animator</a></td></tr>
 <tr class="memdesc:ada29d77d333483963257e51a6e15b8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 Animator  <a href="#ada29d77d333483963257e51a6e15b8ae">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:ada29d77d333483963257e51a6e15b8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb0b2dc2ef34062f72afaf20899ce307"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307">_sprite</a></td></tr>
+<tr class="memdesc:aeb0b2dc2ef34062f72afaf20899ce307"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 Sprite  <a href="#aeb0b2dc2ef34062f72afaf20899ce307">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aeb0b2dc2ef34062f72afaf20899ce307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4940f9e37dd5bf49788de933a833377"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ae4940f9e37dd5bf49788de933a833377">_groundCheck</a></td></tr>
+<tr class="memdesc:ae4940f9e37dd5bf49788de933a833377"><td class="mdescLeft">&#160;</td><td class="mdescRight">땅인지 체크하는 포지션  <a href="#ae4940f9e37dd5bf49788de933a833377">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ae4940f9e37dd5bf49788de933a833377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932dbf6c5cc4527856596dc1f9df1426"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a932dbf6c5cc4527856596dc1f9df1426">_ceilingCheck</a></td></tr>
+<tr class="memdesc:a932dbf6c5cc4527856596dc1f9df1426"><td class="mdescLeft">&#160;</td><td class="mdescRight">위에 천장이 닿이는 지 체크하는 포지션(천장이 너무 낮으면 자동으로 앉도록)  <a href="#a932dbf6c5cc4527856596dc1f9df1426">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a932dbf6c5cc4527856596dc1f9df1426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab899fbdea369867174253d2efd978fe"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d5/d6a/class_command.html">Command</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a></td></tr>
 <tr class="separator:aab899fbdea369867174253d2efd978fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4fed78a016e8baca12e50bb3d7f034a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a">_hungriness</a></td></tr>
-<tr class="memdesc:ab4fed78a016e8baca12e50bb3d7f034a"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 굶주림 정도 (0~1) = (먹어야함 ~ 배가 꽉차 있음)  <a href="#ab4fed78a016e8baca12e50bb3d7f034a">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:ab4fed78a016e8baca12e50bb3d7f034a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e49eccbc78237a2355490b7df08368d"><td class="memItemLeft" align="right" valign="top">LayerMask&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d">_whatIsGround</a></td></tr>
+<tr class="separator:a9e49eccbc78237a2355490b7df08368d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ab6a7892eecf1a9fa7b1a49842a3dd2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">_walkingSpeed</a></td></tr>
 <tr class="memdesc:a1ab6a7892eecf1a9fa7b1a49842a3dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 걷는 속도  <a href="#a1ab6a7892eecf1a9fa7b1a49842a3dd2">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a1ab6a7892eecf1a9fa7b1a49842a3dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b01cf8e0c714d76cbd667d4fab7c25"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ad5b01cf8e0c714d76cbd667d4fab7c25">_jumpingPower</a></td></tr>
-<tr class="memdesc:ad5b01cf8e0c714d76cbd667d4fab7c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 점프 크기  <a href="#ad5b01cf8e0c714d76cbd667d4fab7c25">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:ad5b01cf8e0c714d76cbd667d4fab7c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
-이벤트</h2></td></tr>
-<tr class="memitem:af13292e01756741118500035511fc88d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e">NotifyEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d">Notify</a></td></tr>
-<tr class="separator:af13292e01756741118500035511fc88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private 멤버 함수</h2></td></tr>
-<tr class="memitem:ae1117d9c4da3193181cddad2c814e467"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467">Start</a> ()</td></tr>
-<tr class="memdesc:ae1117d9c4da3193181cddad2c814e467"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 클래스를 초기화하는 함수  <a href="#ae1117d9c4da3193181cddad2c814e467">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:ae1117d9c4da3193181cddad2c814e467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8bc83dffb99867a04be016473ed2c43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43">Update</a> ()</td></tr>
-<tr class="separator:ae8bc83dffb99867a04be016473ed2c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec5e4333fe1c532900ca666c075261c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c">_jumpForce</a></td></tr>
+<tr class="memdesc:aaec5e4333fe1c532900ca666c075261c"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어의 점프 크기  <a href="#aaec5e4333fe1c532900ca666c075261c">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aaec5e4333fe1c532900ca666c075261c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306070e77c6bcd09f4fed177c876684f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a306070e77c6bcd09f4fed177c876684f">_cellingRadius</a> = .2f</td></tr>
+<tr class="separator:a306070e77c6bcd09f4fed177c876684f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d04f96edabfd06d6ba1ecb26322f6a"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dde/class_player_controller.html#a81d04f96edabfd06d6ba1ecb26322f6a">_groundedRadius</a> = .2f</td></tr>
+<tr class="separator:a81d04f96edabfd06d6ba1ecb26322f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>플레이어 담당 일진 클래스 </p>
 <dl class="section author"><dt>작성자</dt><dd>문성후 </dd></dl>
 <dl class="section date"><dt>날짜</dt><dd>2019.08.16 </dd></dl>
+<dl class="section see"><dt>참고</dt><dd>참고: <a href="https://github.com/Brackeys/2D-Character-Controller/blob/master/CharacterController2D.cs">https://github.com/Brackeys/2D-Character-Controller/blob/master/CharacterController2D.cs</a> </dd></dl>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
 <a id="a473a610cfe2a374d5cb39b3c44881d11"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a473a610cfe2a374d5cb39b3c44881d11">&#9670;&nbsp;</a></span>Attack()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void PlayerController.Attack </td>
@@ -202,23 +221,118 @@ Private 멤버 함수</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>플레이어 공격 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00091">91</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        Debug.Log(<span class="stringliteral">&quot;공격!&quot;</span>);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00127">127</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    {</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        Debug.Log(<span class="stringliteral">&quot;공격!&quot;</span>);</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
 이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/dde/class_player_controller_a473a610cfe2a374d5cb39b3c44881d11_icgraph.png" border="0" usemap="#dc/dde/class_player_controller_a473a610cfe2a374d5cb39b3c44881d11_icgraph" alt=""/></div>
 <map name="dc/dde/class_player_controller_a473a610cfe2a374d5cb39b3c44881d11_icgraph" id="dc/dde/class_player_controller_a473a610cfe2a374d5cb39b3c44881d11_icgraph">
-<area shape="rect"  title="íë ì´ì´ ê³µê²©" alt="" coords="200,5,356,32"/>
-<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,152,32"/>
+<area shape="rect"  title="íë ì´ì´ ê³µê²©" alt="" coords="211,5,367,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,163,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a050967f0e5c2340cb21861e4c8c788a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050967f0e5c2340cb21861e4c8c788a1">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>플레이어 클래스를 초기화하는 함수 </p>
+<p>플레이어 클래스 초기화 </p>
+<p>이동, 마우스 위치 등 Axis를 제외한 키만 취급 </p>
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// 필수적인 스크립트 자동추가</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span>(this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a> == <span class="keyword">null</span>)</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a> = this.gameObject.AddComponent&lt;<a class="code" href="../../d0/d3d/class_player_movement.html">PlayerMovement</a>&gt;();</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d1/de2/class_movement.html#a1c50c07edbe274e1cf55253e87506684">Init</a>(this.GetComponent&lt;Rigidbody2D&gt;());</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(this.<a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a> == <span class="keyword">null</span>)</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>    = this.gameObject.AddComponent&lt;<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>&gt;();</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a> = this.<a class="code" href="../../dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">_animator</a>;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>.Add(ScriptableObject.CreateInstance&lt;<a class="code" href="../../d5/d6a/class_command.html">Command</a>&gt;().<a class="code" href="../../d5/d6a/class_command.html#afc8d0350d5935d74a3685f427173d62e">Init</a>(KeyCode.Mouse0, <a class="code" href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">Attack</a>));</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>.Add(ScriptableObject.CreateInstance&lt;<a class="code" href="../../d5/d6a/class_command.html">Command</a>&gt;().<a class="code" href="../../d5/d6a/class_command.html#afc8d0350d5935d74a3685f427173d62e">Init</a>(KeyCode.Space, <a class="code" href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">Jump</a>));</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>.Add(ScriptableObject.CreateInstance&lt;<a class="code" href="../../d5/d6a/class_command.html">Command</a>&gt;().<a class="code" href="../../d5/d6a/class_command.html#afc8d0350d5935d74a3685f427173d62e">Init</a>(KeyCode.E, <a class="code" href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1">Interect</a>));</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_ada29d77d333483963257e51a6e15b8ae"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">PlayerController._animator</a></div><div class="ttdeci">Animator _animator</div><div class="ttdoc">플레이어의 Animator</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00032">PlayerController.cs:32</a></div></div>
+<div class="ttc" id="class_player_controller_html_a2af84a2de0a9c5b304d91cc674e76fc1"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1">PlayerController.Interect</a></div><div class="ttdeci">void Interect()</div><div class="ttdoc">플레이어 상호작용</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00143">PlayerController.cs:143</a></div></div>
+<div class="ttc" id="class_player_controller_html_aab899fbdea369867174253d2efd978fe"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">PlayerController._commands</a></div><div class="ttdeci">List&lt; Command &gt; _commands</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00043">PlayerController.cs:43</a></div></div>
+<div class="ttc" id="class_command_html"><div class="ttname"><a href="../../d5/d6a/class_command.html">Command</a></div><div class="ttdoc">플레이어 HandInput()을 위한 중간 매개층 Command 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨 @detail 어차피 게임에서 쓰일 일 없으니까 Scripta...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00016">Command.cs:16</a></div></div>
+<div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<div class="ttc" id="class_player_controller_html_a8a7010cb6f3c524737be3f6f77553df9"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">PlayerController.Jump</a></div><div class="ttdeci">void Jump()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00133">PlayerController.cs:133</a></div></div>
+<div class="ttc" id="class_command_html_afc8d0350d5935d74a3685f427173d62e"><div class="ttname"><a href="../../d5/d6a/class_command.html#afc8d0350d5935d74a3685f427173d62e">Command.Init</a></div><div class="ttdeci">Command Init(KeyCode key, KeyDownEvent e, string name=&quot;무제&quot;)</div><div class="ttdoc">생성자</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00025">Command.cs:25</a></div></div>
+<div class="ttc" id="class_movement_html_a1c50c07edbe274e1cf55253e87506684"><div class="ttname"><a href="../../d1/de2/class_movement.html#a1c50c07edbe274e1cf55253e87506684">Movement.Init</a></div><div class="ttdeci">virtual void Init(Rigidbody2D rigid)</div><div class="ttdoc">Movement 초기화 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00016">Movement.cs:16</a></div></div>
+<div class="ttc" id="class_player_controller_html_ad788cfe2e37318d22d52010dc0fecd57"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController._movement</a></div><div class="ttdeci">PlayerMovement _movement</div><div class="ttdoc">플레이어 움직임을 제어하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
+<div class="ttc" id="class_player_controller_html_a473a610cfe2a374d5cb39b3c44881d11"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">PlayerController.Attack</a></div><div class="ttdeci">void Attack()</div><div class="ttdoc">플레이어 공격</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00127">PlayerController.cs:127</a></div></div>
+<div class="ttc" id="class_player_movement_html"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html">PlayerMovement</a></div><div class="ttdoc">@TODO JUMPING, FALLING 처리</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00006">PlayerMovement.cs:6</a></div></div>
+<div class="ttc" id="class_state_html_aff1dd03a1b3c63053b23371d6d70cd1a"><div class="ttname"><a href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">State._animator</a></div><div class="ttdeci">Animator _animator</div><div class="ttdoc">처리할 유니티의 Animator</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00016">State.cs:16</a></div></div>
+<div class="ttc" id="class_player_controller_html_addcd33a9c23c1b949964365390c7a6eb"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">PlayerController._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdoc">플레이어의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00029">PlayerController.cs:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/dde/class_player_controller_a050967f0e5c2340cb21861e4c8c788a1_cgraph.png" border="0" usemap="#dc/dde/class_player_controller_a050967f0e5c2340cb21861e4c8c788a1_cgraph" alt=""/></div>
+<map name="dc/dde/class_player_controller_a050967f0e5c2340cb21861e4c8c788a1_cgraph" id="dc/dde/class_player_controller_a050967f0e5c2340cb21861e4c8c788a1_cgraph">
+<area shape="rect"  title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,107,163,133"/>
+<area shape="rect"  href="../../d1/de2/class_movement.html#a1c50c07edbe274e1cf55253e87506684" title="Movement ì´ê¸°í í¨ì" alt="" coords="240,5,343,32"/>
+<area shape="rect"  href="../../d5/d6a/class_command.html#afc8d0350d5935d74a3685f427173d62e" title="ìì±ì" alt="" coords="240,56,343,83"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11" title="íë ì´ì´ ê³µê²©" alt="" coords="213,107,369,133"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9" title=" " alt="" coords="217,157,366,184"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1" title="íë ì´ì´ ìí¸ìì©" alt="" coords="211,208,372,235"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab" title=" " alt="" coords="423,132,576,159"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="420,183,579,209"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae5bdb1b48571f67c3f722a58b6f404d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5bdb1b48571f67c3f722a58b6f404d4">&#9670;&nbsp;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerController.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00083">83</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70">GroundCheck</a>(<a class="code" href="../../dc/dde/class_player_controller.html#ae4940f9e37dd5bf49788de933a833377">_groundCheck</a>.position, <a class="code" href="../../dc/dde/class_player_controller.html#a81d04f96edabfd06d6ba1ecb26322f6a">_groundedRadius</a>, <a class="code" href="../../dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d">_whatIsGround</a>))</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            Debug.Log(<span class="stringliteral">&quot;착지!&quot;</span>);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_ae4940f9e37dd5bf49788de933a833377"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ae4940f9e37dd5bf49788de933a833377">PlayerController._groundCheck</a></div><div class="ttdeci">Transform _groundCheck</div><div class="ttdoc">땅인지 체크하는 포지션</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00037">PlayerController.cs:37</a></div></div>
+<div class="ttc" id="class_player_controller_html_a9e49eccbc78237a2355490b7df08368d"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d">PlayerController._whatIsGround</a></div><div class="ttdeci">LayerMask _whatIsGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00045">PlayerController.cs:45</a></div></div>
+<div class="ttc" id="class_player_movement_html_a957f2e09268831052dbd00a9e8e4fa70"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70">PlayerMovement.GroundCheck</a></div><div class="ttdeci">bool GroundCheck(Vector2 groundCheckPos, float groundedRadius, LayerMask groundLayers)</div><div class="ttdoc">플레이어 땅 체크</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00012">PlayerMovement.cs:12</a></div></div>
+<div class="ttc" id="class_player_controller_html_ad788cfe2e37318d22d52010dc0fecd57"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController._movement</a></div><div class="ttdeci">PlayerMovement _movement</div><div class="ttdoc">플레이어 움직임을 제어하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
+<div class="ttc" id="class_player_controller_html_a81d04f96edabfd06d6ba1ecb26322f6a"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a81d04f96edabfd06d6ba1ecb26322f6a">PlayerController._groundedRadius</a></div><div class="ttdeci">const float _groundedRadius</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00057">PlayerController.cs:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/dde/class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4_cgraph.png" border="0" usemap="#dc/dde/class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4_cgraph" alt=""/></div>
+<map name="dc/dde/class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4_cgraph" id="dc/dde/class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="íë ì´ì´ ë ì²´í¬" alt="" coords="244,5,445,32"/>
 </map>
 </div>
 
@@ -229,9 +343,6 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void PlayerController.HandleInput </td>
@@ -240,21 +351,16 @@ Private 멤버 함수</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다. </p>
 <p>플레이어의 입력 처리 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7">Move</a>(Input.GetAxis(<span class="stringliteral">&quot;Horizontal&quot;</span>));</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="../../d5/d6a/class_command.html">Command</a> command <span class="keywordflow">in</span> <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>)</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            command.<a class="code" href="../../d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721">CheckKey</a>();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_aab899fbdea369867174253d2efd978fe"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">PlayerController._commands</a></div><div class="ttdeci">List&lt; Command &gt; _commands</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00030">PlayerController.cs:30</a></div></div>
-<div class="ttc" id="class_command_html"><div class="ttname"><a href="../../d5/d6a/class_command.html">Command</a></div><div class="ttdoc">플레이어 HandInput()을 위한 중간 매개층 Command 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨 @detail 어차피 게임에서 쓰일 일 없으니까 Scripta...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00015">Command.cs:15</a></div></div>
-<div class="ttc" id="class_command_html_a1f9dcd759b1d51871f8a6efd30c3a721"><div class="ttname"><a href="../../d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721">Command.CheckKey</a></div><div class="ttdeci">bool CheckKey()</div><div class="ttdoc">키 입력 체크하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00042">Command.cs:42</a></div></div>
-<div class="ttc" id="class_player_controller_html_a6e383e6fbce014f4a841143774a6a1e7"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7">PlayerController.Move</a></div><div class="ttdeci">void Move(float dir)</div><div class="ttdoc">입력 받은 방향에 따라 플레이어 이동을 담당하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00085">PlayerController.cs:85</a></div></div>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00098">98</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7">Move</a>(Input.GetAxis(<span class="stringliteral">&quot;Horizontal&quot;</span>));</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">foreach</span> (<a class="code" href="../../d5/d6a/class_command.html">Command</a> command <span class="keywordflow">in</span> <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>)</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        {</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            command.<a class="code" href="../../d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721">CheckKey</a>();</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_aab899fbdea369867174253d2efd978fe"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">PlayerController._commands</a></div><div class="ttdeci">List&lt; Command &gt; _commands</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00043">PlayerController.cs:43</a></div></div>
+<div class="ttc" id="class_command_html"><div class="ttname"><a href="../../d5/d6a/class_command.html">Command</a></div><div class="ttdoc">플레이어 HandInput()을 위한 중간 매개층 Command 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨 @detail 어차피 게임에서 쓰일 일 없으니까 Scripta...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00016">Command.cs:16</a></div></div>
+<div class="ttc" id="class_command_html_a1f9dcd759b1d51871f8a6efd30c3a721"><div class="ttname"><a href="../../d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721">Command.CheckKey</a></div><div class="ttdeci">bool CheckKey()</div><div class="ttdoc">키 입력 체크하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00047">Command.cs:47</a></div></div>
+<div class="ttc" id="class_player_controller_html_a6e383e6fbce014f4a841143774a6a1e7"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7">PlayerController.Move</a></div><div class="ttdeci">void Move(float dir)</div><div class="ttdoc">입력 받은 방향에 따라 플레이어 이동을 담당하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00112">PlayerController.cs:112</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
@@ -263,8 +369,8 @@ Private 멤버 함수</h2></td></tr>
 <area shape="rect"  title="íë ì´ì´ì ìë ¥ì ì²ë¦¬íë í¨ìë¡ ìì ë¡­ê² í¤ë¥¼ ë³ê²½í  ì ìëë¡ ì¤ê° í´ëì¤ë¥¼ ë§ë¤ì´ì ì¬ì©íë¤." alt="" coords="5,56,192,83"/>
 <area shape="rect"  href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7" title="ìë ¥ ë°ì ë°©í¥ì ë°ë¼ íë ì´ì´ ì´ëì ë´ë¹íë í¨ì" alt="" coords="240,31,388,57"/>
 <area shape="rect"  href="../../d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721" title="í¤ ìë ¥ ì²´í¬íë í¨ì" alt="" coords="241,81,387,108"/>
-<area shape="rect"  href="../../d1/de2/class_movement.html#ad400f155e0556a5e22a74cb77858460a" title="ì´ë ê´ë ¨ í¨ì" alt="" coords="437,5,552,32"/>
-<area shape="rect"  href="../../d0/d8b/class_state.html#a7c2adea0228ec1582cd5bda7b36d245e" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="436,56,553,83"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="436,5,595,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a339fca7a54775c8016fb137e3f1b1df7" title="ì´ë ê´ë ¨ í¨ì" alt="" coords="439,56,591,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -284,9 +390,6 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void PlayerController.Interect </td>
@@ -295,23 +398,18 @@ Private 멤버 함수</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>플레이어 상호작용 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00101">101</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        Debug.Log(<span class="stringliteral">&quot;상호작용!&quot;</span>);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00143">143</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        Debug.Log(<span class="stringliteral">&quot;상호작용!&quot;</span>);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
 이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/dde/class_player_controller_a2af84a2de0a9c5b304d91cc674e76fc1_icgraph.png" border="0" usemap="#dc/dde/class_player_controller_a2af84a2de0a9c5b304d91cc674e76fc1_icgraph" alt=""/></div>
 <map name="dc/dde/class_player_controller_a2af84a2de0a9c5b304d91cc674e76fc1_icgraph" id="dc/dde/class_player_controller_a2af84a2de0a9c5b304d91cc674e76fc1_icgraph">
-<area shape="rect"  title="íë ì´ì´ ìí¸ìì©" alt="" coords="200,5,361,32"/>
-<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,152,32"/>
+<area shape="rect"  title="íë ì´ì´ ìí¸ìì©" alt="" coords="211,5,372,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,163,32"/>
 </map>
 </div>
 
@@ -322,9 +420,6 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void PlayerController.Jump </td>
@@ -333,23 +428,36 @@ Private 멤버 함수</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+<p>플레이어 점프 </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">할일:</a></b></dt><dd>isGround 콜라이더로 체크? </dd></dl>
 
-<p>플레이어 점프 </p>
-
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00096">96</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        Debug.Log(<span class="stringliteral">&quot;점프!&quot;</span>);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00133">133</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>)</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        {</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab">Jump</a>(Vector2.up, <a class="code" href="../../dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c">_jumpForce</a>);</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.JUMPING);</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            Debug.Log(<span class="stringliteral">&quot;점프!&quot;</span>);</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_aaec5e4333fe1c532900ca666c075261c"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c">PlayerController._jumpForce</a></div><div class="ttdeci">float _jumpForce</div><div class="ttdoc">플레이어의 점프 크기</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00054">PlayerController.cs:54</a></div></div>
+<div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<div class="ttc" id="class_player_movement_html_a64ce92029a6d91f12d23332bdd44a6ab"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab">PlayerMovement.Jump</a></div><div class="ttdeci">override void Jump(Vector2 dir, float amout, GameObject obj=null)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00036">PlayerMovement.cs:36</a></div></div>
+<div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00031">State.cs:31</a></div></div>
+<div class="ttc" id="class_player_controller_html_ad788cfe2e37318d22d52010dc0fecd57"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController._movement</a></div><div class="ttdeci">PlayerMovement _movement</div><div class="ttdoc">플레이어 움직임을 제어하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
+<div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
+<div class="ttc" id="class_player_movement_html_a3096725f76488ebfdc761c53e9fac852"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">PlayerMovement._isGround</a></div><div class="ttdeci">bool _isGround</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00009">PlayerMovement.cs:9</a></div></div>
+<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00024">PlayerState.cs:24</a></div></div>
+<div class="ttc" id="class_player_controller_html_addcd33a9c23c1b949964365390c7a6eb"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">PlayerController._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdoc">플레이어의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00029">PlayerController.cs:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_cgraph.png" border="0" usemap="#dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_cgraph" alt=""/></div>
+<map name="dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_cgraph" id="dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,31,155,57"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab" title=" " alt="" coords="205,5,359,32"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="203,56,361,83"/>
+</map>
+</div>
+<div class="dynheader">
 이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_icgraph.png" border="0" usemap="#dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_icgraph" alt=""/></div>
 <map name="dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_icgraph" id="dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_icgraph">
-<area shape="rect"  title="íë ì´ì´ ì í" alt="" coords="200,5,349,32"/>
-<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae1117d9c4da3193181cddad2c814e467" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,152,32"/>
+<area shape="rect"  title=" " alt="" coords="211,5,360,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,163,32"/>
 </map>
 </div>
 
@@ -360,9 +468,6 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void PlayerController.Move </td>
@@ -372,35 +477,35 @@ Private 멤버 함수</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>입력 받은 방향에 따라 플레이어 이동을 담당하는 함수 </p>
 <p>플레이어 이동 </p><dl class="params"><dt>매개변수</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dir</td><td>이동 방향 Vector3(-1 or 1) </td></tr>
+    <tr><td class="paramname">dir</td><td>이동 방향 Vector3(-1 ~ 1) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d1/de2/class_movement.html#ad400f155e0556a5e22a74cb77858460a">Move</a>(this.transform, Vector3.right * dir, <a class="code" href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">_walkingSpeed</a>, <span class="keyword">true</span>);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#a7c2adea0228ec1582cd5bda7b36d245e">NotifyData</a>(dir);</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div><div class="ttc" id="class_movement_html_ad400f155e0556a5e22a74cb77858460a"><div class="ttname"><a href="../../d1/de2/class_movement.html#ad400f155e0556a5e22a74cb77858460a">Movement.Move</a></div><div class="ttdeci">virtual Vector3 Move(Transform obj, Vector3 dest, float speed, bool mode=false, bool isDebug=false)</div><div class="ttdoc">이동 관련 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00023">Movement.cs:23</a></div></div>
-<div class="ttc" id="class_state_html_a7c2adea0228ec1582cd5bda7b36d245e"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7c2adea0228ec1582cd5bda7b36d245e">State.NotifyData</a></div><div class="ttdeci">virtual void NotifyData(float dir)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00047">State.cs:47</a></div></div>
-<div class="ttc" id="class_player_controller_html_ad788cfe2e37318d22d52010dc0fecd57"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController._movement</a></div><div class="ttdeci">PlayerMovement _movement</div><div class="ttdoc">플레이어 움직임을 제어하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00025">PlayerController.cs:25</a></div></div>
-<div class="ttc" id="class_player_controller_html_a1ab6a7892eecf1a9fa7b1a49842a3dd2"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">PlayerController._walkingSpeed</a></div><div class="ttdeci">float _walkingSpeed</div><div class="ttdoc">플레이어의 걷는 속도</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00034">PlayerController.cs:34</a></div></div>
-<div class="ttc" id="class_player_controller_html_addcd33a9c23c1b949964365390c7a6eb"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">PlayerController._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdoc">플레이어의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00112">112</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span>(Mathf.Abs(dir) &lt; 0.0001)</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.IDLE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.NONE);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        {</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordtype">float</span> prevDir = <a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4">_prevDir</a>;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a>.<a class="code" href="../../d0/d3d/class_player_movement.html#a339fca7a54775c8016fb137e3f1b1df7">Move</a>(this.transform, Vector3.right * dir, <a class="code" href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">_walkingSpeed</a>, <span class="keyword">true</span>);</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="../../dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307">_sprite</a>.transform.localScale = <span class="keyword">new</span> Vector3(transform.localScale.x * ((prevDir &gt;= 0) ? 1:-1), transform.localScale.y, transform.localScale.z); <span class="comment">// 스프라이트 좌우 교체</span></div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            </div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.WALKING, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.NONE);</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div><div class="ttc" id="class_player_movement_html_a339fca7a54775c8016fb137e3f1b1df7"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a339fca7a54775c8016fb137e3f1b1df7">PlayerMovement.Move</a></div><div class="ttdeci">override Vector3 Move(Transform obj, Vector3 dest, float speed, bool mode=false, bool isDebug=false)</div><div class="ttdoc">이동 관련 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00030">PlayerMovement.cs:30</a></div></div>
+<div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00031">State.cs:31</a></div></div>
+<div class="ttc" id="class_player_controller_html_aeb0b2dc2ef34062f72afaf20899ce307"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307">PlayerController._sprite</a></div><div class="ttdeci">GameObject _sprite</div><div class="ttdoc">플레이어의 Sprite</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00034">PlayerController.cs:34</a></div></div>
+<div class="ttc" id="class_player_movement_html_a802b794d028125d4e547a9caeb90d3d4"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4">PlayerMovement._prevDir</a></div><div class="ttdeci">float _prevDir</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00008">PlayerMovement.cs:8</a></div></div>
+<div class="ttc" id="class_player_controller_html_ad788cfe2e37318d22d52010dc0fecd57"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController._movement</a></div><div class="ttdeci">PlayerMovement _movement</div><div class="ttdoc">플레이어 움직임을 제어하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
+<div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
+<div class="ttc" id="class_player_controller_html_a1ab6a7892eecf1a9fa7b1a49842a3dd2"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">PlayerController._walkingSpeed</a></div><div class="ttdeci">float _walkingSpeed</div><div class="ttdoc">플레이어의 걷는 속도</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00052">PlayerController.cs:52</a></div></div>
+<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00024">PlayerState.cs:24</a></div></div>
+<div class="ttc" id="class_player_controller_html_addcd33a9c23c1b949964365390c7a6eb"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">PlayerController._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdoc">플레이어의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00029">PlayerController.cs:29</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/dde/class_player_controller_a6e383e6fbce014f4a841143774a6a1e7_cgraph.png" border="0" usemap="#dc/dde/class_player_controller_a6e383e6fbce014f4a841143774a6a1e7_cgraph" alt=""/></div>
 <map name="dc/dde/class_player_controller_a6e383e6fbce014f4a841143774a6a1e7_cgraph" id="dc/dde/class_player_controller_a6e383e6fbce014f4a841143774a6a1e7_cgraph">
 <area shape="rect"  title="ìë ¥ ë°ì ë°©í¥ì ë°ë¼ íë ì´ì´ ì´ëì ë´ë¹íë í¨ì" alt="" coords="5,31,153,57"/>
-<area shape="rect"  href="../../d1/de2/class_movement.html#ad400f155e0556a5e22a74cb77858460a" title="ì´ë ê´ë ¨ í¨ì" alt="" coords="203,5,317,32"/>
-<area shape="rect"  href="../../d0/d8b/class_state.html#a7c2adea0228ec1582cd5bda7b36d245e" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="201,56,319,83"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="201,5,360,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a339fca7a54775c8016fb137e3f1b1df7" title="ì´ë ê´ë ¨ í¨ì" alt="" coords="205,56,357,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -439,59 +544,6 @@ Private 멤버 함수</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1117d9c4da3193181cddad2c814e467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1117d9c4da3193181cddad2c814e467">&#9670;&nbsp;</a></span>Start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlayerController.Start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>플레이어 클래스를 초기화하는 함수 </p>
-<p>플레이어 클래스 초기화 </p>
-<p>이동, 마우스 위치 등 Axis를 제외한 키만 취급 </p>
-
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// 필수적인 스크립트 자동추가</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span>(this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a> == <span class="keyword">null</span>)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">_movement</a> = this.gameObject.AddComponent&lt;<a class="code" href="../../d0/d3d/class_player_movement.html">PlayerMovement</a>&gt;();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(this.<a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a> == <span class="keyword">null</span>)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>    = this.gameObject.AddComponent&lt;<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>&gt;();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            this.<a class="code" href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a> = this.<a class="code" href="../../dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">_animator</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            </div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a> = <span class="keyword">new</span> List&lt;Command&gt;();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>.Add(<span class="keyword">new</span> <a class="code" href="../../d5/d6a/class_command.html">Command</a>(KeyCode.Mouse0, <a class="code" href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">Attack</a>));</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>.Add(<span class="keyword">new</span> <a class="code" href="../../d5/d6a/class_command.html">Command</a>(KeyCode.W, <a class="code" href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">Jump</a>));</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">_commands</a>.Add(<span class="keyword">new</span> <a class="code" href="../../d5/d6a/class_command.html">Command</a>(KeyCode.E, <a class="code" href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1">Interect</a>));</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_ada29d77d333483963257e51a6e15b8ae"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">PlayerController._animator</a></div><div class="ttdeci">Animator _animator</div><div class="ttdoc">플레이어의 Animator</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00029">PlayerController.cs:29</a></div></div>
-<div class="ttc" id="class_player_controller_html_a2af84a2de0a9c5b304d91cc674e76fc1"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1">PlayerController.Interect</a></div><div class="ttdeci">void Interect()</div><div class="ttdoc">플레이어 상호작용</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00101">PlayerController.cs:101</a></div></div>
-<div class="ttc" id="class_player_controller_html_aab899fbdea369867174253d2efd978fe"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">PlayerController._commands</a></div><div class="ttdeci">List&lt; Command &gt; _commands</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00030">PlayerController.cs:30</a></div></div>
-<div class="ttc" id="class_command_html"><div class="ttname"><a href="../../d5/d6a/class_command.html">Command</a></div><div class="ttdoc">플레이어 HandInput()을 위한 중간 매개층 Command 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨 @detail 어차피 게임에서 쓰일 일 없으니까 Scripta...</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_command_8cs_source.html#l00015">Command.cs:15</a></div></div>
-<div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
-<div class="ttc" id="class_player_controller_html_a8a7010cb6f3c524737be3f6f77553df9"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">PlayerController.Jump</a></div><div class="ttdeci">void Jump()</div><div class="ttdoc">플레이어 점프</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00096">PlayerController.cs:96</a></div></div>
-<div class="ttc" id="class_player_controller_html_ad788cfe2e37318d22d52010dc0fecd57"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController._movement</a></div><div class="ttdeci">PlayerMovement _movement</div><div class="ttdoc">플레이어 움직임을 제어하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00025">PlayerController.cs:25</a></div></div>
-<div class="ttc" id="class_player_controller_html_a473a610cfe2a374d5cb39b3c44881d11"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">PlayerController.Attack</a></div><div class="ttdeci">void Attack()</div><div class="ttdoc">플레이어 공격</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00091">PlayerController.cs:91</a></div></div>
-<div class="ttc" id="class_player_movement_html"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html">PlayerMovement</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00005">PlayerMovement.cs:5</a></div></div>
-<div class="ttc" id="class_state_html_aff1dd03a1b3c63053b23371d6d70cd1a"><div class="ttname"><a href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">State._animator</a></div><div class="ttdeci">Animator _animator</div><div class="ttdoc">처리할 유니티의 Animator</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00016">State.cs:16</a></div></div>
-<div class="ttc" id="class_player_controller_html_addcd33a9c23c1b949964365390c7a6eb"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">PlayerController._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdoc">플레이어의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00027">PlayerController.cs:27</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dc/dde/class_player_controller_ae1117d9c4da3193181cddad2c814e467_cgraph.png" border="0" usemap="#dc/dde/class_player_controller_ae1117d9c4da3193181cddad2c814e467_cgraph" alt=""/></div>
-<map name="dc/dde/class_player_controller_ae1117d9c4da3193181cddad2c814e467_cgraph" id="dc/dde/class_player_controller_ae1117d9c4da3193181cddad2c814e467_cgraph">
-<area shape="rect"  title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,56,152,83"/>
-<area shape="rect"  href="../../dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11" title="íë ì´ì´ ê³µê²©" alt="" coords="203,5,359,32"/>
-<area shape="rect"  href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9" title="íë ì´ì´ ì í" alt="" coords="206,56,355,83"/>
-<area shape="rect"  href="../../dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1" title="íë ì´ì´ ìí¸ìì©" alt="" coords="200,107,361,133"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="ae8bc83dffb99867a04be016473ed2c43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8bc83dffb99867a04be016473ed2c43">&#9670;&nbsp;</a></span>Update()</h2>
 
@@ -510,13 +562,13 @@ Private 멤버 함수</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">HandleInput</a>();</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_a5ebfe098b2dc258ca8349e6951766883"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">PlayerController.HandleInput</a></div><div class="ttdeci">void HandleInput()</div><div class="ttdoc">플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00071">PlayerController.cs:71</a></div></div>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00088">88</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">HandleInput</a>();</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="ttc" id="class_player_controller_html_a5ebfe098b2dc258ca8349e6951766883"><div class="ttname"><a href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">PlayerController.HandleInput</a></div><div class="ttdeci">void HandleInput()</div><div class="ttdoc">플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d59/_player_controller_8cs_source.html#l00098">PlayerController.cs:98</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
@@ -526,29 +578,87 @@ Private 멤버 함수</h2></td></tr>
 <area shape="rect"  href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883" title="íë ì´ì´ì ìë ¥ì ì²ë¦¬íë í¨ìë¡ ìì ë¡­ê² í¤ë¥¼ ë³ê²½í  ì ìëë¡ ì¤ê° í´ëì¤ë¥¼ ë§ë¤ì´ì ì¬ì©íë¤." alt="" coords="212,56,399,83"/>
 <area shape="rect"  href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7" title="ìë ¥ ë°ì ë°©í¥ì ë°ë¼ íë ì´ì´ ì´ëì ë´ë¹íë í¨ì" alt="" coords="447,31,595,57"/>
 <area shape="rect"  href="../../d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721" title="í¤ ìë ¥ ì²´í¬íë í¨ì" alt="" coords="448,81,593,108"/>
-<area shape="rect"  href="../../d1/de2/class_movement.html#ad400f155e0556a5e22a74cb77858460a" title="ì´ë ê´ë ¨ í¨ì" alt="" coords="644,5,759,32"/>
-<area shape="rect"  href="../../d0/d8b/class_state.html#a7c2adea0228ec1582cd5bda7b36d245e" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="643,56,760,83"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="643,5,801,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a339fca7a54775c8016fb137e3f1b1df7" title="ì´ë ê´ë ¨ í¨ì" alt="" coords="646,56,798,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<h2 class="groupheader">필드 문서화</h2>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
 <a id="ada29d77d333483963257e51a6e15b8ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada29d77d333483963257e51a6e15b8ae">&#9670;&nbsp;</a></span>_animator</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Animator PlayerController._animator</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>플레이어의 Animator </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a932dbf6c5cc4527856596dc1f9df1426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932dbf6c5cc4527856596dc1f9df1426">&#9670;&nbsp;</a></span>_ceilingCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform PlayerController._ceilingCheck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>위에 천장이 닿이는 지 체크하는 포지션(천장이 너무 낮으면 자동으로 앉도록) </p>
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a306070e77c6bcd09f4fed177c876684f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a306070e77c6bcd09f4fed177c876684f">&#9670;&nbsp;</a></span>_cellingRadius</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float PlayerController._cellingRadius = .2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -557,14 +667,72 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">List&lt;<a class="el" href="../../d5/d6a/class_command.html">Command</a>&gt; PlayerController._commands</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae4940f9e37dd5bf49788de933a833377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4940f9e37dd5bf49788de933a833377">&#9670;&nbsp;</a></span>_groundCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform PlayerController._groundCheck</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>땅인지 체크하는 포지션 </p>
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a81d04f96edabfd06d6ba1ecb26322f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d04f96edabfd06d6ba1ecb26322f6a">&#9670;&nbsp;</a></span>_groundedRadius</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float PlayerController._groundedRadius = .2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -582,25 +750,33 @@ Private 멤버 함수</h2></td></tr>
 
 <p>플레이어의 굶주림 정도 (0~1) = (먹어야함 ~ 배가 꽉차 있음) </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
-<a id="ad5b01cf8e0c714d76cbd667d4fab7c25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5b01cf8e0c714d76cbd667d4fab7c25">&#9670;&nbsp;</a></span>_jumpingPower</h2>
+<a id="aaec5e4333fe1c532900ca666c075261c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec5e4333fe1c532900ca666c075261c">&#9670;&nbsp;</a></span>_jumpForce</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float PlayerController._jumpingPower</td>
+          <td class="memname">float PlayerController._jumpForce</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>플레이어의 점프 크기 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -609,16 +785,50 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d0/d3d/class_player_movement.html">PlayerMovement</a> PlayerController._movement</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>플레이어 움직임을 제어하는 클래스 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00025">25</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aeb0b2dc2ef34062f72afaf20899ce307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0b2dc2ef34062f72afaf20899ce307">&#9670;&nbsp;</a></span>_sprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject PlayerController._sprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>플레이어의 Sprite </p>
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -627,16 +837,24 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d6/d23/class_player_state.html">PlayerState</a> PlayerController._state</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>플레이어의 상태 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00027">27</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -645,16 +863,48 @@ Private 멤버 함수</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float PlayerController._walkingSpeed</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>플레이어의 걷는 속도 </p>
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9e49eccbc78237a2355490b7df08368d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e49eccbc78237a2355490b7df08368d">&#9670;&nbsp;</a></span>_whatIsGround</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask PlayerController._whatIsGround</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -679,7 +929,7 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d3/d59/_player_controller_8cs_source.html">PlayerController.cs</a> 파일의 <a class="el" href="../../d3/d59/_player_controller_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>

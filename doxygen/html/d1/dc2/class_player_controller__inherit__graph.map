@@ -1,4 +1,4 @@
 <map id="PlayerController" name="PlayerController">
-<area shape="rect" id="node1" title="플레이어 담당 일진 클래스" alt="" coords="5,131,128,399"/>
-<area shape="rect" id="node2" title=" " alt="" coords="11,5,122,83"/>
+<area shape="rect" id="node1" title="플레이어 담당 일진 클래스" alt="" coords="5,131,136,501"/>
+<area shape="rect" id="node2" title=" " alt="" coords="15,5,126,83"/>
 </map>

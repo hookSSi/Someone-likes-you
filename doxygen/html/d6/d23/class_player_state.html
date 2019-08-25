@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.1</span>
    </div>
   </td>
  </tr>
@@ -90,8 +90,9 @@ $(document).ready(function(){initNavTree('d6/d23/class_player_state.html','../..
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
-<a href="#pub-attribs">데이터 필드</a> &#124;
-<a href="#properties">속성</a>  </div>
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#properties">속성</a> &#124;
+<a href="../../da/d80/class_player_state-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle">
 <div class="title">PlayerState 클래스 참조</div>  </div>
 </div><!--header-->
@@ -104,7 +105,7 @@ PlayerState에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/dd1/class_player_state__inherit__graph.png" border="0" usemap="#_player_state_inherit__map" alt="Inheritance graph"/></div>
 <map name="_player_state_inherit__map" id="_player_state_inherit__map">
-<area shape="rect"  title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="15,344,127,421"/>
+<area shape="rect"  title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="15,344,127,436"/>
 <area shape="rect"  href="../../d0/d8b/class_state.html" title="ì ëë©ì´ìì´ ë¬ë¦° ê°ì²´ì ìí íìê²¸ ì ëë©ì´ì ì²ë¦¬ í´ëì¤" alt="" coords="5,131,136,296"/>
 <area shape="rect"  title=" " alt="" coords="15,5,126,83"/>
 </map>
@@ -114,7 +115,7 @@ PlayerState에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dfa/class_player_state__coll__graph.png" border="0" usemap="#_player_state_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_state_coll__map" id="_player_state_coll__map">
-<area shape="rect"  title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="15,344,127,421"/>
+<area shape="rect"  title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="15,344,127,436"/>
 <area shape="rect"  href="../../d0/d8b/class_state.html" title="ì ëë©ì´ìì´ ë¬ë¦° ê°ì²´ì ìí íìê²¸ ì ëë©ì´ì ì²ë¦¬ í´ëì¤" alt="" coords="5,131,136,296"/>
 <area shape="rect"  title=" " alt="" coords="15,5,126,83"/>
 </map>
@@ -123,16 +124,22 @@ PlayerState에 대한 협력 다이어그램:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
 <tr class="memitem:afe68f1a1529955d173ccd309da55001b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001b">P_State</a> { <a class="el" href="../../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001bafc4db29e596cb9d0d1de3cdc00b982f1">P_State.CLIMBING</a> = 1 &lt;&lt; 0, 
-<a class="el" href="../../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001ba118050df28f155ec919c245101f050e5">P_State.THROWING</a> = 1 &lt;&lt; 1
+<a class="el" href="../../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001ba118050df28f155ec919c245101f050e5">P_State.THROWING</a> = 1 &lt;&lt; 1, 
+<a class="el" href="../../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001ba7ab0a1cfd85cc3da16cd3e3ad7448524">P_State.LANDING</a> = 1 &lt;&lt; 2
  }</td></tr>
 <tr class="separator:afe68f1a1529955d173ccd309da55001b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9eb1c1d81f1903b8486d1275e78b68e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a> { <a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3">OnGround.WALKING</a> = 1 &lt;&lt; 0, 
+<tr class="memitem:ab9eb1c1d81f1903b8486d1275e78b68e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a> { <br />
+&#160;&#160;<a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68eab50339a10e1de285ac99d4c3990b8693">OnGround.NONE</a> = 0, 
+<a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3">OnGround.WALKING</a> = 1 &lt;&lt; 0, 
 <a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68eaa5daf7f2ebbba4975d61dab1c40188c7">OnGround.IDLE</a> = 1 &lt;&lt; 1, 
 <a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68eac6ddd0f72ff2fd344693b9ca8d483871">OnGround.ATTACK</a> = 1 &lt;&lt; 2, 
-<a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea0f85e9fa4c9d9011849fd3bfcae6a2c0">OnGround.INTERACTING1</a> = 1 &lt;&lt; 3
+<br />
+&#160;&#160;<a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea0f85e9fa4c9d9011849fd3bfcae6a2c0">OnGround.INTERACTING1</a> = 1 &lt;&lt; 3
+<br />
  }</td></tr>
 <tr class="separator:ab9eb1c1d81f1903b8486d1275e78b68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d945e793324c017a973205564cf1a56"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a> { <a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134">OffGround.JUMPING</a> = 1 &lt;&lt; 0, 
+<tr class="memitem:a7d945e793324c017a973205564cf1a56"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a> { <a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56ab50339a10e1de285ac99d4c3990b8693">OffGround.NONE</a> = 0, 
+<a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134">OffGround.JUMPING</a> = 1 &lt;&lt; 0, 
 <a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56ac6ddd0f72ff2fd344693b9ca8d483871">OffGround.ATTACK</a> = 1 &lt;&lt; 1, 
 <a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6">OffGround.FALLING</a> = 1 &lt;&lt; 2
  }</td></tr>
@@ -140,14 +147,14 @@ Public 타입</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a59f3f64c24ba1b6e34e34cb23746ecb0"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a> (<a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a> onGroundState, <a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a> offGroundState)</td></tr>
+<tr class="memdesc:a59f3f64c24ba1b6e34e34cb23746ecb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값  <a href="#a59f3f64c24ba1b6e34e34cb23746ecb0">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a59f3f64c24ba1b6e34e34cb23746ecb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57c0c11c946d701bb1e0eb2bc7204dd"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/class_player_state.html#ae57c0c11c946d701bb1e0eb2bc7204dd">HandleAnim</a> ()</td></tr>
 <tr class="memdesc:ae57c0c11c946d701bb1e0eb2bc7204dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">애니메이션을 처리하는 함수' 땅위, 땅아님에 따라 처리  <a href="#ae57c0c11c946d701bb1e0eb2bc7204dd">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:ae57c0c11c946d701bb1e0eb2bc7204dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3ecac701a93b8ef7e5365e0fc599243"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#ad3ecac701a93b8ef7e5365e0fc599243">Update</a> ()</td></tr>
 <tr class="separator:ad3ecac701a93b8ef7e5365e0fc599243"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c2adea0228ec1582cd5bda7b36d245e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#a7c2adea0228ec1582cd5bda7b36d245e">NotifyData</a> (float dir)</td></tr>
-<tr class="memdesc:a7c2adea0228ec1582cd5bda7b36d245e"><td class="mdescLeft">&#160;</td><td class="mdescRight">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값  <a href="#a7c2adea0228ec1582cd5bda7b36d245e">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a7c2adea0228ec1582cd5bda7b36d245e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc5e7be4e977f0a64b29b01171eda8af"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#adc5e7be4e977f0a64b29b01171eda8af">OnGroundAnim</a> ()</td></tr>
 <tr class="memdesc:adc5e7be4e977f0a64b29b01171eda8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">땅위에서 애니메이션 처리  <a href="#adc5e7be4e977f0a64b29b01171eda8af">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:adc5e7be4e977f0a64b29b01171eda8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,8 +163,9 @@ Public 멤버 함수</h2></td></tr>
 <tr class="separator:a2909a234430fa7752fadf2bb993ab5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-데이터 필드</h2></td></tr>
+Public 속성</h2></td></tr>
 <tr class="memitem:a9492a14c13c0dc523c37cb44d334ab68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001b">P_State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d23/class_player_state.html#a9492a14c13c0dc523c37cb44d334ab68">_playerState</a></td></tr>
+<tr class="memdesc:a9492a14c13c0dc523c37cb44d334ab68"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어만을 위한 애니메이션 상태 변수  <a href="#a9492a14c13c0dc523c37cb44d334ab68">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a9492a14c13c0dc523c37cb44d334ab68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3170df5e58f541f39edff3c1278d443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">_onGroundState</a></td></tr>
 <tr class="memdesc:ab3170df5e58f541f39edff3c1278d443"><td class="mdescLeft">&#160;</td><td class="mdescRight">땅위의 상태  <a href="#ab3170df5e58f541f39edff3c1278d443">더 자세히 ...</a><br /></td></tr>
@@ -199,13 +207,14 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134"></a>JUMPING&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a7d945e793324c017a973205564cf1a56ab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134"></a>JUMPING&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a7d945e793324c017a973205564cf1a56ac6ddd0f72ff2fd344693b9ca8d483871"></a>ATTACK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6"></a>FALLING&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;       JUMPING  = 1 &lt;&lt; 0,</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;       ATTACK   = 1 &lt;&lt; 1,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;       FALLING  = 1 &lt;&lt; 2</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;       NONE     = 0,</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;       JUMPING  = 1 &lt;&lt; 0,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;       ATTACK   = 1 &lt;&lt; 1,</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;       FALLING  = 1 &lt;&lt; 2</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ab9eb1c1d81f1903b8486d1275e78b68e"></a>
@@ -228,14 +237,15 @@ Public 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3"></a>WALKING&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ab9eb1c1d81f1903b8486d1275e78b68eab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3"></a>WALKING&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab9eb1c1d81f1903b8486d1275e78b68eaa5daf7f2ebbba4975d61dab1c40188c7"></a>IDLE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab9eb1c1d81f1903b8486d1275e78b68eac6ddd0f72ff2fd344693b9ca8d483871"></a>ATTACK&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab9eb1c1d81f1903b8486d1275e78b68ea0f85e9fa4c9d9011849fd3bfcae6a2c0"></a>INTERACTING1&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        WALKING      = 1 &lt;&lt; 0,</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        IDLE         = 1 &lt;&lt; 1,</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        ATTACK       = 1 &lt;&lt; 2,</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        INTERACTING1 = 1 &lt;&lt; 3</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        NONE         = 0,</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        WALKING      = 1 &lt;&lt; 0,</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        IDLE         = 1 &lt;&lt; 1,</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        ATTACK       = 1 &lt;&lt; 2,</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        INTERACTING1 = 1 &lt;&lt; 3</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="afe68f1a1529955d173ccd309da55001b"></a>
@@ -260,10 +270,11 @@ Public 멤버 함수</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="afe68f1a1529955d173ccd309da55001bafc4db29e596cb9d0d1de3cdc00b982f1"></a>CLIMBING&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afe68f1a1529955d173ccd309da55001ba118050df28f155ec919c245101f050e5"></a>THROWING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afe68f1a1529955d173ccd309da55001ba7ab0a1cfd85cc3da16cd3e3ad7448524"></a>LANDING&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        CLIMBING = 1 &lt;&lt; 0,</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        THROWING = 1 &lt;&lt; 1</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        CLIMBING = 1 &lt;&lt; 0,</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        THROWING = 1 &lt;&lt; 1,</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        LANDING  = 1 &lt;&lt; 2</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">멤버 함수 문서화</h2>
@@ -285,7 +296,7 @@ Public 멤버 함수</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -294,12 +305,12 @@ Public 멤버 함수</h2></td></tr>
 
 <p><a class="el" href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b">State</a>(으)로부터 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        base.HandleAnim();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00029">29</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        base.HandleAnim();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a7c2adea0228ec1582cd5bda7b36d245e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c2adea0228ec1582cd5bda7b36d245e">&#9670;&nbsp;</a></span>NotifyData()</h2>
+<a id="a59f3f64c24ba1b6e34e34cb23746ecb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f3f64c24ba1b6e34e34cb23746ecb0">&#9670;&nbsp;</a></span>NotifyState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,34 +319,46 @@ Public 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void State.NotifyData </td>
+          <td class="memname">override void PlayerState.NotifyState </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>&#160;</td>
+          <td class="paramname"><em>onGroundState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>&#160;</td>
+          <td class="paramname"><em>offGroundState</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값 </p>
 
-<p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(Mathf.Abs(dir) &gt; 0.01)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">_onGroundState</a> = <a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.WALKING;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">_onGroundState</a> = <a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.IDLE;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div><div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
-<div class="ttc" id="class_state_html_ab3170df5e58f541f39edff3c1278d443"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">State._onGroundState</a></div><div class="ttdeci">OnGround _onGroundState</div><div class="ttdoc">땅위의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00019">State.cs:19</a></div></div>
-</div><!-- fragment --><div class="dynheader">
+<p><a class="el" href="../../d0/d8b/class_state.html#a989a27f9b711812d983344ee381da419">State</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        base.NotifyState(onGroundState, offGroundState);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
 이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d0/d8b/class_state_a7c2adea0228ec1582cd5bda7b36d245e_icgraph.png" border="0" usemap="#d0/d8b/class_state_a7c2adea0228ec1582cd5bda7b36d245e_icgraph" alt=""/></div>
-<map name="d0/d8b/class_state_a7c2adea0228ec1582cd5bda7b36d245e_icgraph" id="d0/d8b/class_state_a7c2adea0228ec1582cd5bda7b36d245e_icgraph">
-<area shape="rect"  title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="643,5,760,32"/>
+<div class="center"><img src="../../d6/d23/class_player_state_a59f3f64c24ba1b6e34e34cb23746ecb0_icgraph.png" border="0" usemap="#d6/d23/class_player_state_a59f3f64c24ba1b6e34e34cb23746ecb0_icgraph" alt=""/></div>
+<map name="d6/d23/class_player_state_a59f3f64c24ba1b6e34e34cb23746ecb0_icgraph" id="d6/d23/class_player_state_a59f3f64c24ba1b6e34e34cb23746ecb0_icgraph">
+<area shape="rect"  title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="644,31,803,57"/>
 <area shape="rect"  href="../../dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7" title="ìë ¥ ë°ì ë°©í¥ì ë°ë¼ íë ì´ì´ ì´ëì ë´ë¹íë í¨ì" alt="" coords="447,5,595,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9" title=" " alt="" coords="447,56,596,83"/>
 <area shape="rect"  href="../../dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883" title="íë ì´ì´ì ìë ¥ì ì²ë¦¬íë í¨ìë¡ ìì ë¡­ê² í¤ë¥¼ ë³ê²½í  ì ìëë¡ ì¤ê° í´ëì¤ë¥¼ ë§ë¤ì´ì ì¬ì©íë¤." alt="" coords="212,5,399,32"/>
 <area shape="rect"  href="../../dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="227,56,384,83"/>
 </map>
 </div>
 
@@ -359,15 +382,28 @@ Public 멤버 함수</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>땅위아님에서 애니메이션 처리 </p>
 
-<p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{}</div></div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">switch</span>(<a class="code" href="../../d0/d8b/class_state.html#ad421039bfc35b46969f174c9617ab786">_offGroundState</a>)</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.JUMPING:</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a>.SetBool(<span class="stringliteral">&quot;isGround&quot;</span>, <span class="keyword">false</span>);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div><div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00031">State.cs:31</a></div></div>
+<div class="ttc" id="class_state_html_ad421039bfc35b46969f174c9617ab786"><div class="ttname"><a href="../../d0/d8b/class_state.html#ad421039bfc35b46969f174c9617ab786">State._offGroundState</a></div><div class="ttdeci">OffGround _offGroundState</div><div class="ttdoc">땅안위의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00022">State.cs:22</a></div></div>
+<div class="ttc" id="class_state_html_aff1dd03a1b3c63053b23371d6d70cd1a"><div class="ttname"><a href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">State._animator</a></div><div class="ttdeci">Animator _animator</div><div class="ttdoc">처리할 유니티의 Animator</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00016">State.cs:16</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d8b/class_state_a2909a234430fa7752fadf2bb993ab5e2_icgraph.png" border="0" usemap="#d0/d8b/class_state_a2909a234430fa7752fadf2bb993ab5e2_icgraph" alt=""/></div>
+<map name="d0/d8b/class_state_a2909a234430fa7752fadf2bb993ab5e2_icgraph" id="d0/d8b/class_state_a2909a234430fa7752fadf2bb993ab5e2_icgraph">
+<area shape="rect"  title="ëììëìì ì ëë©ì´ì ì²ë¦¬" alt="" coords="327,5,472,32"/>
+<area shape="rect"  href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b" title="ì ëë©ì´ìì ì²ë¦¬íë í¨ì&#39; ëì, ëìëì ë°ë¼ ì²ë¦¬" alt="" coords="152,5,279,32"/>
+<area shape="rect"  href="../../d0/d8b/class_state.html#ad3ecac701a93b8ef7e5365e0fc599243" title=" " alt="" coords="5,5,104,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="adc5e7be4e977f0a64b29b01171eda8af"></a>
@@ -388,15 +424,15 @@ Public 멤버 함수</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>땅위에서 애니메이션 처리 </p>
 
-<p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">switch</span>(<a class="code" href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">_onGroundState</a>)</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.WALKING:</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a>.SetFloat(<span class="stringliteral">&quot;x_speed&quot;</span>, 3);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.IDLE:</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a>.SetFloat(<span class="stringliteral">&quot;x_speed&quot;</span>, 0);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div><div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
+<p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">switch</span>(<a class="code" href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">_onGroundState</a>)</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.WALKING:</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a>.SetFloat(<span class="stringliteral">&quot;x_speed&quot;</span>, 3);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.IDLE:</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <a class="code" href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">_animator</a>.SetFloat(<span class="stringliteral">&quot;x_speed&quot;</span>, 0);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div><div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
 <div class="ttc" id="class_state_html_ab3170df5e58f541f39edff3c1278d443"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">State._onGroundState</a></div><div class="ttdeci">OnGround _onGroundState</div><div class="ttdoc">땅위의 상태</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00019">State.cs:19</a></div></div>
 <div class="ttc" id="class_state_html_aff1dd03a1b3c63053b23371d6d70cd1a"><div class="ttname"><a href="../../d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">State._animator</a></div><div class="ttdeci">Animator _animator</div><div class="ttdoc">처리할 유니티의 Animator</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00016">State.cs:16</a></div></div>
 </div><!-- fragment --><div class="dynheader">
@@ -430,28 +466,28 @@ Public 멤버 함수</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">할일:</a></b></dt><dd>받는 데이터 형식, 버그는 없는지? (사실 버그 있을거 같음) 체크할 것 </dd></dl>
 
 <p class="definition"><a class="el" href="../../d6/df4/_state_8cs_source.html">State.cs</a> 파일의 <a class="el" href="../../d6/df4/_state_8cs_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b">HandleAnim</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="ttc" id="class_state_html_aa064ec6cd84d4a09b2c72a536125c74b"><div class="ttname"><a href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b">State.HandleAnim</a></div><div class="ttdeci">virtual void HandleAnim()</div><div class="ttdoc">애니메이션을 처리하는 함수' 땅위, 땅아님에 따라 처리</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00063">State.cs:63</a></div></div>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b">HandleAnim</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div><div class="ttc" id="class_state_html_aa064ec6cd84d4a09b2c72a536125c74b"><div class="ttname"><a href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b">State.HandleAnim</a></div><div class="ttdeci">virtual void HandleAnim()</div><div class="ttdoc">애니메이션을 처리하는 함수' 땅위, 땅아님에 따라 처리</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00057">State.cs:57</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d8b/class_state_ad3ecac701a93b8ef7e5365e0fc599243_cgraph.png" border="0" usemap="#d0/d8b/class_state_ad3ecac701a93b8ef7e5365e0fc599243_cgraph" alt=""/></div>
 <map name="d0/d8b/class_state_ad3ecac701a93b8ef7e5365e0fc599243_cgraph" id="d0/d8b/class_state_ad3ecac701a93b8ef7e5365e0fc599243_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect"  href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b" title="ì ëë©ì´ìì ì²ë¦¬íë í¨ì&#39; ëì, ëìëì ë°ë¼ ì²ë¦¬" alt="" coords="152,5,279,32"/>
+<area shape="rect"  title=" " alt="" coords="5,31,104,57"/>
+<area shape="rect"  href="../../d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b" title="ì ëë©ì´ìì ì²ë¦¬íë í¨ì&#39; ëì, ëìëì ë°ë¼ ì²ë¦¬" alt="" coords="152,31,279,57"/>
 <area shape="rect"  href="../../d0/d8b/class_state.html#adc5e7be4e977f0a64b29b01171eda8af" title="ëììì ì ëë©ì´ì ì²ë¦¬" alt="" coords="327,5,473,32"/>
+<area shape="rect"  href="../../d0/d8b/class_state.html#a2909a234430fa7752fadf2bb993ab5e2" title="ëììëìì ì ëë©ì´ì ì²ë¦¬" alt="" coords="327,56,473,83"/>
 </map>
 </div>
 
 </div>
 </div>
-<h2 class="groupheader">필드 문서화</h2>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
 <a id="ad421039bfc35b46969f174c9617ab786"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad421039bfc35b46969f174c9617ab786">&#9670;&nbsp;</a></span>_offGroundState</h2>
 
@@ -516,7 +552,9 @@ Public 멤버 함수</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+<p>플레이어만을 위한 애니메이션 상태 변수 </p>
+
+<p class="definition"><a class="el" href="../../d4/da7/_player_state_8cs_source.html">PlayerState.cs</a> 파일의 <a class="el" href="../../d4/da7/_player_state_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
