@@ -22,19 +22,19 @@ public class State : MonoBehaviour
     public OffGround _offGroundState;
     public enum OnGround
     {
+        NONE         = 0,
         WALKING      = 1 << 0,
         IDLE         = 1 << 1,
         ATTACK       = 1 << 2,
         INTERACTING1 = 1 << 3
     }
-    
     public enum OffGround
     {
+       NONE     = 0,
        JUMPING  = 1 << 0,
        ATTACK   = 1 << 1,
        FALLING  = 1 << 2
     }
-    /// @todo 받는 데이터 형식, 버그는 없는지? (사실 버그 있을거 같음) 체크할 것
     public virtual void Update() 
     {
         HandleAnim();
@@ -44,16 +44,10 @@ public class State : MonoBehaviour
      * 객체에게 데이터를 받는 함수
      * 단, 데이터는 애니메이션을 위한 값
      */
-    public virtual void NotifyData(float dir)
+    public virtual void NotifyState(OnGround onGroundState, OffGround offGroundState)
     {
-        if(Mathf.Abs(dir) > 0.01)
-        {
-            _onGroundState = OnGround.WALKING;
-        }
-        else
-        {
-            _onGroundState = OnGround.IDLE;
-        }
+        _onGroundState  = onGroundState;
+        _offGroundState = offGroundState;
     }
     /**
      * @brief
@@ -64,9 +58,13 @@ public class State : MonoBehaviour
     {
         if(_animator)
         {
-            if(_onGroundState != 0)
+            if(_onGroundState != OnGround.NONE)
             {
                 OnGroundAnim();
+            }
+            if(_offGroundState != OffGround.NONE)
+            {
+                OffGroundAnim();
             }
         }
         else
@@ -86,5 +84,13 @@ public class State : MonoBehaviour
         }
     }
     /// 땅위아님에서 애니메이션 처리
-    public virtual void OffGroundAnim(){}
+    public virtual void OffGroundAnim()
+    {
+        switch(_offGroundState)
+        {
+            case OffGround.JUMPING:
+                _animator.SetBool("isGround", false);
+                break;
+        }
+    }
 }

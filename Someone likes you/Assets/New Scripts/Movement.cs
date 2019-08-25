@@ -11,6 +11,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    protected Rigidbody2D _rigid;
+    /// Movement 초기화 함수
+    public virtual void Init(Rigidbody2D rigid)
+    {
+        this._rigid = rigid;
+    }
     /**
      *  @brief
      *  이동 관련 함수
@@ -49,13 +55,12 @@ public class Movement : MonoBehaviour
 
         return origin;
     }
-    public virtual void Jump(GameObject obj, float amout)
+    public virtual void Jump(Vector2 dir, float amout, GameObject obj = null)
     {
-        Rigidbody2D rigid = obj.GetComponent<Rigidbody2D>();
-
-        if(rigid)
+        if(_rigid)
         {
-            rigid.AddForce(Vector3.up, ForceMode2D.Impulse);
+            //_rigid.velocity = new Vector2(_rigid.velocity.x,  0);
+            _rigid.velocity += dir * amout;
         }
         else
         {

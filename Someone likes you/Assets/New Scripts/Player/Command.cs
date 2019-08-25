@@ -9,6 +9,7 @@ using UnityEngine;
  *  @detail
  *  어차피 게임에서 쓰일 일 없으니까 ScriptableObject를 상속받아
  *  코드에서 객체를 유지할 수 있게 만듬
+ *  @see https://blog.naver.com/hammerimpact/220770261760
  *  @author 문성후
  *  @date   2019.08.17
  */
@@ -21,17 +22,21 @@ public class Command : ScriptableObject
     public string _name;
     private KeyCode _key {get; set;}
     /// 생성자
-    public Command(KeyCode key, KeyDownEvent e, string name = "무제")
+    public Command Init(KeyCode key, KeyDownEvent e, string name = "무제")
     {
         this._key = key;
         this._event += e;
         this._name = name;
+
+        return this;
     }
     /// 복사생성자
-    public Command(Command other)
+    public Command Init(Command other)
     {
         this._key = other._key;
         this._event = other._event;
+
+        return this;
     }
     /// Set Event
     public void SetEvent(KeyDownEvent e){_event = e;}
