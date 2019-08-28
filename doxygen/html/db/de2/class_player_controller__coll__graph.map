@@ -1,8 +1,8 @@
 <map id="PlayerController" name="PlayerController">
-<area shape="rect" id="node1" title="플레이어 담당 일진 클래스" alt="" coords="34,531,165,872"/>
-<area shape="rect" id="node2" title=" " alt="" coords="44,5,155,83"/>
-<area shape="rect" id="node4" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="50,154,149,275"/>
-<area shape="rect" id="node6" href="$d0/d8b/class_state.html" title="애니메이션이 달린 객체의 상태 표시겸 애니메이션 처리 클래스" alt="" coords="173,132,304,297"/>
-<area shape="rect" id="node3" href="$d0/d3d/class_player_movement.html" title="@TODO JUMPING, FALLING 처리" alt="" coords="39,347,160,468"/>
-<area shape="rect" id="node5" href="$d6/d23/class_player_state.html" title="플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!" alt="" coords="185,361,297,453"/>
+<area shape="rect" id="node1" title="플레이어 담당 일진 클래스" alt="" coords="63,531,194,872"/>
+<area shape="rect" id="node2" title=" " alt="" coords="73,5,184,83"/>
+<area shape="rect" id="node4" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="47,132,210,297"/>
+<area shape="rect" id="node6" href="$d0/d8b/class_state.html" title="애니메이션이 달린 객체의 상태 표시겸 애니메이션 처리 클래스" alt="" coords="234,132,365,297"/>
+<area shape="rect" id="node3" href="$d0/d3d/class_player_movement.html" title="플레이어 움직임 담당 클래스" alt="" coords="68,347,189,468"/>
+<area shape="rect" id="node5" href="$d6/d23/class_player_state.html" title="플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!" alt="" coords="229,361,341,453"/>
 </map>

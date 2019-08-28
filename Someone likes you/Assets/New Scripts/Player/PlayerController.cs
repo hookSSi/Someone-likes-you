@@ -83,7 +83,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() 
     {
         if(_movement.GroundCheck(_groundCheck.position, _groundedRadius, _whatIsGround))
-            Debug.Log("착지!");
+            _state.NotifyState(PlayerState.OnGround.LANDING, PlayerState.OffGround.NONE);
+
+        if(!_movement._isGround)
+            _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING);
     }
     private void Update()
     {
@@ -109,19 +112,24 @@ public class PlayerController : MonoBehaviour
      * 입력 받은 방향에 따라 플레이어 이동을 담당하는 함수
      * @param dir 이동 방향 Vector3(-1 ~ 1)
      */
-    public void Move(float dir)
+    public void Move(float move)
     {
-        if(Mathf.Abs(dir) < 0.0001)
+        if(Mathf.Abs(move) < 0.0001)
+        {
             _state.NotifyState(PlayerState.OnGround.IDLE, PlayerState.OffGround.NONE);
+        }
         else
         {
-            float prevDir = _movement._prevDir;
-
-            this._movement.Move(this.transform, Vector3.right * dir, _walkingSpeed, true);
-            _sprite.transform.localScale = new Vector3(transform.localScale.x * ((prevDir >= 0) ? 1:-1), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
-            
-            _state.NotifyState(PlayerState.OnGround.WALKING, PlayerState.OffGround.NONE);
+            if(_movement._isGround)
+                _state.NotifyState(PlayerState.OnGround.WALKING, PlayerState.OffGround.NONE);
+            else
+                _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING);
         }
+        
+        Vector3 dir = Vector3.right * move * _walkingSpeed;
+        this._movement.Move(dir);
+
+        _sprite.transform.localScale = new Vector3(transform.localScale.x * ((_movement._prevDir >= 0) ? 1:-1), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
     }
     /// 플레이어 공격
     public void Attack()
@@ -129,15 +137,11 @@ public class PlayerController : MonoBehaviour
         Debug.Log("공격!");
     }
     /// 플레이어 점프
-    /// @todo isGround 콜라이더로 체크?
     public void Jump()
     {
-        if(_movement._isGround)
-        {
-            this._movement.Jump(Vector2.up, _jumpForce);
-            _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.JUMPING);
-            Debug.Log("점프!");
-        }
+        this._movement.Jump(Vector2.up, _jumpForce);
+        _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.JUMPING);
+        Debug.Log("점프!");
     }
     /// 플레이어 상호작용
     public void Interect()

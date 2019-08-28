@@ -12,6 +12,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     protected Rigidbody2D _rigid;
+    protected Vector3 _velocity = Vector3.zero;
+    public float _movementSmoothing = .01f;
     /// Movement 초기화 함수
     public virtual void Init(Rigidbody2D rigid)
     {
@@ -19,7 +21,7 @@ public class Movement : MonoBehaviour
     }
     /**
      *  @brief
-     *  이동 관련 함수
+     *  Transform 이동 함수
      *  @param obj 이동할 게임 오브젝트
      *  @param dest 목표 위치
      *  @param speed 속도
@@ -47,6 +49,23 @@ public class Movement : MonoBehaviour
 
         return origin;
     }
+    /**
+     *  @brief
+     *  RigidBody 이동 함수
+     *  @param rigid 이동할 rigidbody2D
+     *  @param dir 방향
+     *  @param speed 속도
+     */
+    public virtual Vector3 Move(Vector3 dir)
+    {
+        Vector3 origin = _rigid.position;
+
+        Vector2 targetVelocity = new Vector2(dir.x, _rigid.velocity.y);
+        _rigid.velocity = Vector3.SmoothDamp(_rigid.velocity, targetVelocity, ref _velocity, _movementSmoothing);
+
+        return origin;
+    }
+
     public virtual Vector3 AddForce(Rigidbody2D rigid, Vector3 dir, float amount, ForceMode2D mode)
     {
         Vector3 origin = rigid.position;

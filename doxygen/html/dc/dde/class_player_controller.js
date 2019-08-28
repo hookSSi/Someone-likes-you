@@ -6,7 +6,7 @@ var class_player_controller =
     [ "HandleInput", "dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883", null ],
     [ "Interect", "dc/dde/class_player_controller.html#a2af84a2de0a9c5b304d91cc674e76fc1", null ],
     [ "Jump", "dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9", null ],
-    [ "Move", "dc/dde/class_player_controller.html#a6e383e6fbce014f4a841143774a6a1e7", null ],
+    [ "Move", "dc/dde/class_player_controller.html#a74676e263dd0a0a9a03a389fa9758bd6", null ],
     [ "NotifyEvent", "dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e", null ],
     [ "Update", "dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43", null ],
     [ "_animator", "dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae", null ],

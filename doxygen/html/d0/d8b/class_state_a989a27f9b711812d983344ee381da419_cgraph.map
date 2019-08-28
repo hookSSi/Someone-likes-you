@@ -1,0 +1,6 @@
+<map id="State.NotifyState" name="State.NotifyState">
+<area shape="rect" id="node1" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="5,31,127,57"/>
+<area shape="rect" id="node2" href="$d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b" title="애니메이션을 처리하는 함수&#39; 땅위, 땅아님에 따라 처리" alt="" coords="175,31,301,57"/>
+<area shape="rect" id="node3" href="$d0/d8b/class_state.html#adc5e7be4e977f0a64b29b01171eda8af" title="땅위에서 애니메이션 처리" alt="" coords="349,5,496,32"/>
+<area shape="rect" id="node4" href="$d0/d8b/class_state.html#a2909a234430fa7752fadf2bb993ab5e2" title="땅위아님에서 애니메이션 처리" alt="" coords="350,56,495,83"/>
+</map>

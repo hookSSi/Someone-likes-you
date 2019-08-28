@@ -1,0 +1,5 @@
+<map id="PlayerController.Move" name="PlayerController.Move">
+<area shape="rect" id="node1" title="입력 받은 방향에 따라 플레이어 이동을 담당하는 함수" alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node2" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="201,5,360,32"/>
+<area shape="rect" id="node3" href="$d0/d3d/class_player_movement.html#a94c480a9aa5629d78b5fd16d9a814bb7" title="이동에 플레이어가 어느 방향을 향하는 지 판단하는 코드 추가" alt="" coords="205,56,357,83"/>
+</map>

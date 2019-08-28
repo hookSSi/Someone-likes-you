@@ -1,4 +1,5 @@
 <map id="PlayerController.FixedUpdate" name="PlayerController.FixedUpdate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="플레이어 땅 체크" alt="" coords="244,5,445,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,196,57"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="플레이어 땅 체크 함수" alt="" coords="244,5,445,32"/>
+<area shape="rect" id="node3" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="265,56,424,83"/>
 </map>

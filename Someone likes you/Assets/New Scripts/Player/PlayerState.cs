@@ -18,7 +18,6 @@ public class PlayerState : State
     {
         CLIMBING = 1 << 0,
         THROWING = 1 << 1,
-        LANDING  = 1 << 2
     }
 
     public override void NotifyState(OnGround onGroundState, OffGround offGroundState)

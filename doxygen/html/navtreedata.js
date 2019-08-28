@@ -24,7 +24,6 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "SomeoneLikesYouUnityScript", "index.html", [
-    [ "할일 목록", "dd/da0/todo.html", null ],
     [ "클래스", "annotated.html", [
       [ "클래스 목록", "annotated.html", "annotated_dup" ],
       [ "클래스 색인", "classes.html", null ],

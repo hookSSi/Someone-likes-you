@@ -11,7 +11,8 @@ var class_state =
       [ "WALKING", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3", null ],
       [ "IDLE", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68eaa5daf7f2ebbba4975d61dab1c40188c7", null ],
       [ "ATTACK", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68eac6ddd0f72ff2fd344693b9ca8d483871", null ],
-      [ "INTERACTING1", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea0f85e9fa4c9d9011849fd3bfcae6a2c0", null ]
+      [ "INTERACTING1", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea0f85e9fa4c9d9011849fd3bfcae6a2c0", null ],
+      [ "LANDING", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea7ab0a1cfd85cc3da16cd3e3ad7448524", null ]
     ] ],
     [ "HandleAnim", "d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b", null ],
     [ "NotifyState", "d0/d8b/class_state.html#a989a27f9b711812d983344ee381da419", null ],

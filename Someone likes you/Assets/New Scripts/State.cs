@@ -26,7 +26,8 @@ public class State : MonoBehaviour
         WALKING      = 1 << 0,
         IDLE         = 1 << 1,
         ATTACK       = 1 << 2,
-        INTERACTING1 = 1 << 3
+        INTERACTING1 = 1 << 3,
+        LANDING      = 1 << 4
     }
     public enum OffGround
     {
@@ -37,7 +38,7 @@ public class State : MonoBehaviour
     }
     public virtual void Update() 
     {
-        HandleAnim();
+        
     }
     /**
      * @brief
@@ -48,6 +49,7 @@ public class State : MonoBehaviour
     {
         _onGroundState  = onGroundState;
         _offGroundState = offGroundState;
+        HandleAnim();
     }
     /**
      * @brief
@@ -81,6 +83,9 @@ public class State : MonoBehaviour
             case OnGround.IDLE:
                 _animator.SetFloat("x_speed", 0);
                 break;
+            case OnGround.LANDING:
+                _animator.SetBool("isGround", true);
+                break;
         }
     }
     /// 땅위아님에서 애니메이션 처리
@@ -89,6 +94,10 @@ public class State : MonoBehaviour
         switch(_offGroundState)
         {
             case OffGround.JUMPING:
+                _animator.SetTrigger("isJump");
+                _animator.SetBool("isGround", false);
+                break;
+            case OffGround.FALLING:
                 _animator.SetBool("isGround", false);
                 break;
         }

@@ -10,6 +10,7 @@ var searchData=
   ['_5fisground',['_isGround',['../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852',1,'PlayerMovement']]],
   ['_5fjumpforce',['_jumpForce',['../dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c',1,'PlayerController']]],
   ['_5fmovement',['_movement',['../dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57',1,'PlayerController']]],
+  ['_5fmovementsmoothing',['_movementSmoothing',['../d1/de2/class_movement.html#aff7ca49ff5d930ac7345da97a5162e3a',1,'Movement']]],
   ['_5fname',['_name',['../d5/d6a/class_command.html#a18a8a95d7f2c65bfa786fb525c42d0c4',1,'Command']]],
   ['_5foffgroundstate',['_offGroundState',['../d0/d8b/class_state.html#ad421039bfc35b46969f174c9617ab786',1,'State']]],
   ['_5fongroundstate',['_onGroundState',['../d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443',1,'State']]],
@@ -18,6 +19,7 @@ var searchData=
   ['_5frigid',['_rigid',['../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d',1,'Movement']]],
   ['_5fsprite',['_sprite',['../dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307',1,'PlayerController']]],
   ['_5fstate',['_state',['../dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb',1,'PlayerController']]],
+  ['_5fvelocity',['_velocity',['../d1/de2/class_movement.html#a6ea6768262f1dca968be8ee5c14a0cc1',1,'Movement']]],
   ['_5fwalkingspeed',['_walkingSpeed',['../dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2',1,'PlayerController']]],
   ['_5fwhatisground',['_whatIsGround',['../dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d',1,'PlayerController']]]
 ];

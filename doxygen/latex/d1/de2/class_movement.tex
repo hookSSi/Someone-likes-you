@@ -12,7 +12,7 @@ Movement에 대한 상속 다이어그램 \+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=171pt]{d8/d54/class_movement__inherit__graph}
+\includegraphics[width=202pt]{d8/d54/class_movement__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -22,7 +22,7 @@ Movement에 대한 협력 다이어그램\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{d6/dad/class_movement__coll__graph}
+\includegraphics[width=202pt]{d6/dad/class_movement__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 멤버 함수}
@@ -31,15 +31,24 @@ Movement에 대한 협력 다이어그램\+:
 virtual void \mbox{\hyperlink{class_movement_a1c50c07edbe274e1cf55253e87506684}{Init}} (Rigidbody2D rigid)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_movement}{Movement}} 초기화 함수 \end{DoxyCompactList}\item 
 virtual Vector3 \mbox{\hyperlink{class_movement_ad400f155e0556a5e22a74cb77858460a}{Move}} (Transform obj, Vector3 dest, float speed, bool mode=false, bool is\+Debug=false)
-\begin{DoxyCompactList}\small\item\em 이동 관련 함수 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Transform 이동 함수 \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_movement_a0a304da685db92346b7e274c2b0f023e}{Move}} (Vector3 dir)
+\begin{DoxyCompactList}\small\item\em Rigid\+Body 이동 함수 \end{DoxyCompactList}\item 
 virtual Vector3 \mbox{\hyperlink{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}{Add\+Force}} (Rigidbody2D rigid, Vector3 dir, float amount, Force\+Mode2D mode)
 \item 
 virtual void \mbox{\hyperlink{class_movement_a561e8f643a3f3cd6b0b6789c72161e98}{Jump}} (Vector2 dir, float amout, Game\+Object obj=null)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_movement_aff7ca49ff5d930ac7345da97a5162e3a}{\+\_\+movement\+Smoothing}} = .\+01f
 \end{DoxyCompactItemize}
 \subsection*{Protected 속성}
 \begin{DoxyCompactItemize}
 \item 
 Rigidbody2D \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\+\_\+rigid}}
+\item 
+Vector3 \mbox{\hyperlink{class_movement_a6ea6768262f1dca968be8ee5c14a0cc1}{\+\_\+velocity}} = Vector3.\+zero
 \end{DoxyCompactItemize}
 
 
@@ -67,17 +76,17 @@ Movement.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 
 
-Movement.\+cs 파일의 50 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 69 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{51     \{}
-\DoxyCodeLine{52         Vector3 origin = rigid.position;}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{54         rigid.AddForce(dir.normalized * amount, mode);}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56         \textcolor{keywordflow}{return} origin;}
-\DoxyCodeLine{57     \}}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         Vector3 origin = rigid.position;}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73         rigid.AddForce(dir.normalized * amount, mode);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{76     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_movement_a1c50c07edbe274e1cf55253e87506684}\label{class_movement_a1c50c07edbe274e1cf55253e87506684}} 
@@ -92,13 +101,13 @@ Movement.\+cs 파일의 50 번째 라인에서 정의되었습니다.
 
 
 
-Movement.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 18 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17     \{}
-\DoxyCodeLine{18         this.\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}} = rigid;}
-\DoxyCodeLine{19     \}}
+\DoxyCodeLine{19     \{}
+\DoxyCodeLine{20         this.\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}} = rigid;}
+\DoxyCodeLine{21     \}}
 
 \end{DoxyCode}
 이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
@@ -121,32 +130,32 @@ Movement.\+cs 파일의 16 번째 라인에서 정의되었습니다.
 
 
 
-Movement.\+cs 파일의 58 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 77 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{59     \{}
-\DoxyCodeLine{60         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}})}
-\DoxyCodeLine{61         \{}
-\DoxyCodeLine{62             \textcolor{comment}{//\_rigid.velocity = new Vector2(\_rigid.velocity.x,  0);}}
-\DoxyCodeLine{63             \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity += dir * amout;}
-\DoxyCodeLine{64         \}}
-\DoxyCodeLine{65         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{66         \{}
-\DoxyCodeLine{67             obj.transform.position += Vector3.up * amout;}
-\DoxyCodeLine{68         \}}
-\DoxyCodeLine{69     \}}
+\DoxyCodeLine{78     \{}
+\DoxyCodeLine{79         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}})}
+\DoxyCodeLine{80         \{}
+\DoxyCodeLine{81             \textcolor{comment}{//\_rigid.velocity = new Vector2(\_rigid.velocity.x,  0);}}
+\DoxyCodeLine{82             \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity += dir * amout;}
+\DoxyCodeLine{83         \}}
+\DoxyCodeLine{84         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{85         \{}
+\DoxyCodeLine{86             obj.transform.position += Vector3.up * amout;}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_movement_ad400f155e0556a5e22a74cb77858460a}\label{class_movement_ad400f155e0556a5e22a74cb77858460a}} 
 \index{Movement@{Movement}!Move@{Move}}
 \index{Move@{Move}!Movement@{Movement}}
-\subsubsection{\texorpdfstring{Move()}{Move()}}
+\subsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily virtual Vector3 Movement.\+Move (\begin{DoxyParamCaption}\item[{Transform}]{obj,  }\item[{Vector3}]{dest,  }\item[{float}]{speed,  }\item[{bool}]{mode = {\ttfamily false},  }\item[{bool}]{is\+Debug = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-이동 관련 함수 
+Transform 이동 함수 
 
 
 \begin{DoxyParams}{매개변수}
@@ -163,39 +172,84 @@ Movement.\+cs 파일의 58 번째 라인에서 정의되었습니다.
 \end{DoxyParams}
 
 
-\mbox{\hyperlink{class_player_movement_a339fca7a54775c8016fb137e3f1b1df7}{Player\+Movement}}에서 재구현되었습니다.
-
-
-
-Movement.\+cs 파일의 29 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 31 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{30     \{}
-\DoxyCodeLine{31         Vector3 origin = obj.position;}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33         \textcolor{keywordflow}{if}(mode)}
-\DoxyCodeLine{34         \{}
-\DoxyCodeLine{35             obj.position += dest.normalized * speed * Time.deltaTime;   }
-\DoxyCodeLine{36         \}}
-\DoxyCodeLine{37         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{38             obj.position = dest;}
-\DoxyCodeLine{39 }
-\DoxyCodeLine{40         \textcolor{keywordflow}{if}(isDebug)}
-\DoxyCodeLine{41         \{}
-\DoxyCodeLine{42             \textcolor{keywordflow}{if}(mode)}
-\DoxyCodeLine{43                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}으로 \{2\}의 속도로 이동"}, origin, dest.normalized, speed));}
-\DoxyCodeLine{44             \textcolor{keywordflow}{else}}
-\DoxyCodeLine{45                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}로 이동"}, origin, dest));}
-\DoxyCodeLine{46         \}}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{48         \textcolor{keywordflow}{return} origin;}
-\DoxyCodeLine{49     \}}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         Vector3 origin = obj.position;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{keywordflow}{if}(mode)}
+\DoxyCodeLine{36         \{}
+\DoxyCodeLine{37             obj.position += dest.normalized * speed * Time.deltaTime;   }
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{40             obj.position = dest;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keywordflow}{if}(isDebug)}
+\DoxyCodeLine{43         \{}
+\DoxyCodeLine{44             \textcolor{keywordflow}{if}(mode)}
+\DoxyCodeLine{45                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}으로 \{2\}의 속도로 이동"}, origin, dest.normalized, speed));}
+\DoxyCodeLine{46             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{47                 Debug.Log(\textcolor{keywordtype}{string}.Format(\textcolor{stringliteral}{"\{0\}에서 \{1\}로 이동"}, origin, dest));}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{51     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_movement_a0a304da685db92346b7e274c2b0f023e}\label{class_movement_a0a304da685db92346b7e274c2b0f023e}} 
+\index{Movement@{Movement}!Move@{Move}}
+\index{Move@{Move}!Movement@{Movement}}
+\subsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual Vector3 Movement.\+Move (\begin{DoxyParamCaption}\item[{Vector3}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Rigid\+Body 이동 함수 
+
+
+\begin{DoxyParams}{매개변수}
+{\em rigid} & 이동할 rigidbody2D \\
+\hline
+{\em dir} & 방향 \\
+\hline
+{\em speed} & 속도 \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7}{Player\+Movement}}에서 재구현되었습니다.
+
+
+
+Movement.\+cs 파일의 59 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         Vector3 origin = \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.position;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         Vector2 targetVelocity = \textcolor{keyword}{new} Vector2(dir.x, \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity.y);}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity = Vector3.SmoothDamp(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity, targetVelocity, ref \mbox{\hyperlink{class_movement_a6ea6768262f1dca968be8ee5c14a0cc1}{\_velocity}}, \mbox{\hyperlink{class_movement_aff7ca49ff5d930ac7345da97a5162e3a}{\_movementSmoothing}});}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{67     \}}
 
 \end{DoxyCode}
 
 
 \subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_movement_aff7ca49ff5d930ac7345da97a5162e3a}\label{class_movement_aff7ca49ff5d930ac7345da97a5162e3a}} 
+\index{Movement@{Movement}!\_movementSmoothing@{\_movementSmoothing}}
+\index{\_movementSmoothing@{\_movementSmoothing}!Movement@{Movement}}
+\subsubsection{\texorpdfstring{\_movementSmoothing}{\_movementSmoothing}}
+{\footnotesize\ttfamily float Movement.\+\_\+movement\+Smoothing = .\+01f}
+
+
+
+Movement.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+
 \mbox{\Hypertarget{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}\label{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}} 
 \index{Movement@{Movement}!\_rigid@{\_rigid}}
 \index{\_rigid@{\_rigid}!Movement@{Movement}}
@@ -205,6 +259,16 @@ Movement.\+cs 파일의 29 번째 라인에서 정의되었습니다.
 
 
 Movement.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_movement_a6ea6768262f1dca968be8ee5c14a0cc1}\label{class_movement_a6ea6768262f1dca968be8ee5c14a0cc1}} 
+\index{Movement@{Movement}!\_velocity@{\_velocity}}
+\index{\_velocity@{\_velocity}!Movement@{Movement}}
+\subsubsection{\texorpdfstring{\_velocity}{\_velocity}}
+{\footnotesize\ttfamily Vector3 Movement.\+\_\+velocity = Vector3.\+zero\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Movement.\+cs 파일의 15 번째 라인에서 정의되었습니다.
 
 
 
