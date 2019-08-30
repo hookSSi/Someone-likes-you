@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
- *  @brief
- *  뺀돌뺀돌 혼자서도 잘 움직이는 벽
+ *  @brief 뺀돌뺀돌 혼자서도 잘 움직이는 벽
  *  @author 한민서
  *  @date   2019.08.28
  *  @see https://youtu.be/ek0JZrL6BU4 1분 6초 참고
@@ -14,16 +13,19 @@ public class MovingPlatform : MonoBehaviour
 {
     [Header("플랫폼 오브젝트")]
     [SerializeField]
-    GameObject _platform;
+    private GameObject _platform;
     private Rigidbody2D _rigid;
     
     [Header("목적지")]
     /// 도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!
     public List<Transform> _posList;
+    /// 현재 목표로 하고 있는 posList의 인덱스
     protected int _index = 0;
+    /// 인덱스(_index)가 어떻게 변할지를 결정, -1은 역순, 1은 순방향
     private int _indexDir = 1;
     
-    /*  @brief 벽의 이동 방법을 결정하는 모드
+    /**
+     *  @brief 벽의 이동 방법을 결정하는 모드
      *  @details
      *  벽이 지점 사이를 어떻게 왕복할 것인지를 결정합니다. 약간 '미니 메트로' 같은 느낌? @n
      *  LOOP : 순회노선처럼, 지점 사이를 순회. @n
@@ -36,33 +38,33 @@ public class MovingPlatform : MonoBehaviour
         LOOP, BACK_FORTH, ONE_WAY
     }
     [Header("이동 모드(순회, 양방향, 편도)")]
+    /// 기본 MoveMode는 Loop(순회하기)
     public MoveMode _moveMode = MoveMode.LOOP;
 
-    /// 벽이 움직이는 속도
+    /// 벽이 움직이는 최대 속력
     public float _velocity = 6f;
 
     [Header("출발하기 전에 얼마나 쉬었다가 갈까?")]
     /// 벽이 얼마나 멈췄다가 출발할지를 결정하는 변수
     public float _idleTime = 1f;
+    /// 현재 경과 시간(건드리지 말것!)
     private float _currentTime = 0f;
 
     /// 벽이 부드럽게 정지하는 데 걸리는 시간
     [SerializeField] private float _timeForStop = 0.7f;
 
-    /**
-     *  @brief
-     *  벽의 상태를 나타낸다
-     */
+    /// 벽의 이동 상태를 나타낸다.
     enum WallState
     {
         Idle, Move
     };
-    // private WallState _prevState;
+    
     private WallState _state = WallState.Move;
 
     /// 벽이 움직임이 활성화되었는가?
     /// 사실 _isOn이나 this.isActivatedAndEnable이나 다른 게 없는 것 같아서 고민중...
     [SerializeField] private bool _isOn = true;
+    /// Act 함수가 FixedUpdate에서 실행되는데, Act의 Coroutine이 한 번만 실행되게 하는 트리거 변수
     private bool _trigger = true;
 
     /// 초기화
@@ -80,15 +82,16 @@ public class MovingPlatform : MonoBehaviour
         else
             _trigger = true;
     }
-
+    /// 이 함수를 통해 외부에서 해당 오브젝트를 활성화(이동 시작)한다.
     public void MoveStart()
     {
         _trigger = true;
         _isOn = true;
     }
-
+    /// 이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다.
     public void MoveStop()
     {
+        /// 플랫폼이 비활성화되었다가 다시 활성화되면, 이전에 이동하던 곳으로 이동한다.
         _isOn = false;
     }
 
@@ -101,7 +104,7 @@ public class MovingPlatform : MonoBehaviour
                 _currentTime += Time.deltaTime;
                 if (_currentTime >= _idleTime)
                 {
-                    /// 정방향 순회시
+                    // 정방향 순회시 발동
                     if (_indexDir == 1)
                     {
                         if (_index >= _posList.Count - 1)
@@ -121,7 +124,7 @@ public class MovingPlatform : MonoBehaviour
                             }
                         }
                     }
-                    /// 역방향 순회시
+                    // 역방향 순회시 발동
                     else if (_indexDir == -1)
                     {
                         if (_index <= 0)
@@ -144,7 +147,6 @@ public class MovingPlatform : MonoBehaviour
                     _index += _indexDir;
                     _trigger = true;
                     _state = WallState.Move;
-                    // _prevState = WallState.Idle;
                     _currentTime = 0f;
                 }
                 break;
@@ -159,11 +161,9 @@ public class MovingPlatform : MonoBehaviour
     }
     
     /**
-     *  @brief
-     *  지정된 위치로 벽이 이동한다!
-     *  @detail
-     *  지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서
-     *  가속을 이용합니다.
+     *  @brief 지정된 위치로 벽이 이동한다!
+     *  @details 지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서
+     *  가속을 이용합니다. @n
      *  적당히 시간 계산해서 그 스케줄 따라 움직입니다.
      */
     IEnumerator MoveTo()
@@ -178,13 +178,14 @@ public class MovingPlatform : MonoBehaviour
 
         float _curVelocity = 0f;
         float _dist = (_curDest.position - _curOrigin.position).magnitude;
+        /// 예상시간(_estTime) : 목적지까지 도달하는 데 걸리는 시간. 목적지가 강제로 옮겨지면 변할 수도 있다.
         float _estTime = (_dist < _velocity * _timeForStop) ?
                                2 * Mathf.Sqrt(_dist * _timeForStop / _velocity):
                                _timeForStop + _dist / _velocity;
         // Debug.Log("예상 시간 : " + _estTime);
         _currentTime = 0f;
         
-        /// 이동
+        /// 예상 시간(_estTime) 동안 while문으로 계속 이동한다.
         while(_currentTime < _estTime)
         {
             if (!_isOn || (_currentTime > _estTime / 2 && _currentTime > _estTime - _timeForStop))
@@ -202,7 +203,7 @@ public class MovingPlatform : MonoBehaviour
             
             _platform.transform.position += _dir * _curVelocity * Time.deltaTime;
             
-            /// 너무 크게 빗나가지 않게 해줌.
+            /// 목적지로부터 너무 크게 빗겨가지 않게, 적당히 가까워지면 정지한다(목적지를 강제로 이동시킬 경우 문제가 생길 수 있음)
             if ((_curDest.position - _platform.transform.position).sqrMagnitude < 0.0004)
                 break;
             
