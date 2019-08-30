@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['climbing',['CLIMBING',['../d6/d23/class_player_state.html#afe68f1a1529955d173ccd309da55001bafc4db29e596cb9d0d1de3cdc00b982f1',1,'PlayerState']]]
+  ['back_5fforth',['BACK_FORTH',['../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653a567fc8818cb224cde6a676cb700ac1e3',1,'MovingPlatform']]]
 ];

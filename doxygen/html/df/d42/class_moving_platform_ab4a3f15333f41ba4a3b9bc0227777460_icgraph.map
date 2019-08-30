@@ -1,0 +1,4 @@
+<map id="MovingPlatform.Act" name="MovingPlatform.Act">
+<area shape="rect" id="node1" title="상태에 따라서 벽이 움직이게 하는 함수" alt="" coords="240,5,375,32"/>
+<area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c" title=" " alt="" coords="5,5,192,32"/>
+</map>

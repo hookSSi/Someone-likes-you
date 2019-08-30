@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['moving',['Moving',['../d0/d3d/class_player_movement.html#a0dc6677272370f08106ac49997853c6fadefe967ad0373b2274fc298f19125ca7',1,'PlayerMovement']]]
+  ['one_5fway',['ONE_WAY',['../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653aaa30404ca3fb4604d829dacae0444dd1',1,'MovingPlatform']]]
 ];

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
   </td>
  </tr>
@@ -89,20 +89,27 @@ $(document).ready(function(){initNavTree('df/d42/class_moving_platform.html','..
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
+<a href="#pub-methods">Public 멤버 함수</a> &#124;
 <a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#pro-attribs">Protected 속성</a> &#124;
+<a href="#pri-types">Private 타입</a> &#124;
 <a href="#pri-methods">Private 멤버 함수</a> &#124;
+<a href="#pri-attribs">Private 속성</a> &#124;
 <a href="../../de/df8/class_moving_platform-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle">
 <div class="title">MovingPlatform 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>뺀돌뺀돌 혼자서도 잘 움직이는 벽  
+ <a href="../../df/d42/class_moving_platform.html#details">더 자세히 ...</a></p>
 <div class="dynheader">
 MovingPlatform에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/ddd/class_moving_platform__inherit__graph.png" border="0" usemap="#_moving_platform_inherit__map" alt="Inheritance graph"/></div>
 <map name="_moving_platform_inherit__map" id="_moving_platform_inherit__map">
-<area shape="rect"  title=" " alt="" coords="5,131,147,369"/>
-<area shape="rect"  title=" " alt="" coords="21,5,131,83"/>
+<area shape="rect"  title="ëºëëºë í¼ììë ì ìì§ì´ë ë²½" alt="" coords="5,131,116,457"/>
+<area shape="rect"  title=" " alt="" coords="5,5,116,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -110,57 +117,97 @@ MovingPlatform에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d56/class_moving_platform__coll__graph.png" border="0" usemap="#_moving_platform_coll__map" alt="Collaboration graph"/></div>
 <map name="_moving_platform_coll__map" id="_moving_platform_coll__map">
-<area shape="rect"  title=" " alt="" coords="5,131,147,369"/>
-<area shape="rect"  title=" " alt="" coords="21,5,131,83"/>
+<area shape="rect"  title="ëºëëºë í¼ììë ì ìì§ì´ë ë²½" alt="" coords="5,131,116,457"/>
+<area shape="rect"  title=" " alt="" coords="5,5,116,83"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:af3735076efde22951ec5f5fed6123acc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a> { <a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acca43c7582c40594c3fe32a6634ef9dcb07">State.Deactivated</a>, 
-<a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123accae599161956d626eda4cb0a5ffb85271c">State.Idle</a>, 
-<a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123accacb456215c3333db0551bd0788bc258c7">State.Activated</a>
+<tr class="memitem:a7b3427d2906069ecf4c39d69eee53653"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a> { <a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40">MoveMode.LOOP</a>, 
+<a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653a567fc8818cb224cde6a676cb700ac1e3">MoveMode.BACK_FORTH</a>, 
+<a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653aaa30404ca3fb4604d829dacae0444dd1">MoveMode.ONE_WAY</a>
  }</td></tr>
-<tr class="separator:af3735076efde22951ec5f5fed6123acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a7b3427d2906069ecf4c39d69eee53653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 멤버 함수</h2></td></tr>
+<tr class="memitem:a2e7148eddf9ada2373e3507c02146896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a2e7148eddf9ada2373e3507c02146896">MoveStart</a> ()</td></tr>
+<tr class="separator:a2e7148eddf9ada2373e3507c02146896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9150bceccb63034907ab3ec46216ae83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83">MoveStop</a> ()</td></tr>
+<tr class="separator:a9150bceccb63034907ab3ec46216ae83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:adf2e0e70bbc8733f8a4e8992ce2447da"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#adf2e0e70bbc8733f8a4e8992ce2447da">speed</a> = 2f</td></tr>
-<tr class="separator:adf2e0e70bbc8733f8a4e8992ce2447da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a489629e7e4703ea543f2931265d7fc2d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a489629e7e4703ea543f2931265d7fc2d">idleTime</a> = 2.4f</td></tr>
-<tr class="separator:a489629e7e4703ea543f2931265d7fc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace8d255e601925ab820d5e64a9e62db9"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">dir</a> = Vector3.right</td></tr>
-<tr class="separator:ace8d255e601925ab820d5e64a9e62db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a724607bdb66234b3b0760c8d27cc143d"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a724607bdb66234b3b0760c8d27cc143d">rigid</a></td></tr>
-<tr class="separator:a724607bdb66234b3b0760c8d27cc143d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a145ecedbfee379139ca60f04ecfe7d18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a></td></tr>
-<tr class="separator:a145ecedbfee379139ca60f04ecfe7d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c0ce96c3fc6ad9350dc0350216835b"><td class="memItemLeft" align="right" valign="top">List&lt; Transform &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">_posList</a></td></tr>
+<tr class="memdesc:a51c0ce96c3fc6ad9350dc0350216835b"><td class="mdescLeft">&#160;</td><td class="mdescRight">도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!  <a href="#a51c0ce96c3fc6ad9350dc0350216835b">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a51c0ce96c3fc6ad9350dc0350216835b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47308284bdf720a8fe919a69f2c0019b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a47308284bdf720a8fe919a69f2c0019b">_moveMode</a> = <a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40">MoveMode.LOOP</a></td></tr>
+<tr class="separator:a47308284bdf720a8fe919a69f2c0019b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831cd24df75aa37f0897741d189686a7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a> = 6f</td></tr>
+<tr class="memdesc:a831cd24df75aa37f0897741d189686a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">벽이 움직이는 속도  <a href="#a831cd24df75aa37f0897741d189686a7">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a831cd24df75aa37f0897741d189686a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293066859b3576c931eb4b8c3f802397"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a293066859b3576c931eb4b8c3f802397">_idleTime</a> = 1f</td></tr>
+<tr class="memdesc:a293066859b3576c931eb4b8c3f802397"><td class="mdescLeft">&#160;</td><td class="mdescRight">벽이 얼마나 멈췄다가 출발할지를 결정하는 변수  <a href="#a293066859b3576c931eb4b8c3f802397">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a293066859b3576c931eb4b8c3f802397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 속성</h2></td></tr>
+<tr class="memitem:a20948e50a50c338c4e62f84a633868ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a> = 0</td></tr>
+<tr class="separator:a20948e50a50c338c4e62f84a633868ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private 타입</h2></td></tr>
+<tr class="memitem:ac47e764b71989317aab0bad26d82a901"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a> { <a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901ae599161956d626eda4cb0a5ffb85271c">WallState.Idle</a>, 
+<a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5">WallState.Move</a>
+ }</td></tr>
+<tr class="memdesc:ac47e764b71989317aab0bad26d82a901"><td class="mdescLeft">&#160;</td><td class="mdescRight">벽의 상태를 나타낸다  <a href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ac47e764b71989317aab0bad26d82a901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 멤버 함수</h2></td></tr>
 <tr class="memitem:aec6412bf79a5d4fdec57da2e3b390b93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#aec6412bf79a5d4fdec57da2e3b390b93">Awake</a> ()</td></tr>
+<tr class="memdesc:aec6412bf79a5d4fdec57da2e3b390b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">초기화  <a href="#aec6412bf79a5d4fdec57da2e3b390b93">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:aec6412bf79a5d4fdec57da2e3b390b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a935710333a3a0f0164dad887e8eb7d1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c">FixedUpdate</a> ()</td></tr>
 <tr class="separator:a935710333a3a0f0164dad887e8eb7d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6042324f3ff144a49863cd515eabfbbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a6042324f3ff144a49863cd515eabfbbb">Move</a> ()</td></tr>
-<tr class="separator:a6042324f3ff144a49863cd515eabfbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9ff97c68ae6e8dbf202009afcd139ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#ad9ff97c68ae6e8dbf202009afcd139ce">OnTriggerEnter2D</a> (Collider2D collision)</td></tr>
-<tr class="separator:ad9ff97c68ae6e8dbf202009afcd139ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ae3244849025ffa7505d5d77601a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a65ae3244849025ffa7505d5d77601a89">OnTriggerStay2D</a> (Collider2D collision)</td></tr>
-<tr class="separator:a65ae3244849025ffa7505d5d77601a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef43c6c16b01647d14cfc0a2c9710729"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#aef43c6c16b01647d14cfc0a2c9710729">OnTriggerExit2D</a> (Collider2D collision)</td></tr>
-<tr class="separator:aef43c6c16b01647d14cfc0a2c9710729"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98f73c545d68839bcb755a4b638422b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a98f73c545d68839bcb755a4b638422b5">ChangeDirection</a> ()</td></tr>
-<tr class="separator:a98f73c545d68839bcb755a4b638422b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb283e05e71fe1fd320d051fdd580b33"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#abb283e05e71fe1fd320d051fdd580b33">WaitIdleTime</a> ()</td></tr>
-<tr class="separator:abb283e05e71fe1fd320d051fdd580b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a3f15333f41ba4a3b9bc0227777460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460">Act</a> ()</td></tr>
+<tr class="memdesc:ab4a3f15333f41ba4a3b9bc0227777460"><td class="mdescLeft">&#160;</td><td class="mdescRight">상태에 따라서 벽이 움직이게 하는 함수  <a href="#ab4a3f15333f41ba4a3b9bc0227777460">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ab4a3f15333f41ba4a3b9bc0227777460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb52616391e79cf7e015f5fb37d50e16"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#afb52616391e79cf7e015f5fb37d50e16">MoveTo</a> ()</td></tr>
+<tr class="memdesc:afb52616391e79cf7e015f5fb37d50e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">지정된 위치로 벽이 이동한다! @detail 지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서 가속을 이용합니다. 적당히 시간 계산해서 그 스케줄 따라 움직입니다.  <a href="#afb52616391e79cf7e015f5fb37d50e16">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:afb52616391e79cf7e015f5fb37d50e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private 속성</h2></td></tr>
+<tr class="memitem:ac506246414b03f4f35d462f324c18ffc"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">_platform</a></td></tr>
+<tr class="separator:ac506246414b03f4f35d462f324c18ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420854da980550fe82c4f82f46ecd41e"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a420854da980550fe82c4f82f46ecd41e">_rigid</a></td></tr>
+<tr class="separator:a420854da980550fe82c4f82f46ecd41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a885973335ac91f8c34289d38f2d88d93"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> = 1</td></tr>
+<tr class="separator:a885973335ac91f8c34289d38f2d88d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9c4e39da03c1aef1abde75a137831c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> = 0f</td></tr>
+<tr class="separator:a5c9c4e39da03c1aef1abde75a137831c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69791dc347a05d5513e82cd445640cf4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a> = 0.7f</td></tr>
+<tr class="memdesc:a69791dc347a05d5513e82cd445640cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">벽이 부드럽게 정지하는 데 걸리는 시간  <a href="#a69791dc347a05d5513e82cd445640cf4">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a69791dc347a05d5513e82cd445640cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd03a1d4800fd5fa8ab4ef8ce5a688db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">_state</a> = <a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5">WallState.Move</a></td></tr>
+<tr class="separator:abd03a1d4800fd5fa8ab4ef8ce5a688db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6721f91607e56294fb807a00ccfaafad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">_isOn</a> = true</td></tr>
+<tr class="separator:a6721f91607e56294fb807a00ccfaafad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e69f4b8bfe702ef2bc6a8d77a03b8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">_trigger</a> = true</td></tr>
+<tr class="separator:a98e69f4b8bfe702ef2bc6a8d77a03b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock">
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00005">5</a> 번째 라인에서 정의되었습니다.</p>
+<div class="textblock"><p>뺀돌뺀돌 혼자서도 잘 움직이는 벽 </p>
+<dl class="section author"><dt>작성자</dt><dd>한민서 </dd></dl>
+<dl class="section date"><dt>날짜</dt><dd>2019.08.28 </dd></dl>
+<dl class="section see"><dt>참고</dt><dd><a href="https://youtu.be/ek0JZrL6BU4">https://youtu.be/ek0JZrL6BU4</a> 1분 6초 참고 </dd></dl>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 열거형 문서화</h2>
-<a id="af3735076efde22951ec5f5fed6123acc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3735076efde22951ec5f5fed6123acc">&#9670;&nbsp;</a></span>State</h2>
+<a id="a7b3427d2906069ecf4c39d69eee53653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3427d2906069ecf4c39d69eee53653">&#9670;&nbsp;</a></span>MoveMode</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +216,7 @@ Private 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">MovingPlatform.State</a></td>
+          <td class="memname">enum <a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MovingPlatform.MoveMode</a></td>
         </tr>
       </table>
   </td>
@@ -179,16 +226,106 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="af3735076efde22951ec5f5fed6123acca43c7582c40594c3fe32a6634ef9dcb07"></a>Deactivated&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af3735076efde22951ec5f5fed6123accae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af3735076efde22951ec5f5fed6123accacb456215c3333db0551bd0788bc258c7"></a>Activated&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40"></a>LOOP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b3427d2906069ecf4c39d69eee53653a567fc8818cb224cde6a676cb700ac1e3"></a>BACK_FORTH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a7b3427d2906069ecf4c39d69eee53653aaa30404ca3fb4604d829dacae0444dd1"></a>ONE_WAY&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Deactivated, Idle, Activated</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        LOOP, BACK_FORTH, ONE_WAY</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ac47e764b71989317aab0bad26d82a901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac47e764b71989317aab0bad26d82a901">&#9670;&nbsp;</a></span>WallState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">MovingPlatform.WallState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>벽의 상태를 나타낸다 </p>
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ac47e764b71989317aab0bad26d82a901ae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5"></a>Move&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        Idle, Move</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div></div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ab4a3f15333f41ba4a3b9bc0227777460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a3f15333f41ba4a3b9bc0227777460">&#9670;&nbsp;</a></span>Act()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingPlatform.Act </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>상태에 따라서 벽이 움직이게 하는 함수 </p>
+<p>정방향 순회시</p>
+<p>역방향 순회시 </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00096">96</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">switch</span>(<a class="code" href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">_state</a>)</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a>.Idle:</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> += Time.deltaTime;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> &gt;= <a class="code" href="../../df/d42/class_moving_platform.html#a293066859b3576c931eb4b8c3f802397">_idleTime</a>)</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> == 1)</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    {</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a> &gt;= <a class="code" href="../../df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">_posList</a>.Count - 1)</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        {</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                            <span class="keywordflow">switch</span>(<a class="code" href="../../df/d42/class_moving_platform.html#a47308284bdf720a8fe919a69f2c0019b">_moveMode</a>)</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                            {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                                <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>.LOOP:</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a> = -1;                                </div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>.BACK_FORTH:</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> *= -1;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>.ONE_WAY:</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> *= -1;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83">MoveStop</a>();</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                            }</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        }</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    }</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> == -1)</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    {</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a> &lt;= 0)</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        {</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                            <span class="keywordflow">switch</span>(<a class="code" href="../../df/d42/class_moving_platform.html#a47308284bdf720a8fe919a69f2c0019b">_moveMode</a>)</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                            {</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                                <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>.LOOP:</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a> = <a class="code" href="../../df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">_posList</a>.Count;                                </div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>.BACK_FORTH:</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> *= -1;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a>.ONE_WAY:</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a> *= -1;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                    <a class="code" href="../../df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83">MoveStop</a>();</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                            }</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                        }</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    }</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    <a class="code" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a> += <a class="code" href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">_indexDir</a>;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    <a class="code" href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">_trigger</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    <a class="code" href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">_state</a> = <a class="code" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a>.Move;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    <span class="comment">// _prevState = WallState.Idle;</span></div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> = 0f;</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                }</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a>.Move:</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">_trigger</a>)</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                {</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    StartCoroutine(<span class="stringliteral">&quot;MoveTo&quot;</span>);</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <a class="code" href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">_trigger</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                }</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_ac47e764b71989317aab0bad26d82a901"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">MovingPlatform.WallState</a></div><div class="ttdeci">WallState</div><div class="ttdoc">벽의 상태를 나타낸다</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00056">MovingPlatform.cs:56</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a98e69f4b8bfe702ef2bc6a8d77a03b8a"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">MovingPlatform._trigger</a></div><div class="ttdeci">bool _trigger</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00066">MovingPlatform.cs:66</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a51c0ce96c3fc6ad9350dc0350216835b"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">MovingPlatform._posList</a></div><div class="ttdeci">List&lt; Transform &gt; _posList</div><div class="ttdoc">도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00022">MovingPlatform.cs:22</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a293066859b3576c931eb4b8c3f802397"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a293066859b3576c931eb4b8c3f802397">MovingPlatform._idleTime</a></div><div class="ttdeci">float _idleTime</div><div class="ttdoc">벽이 얼마나 멈췄다가 출발할지를 결정하는 변수</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00046">MovingPlatform.cs:46</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a47308284bdf720a8fe919a69f2c0019b"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a47308284bdf720a8fe919a69f2c0019b">MovingPlatform._moveMode</a></div><div class="ttdeci">MoveMode _moveMode</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00039">MovingPlatform.cs:39</a></div></div>
+<div class="ttc" id="class_moving_platform_html_abd03a1d4800fd5fa8ab4ef8ce5a688db"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">MovingPlatform._state</a></div><div class="ttdeci">WallState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00061">MovingPlatform.cs:61</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a885973335ac91f8c34289d38f2d88d93"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">MovingPlatform._indexDir</a></div><div class="ttdeci">int _indexDir</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00024">MovingPlatform.cs:24</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a5c9c4e39da03c1aef1abde75a137831c"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">MovingPlatform._currentTime</a></div><div class="ttdeci">float _currentTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00047">MovingPlatform.cs:47</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a9150bceccb63034907ab3ec46216ae83"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83">MovingPlatform.MoveStop</a></div><div class="ttdeci">void MoveStop()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00090">MovingPlatform.cs:90</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a7b3427d2906069ecf4c39d69eee53653"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MovingPlatform.MoveMode</a></div><div class="ttdeci">MoveMode</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00034">MovingPlatform.cs:34</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a20948e50a50c338c4e62f84a633868ac"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">MovingPlatform._index</a></div><div class="ttdeci">int _index</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00023">MovingPlatform.cs:23</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_cgraph.png" border="0" usemap="#df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_cgraph" alt=""/></div>
+<map name="df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_cgraph" id="df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_cgraph">
+<area shape="rect"  title="ìíì ë°ë¼ì ë²½ì´ ìì§ì´ê² íë í¨ì" alt="" coords="5,5,140,32"/>
+<area shape="rect"  href="../../df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title=" " alt="" coords="188,5,359,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_icgraph.png" border="0" usemap="#df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_icgraph" alt=""/></div>
+<map name="df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_icgraph" id="df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_icgraph">
+<area shape="rect"  title="ìíì ë°ë¼ì ë²½ì´ ìì§ì´ê² íë í¨ì" alt="" coords="240,5,375,32"/>
+<area shape="rect"  href="../../df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c" title=" " alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aec6412bf79a5d4fdec57da2e3b390b93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec6412bf79a5d4fdec57da2e3b390b93">&#9670;&nbsp;</a></span>Awake()</h2>
 
@@ -212,48 +349,11 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a> = <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Activated;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a724607bdb66234b3b0760c8d27cc143d">rigid</a> = GetComponent&lt;Rigidbody2D&gt;();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="../../df/d42/class_moving_platform.html#a724607bdb66234b3b0760c8d27cc143d">rigid</a>)</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#a724607bdb66234b3b0760c8d27cc143d">rigid</a> = gameObject.AddComponent&lt;Rigidbody2D&gt;();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a724607bdb66234b3b0760c8d27cc143d">rigid</a>.bodyType = RigidbodyType2D.Kinematic;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a145ecedbfee379139ca60f04ecfe7d18"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">MovingPlatform.state</a></div><div class="ttdeci">State state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00013">MovingPlatform.cs:13</a></div></div>
-<div class="ttc" id="class_moving_platform_html_a724607bdb66234b3b0760c8d27cc143d"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a724607bdb66234b3b0760c8d27cc143d">MovingPlatform.rigid</a></div><div class="ttdeci">Rigidbody2D rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00012">MovingPlatform.cs:12</a></div></div>
-<div class="ttc" id="class_moving_platform_html_af3735076efde22951ec5f5fed6123acc"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">MovingPlatform.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00015">MovingPlatform.cs:15</a></div></div>
+<p>초기화 </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a420854da980550fe82c4f82f46ecd41e">_rigid</a> = GetComponentInChildren&lt;Rigidbody2D&gt;();</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a420854da980550fe82c4f82f46ecd41e">_rigid</a> != <span class="keyword">null</span>)</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#a420854da980550fe82c4f82f46ecd41e">_rigid</a>.isKinematic = <span class="keyword">true</span>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a420854da980550fe82c4f82f46ecd41e"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a420854da980550fe82c4f82f46ecd41e">MovingPlatform._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00018">MovingPlatform.cs:18</a></div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a98f73c545d68839bcb755a4b638422b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98f73c545d68839bcb755a4b638422b5">&#9670;&nbsp;</a></span>ChangeDirection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MovingPlatform.ChangeDirection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">dir</a> *= -1;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        StartCoroutine(<span class="stringliteral">&quot;WaitIdleTime&quot;</span>);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_ace8d255e601925ab820d5e64a9e62db9"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">MovingPlatform.dir</a></div><div class="ttdeci">Vector3 dir</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00011">MovingPlatform.cs:11</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../df/d42/class_moving_platform_a98f73c545d68839bcb755a4b638422b5_icgraph.png" border="0" usemap="#df/d42/class_moving_platform_a98f73c545d68839bcb755a4b638422b5_icgraph" alt=""/></div>
-<map name="df/d42/class_moving_platform_a98f73c545d68839bcb755a4b638422b5_icgraph" id="df/d42/class_moving_platform_a98f73c545d68839bcb755a4b638422b5_icgraph">
-<area shape="rect"  title=" " alt="" coords="224,13,433,39"/>
-<area shape="rect"  href="../../df/d42/class_moving_platform.html#ad9ff97c68ae6e8dbf202009afcd139ce" title=" " alt="" coords="5,5,176,47"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="a935710333a3a0f0164dad887e8eb7d1c"></a>
@@ -279,24 +379,76 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">switch</span>(<a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a>)</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Activated:</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <a class="code" href="../../df/d42/class_moving_platform.html#a6042324f3ff144a49863cd515eabfbbb">Move</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Idle:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Deactivated:</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a145ecedbfee379139ca60f04ecfe7d18"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">MovingPlatform.state</a></div><div class="ttdeci">State state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00013">MovingPlatform.cs:13</a></div></div>
-<div class="ttc" id="class_moving_platform_html_a6042324f3ff144a49863cd515eabfbbb"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a6042324f3ff144a49863cd515eabfbbb">MovingPlatform.Move</a></div><div class="ttdeci">void Move()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00047">MovingPlatform.cs:47</a></div></div>
-<div class="ttc" id="class_moving_platform_html_af3735076efde22951ec5f5fed6123acc"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">MovingPlatform.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00015">MovingPlatform.cs:15</a></div></div>
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">_isOn</a>)</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460">Act</a>();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">_trigger</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a98e69f4b8bfe702ef2bc6a8d77a03b8a"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">MovingPlatform._trigger</a></div><div class="ttdeci">bool _trigger</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00066">MovingPlatform.cs:66</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a6721f91607e56294fb807a00ccfaafad"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">MovingPlatform._isOn</a></div><div class="ttdeci">bool _isOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00065">MovingPlatform.cs:65</a></div></div>
+<div class="ttc" id="class_moving_platform_html_ab4a3f15333f41ba4a3b9bc0227777460"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460">MovingPlatform.Act</a></div><div class="ttdeci">void Act()</div><div class="ttdoc">상태에 따라서 벽이 움직이게 하는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00096">MovingPlatform.cs:96</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d42/class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c_cgraph.png" border="0" usemap="#df/d42/class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c_cgraph" alt=""/></div>
 <map name="df/d42/class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c_cgraph" id="df/d42/class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c_cgraph">
 <area shape="rect"  title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect"  href="../../df/d42/class_moving_platform.html#a6042324f3ff144a49863cd515eabfbbb" title=" " alt="" coords="240,5,384,32"/>
+<area shape="rect"  href="../../df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460" title="ìíì ë°ë¼ì ë²½ì´ ìì§ì´ê² íë í¨ì" alt="" coords="240,5,375,32"/>
+<area shape="rect"  href="../../df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title=" " alt="" coords="423,5,593,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a6042324f3ff144a49863cd515eabfbbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6042324f3ff144a49863cd515eabfbbb">&#9670;&nbsp;</a></span>Move()</h2>
+<a id="a2e7148eddf9ada2373e3507c02146896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7148eddf9ada2373e3507c02146896">&#9670;&nbsp;</a></span>MoveStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingPlatform.MoveStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00084">84</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">_trigger</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">_isOn</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a98e69f4b8bfe702ef2bc6a8d77a03b8a"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">MovingPlatform._trigger</a></div><div class="ttdeci">bool _trigger</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00066">MovingPlatform.cs:66</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a6721f91607e56294fb807a00ccfaafad"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">MovingPlatform._isOn</a></div><div class="ttdeci">bool _isOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00065">MovingPlatform.cs:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9150bceccb63034907ab3ec46216ae83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9150bceccb63034907ab3ec46216ae83">&#9670;&nbsp;</a></span>MoveStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MovingPlatform.MoveStop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00090">90</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">_isOn</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a6721f91607e56294fb807a00ccfaafad"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">MovingPlatform._isOn</a></div><div class="ttdeci">bool _isOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00065">MovingPlatform.cs:65</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/d42/class_moving_platform_a9150bceccb63034907ab3ec46216ae83_icgraph.png" border="0" usemap="#df/d42/class_moving_platform_a9150bceccb63034907ab3ec46216ae83_icgraph" alt=""/></div>
+<map name="df/d42/class_moving_platform_a9150bceccb63034907ab3ec46216ae83_icgraph" id="df/d42/class_moving_platform_a9150bceccb63034907ab3ec46216ae83_icgraph">
+<area shape="rect"  title=" " alt="" coords="423,5,593,32"/>
+<area shape="rect"  href="../../df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460" title="ìíì ë°ë¼ì ë²½ì´ ìì§ì´ê² íë í¨ì" alt="" coords="240,5,375,32"/>
+<area shape="rect"  href="../../df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c" title=" " alt="" coords="5,5,192,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb52616391e79cf7e015f5fb37d50e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb52616391e79cf7e015f5fb37d50e16">&#9670;&nbsp;</a></span>MoveTo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,10 +457,49 @@ Private 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MovingPlatform.Move </td>
+          <td class="memname">IEnumerator MovingPlatform.MoveTo </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>지정된 위치로 벽이 이동한다! @detail 지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서 가속을 이용합니다. 적당히 시간 계산해서 그 스케줄 따라 움직입니다. </p>
+<p>이동</p>
+<p>너무 크게 빗나가지 않게 해줌.</p>
+<p>pos 위치가 이동했을 땐 한 번 더 이동해서 보정한다. </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00169">169</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    {</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">_state</a> == <a class="code" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a>.Idle)</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            yield <span class="keywordflow">break</span>;</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        </div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        Transform _curOrigin = <a class="code" href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">_platform</a>.transform;</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        Transform _curDest = <a class="code" href="../../df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">_posList</a>[<a class="code" href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">_index</a>];</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        Vector3 _dir = (_curDest.position - _curOrigin.position).normalized;</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordtype">float</span> _curVelocity = 0f;</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">float</span> _dist = (_curDest.position - _curOrigin.position).magnitude;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordtype">float</span> _estTime = (_dist &lt; <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a> * <a class="code" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a>) ?</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                               2 * Mathf.Sqrt(_dist * <a class="code" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a> / <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a>):</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                               <a class="code" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a> + _dist / <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a>;</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// Debug.Log(&quot;예상 시간 : &quot; + _estTime);</span></div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> = 0f;</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        </div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">while</span>(<a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> &lt; _estTime)</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">_isOn</a> || (<a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> &gt; _estTime / 2 &amp;&amp; <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> &gt; _estTime - <a class="code" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a>))</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                _curVelocity -= <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a> / <a class="code" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a> * Time.deltaTime;</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">if</span> (_curVelocity &lt; 0.01f)</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    _curVelocity = 0f;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            }</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> &lt; _estTime / 2 &amp;&amp; _curVelocity &lt; <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a>)</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            {</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                _curVelocity += <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a> / <a class="code" href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">_timeForStop</a> * Time.deltaTime;</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">else</span></div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                _curVelocity = <a class="code" href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">_velocity</a>;</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            </div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">_platform</a>.transform.position += _dir * _curVelocity * Time.deltaTime;</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            </div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">if</span> ((_curDest.position - <a class="code" href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">_platform</a>.transform.position).sqrMagnitude &lt; 0.0004)</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            </div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> += Time.deltaTime;</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">_isOn</a> &amp;&amp; _curVelocity == 0f)</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            {</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> = 0f;</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                yield <span class="keywordflow">break</span>;</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            }</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForFixedUpdate();</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        </div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">if</span> ((_curDest.position - <a class="code" href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">_platform</a>.transform.position).sqrMagnitude &gt; 0.0004)</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        {</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            StartCoroutine(<span class="stringliteral">&quot;MoveTo&quot;</span>);</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            yield <span class="keywordflow">break</span>;</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">_platform</a>.transform.position = _curDest.position;</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">_currentTime</a> = 0f;</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">_state</a> = <a class="code" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a>.Idle;</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_ac47e764b71989317aab0bad26d82a901"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">MovingPlatform.WallState</a></div><div class="ttdeci">WallState</div><div class="ttdoc">벽의 상태를 나타낸다</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00056">MovingPlatform.cs:56</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a69791dc347a05d5513e82cd445640cf4"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">MovingPlatform._timeForStop</a></div><div class="ttdeci">float _timeForStop</div><div class="ttdoc">벽이 부드럽게 정지하는 데 걸리는 시간</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00050">MovingPlatform.cs:50</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a831cd24df75aa37f0897741d189686a7"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">MovingPlatform._velocity</a></div><div class="ttdeci">float _velocity</div><div class="ttdoc">벽이 움직이는 속도</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00042">MovingPlatform.cs:42</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a51c0ce96c3fc6ad9350dc0350216835b"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">MovingPlatform._posList</a></div><div class="ttdeci">List&lt; Transform &gt; _posList</div><div class="ttdoc">도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00022">MovingPlatform.cs:22</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a6721f91607e56294fb807a00ccfaafad"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">MovingPlatform._isOn</a></div><div class="ttdeci">bool _isOn</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00065">MovingPlatform.cs:65</a></div></div>
+<div class="ttc" id="class_moving_platform_html_abd03a1d4800fd5fa8ab4ef8ce5a688db"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">MovingPlatform._state</a></div><div class="ttdeci">WallState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00061">MovingPlatform.cs:61</a></div></div>
+<div class="ttc" id="class_moving_platform_html_ac506246414b03f4f35d462f324c18ffc"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ac506246414b03f4f35d462f324c18ffc">MovingPlatform._platform</a></div><div class="ttdeci">GameObject _platform</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00017">MovingPlatform.cs:17</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a5c9c4e39da03c1aef1abde75a137831c"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">MovingPlatform._currentTime</a></div><div class="ttdeci">float _currentTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00047">MovingPlatform.cs:47</a></div></div>
+<div class="ttc" id="class_moving_platform_html_a20948e50a50c338c4e62f84a633868ac"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">MovingPlatform._index</a></div><div class="ttdeci">int _index</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00023">MovingPlatform.cs:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a5c9c4e39da03c1aef1abde75a137831c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9c4e39da03c1aef1abde75a137831c">&#9670;&nbsp;</a></span>_currentTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MovingPlatform._currentTime = 0f</td>
         </tr>
       </table>
   </td>
@@ -319,22 +510,29 @@ Private 멤버 함수</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        transform.position += <a class="code" href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">dir</a> * <a class="code" href="../../df/d42/class_moving_platform.html#adf2e0e70bbc8733f8a4e8992ce2447da">speed</a> * Time.fixedDeltaTime; <span class="comment">// fixed? original? 뭘 써야 할까?</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_ace8d255e601925ab820d5e64a9e62db9"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">MovingPlatform.dir</a></div><div class="ttdeci">Vector3 dir</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00011">MovingPlatform.cs:11</a></div></div>
-<div class="ttc" id="class_moving_platform_html_adf2e0e70bbc8733f8a4e8992ce2447da"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#adf2e0e70bbc8733f8a4e8992ce2447da">MovingPlatform.speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00008">MovingPlatform.cs:8</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../df/d42/class_moving_platform_a6042324f3ff144a49863cd515eabfbbb_icgraph.png" border="0" usemap="#df/d42/class_moving_platform_a6042324f3ff144a49863cd515eabfbbb_icgraph" alt=""/></div>
-<map name="df/d42/class_moving_platform_a6042324f3ff144a49863cd515eabfbbb_icgraph" id="df/d42/class_moving_platform_a6042324f3ff144a49863cd515eabfbbb_icgraph">
-<area shape="rect"  title=" " alt="" coords="240,5,384,32"/>
-<area shape="rect"  href="../../df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c" title=" " alt="" coords="5,5,192,32"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="ad9ff97c68ae6e8dbf202009afcd139ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9ff97c68ae6e8dbf202009afcd139ce">&#9670;&nbsp;</a></span>OnTriggerEnter2D()</h2>
+<a id="a293066859b3576c931eb4b8c3f802397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a293066859b3576c931eb4b8c3f802397">&#9670;&nbsp;</a></span>_idleTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MovingPlatform._idleTime = 1f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>벽이 얼마나 멈췄다가 출발할지를 결정하는 변수 </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a20948e50a50c338c4e62f84a633868ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20948e50a50c338c4e62f84a633868ac">&#9670;&nbsp;</a></span>_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,11 +541,31 @@ Private 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MovingPlatform.OnTriggerEnter2D </td>
-          <td>(</td>
-          <td class="paramtype">Collider2D&#160;</td>
-          <td class="paramname"><em>collision</em></td><td>)</td>
-          <td></td>
+          <td class="memname">int MovingPlatform._index = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a885973335ac91f8c34289d38f2d88d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a885973335ac91f8c34289d38f2d88d93">&#9670;&nbsp;</a></span>_indexDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MovingPlatform._indexDir = 1</td>
         </tr>
       </table>
   </td>
@@ -357,22 +575,12 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span>(collision.tag == <span class="stringliteral">&quot;PlatformPath&quot;</span> || collision.tag == <span class="stringliteral">&quot;Ground&quot;</span>)</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#a98f73c545d68839bcb755a4b638422b5">ChangeDirection</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a98f73c545d68839bcb755a4b638422b5"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a98f73c545d68839bcb755a4b638422b5">MovingPlatform.ChangeDirection</a></div><div class="ttdeci">void ChangeDirection()</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00079">MovingPlatform.cs:79</a></div></div>
-</div><!-- fragment --><div class="dynheader">
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../df/d42/class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce_cgraph.png" border="0" usemap="#df/d42/class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce_cgraph" alt=""/></div>
-<map name="df/d42/class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce_cgraph" id="df/d42/class_moving_platform_ad9ff97c68ae6e8dbf202009afcd139ce_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,5,176,47"/>
-<area shape="rect"  href="../../df/d42/class_moving_platform.html#a98f73c545d68839bcb755a4b638422b5" title=" " alt="" coords="224,13,433,39"/>
-</map>
-</div>
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
-<a id="aef43c6c16b01647d14cfc0a2c9710729"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef43c6c16b01647d14cfc0a2c9710729">&#9670;&nbsp;</a></span>OnTriggerExit2D()</h2>
+<a id="a6721f91607e56294fb807a00ccfaafad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6721f91607e56294fb807a00ccfaafad">&#9670;&nbsp;</a></span>_isOn</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,11 +589,48 @@ Private 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MovingPlatform.OnTriggerExit2D </td>
-          <td>(</td>
-          <td class="paramtype">Collider2D&#160;</td>
-          <td class="paramname"><em>collision</em></td><td>)</td>
-          <td></td>
+          <td class="memname">bool MovingPlatform._isOn = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>벽이 움직임이 활성화되었는가? 사실 _isOn이나 this.isActivatedAndEnable이나 다른 게 없는 것 같아서 고민중... </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a47308284bdf720a8fe919a69f2c0019b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47308284bdf720a8fe919a69f2c0019b">&#9670;&nbsp;</a></span>_moveMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MoveMode</a> MovingPlatform._moveMode = <a class="el" href="../../df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40">MoveMode.LOOP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac506246414b03f4f35d462f324c18ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac506246414b03f4f35d462f324c18ffc">&#9670;&nbsp;</a></span>_platform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject MovingPlatform._platform</td>
         </tr>
       </table>
   </td>
@@ -395,16 +640,30 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(collision.tag == <span class="stringliteral">&quot;Player&quot;</span> &amp;&amp; collision.transform.parent == transform)</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            collision.transform.parent = <span class="keyword">null</span>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a> == <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Activated)</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;               collision.GetComponent&lt;Rigidbody2D&gt;().velocity += (Vector2)<a class="code" href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">dir</a> * <a class="code" href="../../df/d42/class_moving_platform.html#adf2e0e70bbc8733f8a4e8992ce2447da">speed</a>;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a145ecedbfee379139ca60f04ecfe7d18"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">MovingPlatform.state</a></div><div class="ttdeci">State state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00013">MovingPlatform.cs:13</a></div></div>
-<div class="ttc" id="class_moving_platform_html_ace8d255e601925ab820d5e64a9e62db9"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#ace8d255e601925ab820d5e64a9e62db9">MovingPlatform.dir</a></div><div class="ttdeci">Vector3 dir</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00011">MovingPlatform.cs:11</a></div></div>
-<div class="ttc" id="class_moving_platform_html_adf2e0e70bbc8733f8a4e8992ce2447da"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#adf2e0e70bbc8733f8a4e8992ce2447da">MovingPlatform.speed</a></div><div class="ttdeci">float speed</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00008">MovingPlatform.cs:8</a></div></div>
-<div class="ttc" id="class_moving_platform_html_af3735076efde22951ec5f5fed6123acc"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">MovingPlatform.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00015">MovingPlatform.cs:15</a></div></div>
-</div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
 </div>
 </div>
-<a id="a65ae3244849025ffa7505d5d77601a89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ae3244849025ffa7505d5d77601a89">&#9670;&nbsp;</a></span>OnTriggerStay2D()</h2>
+<a id="a51c0ce96c3fc6ad9350dc0350216835b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c0ce96c3fc6ad9350dc0350216835b">&#9670;&nbsp;</a></span>_posList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Transform&gt; MovingPlatform._posList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임! </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a420854da980550fe82c4f82f46ecd41e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420854da980550fe82c4f82f46ecd41e">&#9670;&nbsp;</a></span>_rigid</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -413,11 +672,7 @@ Private 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MovingPlatform.OnTriggerStay2D </td>
-          <td>(</td>
-          <td class="paramtype">Collider2D&#160;</td>
-          <td class="paramname"><em>collision</em></td><td>)</td>
-          <td></td>
+          <td class="memname">Rigidbody2D MovingPlatform._rigid</td>
         </tr>
       </table>
   </td>
@@ -427,12 +682,12 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span>(collision.tag == <span class="stringliteral">&quot;Player&quot;</span>)</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// Attach</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            collision.transform.parent = transform;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+
 </div>
 </div>
-<a id="abb283e05e71fe1fd320d051fdd580b33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb283e05e71fe1fd320d051fdd580b33">&#9670;&nbsp;</a></span>WaitIdleTime()</h2>
+<a id="abd03a1d4800fd5fa8ab4ef8ce5a688db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd03a1d4800fd5fa8ab4ef8ce5a688db">&#9670;&nbsp;</a></span>_state</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,10 +696,7 @@ Private 멤버 함수</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerator MovingPlatform.WaitIdleTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">WallState</a> MovingPlatform._state = <a class="el" href="../../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5">WallState.Move</a></td>
         </tr>
       </table>
   </td>
@@ -454,96 +706,80 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a> != <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Activated) yield <span class="keywordflow">break</span>;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a> = <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Idle;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// Wait Idle Time();</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(<a class="code" href="../../df/d42/class_moving_platform.html#a489629e7e4703ea543f2931265d7fc2d">idleTime</a>);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a> == <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Idle)</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">state</a> = <a class="code" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a>.Activated;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div><div class="ttc" id="class_moving_platform_html_a145ecedbfee379139ca60f04ecfe7d18"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a145ecedbfee379139ca60f04ecfe7d18">MovingPlatform.state</a></div><div class="ttdeci">State state</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00013">MovingPlatform.cs:13</a></div></div>
-<div class="ttc" id="class_moving_platform_html_a489629e7e4703ea543f2931265d7fc2d"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#a489629e7e4703ea543f2931265d7fc2d">MovingPlatform.idleTime</a></div><div class="ttdeci">float idleTime</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00009">MovingPlatform.cs:9</a></div></div>
-<div class="ttc" id="class_moving_platform_html_af3735076efde22951ec5f5fed6123acc"><div class="ttname"><a href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">MovingPlatform.State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d78/_moving_platform_8cs_source.html#l00015">MovingPlatform.cs:15</a></div></div>
-</div><!-- fragment -->
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+
 </div>
 </div>
-<h2 class="groupheader">멤버 데이터 문서화</h2>
-<a id="ace8d255e601925ab820d5e64a9e62db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace8d255e601925ab820d5e64a9e62db9">&#9670;&nbsp;</a></span>dir</h2>
+<a id="a69791dc347a05d5513e82cd445640cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69791dc347a05d5513e82cd445640cf4">&#9670;&nbsp;</a></span>_timeForStop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MovingPlatform._timeForStop = 0.7f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>벽이 부드럽게 정지하는 데 걸리는 시간 </p>
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a98e69f4b8bfe702ef2bc6a8d77a03b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e69f4b8bfe702ef2bc6a8d77a03b8a">&#9670;&nbsp;</a></span>_trigger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MovingPlatform._trigger = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a831cd24df75aa37f0897741d189686a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831cd24df75aa37f0897741d189686a7">&#9670;&nbsp;</a></span>_velocity</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Vector3 MovingPlatform.dir = Vector3.right</td>
+          <td class="memname">float MovingPlatform._velocity = 6f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
+<p>벽이 움직이는 속도 </p>
 
-</div>
-</div>
-<a id="a489629e7e4703ea543f2931265d7fc2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a489629e7e4703ea543f2931265d7fc2d">&#9670;&nbsp;</a></span>idleTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float MovingPlatform.idleTime = 2.4f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a724607bdb66234b3b0760c8d27cc143d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a724607bdb66234b3b0760c8d27cc143d">&#9670;&nbsp;</a></span>rigid</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Rigidbody2D MovingPlatform.rigid</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="adf2e0e70bbc8733f8a4e8992ce2447da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf2e0e70bbc8733f8a4e8992ce2447da">&#9670;&nbsp;</a></span>speed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float MovingPlatform.speed = 2f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a145ecedbfee379139ca60f04ecfe7d18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a145ecedbfee379139ca60f04ecfe7d18">&#9670;&nbsp;</a></span>state</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/d42/class_moving_platform.html#af3735076efde22951ec5f5fed6123acc">State</a> MovingPlatform.state</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a> 파일의 <a class="el" href="../../d9/d78/_moving_platform_8cs_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/Scripts/<a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a></li>
+<li>C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/New Scripts/Wall/<a class="el" href="../../d9/d78/_moving_platform_8cs_source.html">MovingPlatform.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

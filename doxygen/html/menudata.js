@@ -44,7 +44,8 @@ var menudata={children:[
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"s",url:"functions.html#index_s"},
-{text:"u",url:"functions.html#index_u"}]},
+{text:"u",url:"functions.html#index_u"},
+{text:"w",url:"functions.html#index_w"}]},
 {text:"함수",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"c",url:"functions_func.html#index_c"},
@@ -60,7 +61,8 @@ var menudata={children:[
 {text:"o",url:"functions_func.html#index_o"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"u",url:"functions_func.html#index_u"}]},
-{text:"변수",url:"functions_vars.html"},
+{text:"변수",url:"functions_vars.html",children:[
+{text:"_",url:"functions_vars.html#index__5F"}]},
 {text:"열거형 타입",url:"functions_enum.html"},
 {text:"속성",url:"functions_prop.html"},
 {text:"이벤트",url:"functions_evnt.html"}]}]},
