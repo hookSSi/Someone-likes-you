@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class MovingPlatform_legacy : MonoBehaviour
 {
     // Ground 태그 오브젝트와 충돌 시 방향 변환, PlatformPath 태그 오브젝트의 Trigger에 진입 시 방향 전환
     public float speed = 2f;
