@@ -1,6 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/**
+ *  @brief 움직이는 플랫폼이 위에 있는 물체와 함께 움직이게 하는 클래스
+ *  @author 한민서
+ *  @date 2019.09.01
+ */
 class PlatformCatcher : MonoBehaviour
 {
     [SerializeField] private LayerMask[] _ArrayNotCatch;
@@ -8,6 +13,7 @@ class PlatformCatcher : MonoBehaviour
     private Rigidbody2D _rigid;
     private PlatformEffector2D _platformEffector;
 
+    /// 컴포넌트 초기화
     void Awake()
     {
         _collider = GetComponent<Collider2D>();
@@ -33,10 +39,10 @@ class PlatformCatcher : MonoBehaviour
         _platformEffector.useOneWay = true;
     }
 
-    // GroundCheck를 통해서 Object를 체크할 수도 있지 않을까....라고 생각했지만 그래버리면
-    // 다른 오브젝트는 제대로 체크가 안 되겠지...
+    /// 플랫폼 위에 있는 물체의 부모를 플랫폼으로 설정한다
     void OnCollisionEnter2D(Collision2D coll)
     {
+        // 플랫폼 위에 물체가 있지 않다면 return한다
         float collY = coll.collider.bounds.min.y;
         if (collY < _collider.bounds.max.y - 0.05f)
             return;
@@ -49,26 +55,17 @@ class PlatformCatcher : MonoBehaviour
                 return;
             }
         }
-        
-        SpriteRenderer sprite = coll.gameObject.GetComponentInChildren<SpriteRenderer>();
-        Vector3 spriteScale = sprite.transform.localScale;
 
         coll.transform.SetParent(this.transform);
-
-        // 요주의 코드. 스프라이트 크기가 스파게티가 된다면 아마 이 녀석 때문일겁니다.
-        sprite.transform.localScale = spriteScale;
     }
 
+    /// 플랫폼 위에 있는 물체의 부모를 해제한다
     void OnCollisionExit2D(Collision2D coll)
     {
         // Debug.Log("나간다.");
         if (coll.transform.parent == this.transform)
         {
-            SpriteRenderer sprite = coll.gameObject.GetComponentInChildren<SpriteRenderer>();
-            Vector3 spriteScale = sprite.transform.localScale;
-        
             coll.transform.SetParent(null);
-            sprite.transform.localScale = spriteScale;
         }
     }
 }

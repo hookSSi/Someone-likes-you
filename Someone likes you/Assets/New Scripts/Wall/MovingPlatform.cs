@@ -66,6 +66,12 @@ public class MovingPlatform : MonoBehaviour
     /// Act 함수가 FixedUpdate에서 실행되는데, Act의 Coroutine이 한 번만 실행되게 하는 트리거 변수
     private bool _trigger = true;
 
+    private void Awake()
+    {
+        if (!_platform)
+            _platform = GetComponentInChildren<PlatformCatcher>();
+    }
+
     private void FixedUpdate()
     {
         if (_isOn)
@@ -179,6 +185,7 @@ public class MovingPlatform : MonoBehaviour
         /// 예상 시간(_estTime) 동안 while문으로 계속 이동한다.
         while(_currentTime < _estTime)
         {
+            // 시간에 따라 속도를 설정한다.
             if (!_isOn || (_currentTime > _estTime / 2 && _currentTime > _estTime - _timeForStop))
             {
                 _curVelocity -= _velocity / _timeForStop * Time.deltaTime;
