@@ -13,8 +13,7 @@ public class MovingPlatform : MonoBehaviour
 {
     [Header("플랫폼 오브젝트")]
     [SerializeField]
-    private GameObject _platform;
-    private Rigidbody2D _rigid;
+    private PlatformCatcher _platform;
     
     [Header("목적지")]
     /// 도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!
@@ -66,14 +65,6 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] private bool _isOn = true;
     /// Act 함수가 FixedUpdate에서 실행되는데, Act의 Coroutine이 한 번만 실행되게 하는 트리거 변수
     private bool _trigger = true;
-
-    /// 초기화
-    private void Awake()
-    {
-        _rigid = GetComponentInChildren<Rigidbody2D>();
-        if (_rigid != null)
-            _rigid.isKinematic = true;
-    }
 
     private void FixedUpdate()
     {
