@@ -10,8 +10,15 @@ using UnityEngine;
  */
 public class PlayerMovement : Movement
 {
+    protected PlayerState _state;
     public float _prevDir = 0;
     public bool _isGround = true;
+
+    public virtual void Init(Rigidbody2D rigid, PlayerState state)
+    {
+        this._state = state;
+        base.Init(rigid);
+    }
 
     /**
      *  @brief
@@ -26,16 +33,20 @@ public class PlayerMovement : Movement
         bool wasGrounded = _isGround;
         _isGround = false;
 
+        DebugCircle(groundCheckPos, groundedRadius, Color.red);
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckPos, groundedRadius, groundLayers);
         for(int i = 0; i < colliders.Length; i++)
         {
             if(colliders[i].gameObject != gameObject)
             {
                 _isGround = true;
+                 _state.NotifyState(PlayerState.OnGround.IDLE, PlayerState.OffGround.NONE);
                 if(!wasGrounded)
                     return true;
             }
         }
+
+        _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING);
         return false;
     }
     /**
@@ -44,8 +55,12 @@ public class PlayerMovement : Movement
      */
     public override Vector3 Move(Vector3 dir)
     {
+        if(dir.x < 0.01)
+            _state.Move(0);
         if(dir.x != 0)
-            _prevDir = dir.x >= 0  ? 1 : -1;
+            _prevDir = dir.x > 0  ? 1 : -1;
+        _state.Move(Mathf.Abs(dir.x));
+        
         return base.Move(dir);
     }
     /**
@@ -58,5 +73,13 @@ public class PlayerMovement : Movement
         {
             base.Jump(dir, amout, obj);
         }
+    }
+
+    private void DebugCircle(Vector3 pos, float radius, Color color)
+    {
+        Debug.DrawLine(pos, new Vector3(pos.x + radius, pos.y, 0), color, 0.1f);
+        Debug.DrawLine(pos, new Vector3(pos.x - radius, pos.y, 0), color, 0.1f);
+        Debug.DrawLine(pos, new Vector3(pos.x, pos.y + radius, 0), color, 0.1f);
+        Debug.DrawLine(pos, new Vector3(pos.x, pos.y - radius, 0), color, 0.1f);
     }
 }

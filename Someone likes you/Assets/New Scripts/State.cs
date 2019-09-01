@@ -93,13 +93,20 @@ public class State : MonoBehaviour
     {
         switch(_offGroundState)
         {
+            case OffGround.NONE:
+                _animator.SetBool("isGround", true);
+                break;
             case OffGround.JUMPING:
                 _animator.SetTrigger("isJump");
-                _animator.SetBool("isGround", false);
                 break;
             case OffGround.FALLING:
                 _animator.SetBool("isGround", false);
                 break;
         }
+    }
+
+    public void Move(float x_speed)
+    {
+        _animator.SetFloat("x_speed", x_speed);
     }
 }

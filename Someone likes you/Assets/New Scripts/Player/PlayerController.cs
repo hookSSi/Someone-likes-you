@@ -63,30 +63,29 @@ public class PlayerController : MonoBehaviour
     private void Awake() 
     {
         // 필수적인 스크립트 자동추가
-        if(this._movement == null)
-        {
-            this._movement = this.gameObject.AddComponent<PlayerMovement>();
-            this._movement.Init(this.GetComponent<Rigidbody2D>());
-        }
         if(this._state == null)
         {
             this._state    = this.gameObject.AddComponent<PlayerState>();
             this._state._animator = this._animator;
+        }
+        if(this._movement == null)
+        {
+            this._movement = this.gameObject.AddComponent<PlayerMovement>();
+            this._movement.Init(this.GetComponent<Rigidbody2D>(), this._state);
         }
 
         /// @brief
         /// 이동, 마우스 위치 등 Axis를 제외한 키만 취급
         _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Mouse0, Attack));
         _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, Jump));
-        _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.E, Interect));
+        _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.E, Interact));
     }
     private void FixedUpdate() 
     {
         if(_movement.GroundCheck(_groundCheck.position, _groundedRadius, _whatIsGround))
             _state.NotifyState(PlayerState.OnGround.LANDING, PlayerState.OffGround.NONE);
 
-        if(!_movement._isGround)
-            _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING);
+        Move(Input.GetAxis("Horizontal"));
     }
     private void Update()
     {
@@ -100,8 +99,6 @@ public class PlayerController : MonoBehaviour
      */
     public void HandleInput()
     {
-        Move(Input.GetAxis("Horizontal"));
-
         foreach (Command command in _commands)
         {
             command.CheckKey();
@@ -114,18 +111,6 @@ public class PlayerController : MonoBehaviour
      */
     public void Move(float move)
     {
-        if(Mathf.Abs(move) < 0.0001)
-        {
-            _state.NotifyState(PlayerState.OnGround.IDLE, PlayerState.OffGround.NONE);
-        }
-        else
-        {
-            if(_movement._isGround)
-                _state.NotifyState(PlayerState.OnGround.WALKING, PlayerState.OffGround.NONE);
-            else
-                _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING);
-        }
-        
         Vector3 dir = Vector3.right * move * _walkingSpeed;
         this._movement.Move(dir);
 
@@ -139,13 +124,13 @@ public class PlayerController : MonoBehaviour
     /// 플레이어 점프
     public void Jump()
     {
-        this._movement.Jump(Vector2.up, _jumpForce);
-        _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.JUMPING);
-        Debug.Log("점프!");
+        if(_movement._isGround)
+        {
+            this._movement.Jump(Vector2.up, _jumpForce);
+            _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.JUMPING);
+            Debug.Log("점프!");
+        }
     }
     /// 플레이어 상호작용
-    public void Interect()
-    {
-        Debug.Log("상호작용!");
-    }
+    public void Interact() => Debug.Log("상호작용!");
 }

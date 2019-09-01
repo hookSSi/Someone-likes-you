@@ -60,7 +60,7 @@ public class Movement : MonoBehaviour
     {
         Vector3 origin = _rigid.position;
 
-        Vector2 targetVelocity = new Vector2(dir.x, _rigid.velocity.y);
+        Vector2 targetVelocity = new Vector2(dir.x, _rigid.velocity.y + dir.y);
         _rigid.velocity = Vector3.SmoothDamp(_rigid.velocity, targetVelocity, ref _velocity, _movementSmoothing);
 
         return origin;
