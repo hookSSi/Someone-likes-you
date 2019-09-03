@@ -101,46 +101,7 @@ public class MovingPlatform : MonoBehaviour
                 _currentTime += Time.deltaTime;
                 if (_currentTime >= _idleTime)
                 {
-                    // 정방향 순회시 발동
-                    if (_indexDir == 1)
-                    {
-                        if (_index >= _posList.Count - 1)
-                        {
-                            switch(_moveMode)
-                            {
-                                case MoveMode.LOOP:
-                                    _index = -1;                                
-                                    break;
-                                case MoveMode.BACK_FORTH:
-                                    _indexDir *= -1;
-                                    break;
-                                case MoveMode.ONE_WAY:
-                                    _indexDir *= -1;
-                                    MoveStop();
-                                    break;
-                            }
-                        }
-                    }
-                    // 역방향 순회시 발동
-                    else if (_indexDir == -1)
-                    {
-                        if (_index <= 0)
-                        {
-                            switch(_moveMode)
-                            {
-                                case MoveMode.LOOP:
-                                    _index = _posList.Count;                                
-                                    break;
-                                case MoveMode.BACK_FORTH:
-                                    _indexDir *= -1;
-                                    break;
-                                case MoveMode.ONE_WAY:
-                                    _indexDir *= -1;
-                                    MoveStop();
-                                    break;
-                            }
-                        }
-                    }
+                    NextTo();
                     _index += _indexDir;
                     _trigger = true;
                     _state = WallState.Move;
@@ -154,6 +115,45 @@ public class MovingPlatform : MonoBehaviour
                     _trigger = false;
                 }
                 break;
+        }
+    }
+    
+    /// 다음 오브젝트로 넘어간다
+    private void NextTo()
+    {
+        // 정방향 순회시 발동
+        if (_indexDir == 1 && _index >= _posList.Count - 1)
+        {
+            switch(_moveMode)
+            {
+                case MoveMode.LOOP:
+                    _index = -1;                                
+                    break;
+                case MoveMode.BACK_FORTH:
+                    _indexDir *= -1;
+                    break;
+                case MoveMode.ONE_WAY:
+                    _indexDir *= -1;
+                    MoveStop();
+                    break;
+            }
+        }
+        // 역방향 순회시 발동
+        else if (_indexDir == -1 && _index <= 0)
+        {
+            switch(_moveMode)
+            {
+                case MoveMode.LOOP:
+                    _index = _posList.Count;                                
+                    break;
+                case MoveMode.BACK_FORTH:
+                    _indexDir *= -1;
+                    break;
+                case MoveMode.ONE_WAY:
+                    _indexDir *= -1;
+                    MoveStop();
+                    break;
+            }
         }
     }
     

@@ -8,7 +8,8 @@ using System.Collections.Generic;
  */
 class PlatformCatcher : MonoBehaviour
 {
-    [SerializeField] private LayerMask[] _ArrayNotCatch;
+    [Header("플랫폼을 무시할 레이어")]
+    [SerializeField] private LayerMask[] _Filter;
     private Collider2D _collider;
     private Rigidbody2D _rigid;
     private PlatformEffector2D _platformEffector;
@@ -40,20 +41,27 @@ class PlatformCatcher : MonoBehaviour
     }
 
     /// 플랫폼 위에 있는 물체의 부모를 플랫폼으로 설정한다
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D collision)
     {
+        Collider2D temp;
+        Collider2D coll = collision.collider;
+        // 실제로 플레이어는 바닥에 약간 파묻혀 있으므로 이를 보정하기 위한 변수 delta를 둔다
+        float delta = 0.05f;
+        float collY = coll.bounds.min.y;
+
         // 플랫폼 위에 물체가 있지 않다면 return한다
-        float collY = coll.collider.bounds.min.y;
-        if (collY < _collider.bounds.max.y - 0.05f)
+        if (collY < _collider.bounds.max.y - delta)
             return;
         
         // Debug.Log("들어온다.");
-        foreach(var layer in _ArrayNotCatch)
+        // 필터에 해당하는 오브젝트를 거른다.
+        if (Filter(coll))
+            return;
+
+        // 플레이어의 경우 자식 Collider가 걸려서 부모를 강제 변경(...) 당할 수 있으므로 부모 오브젝트에 Collider가 존재하는지 탐색한다.
+        while((temp = coll.transform.parent.GetComponent<Collider2D>()) != null)
         {
-            if (coll.gameObject.layer == layer)
-            {
-                return;
-            }
+            coll = temp;
         }
 
         coll.transform.SetParent(this.transform);
@@ -67,5 +75,18 @@ class PlatformCatcher : MonoBehaviour
         {
             coll.transform.SetParent(null);
         }
+    }
+
+    /// _Filter에 해당하는 콜라이더를 무시한다
+    private bool Filter(Collider2D coll)
+    {
+        foreach(var layer in _Filter)
+        {
+            if (coll.gameObject.layer == layer)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
