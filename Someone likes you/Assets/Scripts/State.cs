@@ -16,10 +16,10 @@ public class State : MonoBehaviour
     public Animator _animator{get; set;}
     /// 땅위의 상태
     [EnumFlags]
-    public OnGround _onGroundState;
+    [SerializeField]protected OnGround _onGroundState;
     /// 땅안위의 상태
     [EnumFlags]
-    public OffGround _offGroundState;
+    [SerializeField]protected OffGround _offGroundState;
     public enum OnGround
     {
         NONE         = 0,
@@ -31,8 +31,7 @@ public class State : MonoBehaviour
     {
        NONE     = 0,
        JUMPING  = 1 << 0,
-       ATTACK   = 1 << 1,
-       FALLING  = 1 << 2
+       FALLING  = 1 << 1
     }
     /**
      * @brief
@@ -43,7 +42,7 @@ public class State : MonoBehaviour
     {
         _onGroundState  = onGroundState;
         _offGroundState = offGroundState;
-        HandleAnim();
+        this.HandleAnim();
     }
     /**
      * @brief
@@ -71,12 +70,6 @@ public class State : MonoBehaviour
     {
         switch(_onGroundState)
         {
-            case OnGround.WALKING:
-                _animator.SetFloat("x_speed", 1);
-                break;
-            case OnGround.IDLE:
-                _animator.SetFloat("x_speed", 0);
-                break;
             case OnGround.LANDING:
                 _animator.SetBool("isGround", true);
                 break;
@@ -87,9 +80,6 @@ public class State : MonoBehaviour
     {
         switch(_offGroundState)
         {
-            case OffGround.NONE:
-                _animator.SetBool("isGround", true);
-                break;
             case OffGround.JUMPING:
                 _animator.SetTrigger("isJump");
                 break;

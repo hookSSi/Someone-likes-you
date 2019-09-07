@@ -43,24 +43,32 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     [Header("플레이어 조작커맨드 목록")]
     [SerializeField] private List<Command> _commands;
-    [Header("플레이어에게 땅인 레이어들")]
+    [Header("플레이어에게 땅인 레이어")]
     [SerializeField] private LayerMask _whatIsGround;
+    [Header("플레이어에게 벽인 레이어")]
+    [SerializeField] private LayerMask _whatIsWall;
 
     [Space(10)]
     [Header("플레이어 정보")]
     /// 플레이어의 굶주림 정도 (0~1) = (먹어야함 ~ 배가 꽉차 있음)
-    [Range(0, 1)] [SerializeField]public float _hungriness; 
+    [Range(0, 1)] [SerializeField]public float _hungriness;
+    /// 플레이어의 이동 방향
+    [SerializeField] private float _horizontalMove;
     /// 플레이어의 걷는 속도
     [SerializeField] private float _walkingSpeed; 
     /// 플레이어의 점프 크기
-    [SerializeField] private float _jumpForce; 
+    [SerializeField] private float _jumpForce;
+    /// 플레이어의 하강 속도
+    [SerializeField] private float _downForce;
+    /// 플레이어의 벽타기중 하강 속도
+    [SerializeField] private float _wallSlidingSpeed;
 
     /// 천장
-    const float _cellingRadius = .2f;
+    const float _ceilingRadius = .2f;
     /// 땅
-    const float _groundedRadius = .2f;
+    const float _groundedRadius = .18f;
     /// 벽
-    const float _wallRadius = .2f;
+    const float _wallDistance = .3f;
     /**
      * 플레이어 클래스 초기화
      * @brief
@@ -88,10 +96,25 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate() 
     {
-        if(_movement.GroundCheck(_groundCheck.position, _groundedRadius, _whatIsGround))
-            _state.NotifyState(PlayerState.OnGround.LANDING, PlayerState.OffGround.NONE);
+        _horizontalMove = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
 
-        Move(Input.GetAxis("Horizontal"));
+        if(!_movement._isGround)
+        {
+            // 벽 타지 않을때
+            _movement.Down(_downForce * Time.deltaTime);
+            
+            if(_movement.WallCheck(_wallCheck.position, _horizontalMove, _wallDistance, _whatIsWall))
+            {
+                Debug.Log("벽 타는 중");
+                // 벽 탈때
+                _movement.WallSliding(_wallSlidingSpeed * Time.deltaTime);
+            }
+        }
+
+        if(_movement.GroundCheck(_groundCheck.position, _groundedRadius, _whatIsGround))
+            Debug.Log("착지!");
+
+        Move(_horizontalMove);
     }
     private void Update()
     {
@@ -114,17 +137,23 @@ public class PlayerController : MonoBehaviour
      * @brief
      * 입력 받은 방향에 따라 플레이어 이동을 담당하는 함수
      * @param dir 이동 방향 Vector3(-1 ~ 1)
+     * @return 가는 방향 vector 리턴
      */
-    public void Move(float move)
+    public Vector3 Move(float move)
     {
         Vector3 dir = Vector3.right * move * _walkingSpeed;
         this._movement.Move(dir);
         Flip(_movement._prevDir);
+
+        return dir;
     }
-    /// 스프라이트 반전
+    /// 플레이어 반전
     public void Flip(float dir)
     {
-        _sprite.transform.localScale = new Vector3(transform.localScale.x * ((dir >= 0) ? 1:-1), transform.localScale.y, transform.localScale.z); // 스프라이트 좌우 교체
+        Vector3 dirToVector = new Vector3(transform.localScale.x * ((dir >= 0) ? 1:-1), transform.localScale.y, transform.localScale.z);
+
+        _sprite.transform.localScale                  = dirToVector; // 스프라이트 좌우 교체
+        _ceilingCheck.parent.transform.localScale     = dirToVector; // 천장 체커 좌우 교체
     }
     /// 플레이어 공격
     public void Attack()
@@ -134,12 +163,8 @@ public class PlayerController : MonoBehaviour
     /// 플레이어 점프
     public void Jump()
     {
-        if(_movement._isGround)
-        {
-            this._movement.Jump(_jumpForce);
-            _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.JUMPING);
-            Debug.Log("점프!");
-        }
+        this._movement.Jump(_jumpForce);
+        Debug.Log("점프!");
     }
     /// 플레이어 상호작용
     public void Interact() => Debug.Log("상호작용!");

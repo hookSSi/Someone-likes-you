@@ -91,7 +91,7 @@ public class Movement : MonoBehaviour
         if(_rigid)
         {
             //_rigid.velocity = new Vector2(_rigid.velocity.x,  0);
-            _rigid.velocity += Vector2.up * amount;
+            _rigid.AddForce(Vector2.up * amount);
         }
         else
         {

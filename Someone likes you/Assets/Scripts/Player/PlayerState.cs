@@ -13,17 +13,18 @@ public class PlayerState : State
 {
     /// 플레이어 액션관련 애니메이션 상태 변수
     [EnumFlags]
-    private PlayerAction _playerAction;
+    [SerializeField]protected PlayerAction _playerAction;
     /// 플레이어 벽타기 애니메이션 상태 변수
     [EnumFlags]
-    private OnClimbing _onClimbing;
+    [SerializeField]protected OnClimbing _onClimbing;
 
     public enum PlayerAction
     {
         NONE         = 0,
-        ATTACK       = 1 << 0,
-        THROWING     = 1 << 1,
-        INTERACTING1 = 1 << 2,
+        ATTACK       = 1 << 1,
+        THROWING     = 1 << 2,
+        INTERACTING = 1 << 3,
+        SLIDING      = 1 << 4
     }
     public enum OnClimbing
     {
@@ -35,6 +36,8 @@ public class PlayerState : State
     public override void NotifyState(OnGround onGroundState, OffGround offGroundState)
     {
         base.NotifyState(onGroundState, offGroundState);
+        _onClimbing = PlayerState.OnClimbing.NONE;
+        _playerAction = PlayerState.PlayerAction.NONE;
     }
     /**
      *  @param onGroundState 땅위에서 애니메이션 상태
@@ -45,15 +48,25 @@ public class PlayerState : State
     public virtual void NotifyState(OnGround onGroundState, OffGround offGroundState, OnClimbing onClimbing, PlayerAction playerAction)
     {
         base.NotifyState(onGroundState, offGroundState);
+        _onClimbing = onClimbing;
+        _playerAction = playerAction;
     }
+    protected override void OnGroundAnim()
+    {
+        switch(_onGroundState)
+        {
+            case OnGround.LANDING:
+                _animator.SetBool("isGround", true);
+                _animator.SetBool("isSliding", false);
+                break;
+        }
+    }
+
     /// 벽타기 애니메이션 처리
     protected virtual void OnClimbingAnim()
     {
           switch(_offGroundState)
         {
-            case OffGround.NONE:
-                _animator.SetBool("isGround", true);
-                break;
             case OffGround.JUMPING:
                 _animator.SetTrigger("isJump");
                 break;
@@ -65,16 +78,10 @@ public class PlayerState : State
     /// 플레이어 액션 애니메이션 처리
     protected virtual void PlayerActionAnim()
     {
-          switch(_offGroundState)
+          switch(_playerAction)
         {
-            case OffGround.NONE:
-                _animator.SetBool("isGround", true);
-                break;
-            case OffGround.JUMPING:
-                _animator.SetTrigger("isJump");
-                break;
-            case OffGround.FALLING:
-                _animator.SetBool("isGround", false);
+            case PlayerAction.SLIDING:
+                _animator.SetBool("isSliding", true);
                 break;
         }
     }
