@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SomeoneLikesYouUnityScript: C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/New Scripts/Wall/PlatformCatcher.cs 소스 파일</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SomeoneLikesYouUnityScript
+   &#160;<span id="projectnumber">1.1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "../../search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('../../',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('d9/dc6/_platform_catcher_8cs_source.html','../../');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlatformCatcher.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/dc6/_platform_catcher_8cs.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> UnityEngine;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/dfc/class_platform_catcher.html">PlatformCatcher</a> : MonoBehaviour</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#a78ef499926b824a8f831cce7f9a430d2">   11</a></span>&#160;    [SerializeField] <span class="keyword">private</span> LayerMask[] <a class="code" href="../../d2/dfc/class_platform_catcher.html#a78ef499926b824a8f831cce7f9a430d2">_ArrayNotCatch</a>;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">   12</a></span>&#160;    <span class="keyword">private</span> Collider2D <a class="code" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">_collider</a>;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">   13</a></span>&#160;    <span class="keyword">private</span> Rigidbody2D <a class="code" href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">_rigid</a>;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">   14</a></span>&#160;    <span class="keyword">private</span> PlatformEffector2D <a class="code" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">_platformEffector</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#a85b586a2617a568e4201c3f3b3c4103f">   17</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/dfc/class_platform_catcher.html#a85b586a2617a568e4201c3f3b3c4103f">Awake</a>()</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">_collider</a> = GetComponent&lt;Collider2D&gt;();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">_collider</a>)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <a class="code" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">_collider</a> = (Collider2D)gameObject.AddComponent&lt;BoxCollider2D&gt;();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">_collider</a>.usedByEffector = <span class="keyword">true</span>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">_rigid</a> = GetComponent&lt;Rigidbody2D&gt;();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">_rigid</a>)</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <a class="code" href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">_rigid</a> = gameObject.AddComponent&lt;Rigidbody2D&gt;();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">_rigid</a>.isKinematic = <span class="keyword">true</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">_platformEffector</a> = GetComponent&lt;PlatformEffector2D&gt;();</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">_platformEffector</a>)</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">_platformEffector</a> = gameObject.AddComponent&lt;PlatformEffector2D&gt;();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">_platformEffector</a>.useColliderMask = <span class="keyword">true</span>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">_platformEffector</a>.useOneWay = <span class="keyword">true</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#ae55ceae7b20536053cc1dbb12a71041e">   43</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/dfc/class_platform_catcher.html#ae55ceae7b20536053cc1dbb12a71041e">OnCollisionEnter2D</a>(Collision2D coll)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// 플랫폼 위에 물체가 있지 않다면 return한다</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">float</span> collY = coll.collider.bounds.min.y;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (collY &lt; <a class="code" href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">_collider</a>.bounds.max.y - 0.05f)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// Debug.Log(&quot;들어온다.&quot;);</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">foreach</span>(var layer <span class="keywordflow">in</span> <a class="code" href="../../d2/dfc/class_platform_catcher.html#a78ef499926b824a8f831cce7f9a430d2">_ArrayNotCatch</a>)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (coll.gameObject.layer == layer)</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            {</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span>;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        coll.transform.SetParent(this.transform);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d2/dfc/class_platform_catcher.html#a8d350fc36f8ebc200f8a769bf4d1df69">   63</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/dfc/class_platform_catcher.html#a8d350fc36f8ebc200f8a769bf4d1df69">OnCollisionExit2D</a>(Collision2D coll)</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// Debug.Log(&quot;나간다.&quot;);</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (coll.transform.parent == <span class="keyword">this</span>.transform)</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            coll.transform.SetParent(<span class="keyword">null</span>);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div><div class="ttc" id="class_platform_catcher_html"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html">PlatformCatcher</a></div><div class="ttdoc">움직이는 플랫폼이 위에 있는 물체와 함께 움직이게 하는 클래스</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00009">PlatformCatcher.cs:9</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_a78ef499926b824a8f831cce7f9a430d2"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#a78ef499926b824a8f831cce7f9a430d2">PlatformCatcher._ArrayNotCatch</a></div><div class="ttdeci">LayerMask [] _ArrayNotCatch</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00011">PlatformCatcher.cs:11</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_a8d350fc36f8ebc200f8a769bf4d1df69"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#a8d350fc36f8ebc200f8a769bf4d1df69">PlatformCatcher.OnCollisionExit2D</a></div><div class="ttdeci">void OnCollisionExit2D(Collision2D coll)</div><div class="ttdoc">플랫폼 위에 있는 물체의 부모를 해제한다</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00063">PlatformCatcher.cs:63</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_ae55ceae7b20536053cc1dbb12a71041e"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#ae55ceae7b20536053cc1dbb12a71041e">PlatformCatcher.OnCollisionEnter2D</a></div><div class="ttdeci">void OnCollisionEnter2D(Collision2D coll)</div><div class="ttdoc">플랫폼 위에 있는 물체의 부모를 플랫폼으로 설정한다</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00043">PlatformCatcher.cs:43</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_a9a76fa21f5f0843c1115e36e50eb33f6"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#a9a76fa21f5f0843c1115e36e50eb33f6">PlatformCatcher._platformEffector</a></div><div class="ttdeci">PlatformEffector2D _platformEffector</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00014">PlatformCatcher.cs:14</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_a85b586a2617a568e4201c3f3b3c4103f"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#a85b586a2617a568e4201c3f3b3c4103f">PlatformCatcher.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdoc">컴포넌트 초기화</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00017">PlatformCatcher.cs:17</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_ae8627f8ac9558d21ee7b73eb5bb7d202"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#ae8627f8ac9558d21ee7b73eb5bb7d202">PlatformCatcher._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00013">PlatformCatcher.cs:13</a></div></div>
+<div class="ttc" id="class_platform_catcher_html_aa301b8dfc4e4d2248eeee749691a85a6"><div class="ttname"><a href="../../d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">PlatformCatcher._collider</a></div><div class="ttdeci">Collider2D _collider</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dc6/_platform_catcher_8cs_source.html#l00012">PlatformCatcher.cs:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_3beff099619fdbea60c5d5ad06b6665f.html">Someone likes you</a></li><li class="navelem"><a class="el" href="../../dir_08e9473894999c0a2b821effc5369fad.html">Assets</a></li><li class="navelem"><a class="el" href="../../dir_1928622b4a8e602b5cba7b024bde0020.html">New Scripts</a></li><li class="navelem"><a class="el" href="../../dir_01ff9e9a489c0c86e99f1a7dbcd96af6.html">Wall</a></li><li class="navelem"><a class="el" href="../../d9/dc6/_platform_catcher_8cs.html">PlatformCatcher.cs</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

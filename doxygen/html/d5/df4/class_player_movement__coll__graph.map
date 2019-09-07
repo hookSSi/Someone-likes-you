@@ -1,5 +1,7 @@
 <map id="PlayerMovement" name="PlayerMovement">
-<area shape="rect" id="node1" title="플레이어 움직임 담당 클래스" alt="" coords="26,344,147,465"/>
-<area shape="rect" id="node2" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="5,131,168,296"/>
-<area shape="rect" id="node3" title=" " alt="" coords="31,5,142,83"/>
+<area shape="rect" id="node1" title="플레이어 움직임 담당 클래스" alt="" coords="43,724,165,889"/>
+<area shape="rect" id="node2" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="5,321,168,487"/>
+<area shape="rect" id="node3" title=" " alt="" coords="66,5,177,83"/>
+<area shape="rect" id="node5" href="$d0/d8b/class_state.html" title="애니메이션이 달린 객체의 상태 표시겸 애니메이션 처리 클래스" alt="" coords="125,132,256,297"/>
+<area shape="rect" id="node4" href="$d6/d23/class_player_state.html" title="플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!" alt="" coords="121,511,266,661"/>
 </map>

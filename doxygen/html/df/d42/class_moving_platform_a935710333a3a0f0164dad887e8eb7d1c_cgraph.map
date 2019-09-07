@@ -1,5 +1,5 @@
 <map id="MovingPlatform.FixedUpdate" name="MovingPlatform.FixedUpdate">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,192,32"/>
 <area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460" title="상태에 따라서 벽이 움직이게 하는 함수" alt="" coords="240,5,375,32"/>
-<area shape="rect" id="node3" href="$df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title=" " alt="" coords="423,5,593,32"/>
+<area shape="rect" id="node3" href="$df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title="이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다." alt="" coords="423,5,593,32"/>
 </map>

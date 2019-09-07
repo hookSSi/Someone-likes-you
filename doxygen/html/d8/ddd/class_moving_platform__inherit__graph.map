@@ -1,4 +1,4 @@
 <map id="MovingPlatform" name="MovingPlatform">
-<area shape="rect" id="node1" title="뺀돌뺀돌 혼자서도 잘 움직이는 벽" alt="" coords="5,131,116,457"/>
+<area shape="rect" id="node1" title="뺀돌뺀돌 혼자서도 잘 움직이는 벽" alt="" coords="5,131,116,443"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,116,83"/>
 </map>

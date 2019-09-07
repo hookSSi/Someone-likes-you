@@ -1,4 +1,4 @@
 <map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,124,32"/>
-<area shape="rect" id="node2" href="$d5/d6a/class_command.html" title="플레이어 HandInput()을 위한 중간 매개층 Command 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨 @detail 어차피 게임에서 쓰일 일 없으니까 Scripta..." alt="" coords="172,5,253,32"/>
+<area shape="rect" id="node2" href="$d5/d6a/class_command.html" title="플레이어 HandInput()을 위한 중간 매개층 Command 이걸 따로 만듬으로써 키변경의 유연함을 가질 수 있게됨" alt="" coords="172,5,253,32"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="PlayerMovement.GroundCheck" name="PlayerMovement.GroundCheck">
+<area shape="rect" id="node1" title="플레이어 땅 체크 함수" alt="" coords="5,31,207,57"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51" title=" " alt="" coords="255,5,447,32"/>
+<area shape="rect" id="node3" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="271,56,430,83"/>
+</map>

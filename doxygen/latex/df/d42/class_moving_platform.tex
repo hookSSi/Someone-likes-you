@@ -7,8 +7,7 @@
 
 
 
-Moving\+Platform에 대한 상속 다이어그램 \+: 
-\nopagebreak
+Moving\+Platform에 대한 상속 다이어그램 \+: \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,12 +16,11 @@ Moving\+Platform에 대한 상속 다이어그램 \+:
 \end{figure}
 
 
-Moving\+Platform에 대한 협력 다이어그램\+:
-\nopagebreak
+Moving\+Platform에 대한 협력 다이어그램\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{df/d56/class_moving_platform__coll__graph}
+\includegraphics[height=550pt]{df/d56/class_moving_platform__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 타입}
@@ -32,59 +30,57 @@ enum \mbox{\hyperlink{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653}{M
 \mbox{\hyperlink{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653a567fc8818cb224cde6a676cb700ac1e3}{Move\+Mode.\+B\+A\+C\+K\+\_\+\+F\+O\+R\+TH}}, 
 \mbox{\hyperlink{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653aaa30404ca3fb4604d829dacae0444dd1}{Move\+Mode.\+O\+N\+E\+\_\+\+W\+AY}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 벽의 이동 방법을 결정하는 모드 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_moving_platform_a2e7148eddf9ada2373e3507c02146896}{Move\+Start}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em 이 함수를 통해 외부에서 해당 오브젝트를 활성화(이동 시작)한다. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_moving_platform_a9150bceccb63034907ab3ec46216ae83}{Move\+Stop}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ Transform $>$ \mbox{\hyperlink{class_moving_platform_a51c0ce96c3fc6ad9350dc0350216835b}{\+\_\+pos\+List}}
 \begin{DoxyCompactList}\small\item\em 도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임! \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653}{Move\+Mode}} \mbox{\hyperlink{class_moving_platform_a47308284bdf720a8fe919a69f2c0019b}{\+\_\+move\+Mode}} = \mbox{\hyperlink{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40}{Move\+Mode.\+L\+O\+OP}}
-\item 
+\begin{DoxyCompactList}\small\item\em 기본 Move\+Mode는 Loop(순회하기) \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\+\_\+velocity}} = 6f
-\begin{DoxyCompactList}\small\item\em 벽이 움직이는 속도 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em 벽이 움직이는 최대 속력 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_moving_platform_a293066859b3576c931eb4b8c3f802397}{\+\_\+idle\+Time}} = 1f
 \begin{DoxyCompactList}\small\item\em 벽이 얼마나 멈췄다가 출발할지를 결정하는 변수 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected 속성}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}{\+\_\+index}} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 현재 목표로 하고 있는 pos\+List의 인덱스 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private 타입}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{Wall\+State}} \{ \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901ae599161956d626eda4cb0a5ffb85271c}{Wall\+State.\+Idle}}, 
 \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5}{Wall\+State.\+Move}}
  \}
-\begin{DoxyCompactList}\small\item\em 벽의 상태를 나타낸다 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 벽의 이동 상태를 나타낸다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_moving_platform_aec6412bf79a5d4fdec57da2e3b390b93}{Awake}} ()
-\begin{DoxyCompactList}\small\item\em 초기화 \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c}{Fixed\+Update}} ()
 \item 
 void \mbox{\hyperlink{class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460}{Act}} ()
 \begin{DoxyCompactList}\small\item\em 상태에 따라서 벽이 움직이게 하는 함수 \end{DoxyCompactList}\item 
 I\+Enumerator \mbox{\hyperlink{class_moving_platform_afb52616391e79cf7e015f5fb37d50e16}{Move\+To}} ()
-\begin{DoxyCompactList}\small\item\em 지정된 위치로 벽이 이동한다! @detail 지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서 가속을 이용합니다. 적당히 시간 계산해서 그 스케줄 따라 움직입니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 지정된 위치로 벽이 이동한다! \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
-Game\+Object \mbox{\hyperlink{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}{\+\_\+platform}}
-\item 
-Rigidbody2D \mbox{\hyperlink{class_moving_platform_a420854da980550fe82c4f82f46ecd41e}{\+\_\+rigid}}
+\mbox{\hyperlink{class_platform_catcher}{Platform\+Catcher}} \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\+\_\+platform}}
 \item 
 int \mbox{\hyperlink{class_moving_platform_a885973335ac91f8c34289d38f2d88d93}{\+\_\+index\+Dir}} = 1
-\item 
+\begin{DoxyCompactList}\small\item\em 인덱스(\+\_\+index)가 어떻게 변할지를 결정, -\/1은 역순, 1은 순방향 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\+\_\+current\+Time}} = 0f
-\item 
+\begin{DoxyCompactList}\small\item\em 현재 경과 시간(건드리지 말것!) \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\+\_\+time\+For\+Stop}} = 0.\+7f
 \begin{DoxyCompactList}\small\item\em 벽이 부드럽게 정지하는 데 걸리는 시간 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{Wall\+State}} \mbox{\hyperlink{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}{\+\_\+state}} = \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5}{Wall\+State.\+Move}}
@@ -92,7 +88,7 @@ float \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{
 bool \mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\+\_\+is\+On}} = true
 \item 
 bool \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\+\_\+trigger}} = true
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Act 함수가 Fixed\+Update에서 실행되는데, Act의 Coroutine이 한 번만 실행되게 하는 트리거 변수 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{상세한 설명}
@@ -109,7 +105,7 @@ bool \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\
 \end{DoxySeeAlso}
 
 
-Moving\+Platform.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 
 
@@ -120,6 +116,16 @@ Moving\+Platform.\+cs 파일의 13 번째 라인에서 정의되었습니다.
 \subsubsection{\texorpdfstring{MoveMode}{MoveMode}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653}{Moving\+Platform.\+Move\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
 
+
+
+벽의 이동 방법을 결정하는 모드 
+
+벽이 지점 사이를 어떻게 왕복할 것인지를 결정합니다. 약간 \textquotesingle{}미니 메트로\textquotesingle{} 같은 느낌? ~\newline
+L\+O\+OP \+: 순회노선처럼, 지점 사이를 순회. ~\newline
+B\+A\+C\+K\+\_\+\+F\+O\+R\+TH \+: L\+O\+O\+P처럼 모든 지점을 지나치되, 양방향으로 처음과 중간지점, 끝을 거쳐 왕복한다. ~\newline
+O\+N\+E\+\_\+\+W\+AY \+: 편도선, 한 번씩 지나친 후 움직임을 멈춘다. Move\+Start로 다시 움직인다. \begin{DoxySeeAlso}{참고}
+\href{https://youtu.be/ek0JZrL6BU4}{\texttt{ https\+://youtu.\+be/ek0\+J\+Zr\+L6\+B\+U4}} 1분 6초 참고 
+\end{DoxySeeAlso}
 \begin{DoxyEnumFields}{열거형 멤버}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{LOOP@{LOOP}!MovingPlatform@{MovingPlatform}}\index{MovingPlatform@{MovingPlatform}!LOOP@{LOOP}}}\mbox{\Hypertarget{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40}\label{class_moving_platform_a7b3427d2906069ecf4c39d69eee53653a9159b3578e4e1eb31ffdf90acd6f6e40}} 
 L\+O\+OP&\\
@@ -136,13 +142,13 @@ O\+N\+E\+\_\+\+W\+AY&\\
 \end{DoxyEnumFields}
 
 
-Moving\+Platform.\+cs 파일의 34 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 35 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{35     \{}
-\DoxyCodeLine{36         LOOP, BACK\_FORTH, ONE\_WAY}
-\DoxyCodeLine{37     \}}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         LOOP, BACK\_FORTH, ONE\_WAY}
+\DoxyCodeLine{38     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_moving_platform_ac47e764b71989317aab0bad26d82a901}\label{class_moving_platform_ac47e764b71989317aab0bad26d82a901}} 
@@ -153,7 +159,7 @@ Moving\+Platform.\+cs 파일의 34 번째 라인에서 정의되었습니다.
 
 
 
-벽의 상태를 나타낸다 
+벽의 이동 상태를 나타낸다. 
 
 \begin{DoxyEnumFields}{열거형 멤버}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!MovingPlatform@{MovingPlatform}}\index{MovingPlatform@{MovingPlatform}!Idle@{Idle}}}\mbox{\Hypertarget{class_moving_platform_ac47e764b71989317aab0bad26d82a901ae599161956d626eda4cb0a5ffb85271c}\label{class_moving_platform_ac47e764b71989317aab0bad26d82a901ae599161956d626eda4cb0a5ffb85271c}} 
@@ -189,9 +195,7 @@ Moving\+Platform.\+cs 파일의 56 번째 라인에서 정의되었습니다.
 
 상태에 따라서 벽이 움직이게 하는 함수 
 
-정방향 순회시
 
-역방향 순회시 
 
 Moving\+Platform.\+cs 파일의 96 번째 라인에서 정의되었습니다.
 
@@ -204,6 +208,7 @@ Moving\+Platform.\+cs 파일의 96 번째 라인에서 정의되었습니다.
 \DoxyCodeLine{101                 \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} += Time.deltaTime;}
 \DoxyCodeLine{102                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} >= \mbox{\hyperlink{class_moving_platform_a293066859b3576c931eb4b8c3f802397}{\_idleTime}})}
 \DoxyCodeLine{103                 \{}
+\DoxyCodeLine{104                     \textcolor{comment}{// 정방향 순회시 발동}}
 \DoxyCodeLine{105                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a885973335ac91f8c34289d38f2d88d93}{\_indexDir}} == 1)}
 \DoxyCodeLine{106                     \{}
 \DoxyCodeLine{107                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}{\_index}} >= \mbox{\hyperlink{class_moving_platform_a51c0ce96c3fc6ad9350dc0350216835b}{\_posList}}.Count - 1)}
@@ -223,6 +228,7 @@ Moving\+Platform.\+cs 파일의 96 번째 라인에서 정의되었습니다.
 \DoxyCodeLine{121                             \}}
 \DoxyCodeLine{122                         \}}
 \DoxyCodeLine{123                     \}}
+\DoxyCodeLine{124                     \textcolor{comment}{// 역방향 순회시 발동}}
 \DoxyCodeLine{125                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a885973335ac91f8c34289d38f2d88d93}{\_indexDir}} == -1)}
 \DoxyCodeLine{126                     \{}
 \DoxyCodeLine{127                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}{\_index}} <= 0)}
@@ -245,31 +251,28 @@ Moving\+Platform.\+cs 파일의 96 번째 라인에서 정의되었습니다.
 \DoxyCodeLine{144                     \mbox{\hyperlink{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}{\_index}} += \mbox{\hyperlink{class_moving_platform_a885973335ac91f8c34289d38f2d88d93}{\_indexDir}};}
 \DoxyCodeLine{145                     \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{146                     \mbox{\hyperlink{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}{\_state}} = \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Move;}
-\DoxyCodeLine{147                     \textcolor{comment}{// \_prevState = WallState.Idle;}}
-\DoxyCodeLine{148                     \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
-\DoxyCodeLine{149                 \}}
-\DoxyCodeLine{150                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{151             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Move:}
-\DoxyCodeLine{152                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}})}
-\DoxyCodeLine{153                 \{}
-\DoxyCodeLine{154                     StartCoroutine(\textcolor{stringliteral}{"MoveTo"});}
-\DoxyCodeLine{155                     \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{156                 \}}
-\DoxyCodeLine{157                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{158         \}}
-\DoxyCodeLine{159     \}}
+\DoxyCodeLine{147                     \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
+\DoxyCodeLine{148                 \}}
+\DoxyCodeLine{149                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{150             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Move:}
+\DoxyCodeLine{151                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}})}
+\DoxyCodeLine{152                 \{}
+\DoxyCodeLine{153                     StartCoroutine(\textcolor{stringliteral}{"MoveTo"});}
+\DoxyCodeLine{154                     \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{155                 \}}
+\DoxyCodeLine{156                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158     \}}
 
 \end{DoxyCode}
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
-\nopagebreak
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=345pt]{df/d42/class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460_cgraph}
 \end{center}
 \end{figure}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
-\nopagebreak
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -284,19 +287,14 @@ Moving\+Platform.\+cs 파일의 96 번째 라인에서 정의되었습니다.
 
 
 
-초기화 
-
-
-
 Moving\+Platform.\+cs 파일의 69 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{70     \{}
-\DoxyCodeLine{71         \mbox{\hyperlink{class_moving_platform_a420854da980550fe82c4f82f46ecd41e}{\_rigid}} = GetComponentInChildren<Rigidbody2D>();}
-\DoxyCodeLine{72         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a420854da980550fe82c4f82f46ecd41e}{\_rigid}} != \textcolor{keyword}{null})}
-\DoxyCodeLine{73             \mbox{\hyperlink{class_moving_platform_a420854da980550fe82c4f82f46ecd41e}{\_rigid}}.isKinematic = \textcolor{keyword}{true};}
-\DoxyCodeLine{74     \}}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}})}
+\DoxyCodeLine{72             \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}} = GetComponentInChildren<PlatformCatcher>();}
+\DoxyCodeLine{73     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c}\label{class_moving_platform_a935710333a3a0f0164dad887e8eb7d1c}} 
@@ -307,20 +305,19 @@ Moving\+Platform.\+cs 파일의 69 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 76 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 75 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{77     \{}
-\DoxyCodeLine{78         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}})}
-\DoxyCodeLine{79             \mbox{\hyperlink{class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460}{Act}}();}
-\DoxyCodeLine{80         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{81             \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{82     \}}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}})}
+\DoxyCodeLine{78             \mbox{\hyperlink{class_moving_platform_ab4a3f15333f41ba4a3b9bc0227777460}{Act}}();}
+\DoxyCodeLine{79         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{80             \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{81     \}}
 
 \end{DoxyCode}
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
-\nopagebreak
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -335,14 +332,18 @@ Moving\+Platform.\+cs 파일의 76 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 84 번째 라인에서 정의되었습니다.
+이 함수를 통해 외부에서 해당 오브젝트를 활성화(이동 시작)한다. 
+
+
+
+Moving\+Platform.\+cs 파일의 83 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{85     \{}
-\DoxyCodeLine{86         \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{87         \mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{88     \}}
+\DoxyCodeLine{84     \{}
+\DoxyCodeLine{85         \mbox{\hyperlink{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}{\_trigger}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{86         \mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{87     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_moving_platform_a9150bceccb63034907ab3ec46216ae83}\label{class_moving_platform_a9150bceccb63034907ab3ec46216ae83}} 
@@ -353,17 +354,20 @@ Moving\+Platform.\+cs 파일의 84 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 90 번째 라인에서 정의되었습니다.
+이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다. 
+
+플랫폼이 비활성화되었다가 다시 활성화되면, 이전에 이동하던 곳으로 이동한다. 
+
+Moving\+Platform.\+cs 파일의 89 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{91     \{}
+\DoxyCodeLine{90     \{}
 \DoxyCodeLine{92         \mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{93     \}}
 
 \end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
-\nopagebreak
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -378,77 +382,81 @@ Moving\+Platform.\+cs 파일의 90 번째 라인에서 정의되었습니다.
 
 
 
-지정된 위치로 벽이 이동한다! @detail 지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서 가속을 이용합니다. 적당히 시간 계산해서 그 스케줄 따라 움직입니다. 
+지정된 위치로 벽이 이동한다! 
 
-이동
+지정된 위치를 향해 일정한 속도로 이동하지만, 부드러운 정지를 위해 시작 위치와 목적지 근방에서 가속을 이용합니다. ~\newline
+적당히 시간 계산해서 그 스케줄 따라 움직입니다. 예상시간(\+\_\+est\+Time) \+: 목적지까지 도달하는 데 걸리는 시간. 목적지가 강제로 옮겨지면 변할 수도 있다.
 
-너무 크게 빗나가지 않게 해줌.
+예상 시간(\+\_\+est\+Time) 동안 while문으로 계속 이동한다.
+
+목적지로부터 너무 크게 빗겨가지 않게, 적당히 가까워지면 정지한다(목적지를 강제로 이동시킬 경우 문제가 생길 수 있음)
 
 pos 위치가 이동했을 땐 한 번 더 이동해서 보정한다. 
 
-Moving\+Platform.\+cs 파일의 169 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 166 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{170     \{}
-\DoxyCodeLine{171         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}{\_state}} == \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Idle)}
-\DoxyCodeLine{172             yield \textcolor{keywordflow}{break};}
-\DoxyCodeLine{173         }
-\DoxyCodeLine{174         Transform \_curOrigin = \mbox{\hyperlink{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}{\_platform}}.transform;}
-\DoxyCodeLine{175         Transform \_curDest = \mbox{\hyperlink{class_moving_platform_a51c0ce96c3fc6ad9350dc0350216835b}{\_posList}}[\mbox{\hyperlink{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}{\_index}}];}
-\DoxyCodeLine{176 }
-\DoxyCodeLine{177         Vector3 \_dir = (\_curDest.position - \_curOrigin.position).normalized;}
-\DoxyCodeLine{178 }
-\DoxyCodeLine{179         \textcolor{keywordtype}{float} \_curVelocity = 0f;}
-\DoxyCodeLine{180         \textcolor{keywordtype}{float} \_dist = (\_curDest.position - \_curOrigin.position).magnitude;}
-\DoxyCodeLine{181         \textcolor{keywordtype}{float} \_estTime = (\_dist < \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}} * \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}}) ?}
-\DoxyCodeLine{182                                2 * Mathf.Sqrt(\_dist * \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} / \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}}):}
-\DoxyCodeLine{183                                \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} + \_dist / \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}};}
-\DoxyCodeLine{184         \textcolor{comment}{// Debug.Log("예상 시간 : " + \_estTime);}}
-\DoxyCodeLine{185         \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
-\DoxyCodeLine{186         }
-\DoxyCodeLine{188         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} < \_estTime)}
-\DoxyCodeLine{189         \{}
-\DoxyCodeLine{190             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} || (\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} > \_estTime / 2 \&\& \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} > \_estTime - \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}}))}
-\DoxyCodeLine{191             \{}
-\DoxyCodeLine{192                 \_curVelocity -= \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}} / \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} * Time.deltaTime;}
-\DoxyCodeLine{193                 \textcolor{keywordflow}{if} (\_curVelocity < 0.01f)}
-\DoxyCodeLine{194                     \_curVelocity = 0f;}
-\DoxyCodeLine{195             \}}
-\DoxyCodeLine{196             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} < \_estTime / 2 \&\& \_curVelocity < \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}})}
-\DoxyCodeLine{197             \{}
-\DoxyCodeLine{198                 \_curVelocity += \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}} / \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} * Time.deltaTime;}
-\DoxyCodeLine{199             \}}
-\DoxyCodeLine{200             \textcolor{keywordflow}{else}}
-\DoxyCodeLine{201                 \_curVelocity = \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}};}
-\DoxyCodeLine{202             }
-\DoxyCodeLine{203             \mbox{\hyperlink{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}{\_platform}}.transform.position += \_dir * \_curVelocity * Time.deltaTime;}
-\DoxyCodeLine{204             }
-\DoxyCodeLine{206             \textcolor{keywordflow}{if} ((\_curDest.position - \mbox{\hyperlink{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}{\_platform}}.transform.position).sqrMagnitude < 0.0004)}
-\DoxyCodeLine{207                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{208             }
-\DoxyCodeLine{209             \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} += Time.deltaTime;}
-\DoxyCodeLine{210 }
-\DoxyCodeLine{211             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} \&\& \_curVelocity == 0f)}
-\DoxyCodeLine{212             \{}
-\DoxyCodeLine{213                 \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
-\DoxyCodeLine{214                 yield \textcolor{keywordflow}{break};}
-\DoxyCodeLine{215             \}}
-\DoxyCodeLine{216 }
-\DoxyCodeLine{217             yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
-\DoxyCodeLine{218         \}}
-\DoxyCodeLine{219         }
-\DoxyCodeLine{221         \textcolor{keywordflow}{if} ((\_curDest.position - \mbox{\hyperlink{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}{\_platform}}.transform.position).sqrMagnitude > 0.0004)}
-\DoxyCodeLine{222         \{}
-\DoxyCodeLine{223             StartCoroutine(\textcolor{stringliteral}{"MoveTo"});}
-\DoxyCodeLine{224             yield \textcolor{keywordflow}{break};}
-\DoxyCodeLine{225         \}}
-\DoxyCodeLine{226         \mbox{\hyperlink{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}{\_platform}}.transform.position = \_curDest.position;}
-\DoxyCodeLine{227 }
-\DoxyCodeLine{228         \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
-\DoxyCodeLine{229 }
-\DoxyCodeLine{230         \mbox{\hyperlink{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}{\_state}} = \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Idle;}
-\DoxyCodeLine{231     \}}
+\DoxyCodeLine{167     \{}
+\DoxyCodeLine{168         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}{\_state}} == \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Idle)}
+\DoxyCodeLine{169             yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{170         }
+\DoxyCodeLine{171         Transform \_curOrigin = \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}}.transform;}
+\DoxyCodeLine{172         Transform \_curDest = \mbox{\hyperlink{class_moving_platform_a51c0ce96c3fc6ad9350dc0350216835b}{\_posList}}[\mbox{\hyperlink{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}{\_index}}];}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174         Vector3 \_dir = (\_curDest.position - \_curOrigin.position).normalized;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176         \textcolor{keywordtype}{float} \_curVelocity = 0f;}
+\DoxyCodeLine{177         \textcolor{keywordtype}{float} \_dist = (\_curDest.position - \_curOrigin.position).magnitude;}
+\DoxyCodeLine{179         \textcolor{keywordtype}{float} \_estTime = (\_dist < \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}} * \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}}) ?}
+\DoxyCodeLine{180                                2 * Mathf.Sqrt(\_dist * \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} / \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}}):}
+\DoxyCodeLine{181                                \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} + \_dist / \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}};}
+\DoxyCodeLine{182         \textcolor{comment}{// Debug.Log("예상 시간 : " + \_estTime);}}
+\DoxyCodeLine{183         \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
+\DoxyCodeLine{184         }
+\DoxyCodeLine{186         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} < \_estTime)}
+\DoxyCodeLine{187         \{}
+\DoxyCodeLine{188             \textcolor{comment}{// 시간에 따라 속도를 설정한다.}}
+\DoxyCodeLine{189             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} || (\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} > \_estTime / 2 \&\& \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} > \_estTime - \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}}))}
+\DoxyCodeLine{190             \{}
+\DoxyCodeLine{191                 \_curVelocity -= \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}} / \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} * Time.deltaTime;}
+\DoxyCodeLine{192                 \textcolor{keywordflow}{if} (\_curVelocity < 0.01f)}
+\DoxyCodeLine{193                     \_curVelocity = 0f;}
+\DoxyCodeLine{194             \}}
+\DoxyCodeLine{195             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} < \_estTime / 2 \&\& \_curVelocity < \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}})}
+\DoxyCodeLine{196             \{}
+\DoxyCodeLine{197                 \_curVelocity += \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}} / \mbox{\hyperlink{class_moving_platform_a69791dc347a05d5513e82cd445640cf4}{\_timeForStop}} * Time.deltaTime;}
+\DoxyCodeLine{198             \}}
+\DoxyCodeLine{199             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{200                 \_curVelocity = \mbox{\hyperlink{class_moving_platform_a831cd24df75aa37f0897741d189686a7}{\_velocity}};}
+\DoxyCodeLine{201             }
+\DoxyCodeLine{202             \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}}.transform.position += \_dir * \_curVelocity * Time.deltaTime;}
+\DoxyCodeLine{203             }
+\DoxyCodeLine{205             \textcolor{keywordflow}{if} ((\_curDest.position - \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}}.transform.position).sqrMagnitude < 0.0004)}
+\DoxyCodeLine{206                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{207             }
+\DoxyCodeLine{208             \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} += Time.deltaTime;}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_moving_platform_a6721f91607e56294fb807a00ccfaafad}{\_isOn}} \&\& \_curVelocity == 0f)}
+\DoxyCodeLine{211             \{}
+\DoxyCodeLine{212                 \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
+\DoxyCodeLine{213                 yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{214             \}}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216             yield \textcolor{keywordflow}{return} \textcolor{keyword}{new} WaitForFixedUpdate();}
+\DoxyCodeLine{217         \}}
+\DoxyCodeLine{218         }
+\DoxyCodeLine{220         \textcolor{keywordflow}{if} ((\_curDest.position - \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}}.transform.position).sqrMagnitude > 0.0004)}
+\DoxyCodeLine{221         \{}
+\DoxyCodeLine{222             StartCoroutine(\textcolor{stringliteral}{"MoveTo"});}
+\DoxyCodeLine{223             yield \textcolor{keywordflow}{break};}
+\DoxyCodeLine{224         \}}
+\DoxyCodeLine{225         \mbox{\hyperlink{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}{\_platform}}.transform.position = \_curDest.position;}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         \mbox{\hyperlink{class_moving_platform_a5c9c4e39da03c1aef1abde75a137831c}{\_currentTime}} = 0f;}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229         \mbox{\hyperlink{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}{\_state}} = \mbox{\hyperlink{class_moving_platform_ac47e764b71989317aab0bad26d82a901}{WallState}}.Idle;}
+\DoxyCodeLine{230     \}}
 
 \end{DoxyCode}
 
@@ -462,7 +470,11 @@ Moving\+Platform.\+cs 파일의 169 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 47 번째 라인에서 정의되었습니다.
+현재 경과 시간(건드리지 말것!) 
+
+
+
+Moving\+Platform.\+cs 파일의 50 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_a293066859b3576c931eb4b8c3f802397}\label{class_moving_platform_a293066859b3576c931eb4b8c3f802397}} 
 \index{MovingPlatform@{MovingPlatform}!\_idleTime@{\_idleTime}}
@@ -476,7 +488,7 @@ Moving\+Platform.\+cs 파일의 47 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 46 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 48 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}\label{class_moving_platform_a20948e50a50c338c4e62f84a633868ac}} 
 \index{MovingPlatform@{MovingPlatform}!\_index@{\_index}}
@@ -486,13 +498,21 @@ Moving\+Platform.\+cs 파일의 46 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 23 번째 라인에서 정의되었습니다.
+현재 목표로 하고 있는 pos\+List의 인덱스 
+
+
+
+Moving\+Platform.\+cs 파일의 22 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_a885973335ac91f8c34289d38f2d88d93}\label{class_moving_platform_a885973335ac91f8c34289d38f2d88d93}} 
 \index{MovingPlatform@{MovingPlatform}!\_indexDir@{\_indexDir}}
 \index{\_indexDir@{\_indexDir}!MovingPlatform@{MovingPlatform}}
 \subsubsection{\texorpdfstring{\_indexDir}{\_indexDir}}
 {\footnotesize\ttfamily int Moving\+Platform.\+\_\+index\+Dir = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+인덱스(\+\_\+index)가 어떻게 변할지를 결정, -\/1은 역순, 1은 순방향 
 
 
 
@@ -516,17 +536,21 @@ Moving\+Platform.\+cs 파일의 65 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 39 번째 라인에서 정의되었습니다.
+기본 Move\+Mode는 Loop(순회하기) 
 
-\mbox{\Hypertarget{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}\label{class_moving_platform_ac506246414b03f4f35d462f324c18ffc}} 
+
+
+Moving\+Platform.\+cs 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}\label{class_moving_platform_a2269ebd689de9ad6368f64b6b14cecb6}} 
 \index{MovingPlatform@{MovingPlatform}!\_platform@{\_platform}}
 \index{\_platform@{\_platform}!MovingPlatform@{MovingPlatform}}
 \subsubsection{\texorpdfstring{\_platform}{\_platform}}
-{\footnotesize\ttfamily Game\+Object Moving\+Platform.\+\_\+platform\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_platform_catcher}{Platform\+Catcher}} Moving\+Platform.\+\_\+platform\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Moving\+Platform.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 16 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_a51c0ce96c3fc6ad9350dc0350216835b}\label{class_moving_platform_a51c0ce96c3fc6ad9350dc0350216835b}} 
 \index{MovingPlatform@{MovingPlatform}!\_posList@{\_posList}}
@@ -540,17 +564,7 @@ Moving\+Platform.\+cs 파일의 17 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 22 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_moving_platform_a420854da980550fe82c4f82f46ecd41e}\label{class_moving_platform_a420854da980550fe82c4f82f46ecd41e}} 
-\index{MovingPlatform@{MovingPlatform}!\_rigid@{\_rigid}}
-\index{\_rigid@{\_rigid}!MovingPlatform@{MovingPlatform}}
-\subsubsection{\texorpdfstring{\_rigid}{\_rigid}}
-{\footnotesize\ttfamily Rigidbody2D Moving\+Platform.\+\_\+rigid\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Moving\+Platform.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 20 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}\label{class_moving_platform_abd03a1d4800fd5fa8ab4ef8ce5a688db}} 
 \index{MovingPlatform@{MovingPlatform}!\_state@{\_state}}
@@ -574,7 +588,7 @@ Moving\+Platform.\+cs 파일의 61 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 50 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 53 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}\label{class_moving_platform_a98e69f4b8bfe702ef2bc6a8d77a03b8a}} 
 \index{MovingPlatform@{MovingPlatform}!\_trigger@{\_trigger}}
@@ -584,7 +598,11 @@ Moving\+Platform.\+cs 파일의 50 번째 라인에서 정의되었습니다.
 
 
 
-Moving\+Platform.\+cs 파일의 66 번째 라인에서 정의되었습니다.
+Act 함수가 Fixed\+Update에서 실행되는데, Act의 Coroutine이 한 번만 실행되게 하는 트리거 변수 
+
+
+
+Moving\+Platform.\+cs 파일의 67 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_moving_platform_a831cd24df75aa37f0897741d189686a7}\label{class_moving_platform_a831cd24df75aa37f0897741d189686a7}} 
 \index{MovingPlatform@{MovingPlatform}!\_velocity@{\_velocity}}
@@ -594,11 +612,11 @@ Moving\+Platform.\+cs 파일의 66 번째 라인에서 정의되었습니다.
 
 
 
-벽이 움직이는 속도 
+벽이 움직이는 최대 속력 
 
 
 
-Moving\+Platform.\+cs 파일의 42 번째 라인에서 정의되었습니다.
+Moving\+Platform.\+cs 파일의 44 번째 라인에서 정의되었습니다.
 
 
 

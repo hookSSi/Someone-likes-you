@@ -32,10 +32,10 @@ virtual Vector3 \mbox{\hyperlink{class_movement_ad400f155e0556a5e22a74cb77858460
 \begin{DoxyCompactList}\small\item\em Transform 이동 함수 \end{DoxyCompactList}\item 
 virtual Vector3 \mbox{\hyperlink{class_movement_a0a304da685db92346b7e274c2b0f023e}{Move}} (Vector3 dir)
 \begin{DoxyCompactList}\small\item\em Rigid\+Body 이동 함수 \end{DoxyCompactList}\item 
-virtual Vector3 \mbox{\hyperlink{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}{Add\+Force}} (Rigidbody2D rigid, Vector3 dir, float amount, Force\+Mode2D mode)
-\item 
-virtual void \mbox{\hyperlink{class_movement_a561e8f643a3f3cd6b0b6789c72161e98}{Jump}} (Vector2 dir, float amout, Game\+Object obj=null)
-\end{DoxyCompactItemize}
+virtual Vector3 \mbox{\hyperlink{class_movement_a132e2f7bc0af811ff3b1ab86c8d1f090}{Add\+Force}} (Vector3 dir, float amount, Force\+Mode2D mode)
+\begin{DoxyCompactList}\small\item\em Rigid\+Body 힘을 주는 함수 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_movement_a656604a80e3c1b86af6b7ce80932442d}{Jump}} (float amount, Game\+Object obj=null)
+\begin{DoxyCompactList}\small\item\em 점프하는 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,25 +66,41 @@ Movement.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 
 \subsection{멤버 함수 문서화}
-\mbox{\Hypertarget{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}\label{class_movement_ab0b20a2f058e2eed15f4bdf0503a2566}} 
+\mbox{\Hypertarget{class_movement_a132e2f7bc0af811ff3b1ab86c8d1f090}\label{class_movement_a132e2f7bc0af811ff3b1ab86c8d1f090}} 
 \index{Movement@{Movement}!AddForce@{AddForce}}
 \index{AddForce@{AddForce}!Movement@{Movement}}
 \subsubsection{\texorpdfstring{AddForce()}{AddForce()}}
-{\footnotesize\ttfamily virtual Vector3 Movement.\+Add\+Force (\begin{DoxyParamCaption}\item[{Rigidbody2D}]{rigid,  }\item[{Vector3}]{dir,  }\item[{float}]{amount,  }\item[{Force\+Mode2D}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual Vector3 Movement.\+Add\+Force (\begin{DoxyParamCaption}\item[{Vector3}]{dir,  }\item[{float}]{amount,  }\item[{Force\+Mode2D}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Movement.\+cs 파일의 69 번째 라인에서 정의되었습니다.
+Rigid\+Body 힘을 주는 함수 
+
+
+\begin{DoxyParams}{매개변수}
+{\em dir} & 힘의 방향 \\
+\hline
+{\em amount} & 힘의 크기 \\
+\hline
+{\em mode} & 힘을 주는 방식 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+origin 원래 위치 
+\end{DoxyReturn}
+
+
+Movement.\+cs 파일의 75 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{70     \{}
-\DoxyCodeLine{71         Vector3 origin = rigid.position;}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{73         rigid.AddForce(dir.normalized * amount, mode);}
-\DoxyCodeLine{74 }
-\DoxyCodeLine{75         \textcolor{keywordflow}{return} origin;}
-\DoxyCodeLine{76     \}}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77         Vector3 origin = \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.position;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.AddForce(dir.normalized * amount, mode);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{82     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_movement_a1c50c07edbe274e1cf55253e87506684}\label{class_movement_a1c50c07edbe274e1cf55253e87506684}} 
@@ -108,41 +124,40 @@ Movement.\+cs 파일의 18 번째 라인에서 정의되었습니다.
 \DoxyCodeLine{21     \}}
 
 \end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=311pt]{d1/de2/class_movement_a1c50c07edbe274e1cf55253e87506684_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_movement_a561e8f643a3f3cd6b0b6789c72161e98}\label{class_movement_a561e8f643a3f3cd6b0b6789c72161e98}} 
+\mbox{\Hypertarget{class_movement_a656604a80e3c1b86af6b7ce80932442d}\label{class_movement_a656604a80e3c1b86af6b7ce80932442d}} 
 \index{Movement@{Movement}!Jump@{Jump}}
 \index{Jump@{Jump}!Movement@{Movement}}
 \subsubsection{\texorpdfstring{Jump()}{Jump()}}
-{\footnotesize\ttfamily virtual void Movement.\+Jump (\begin{DoxyParamCaption}\item[{Vector2}]{dir,  }\item[{float}]{amout,  }\item[{Game\+Object}]{obj = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void Movement.\+Jump (\begin{DoxyParamCaption}\item[{float}]{amount,  }\item[{Game\+Object}]{obj = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-\mbox{\hyperlink{class_player_movement_a64ce92029a6d91f12d23332bdd44a6ab}{Player\+Movement}}에서 재구현되었습니다.
+점프하는 함수 
 
 
+\begin{DoxyParams}{매개변수}
+{\em amount} & 힘의 크기 \\
+\hline
+{\em obj} & 점프하는 게임 오브젝트 \\
+\hline
+\end{DoxyParams}
 
-Movement.\+cs 파일의 77 번째 라인에서 정의되었습니다.
+
+Movement.\+cs 파일의 89 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{78     \{}
-\DoxyCodeLine{79         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}})}
-\DoxyCodeLine{80         \{}
-\DoxyCodeLine{81             \textcolor{comment}{//\_rigid.velocity = new Vector2(\_rigid.velocity.x,  0);}}
-\DoxyCodeLine{82             \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity += dir * amout;}
-\DoxyCodeLine{83         \}}
-\DoxyCodeLine{84         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{85         \{}
-\DoxyCodeLine{86             obj.transform.position += Vector3.up * amout;}
-\DoxyCodeLine{87         \}}
-\DoxyCodeLine{88     \}}
+\DoxyCodeLine{90     \{}
+\DoxyCodeLine{91         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}})}
+\DoxyCodeLine{92         \{}
+\DoxyCodeLine{93             \textcolor{comment}{//\_rigid.velocity = new Vector2(\_rigid.velocity.x,  0);}}
+\DoxyCodeLine{94             \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity += Vector2.up * amout;}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{97         \{}
+\DoxyCodeLine{98             obj.transform.position += Vector3.up * amout;}
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_movement_ad400f155e0556a5e22a74cb77858460a}\label{class_movement_ad400f155e0556a5e22a74cb77858460a}} 
@@ -165,7 +180,7 @@ Transform 이동 함수
 \hline
 {\em mode} & 이동 모드 (true = Velocity Move, false = Position Move) \\
 \hline
-{\em debug} & 디버그 사용여부 (true = 디버그 사용, false = 디버그 사용안함) \\
+{\em is\+Debug} & 디버그 사용여부 (true = 디버그 사용, false = 디버그 사용안함) \\
 \hline
 \end{DoxyParams}
 
@@ -208,31 +223,30 @@ Rigid\+Body 이동 함수
 
 
 \begin{DoxyParams}{매개변수}
-{\em rigid} & 이동할 rigidbody2D \\
-\hline
 {\em dir} & 방향 \\
 \hline
-{\em speed} & 속도 \\
-\hline
 \end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+origin 원래 위치 
+\end{DoxyReturn}
 
 
 \mbox{\hyperlink{class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7}{Player\+Movement}}에서 재구현되었습니다.
 
 
 
-Movement.\+cs 파일의 59 번째 라인에서 정의되었습니다.
+Movement.\+cs 파일의 58 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{60     \{}
-\DoxyCodeLine{61         Vector3 origin = \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.position;}
-\DoxyCodeLine{62 }
-\DoxyCodeLine{63         Vector2 targetVelocity = \textcolor{keyword}{new} Vector2(dir.x, \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity.y);}
-\DoxyCodeLine{64         \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity = Vector3.SmoothDamp(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity, targetVelocity, ref \mbox{\hyperlink{class_movement_a6ea6768262f1dca968be8ee5c14a0cc1}{\_velocity}}, \mbox{\hyperlink{class_movement_aff7ca49ff5d930ac7345da97a5162e3a}{\_movementSmoothing}});}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66         \textcolor{keywordflow}{return} origin;}
-\DoxyCodeLine{67     \}}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         Vector3 origin = \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.position;}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62         Vector2 targetVelocity = \textcolor{keyword}{new} Vector2(dir.x, \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity.y + dir.y);}
+\DoxyCodeLine{63         \mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity = Vector3.SmoothDamp(\mbox{\hyperlink{class_movement_a8b24a93b5f529e53c668ff81bde13c0d}{\_rigid}}.velocity, targetVelocity, ref \mbox{\hyperlink{class_movement_a6ea6768262f1dca968be8ee5c14a0cc1}{\_velocity}}, \mbox{\hyperlink{class_movement_aff7ca49ff5d930ac7345da97a5162e3a}{\_movementSmoothing}});}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} origin;}
+\DoxyCodeLine{66     \}}
 
 \end{DoxyCode}
 

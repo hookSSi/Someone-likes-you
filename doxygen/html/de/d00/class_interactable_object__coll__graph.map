@@ -1,0 +1,4 @@
+<map id="InteractableObject" name="InteractableObject">
+<area shape="rect" id="node1" title="상호작용 가능한 오브젝트를 위한 추상클래스 상호작용하는 오브젝트들은 모두 이 클래스를 상속받을 것!" alt="" coords="5,131,140,223"/>
+<area shape="rect" id="node2" title=" " alt="" coords="17,5,128,83"/>
+</map>

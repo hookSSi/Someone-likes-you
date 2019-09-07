@@ -1,5 +1,5 @@
 <map id="State" name="State">
-<area shape="rect" id="node1" title="애니메이션이 달린 객체의 상태 표시겸 애니메이션 처리 클래스" alt="" coords="5,131,136,296"/>
-<area shape="rect" id="node3" href="$d6/d23/class_player_state.html" title="플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!" alt="" coords="15,344,127,436"/>
-<area shape="rect" id="node2" title=" " alt="" coords="15,5,126,83"/>
+<area shape="rect" id="node1" title="애니메이션이 달린 객체의 상태 표시겸 애니메이션 처리 클래스" alt="" coords="13,131,143,296"/>
+<area shape="rect" id="node3" href="$d6/d23/class_player_state.html" title="플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!" alt="" coords="5,344,151,495"/>
+<area shape="rect" id="node2" title=" " alt="" coords="23,5,133,83"/>
 </map>

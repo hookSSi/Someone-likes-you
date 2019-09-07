@@ -201,8 +201,7 @@ GameObject:
   - component: {fileID: 207306600}
   - component: {fileID: 207306601}
   - component: {fileID: 207306603}
-  - component: {fileID: 207306602}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,6 +241,7 @@ MonoBehaviour:
   _sprite: {fileID: 322248423}
   _groundCheck: {fileID: 1901448697}
   _ceilingCheck: {fileID: 0}
+  _wallCheck: {fileID: 0}
   _commands: []
   _whatIsGround:
     serializedVersion: 2
@@ -249,32 +249,6 @@ MonoBehaviour:
   _hungriness: 0
   _walkingSpeed: 5
   _jumpForce: 8
---- !u!61 &207306602
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207306599}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 2.4}
-  m_EdgeRadius: 0
 --- !u!50 &207306603
 Rigidbody2D:
   serializedVersion: 4
@@ -290,7 +264,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 2
+  m_GravityScale: 1.5
   m_Material: {fileID: 6200000, guid: 7f71c8e09665b2e43a03ce646770f7fa, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -508,7 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322248424}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 524266352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889317171}
   - component: {fileID: 889317172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,10 +804,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.03}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -844,7 +818,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 2.39}
+  m_Size: {x: 0.5, y: 2.4}
   m_EdgeRadius: 0
 --- !u!1 &1042755441
 GameObject:
@@ -3852,7 +3826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1208533206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Checker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3885,7 +3859,7 @@ GameObject:
   - component: {fileID: 1216749225}
   - component: {fileID: 1216749227}
   - component: {fileID: 1216749226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28714,7 +28688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1901448697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
@@ -28745,7 +28719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020257484}
   - component: {fileID: 2020257485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28776,7 +28750,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.69}
