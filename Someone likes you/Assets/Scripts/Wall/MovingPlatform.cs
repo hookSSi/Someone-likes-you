@@ -11,13 +11,13 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    [Header("플랫폼 오브젝트")]
-    [SerializeField]
-    private PlatformCatcher _platform;
+    /// 플랫폼 오브젝트
+    [Header("플랫폼")]
+    public PlatformCatcher _platform;
     
-    [Header("목적지")]
     /// 도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!
-    public List<Transform> _posList;
+    [Header("목적지")]
+    public List<Transform> _checkPointList;
     /// 현재 목표로 하고 있는 posList의 인덱스
     protected int _index = 0;
     /// 인덱스(_index)가 어떻게 변할지를 결정, -1은 역순, 1은 순방향
@@ -36,20 +36,23 @@ public class MovingPlatform : MonoBehaviour
     {
         LOOP, BACK_FORTH, ONE_WAY
     }
-    [Header("이동 모드(순회, 양방향, 편도)")]
+
     /// 기본 MoveMode는 Loop(순회하기)
+    [Header("이동 모드(순회, 양방향, 편도)")]
     public MoveMode _moveMode = MoveMode.LOOP;
 
     /// 벽이 움직이는 최대 속력
+    [Header("속도")]
     public float _velocity = 6f;
 
-    [Header("출발하기 전에 얼마나 쉬었다가 갈까?")]
     /// 벽이 얼마나 멈췄다가 출발할지를 결정하는 변수
-    public float _idleTime = 1f;
+    [Header("출발하기 전에 얼마나 쉬었다가 갈까?")]
+    public float _waitTime = 1f;
     /// 현재 경과 시간(건드리지 말것!)
     private float _currentTime = 0f;
 
     /// 벽이 부드럽게 정지하는 데 걸리는 시간
+    [Header("제로백 시간")]
     [SerializeField] private float _timeForStop = 0.7f;
 
     /// 벽의 이동 상태를 나타낸다.
@@ -61,8 +64,7 @@ public class MovingPlatform : MonoBehaviour
     private WallState _state = WallState.Move;
 
     /// 벽이 움직임이 활성화되었는가?
-    /// 사실 _isOn이나 this.isActivatedAndEnable이나 다른 게 없는 것 같아서 고민중...
-    [SerializeField] private bool _isOn = true;
+    private bool _isOn = true;
     /// Act 함수가 FixedUpdate에서 실행되는데, Act의 Coroutine이 한 번만 실행되게 하는 트리거 변수
     private bool _trigger = true;
 
@@ -99,7 +101,7 @@ public class MovingPlatform : MonoBehaviour
         {
             case WallState.Idle:
                 _currentTime += Time.deltaTime;
-                if (_currentTime >= _idleTime)
+                if (_currentTime >= _waitTime)
                 {
                     NextTo();
                     _index += _indexDir;
@@ -122,7 +124,7 @@ public class MovingPlatform : MonoBehaviour
     private void NextTo()
     {
         // 정방향 순회시 발동
-        if (_indexDir == 1 && _index >= _posList.Count - 1)
+        if (_indexDir == 1 && _index >= _checkPointList.Count - 1)
         {
             switch(_moveMode)
             {
@@ -144,7 +146,7 @@ public class MovingPlatform : MonoBehaviour
             switch(_moveMode)
             {
                 case MoveMode.LOOP:
-                    _index = _posList.Count;                                
+                    _index = _checkPointList.Count;                                
                     break;
                 case MoveMode.BACK_FORTH:
                     _indexDir *= -1;
@@ -169,7 +171,7 @@ public class MovingPlatform : MonoBehaviour
             yield break;
         
         Transform _curOrigin = _platform.transform;
-        Transform _curDest = _posList[_index];
+        Transform _curDest = _checkPointList[_index];
 
         Vector3 _dir = (_curDest.position - _curOrigin.position).normalized;
 
@@ -202,7 +204,7 @@ public class MovingPlatform : MonoBehaviour
             _platform.transform.position += _dir * _curVelocity * Time.deltaTime;
             
             /// 목적지로부터 너무 크게 빗겨가지 않게, 적당히 가까워지면 정지한다(목적지를 강제로 이동시킬 경우 문제가 생길 수 있음)
-            if ((_curDest.position - _platform.transform.position).sqrMagnitude < 0.0004)
+            if ((_curDest.position - _platform.transform.position).sqrMagnitude <= 0.0003)
                 break;
             
             _currentTime += Time.deltaTime;
@@ -217,7 +219,7 @@ public class MovingPlatform : MonoBehaviour
         }
         
         /// pos 위치가 이동했을 땐 한 번 더 이동해서 보정한다.
-        if ((_curDest.position - _platform.transform.position).sqrMagnitude > 0.0004)
+        if ((_curDest.position - _platform.transform.position).sqrMagnitude > 0.0003)
         {
             StartCoroutine("MoveTo");
             yield break;
