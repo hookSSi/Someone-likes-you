@@ -28,10 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
   </td>
  </tr>
@@ -105,7 +105,7 @@ PlayerMovement에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
 <div class="center"><img src="../../de/d46/class_player_movement__inherit__graph.png" border="0" usemap="#_player_movement_inherit__map" alt="Inheritance graph"/></div>
 <map name="_player_movement_inherit__map" id="_player_movement_inherit__map">
-<area shape="rect"  title="íë ì´ì´ ìì§ì ë´ë¹ í´ëì¤" alt="" coords="26,344,147,524"/>
+<area shape="rect"  title="íë ì´ì´ ìì§ì ë´ë¹ í´ëì¤" alt="" coords="25,344,148,641"/>
 <area shape="rect"  href="../../d1/de2/class_movement.html" title="ê³µíµì ì¸ ìì§ìì ì ìí  í¨ìë¥¼ ë´ë í´ëì¤" alt="" coords="5,131,168,296"/>
 <area shape="rect"  title=" " alt="" coords="31,5,142,83"/>
 </map>
@@ -115,11 +115,11 @@ PlayerMovement에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d5/df4/class_player_movement__coll__graph.png" border="0" usemap="#_player_movement_coll__map" alt="Collaboration graph"/></div>
 <map name="_player_movement_coll__map" id="_player_movement_coll__map">
-<area shape="rect"  title="íë ì´ì´ ìì§ì ë´ë¹ í´ëì¤" alt="" coords="43,724,165,889"/>
+<area shape="rect"  title="íë ì´ì´ ìì§ì ë´ë¹ í´ëì¤" alt="" coords="43,739,165,1021"/>
 <area shape="rect"  href="../../d1/de2/class_movement.html" title="ê³µíµì ì¸ ìì§ìì ì ìí  í¨ìë¥¼ ë´ë í´ëì¤" alt="" coords="5,321,168,487"/>
 <area shape="rect"  title=" " alt="" coords="66,5,177,83"/>
 <area shape="rect"  href="../../d0/d8b/class_state.html" title="ì ëë©ì´ìì´ ë¬ë¦° ê°ì²´ì ìí íìê²¸ ì ëë©ì´ì ì²ë¦¬ í´ëì¤" alt="" coords="125,132,256,297"/>
-<area shape="rect"  href="../../d6/d23/class_player_state.html" title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="121,511,266,661"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html" title="íë ì´ì´ ìí, ì ëë©ì´ì ì²ë¦¬ í´ëì¤ State í´ëì¤ë¥¼ ììë°ì!" alt="" coords="121,511,266,676"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -130,12 +130,21 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a957f2e09268831052dbd00a9e8e4fa70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70">GroundCheck</a> (Vector2 groundCheckPos, float groundedRadius, LayerMask groundLayers)</td></tr>
 <tr class="memdesc:a957f2e09268831052dbd00a9e8e4fa70"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어 땅 체크 함수  <a href="#a957f2e09268831052dbd00a9e8e4fa70">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a957f2e09268831052dbd00a9e8e4fa70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9b40c6b4bb2fcb47c3c0b8f17a81b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a6f9b40c6b4bb2fcb47c3c0b8f17a81b8">CeilingCheck</a> (Vector2 ceilingCheckPos, float ceilingRadius, LayerMask ceilingLayers)</td></tr>
+<tr class="separator:a6f9b40c6b4bb2fcb47c3c0b8f17a81b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad878c661ddfc72890b353a01943f9161"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161">WallCheck</a> (Vector2 wallCheckPos, float dir, float wallDistance, LayerMask wallLayers)</td></tr>
+<tr class="memdesc:ad878c661ddfc72890b353a01943f9161"><td class="mdescLeft">&#160;</td><td class="mdescRight">벽 타기를 위한 벽 체크 함수  <a href="#ad878c661ddfc72890b353a01943f9161">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ad878c661ddfc72890b353a01943f9161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c480a9aa5629d78b5fd16d9a814bb7"><td class="memItemLeft" align="right" valign="top">override Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a94c480a9aa5629d78b5fd16d9a814bb7">Move</a> (Vector3 dir)</td></tr>
-<tr class="memdesc:a94c480a9aa5629d78b5fd16d9a814bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">이동에 플레이어가 어느 방향을 향하는 지 판단하는 코드 추가  <a href="#a94c480a9aa5629d78b5fd16d9a814bb7">더 자세히 ...</a><br /></td></tr>
+<tr class="memdesc:a94c480a9aa5629d78b5fd16d9a814bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">이동에 플레이어가 어느 방향을 향하는 지 판단하는 코드 추가 dir.x 가 0이 아니라면 _prevDir 업데이트  <a href="#a94c480a9aa5629d78b5fd16d9a814bb7">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a94c480a9aa5629d78b5fd16d9a814bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64ce92029a6d91f12d23332bdd44a6ab"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab">Jump</a> (Vector2 dir, float amout, GameObject obj=null)</td></tr>
-<tr class="memdesc:a64ce92029a6d91f12d23332bdd44a6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어가 땅위에 있을 때만 점프할 수 있도록 조치  <a href="#a64ce92029a6d91f12d23332bdd44a6ab">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a64ce92029a6d91f12d23332bdd44a6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347d6bcd5389bbc6b115c2bdf33e8f29"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a347d6bcd5389bbc6b115c2bdf33e8f29">Jump</a> (float amount, GameObject obj=null)</td></tr>
+<tr class="memdesc:a347d6bcd5389bbc6b115c2bdf33e8f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">플레이어가 땅위에 있을 때만 점프할 수 있도록 조치  <a href="#a347d6bcd5389bbc6b115c2bdf33e8f29">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a347d6bcd5389bbc6b115c2bdf33e8f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4905085466c9d84cc032807f704fb41"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#ae4905085466c9d84cc032807f704fb41">Down</a> (float amount)</td></tr>
+<tr class="separator:ae4905085466c9d84cc032807f704fb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a54ca25bbc57c10ddbd74d4a0b1e30f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a9a54ca25bbc57c10ddbd74d4a0b1e30f">WallSliding</a> (float amount)</td></tr>
+<tr class="separator:a9a54ca25bbc57c10ddbd74d4a0b1e30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c50c07edbe274e1cf55253e87506684"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de2/class_movement.html#a1c50c07edbe274e1cf55253e87506684">Init</a> (Rigidbody2D rigid)</td></tr>
 <tr class="memdesc:a1c50c07edbe274e1cf55253e87506684"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스">Movement</a> 초기화 함수  <a href="#a1c50c07edbe274e1cf55253e87506684">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a1c50c07edbe274e1cf55253e87506684"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,9 +154,6 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:a132e2f7bc0af811ff3b1ab86c8d1f090"><td class="memItemLeft" align="right" valign="top">virtual Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de2/class_movement.html#a132e2f7bc0af811ff3b1ab86c8d1f090">AddForce</a> (Vector3 dir, float amount, ForceMode2D mode)</td></tr>
 <tr class="memdesc:a132e2f7bc0af811ff3b1ab86c8d1f090"><td class="mdescLeft">&#160;</td><td class="mdescRight">RigidBody 힘을 주는 함수  <a href="#a132e2f7bc0af811ff3b1ab86c8d1f090">더 자세히 ...</a><br /></td></tr>
 <tr class="separator:a132e2f7bc0af811ff3b1ab86c8d1f090"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a656604a80e3c1b86af6b7ce80932442d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de2/class_movement.html#a656604a80e3c1b86af6b7ce80932442d">Jump</a> (float amount, GameObject obj=null)</td></tr>
-<tr class="memdesc:a656604a80e3c1b86af6b7ce80932442d"><td class="mdescLeft">&#160;</td><td class="mdescRight">점프하는 함수  <a href="#a656604a80e3c1b86af6b7ce80932442d">더 자세히 ...</a><br /></td></tr>
-<tr class="separator:a656604a80e3c1b86af6b7ce80932442d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
@@ -155,6 +161,10 @@ Public 속성</h2></td></tr>
 <tr class="separator:a802b794d028125d4e547a9caeb90d3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3096725f76488ebfdc761c53e9fac852"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a> = true</td></tr>
 <tr class="separator:a3096725f76488ebfdc761c53e9fac852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675cef6bf2bfaa54c290f2b73caf91cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">_isWall</a> = false</td></tr>
+<tr class="separator:a675cef6bf2bfaa54c290f2b73caf91cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3701c47b7350464da003c1cc53f1bf69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a3701c47b7350464da003c1cc53f1bf69">_isCeiling</a> = false</td></tr>
+<tr class="separator:a3701c47b7350464da003c1cc53f1bf69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8ea9d72a49e01aecdf8cfd6d2b0b3cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#af8ea9d72a49e01aecdf8cfd6d2b0b3cf">_isClimbing</a> = false</td></tr>
 <tr class="separator:af8ea9d72a49e01aecdf8cfd6d2b0b3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff7ca49ff5d930ac7345da97a5162e3a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de2/class_movement.html#aff7ca49ff5d930ac7345da97a5162e3a">_movementSmoothing</a> = .01f</td></tr>
@@ -164,6 +174,8 @@ Public 속성</h2></td></tr>
 Protected 속성</h2></td></tr>
 <tr class="memitem:af88a64a22da9ba3a831b0fe31bd8e7db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d23/class_player_state.html">PlayerState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a></td></tr>
 <tr class="separator:af88a64a22da9ba3a831b0fe31bd8e7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf40aeeabcd73e5aefa1ced890c167d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#accf40aeeabcd73e5aefa1ced890c167d">_deceleration</a> = 0.5f</td></tr>
+<tr class="separator:accf40aeeabcd73e5aefa1ced890c167d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b24a93b5f529e53c668ff81bde13c0d"><td class="memItemLeft" align="right" valign="top">Rigidbody2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a></td></tr>
 <tr class="separator:a8b24a93b5f529e53c668ff81bde13c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea6768262f1dca968be8ee5c14a0cc1"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de2/class_movement.html#a6ea6768262f1dca968be8ee5c14a0cc1">_velocity</a> = Vector3.zero</td></tr>
@@ -173,6 +185,8 @@ Protected 속성</h2></td></tr>
 Private 멤버 함수</h2></td></tr>
 <tr class="memitem:a6f77ea4796901d5e2a476e2f8ec49b51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51">DebugCircle</a> (Vector3 pos, float radius, Color color)</td></tr>
 <tr class="separator:a6f77ea4796901d5e2a476e2f8ec49b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10abf2ced0397cbfa0cc29a0296023fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3d/class_player_movement.html#a10abf2ced0397cbfa0cc29a0296023fb">DebugRaycast</a> (Vector3 origin, Vector3 dest, Color color)</td></tr>
+<tr class="separator:a10abf2ced0397cbfa0cc29a0296023fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock"><p>플레이어 움직임 담당 클래스 </p>
@@ -237,6 +251,42 @@ Private 멤버 함수</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a6f9b40c6b4bb2fcb47c3c0b8f17a81b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9b40c6b4bb2fcb47c3c0b8f17a81b8">&#9670;&nbsp;</a></span>CeilingCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement.CeilingCheck </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>ceilingCheckPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ceilingRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayerMask&#160;</td>
+          <td class="paramname"><em>ceilingLayers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
 <a id="a6f77ea4796901d5e2a476e2f8ec49b51"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f77ea4796901d5e2a476e2f8ec49b51">&#9670;&nbsp;</a></span>DebugCircle()</h2>
 
@@ -277,14 +327,123 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00081">81</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x + radius, pos.y, 0), color, 0.1f);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x - radius, pos.y, 0), color, 0.1f);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x, pos.y + radius, 0), color, 0.1f);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x, pos.y - radius, 0), color, 0.1f);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00141">141</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x + radius, pos.y, 0), color);</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x - radius, pos.y, 0), color);</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x, pos.y + radius, 0), color);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        Debug.DrawLine(pos, <span class="keyword">new</span> Vector3(pos.x, pos.y - radius, 0), color);</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
 이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d3d/class_player_movement_a6f77ea4796901d5e2a476e2f8ec49b51_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a6f77ea4796901d5e2a476e2f8ec49b51_icgraph" alt=""/></div>
 <map name="d0/d3d/class_player_movement_a6f77ea4796901d5e2a476e2f8ec49b51_icgraph" id="d0/d3d/class_player_movement_a6f77ea4796901d5e2a476e2f8ec49b51_icgraph">
-<area shape="rect"  title=" " alt="" coords="255,5,447,32"/>
-<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="íë ì´ì´ ë ì²´í¬ í¨ì" alt="" coords="5,5,207,32"/>
+<area shape="rect"  title=" " alt="" coords="493,5,685,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="íë ì´ì´ ë ì²´í¬ í¨ì" alt="" coords="244,5,445,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10abf2ced0397cbfa0cc29a0296023fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10abf2ced0397cbfa0cc29a0296023fb">&#9670;&nbsp;</a></span>DebugRaycast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMovement.DebugRaycast </td>
+          <td>(</td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>origin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00149">149</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        Debug.DrawLine(origin, dest, color, 3f);</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a10abf2ced0397cbfa0cc29a0296023fb_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a10abf2ced0397cbfa0cc29a0296023fb_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a10abf2ced0397cbfa0cc29a0296023fb_icgraph" id="d0/d3d/class_player_movement_a10abf2ced0397cbfa0cc29a0296023fb_icgraph">
+<area shape="rect"  title=" " alt="" coords="477,5,684,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161" title="ë²½ íê¸°ë¥¼ ìí ë²½ ì²´í¬ í¨ì" alt="" coords="244,5,429,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4905085466c9d84cc032807f704fb41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4905085466c9d84cc032807f704fb41">&#9670;&nbsp;</a></span>Down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerMovement.Down </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00126">126</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity = <span class="keyword">new</span> Vector2(<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity.x, <a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity.y - amount);</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.FALLING, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d6/d23/class_player_state.html#a16e115e2b4c8d0420119d6ff2fe8b3bc">OnClimbing</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d6/d23/class_player_state.html#a2909421d9f22a750c1b0eacfc9bafb3d">PlayerAction</a>.NONE);</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div><div class="ttc" id="class_movement_html_a8b24a93b5f529e53c668ff81bde13c0d"><div class="ttname"><a href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">Movement._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00014">Movement.cs:14</a></div></div>
+<div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
+<div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00030">State.cs:30</a></div></div>
+<div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
+<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00036">PlayerState.cs:36</a></div></div>
+<div class="ttc" id="class_player_state_html_a2909421d9f22a750c1b0eacfc9bafb3d"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a2909421d9f22a750c1b0eacfc9bafb3d">PlayerState.PlayerAction</a></div><div class="ttdeci">PlayerAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00021">PlayerState.cs:21</a></div></div>
+<div class="ttc" id="class_player_state_html_a16e115e2b4c8d0420119d6ff2fe8b3bc"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a16e115e2b4c8d0420119d6ff2fe8b3bc">PlayerState.OnClimbing</a></div><div class="ttdeci">OnClimbing</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00029">PlayerState.cs:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_cgraph.png" border="0" usemap="#d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_cgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_cgraph" id="d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,160,32"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="208,5,367,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_icgraph" id="d0/d3d/class_player_movement_ae4905085466c9d84cc032807f704fb41_icgraph">
+<area shape="rect"  title=" " alt="" coords="244,5,399,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
 </map>
 </div>
 
@@ -333,14 +492,14 @@ Private 멤버 함수</h2></td></tr>
 </dl>
 <dl class="section return"><dt>반환값</dt><dd>LANDING 했는지 판단하는 bool 값 리턴 </dd></dl>
 
-<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> wasGrounded = <a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51">DebugCircle</a>(groundCheckPos, groundedRadius, Color.red);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckPos, groundedRadius, groundLayers);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; colliders.Length; i++)</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span>(colliders[i].gameObject != gameObject)</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.IDLE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.NONE);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">if</span>(!wasGrounded)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>)</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.FALLING);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div><div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> wasGrounded = <a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51">DebugCircle</a>(groundCheckPos, groundedRadius, Color.red);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckPos, groundedRadius, groundLayers);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; colliders.Length; i++)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span>(colliders[i].gameObject != gameObject)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.IDLE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.NONE);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">if</span>(!wasGrounded)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.LANDING, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.NONE);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>)</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.FALLING);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div><div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
 <div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
 <div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00030">State.cs:30</a></div></div>
 <div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
 <div class="ttc" id="class_player_movement_html_a3096725f76488ebfdc761c53e9fac852"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">PlayerMovement._isGround</a></div><div class="ttdeci">bool _isGround</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00015">PlayerMovement.cs:15</a></div></div>
-<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00035">PlayerState.cs:35</a></div></div>
-<div class="ttc" id="class_player_movement_html_a6f77ea4796901d5e2a476e2f8ec49b51"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51">PlayerMovement.DebugCircle</a></div><div class="ttdeci">void DebugCircle(Vector3 pos, float radius, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00081">PlayerMovement.cs:81</a></div></div>
+<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00036">PlayerState.cs:36</a></div></div>
+<div class="ttc" id="class_player_movement_html_a6f77ea4796901d5e2a476e2f8ec49b51"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51">PlayerMovement.DebugCircle</a></div><div class="ttdeci">void DebugCircle(Vector3 pos, float radius, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00141">PlayerMovement.cs:141</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
@@ -351,11 +510,51 @@ Private 멤버 함수</h2></td></tr>
 <area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="271,56,430,83"/>
 </map>
 </div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a957f2e09268831052dbd00a9e8e4fa70_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a957f2e09268831052dbd00a9e8e4fa70_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a957f2e09268831052dbd00a9e8e4fa70_icgraph" id="d0/d3d/class_player_movement_a957f2e09268831052dbd00a9e8e4fa70_icgraph">
+<area shape="rect"  title="íë ì´ì´ ë ì²´í¬ í¨ì" alt="" coords="244,5,445,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
+</map>
+</div>
 
 </div>
 </div>
+<a id="a1c50c07edbe274e1cf55253e87506684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c50c07edbe274e1cf55253e87506684">&#9670;&nbsp;</a></span>Init() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Movement.Init </td>
+          <td>(</td>
+          <td class="paramtype">Rigidbody2D&#160;</td>
+          <td class="paramname"><em>rigid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스">Movement</a> 초기화 함수 </p>
+
+<p class="definition"><a class="el" href="../../d1/daf/_movement_8cs_source.html">Movement.cs</a> 파일의 <a class="el" href="../../d1/daf/_movement_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        this.<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a> = rigid;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="ttc" id="class_movement_html_a8b24a93b5f529e53c668ff81bde13c0d"><div class="ttname"><a href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">Movement._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00014">Movement.cs:14</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a104a453051ca7b60d6862e4deb7475b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a104a453051ca7b60d6862e4deb7475b4">&#9670;&nbsp;</a></span>Init() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a104a453051ca7b60d6862e4deb7475b4">&#9670;&nbsp;</a></span>Init() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,92 +587,31 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        this.<a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a> = state;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        base.Init(rigid);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div><div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
-</div><!-- fragment -->
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00022">22</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        this.<a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a> = state;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        base.Init(rigid);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div><div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a104a453051ca7b60d6862e4deb7475b4_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a104a453051ca7b60d6862e4deb7475b4_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a104a453051ca7b60d6862e4deb7475b4_icgraph" id="d0/d3d/class_player_movement_a104a453051ca7b60d6862e4deb7475b4_icgraph">
+<area shape="rect"  title=" " alt="" coords="211,5,349,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,163,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a1c50c07edbe274e1cf55253e87506684"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c50c07edbe274e1cf55253e87506684">&#9670;&nbsp;</a></span>Init() <span class="overload">[2/2]</span></h2>
+<a id="a347d6bcd5389bbc6b115c2bdf33e8f29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347d6bcd5389bbc6b115c2bdf33e8f29">&#9670;&nbsp;</a></span>Jump()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Movement.Init </td>
-          <td>(</td>
-          <td class="paramtype">Rigidbody2D&#160;</td>
-          <td class="paramname"><em>rigid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="../../d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스">Movement</a> 초기화 함수 </p>
-
-<p class="definition"><a class="el" href="../../d1/daf/_movement_8cs_source.html">Movement.cs</a> 파일의 <a class="el" href="../../d1/daf/_movement_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        this.<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a> = rigid;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="ttc" id="class_movement_html_a8b24a93b5f529e53c668ff81bde13c0d"><div class="ttname"><a href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">Movement._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00014">Movement.cs:14</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a64ce92029a6d91f12d23332bdd44a6ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64ce92029a6d91f12d23332bdd44a6ab">&#9670;&nbsp;</a></span>Jump() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">override void PlayerMovement.Jump </td>
-          <td>(</td>
-          <td class="paramtype">Vector2&#160;</td>
-          <td class="paramname"><em>dir</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>amout</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GameObject&#160;</td>
-          <td class="paramname"><em>obj</em> = <code>null</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>플레이어가 땅위에 있을 때만 점프할 수 있도록 조치 </p>
-
-<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>)</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            base.Jump(dir, amout, obj);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div><div class="ttc" id="class_player_movement_html_a3096725f76488ebfdc761c53e9fac852"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">PlayerMovement._isGround</a></div><div class="ttdeci">bool _isGround</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00015">PlayerMovement.cs:15</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a656604a80e3c1b86af6b7ce80932442d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a656604a80e3c1b86af6b7ce80932442d">&#9670;&nbsp;</a></span>Jump() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Movement.Jump </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>amount</em>, </td>
@@ -492,23 +630,42 @@ Private 멤버 함수</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>점프하는 함수 </p>
-<dl class="params"><dt>매개변수</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">amount</td><td>힘의 크기 </td></tr>
-    <tr><td class="paramname">obj</td><td>점프하는 게임 오브젝트 </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>플레이어가 땅위에 있을 때만 점프할 수 있도록 조치 </p>
 
-<p class="definition"><a class="el" href="../../d1/daf/_movement_8cs_source.html">Movement.cs</a> 파일의 <a class="el" href="../../d1/daf/_movement_8cs_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>)</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="comment">//_rigid.velocity = new Vector2(_rigid.velocity.x,  0);</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity += Vector2.up * amout;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            obj.transform.position += Vector3.up * amout;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div><div class="ttc" id="class_movement_html_a8b24a93b5f529e53c668ff81bde13c0d"><div class="ttname"><a href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">Movement._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00014">Movement.cs:14</a></div></div>
-</div><!-- fragment -->
+<p><a class="el" href="../../d1/de2/class_movement.html#a656604a80e3c1b86af6b7ce80932442d">Movement</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00118">118</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">_isGround</a>)</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        {</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.JUMPING);</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            base.Jump(amount, obj);</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div><div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
+<div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00030">State.cs:30</a></div></div>
+<div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
+<div class="ttc" id="class_player_movement_html_a3096725f76488ebfdc761c53e9fac852"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">PlayerMovement._isGround</a></div><div class="ttdeci">bool _isGround</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00015">PlayerMovement.cs:15</a></div></div>
+<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00036">PlayerState.cs:36</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_cgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_cgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_cgraph" id="d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_cgraph">
+<area shape="rect"  title="íë ì´ì´ê° ëìì ìì ëë§ ì íí  ì ìëë¡ ì¡°ì¹" alt="" coords="5,5,159,32"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="207,5,365,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_icgraph" id="d0/d3d/class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29_icgraph">
+<area shape="rect"  title="íë ì´ì´ê° ëìì ìì ëë§ ì íí  ì ìëë¡ ì¡°ì¹" alt="" coords="408,5,561,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9" title="íë ì´ì´ ì í" alt="" coords="211,5,360,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="íë ì´ì´ í´ëì¤ë¥¼ ì´ê¸°ííë í¨ì" alt="" coords="5,5,163,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="ad400f155e0556a5e22a74cb77858460a"></a>
@@ -603,27 +760,206 @@ Private 멤버 함수</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>이동에 플레이어가 어느 방향을 향하는 지 판단하는 코드 추가 </p>
+<p>이동에 플레이어가 어느 방향을 향하는 지 판단하는 코드 추가 dir.x 가 0이 아니라면 _prevDir 업데이트 </p>
 
 <p><a class="el" href="../../d1/de2/class_movement.html#a0a304da685db92346b7e274c2b0f023e">Movement</a>(으)로부터 재구현되었습니다.</p>
 
-<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span>(dir.x &lt; 0.01)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">Move</a>(0);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span>(dir.x != 0)</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4">_prevDir</a> = dir.x &gt; 0  ? 1 : -1;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">Move</a>(Mathf.Abs(dir.x));</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> base.Move(dir);</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div><div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00102">102</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">if</span>(dir.x &lt; 0.01)</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">Move</a>(0);</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">if</span>(dir.x != 0)</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4">_prevDir</a> = dir.x &gt; 0  ? 1 : -1;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        </div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// 애니메이션에게 속도 업데이트</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">Move</a>(Mathf.Abs(<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity.x));</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> base.Move(dir);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div><div class="ttc" id="class_movement_html_a8b24a93b5f529e53c668ff81bde13c0d"><div class="ttname"><a href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">Movement._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00014">Movement.cs:14</a></div></div>
+<div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
 <div class="ttc" id="class_player_movement_html_a802b794d028125d4e547a9caeb90d3d4"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4">PlayerMovement._prevDir</a></div><div class="ttdeci">float _prevDir</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00014">PlayerMovement.cs:14</a></div></div>
-<div class="ttc" id="class_state_html_a4424d0f582fe05b9dc7cec2a0a7c735a"><div class="ttname"><a href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">State.Move</a></div><div class="ttdeci">void Move(float x_speed)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00102">State.cs:102</a></div></div>
+<div class="ttc" id="class_state_html_a4424d0f582fe05b9dc7cec2a0a7c735a"><div class="ttname"><a href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">State.Move</a></div><div class="ttdeci">void Move(float x_speed)</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00092">State.cs:92</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_cgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_cgraph" alt=""/></div>
 <map name="d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_cgraph" id="d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_cgraph">
-<area shape="rect"  title="ì´ëì íë ì´ì´ê° ì´ë ë°©í¥ì í¥íë ì§ íë¨íë ì½ë ì¶ê°" alt="" coords="5,5,157,32"/>
+<area shape="rect"  title="ì´ëì íë ì´ì´ê° ì´ë ë°©í¥ì í¥íë ì§ íë¨íë ì½ë ì¶ê° dir.x ê° 0ì´ ìëë¼ë©´ _prevDir ìë°ì´í¸" alt="" coords="5,5,157,32"/>
 <area shape="rect"  href="../../d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a" title=" " alt="" coords="205,5,292,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_icgraph" id="d0/d3d/class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7_icgraph">
+<area shape="rect"  title="ì´ëì íë ì´ì´ê° ì´ë ë°©í¥ì í¥íë ì§ íë¨íë ì½ë ì¶ê° dir.x ê° 0ì´ ìëë¼ë©´ _prevDir ìë°ì´í¸" alt="" coords="440,5,592,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#a50157884365897164379b8bad7ee4722" title="ìë ¥ ë°ì ë°©í¥ì ë°ë¼ íë ì´ì´ ì´ëì ë´ë¹íë í¨ì" alt="" coords="244,5,392,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad878c661ddfc72890b353a01943f9161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad878c661ddfc72890b353a01943f9161">&#9670;&nbsp;</a></span>WallCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement.WallCheck </td>
+          <td>(</td>
+          <td class="paramtype">Vector2&#160;</td>
+          <td class="paramname"><em>wallCheckPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>wallDistance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LayerMask&#160;</td>
+          <td class="paramname"><em>wallLayers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>벽 타기를 위한 벽 체크 함수 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wallCheckPos</td><td>벽 체크 객체 위치 </td></tr>
+    <tr><td class="paramname">dir</td><td>플레이어의 이동 방향 (이동 방향으로 벽 체크) </td></tr>
+    <tr><td class="paramname">wallDistance</td><td>벽 체크 범위 </td></tr>
+    <tr><td class="paramname">wallLayers</td><td>벽으로 분류할 레이어 마스크 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>반환값</dt><dd></dd></dl>
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> wasWalled = <a class="code" href="../../d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">_isWall</a>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="../../d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">_isWall</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span>(Mathf.Abs(dir) &gt; 0)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            Vector2 dest = <span class="keyword">new</span> Vector2(wallCheckPos.x + (dir &gt; 0 ? wallDistance : -wallDistance), wallCheckPos.y);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#a10abf2ced0397cbfa0cc29a0296023fb">DebugRaycast</a>(wallCheckPos, dest, Color.blue);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            Collider2D[] colliders = Physics2D.OverlapCircleAll(dest, wallDistance, wallLayers);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; colliders.Length; i++)</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">if</span>(colliders[i].gameObject != gameObject)</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <a class="code" href="../../d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">_isWall</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                }</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">_isWall</a>;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div><div class="ttc" id="class_player_movement_html_a675cef6bf2bfaa54c290f2b73caf91cb"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">PlayerMovement._isWall</a></div><div class="ttdeci">bool _isWall</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00016">PlayerMovement.cs:16</a></div></div>
+<div class="ttc" id="class_player_movement_html_a10abf2ced0397cbfa0cc29a0296023fb"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#a10abf2ced0397cbfa0cc29a0296023fb">PlayerMovement.DebugRaycast</a></div><div class="ttdeci">void DebugRaycast(Vector3 origin, Vector3 dest, Color color)</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00149">PlayerMovement.cs:149</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_cgraph.png" border="0" usemap="#d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_cgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_cgraph" id="d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_cgraph">
+<area shape="rect"  title="ë²½ íê¸°ë¥¼ ìí ë²½ ì²´í¬ í¨ì" alt="" coords="5,5,191,32"/>
+<area shape="rect"  href="../../d0/d3d/class_player_movement.html#a10abf2ced0397cbfa0cc29a0296023fb" title=" " alt="" coords="239,5,445,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_icgraph" id="d0/d3d/class_player_movement_ad878c661ddfc72890b353a01943f9161_icgraph">
+<area shape="rect"  title="ë²½ íê¸°ë¥¼ ìí ë²½ ì²´í¬ í¨ì" alt="" coords="244,5,429,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a54ca25bbc57c10ddbd74d4a0b1e30f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a54ca25bbc57c10ddbd74d4a0b1e30f">&#9670;&nbsp;</a></span>WallSliding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void PlayerMovement.WallSliding </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00132">132</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity.y &lt; 0)</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        {</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity = <span class="keyword">new</span> Vector2(<a class="code" href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">_rigid</a>.velocity.x, -amount);</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <a class="code" href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">_state</a>.<a class="code" href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">NotifyState</a>(<a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">OnGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">OffGround</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d6/d23/class_player_state.html#a16e115e2b4c8d0420119d6ff2fe8b3bc">OnClimbing</a>.NONE, <a class="code" href="../../d6/d23/class_player_state.html">PlayerState</a>.<a class="code" href="../../d6/d23/class_player_state.html#a2909421d9f22a750c1b0eacfc9bafb3d">PlayerAction</a>.SLIDING);</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        }</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div><div class="ttc" id="class_movement_html_a8b24a93b5f529e53c668ff81bde13c0d"><div class="ttname"><a href="../../d1/de2/class_movement.html#a8b24a93b5f529e53c668ff81bde13c0d">Movement._rigid</a></div><div class="ttdeci">Rigidbody2D _rigid</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/daf/_movement_8cs_source.html#l00014">Movement.cs:14</a></div></div>
+<div class="ttc" id="class_player_state_html"><div class="ttname"><a href="../../d6/d23/class_player_state.html">PlayerState</a></div><div class="ttdoc">플레이어 상태, 애니메이션 처리 클래스 State 클래스를 상속받음!</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00012">PlayerState.cs:12</a></div></div>
+<div class="ttc" id="class_player_movement_html_af88a64a22da9ba3a831b0fe31bd8e7db"><div class="ttname"><a href="../../d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement._state</a></div><div class="ttdeci">PlayerState _state</div><div class="ttdef"><b>Definition:</b> <a href="../../de/d53/_player_movement_8cs_source.html#l00013">PlayerMovement.cs:13</a></div></div>
+<div class="ttc" id="class_state_html_a7d945e793324c017a973205564cf1a56"><div class="ttname"><a href="../../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56">State.OffGround</a></div><div class="ttdeci">OffGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00030">State.cs:30</a></div></div>
+<div class="ttc" id="class_state_html_ab9eb1c1d81f1903b8486d1275e78b68e"><div class="ttname"><a href="../../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State.OnGround</a></div><div class="ttdeci">OnGround</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/df4/_state_8cs_source.html#l00023">State.cs:23</a></div></div>
+<div class="ttc" id="class_player_state_html_a59f3f64c24ba1b6e34e34cb23746ecb0"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState.NotifyState</a></div><div class="ttdeci">override void NotifyState(OnGround onGroundState, OffGround offGroundState)</div><div class="ttdoc">객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00036">PlayerState.cs:36</a></div></div>
+<div class="ttc" id="class_player_state_html_a2909421d9f22a750c1b0eacfc9bafb3d"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a2909421d9f22a750c1b0eacfc9bafb3d">PlayerState.PlayerAction</a></div><div class="ttdeci">PlayerAction</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00021">PlayerState.cs:21</a></div></div>
+<div class="ttc" id="class_player_state_html_a16e115e2b4c8d0420119d6ff2fe8b3bc"><div class="ttname"><a href="../../d6/d23/class_player_state.html#a16e115e2b4c8d0420119d6ff2fe8b3bc">PlayerState.OnClimbing</a></div><div class="ttdeci">OnClimbing</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da7/_player_state_8cs_source.html#l00029">PlayerState.cs:29</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_cgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_cgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_cgraph" id="d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect"  href="../../d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="ê°ì²´ìê² ë°ì´í°ë¥¼ ë°ë í¨ì ë¨, ë°ì´í°ë ì ëë©ì´ìì ìí ê°" alt="" coords="240,5,399,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_icgraph.png" border="0" usemap="#d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_icgraph" alt=""/></div>
+<map name="d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_icgraph" id="d0/d3d/class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f_icgraph">
+<area shape="rect"  title=" " alt="" coords="244,5,431,32"/>
+<area shape="rect"  href="../../dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4" title=" " alt="" coords="5,5,196,32"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="accf40aeeabcd73e5aefa1ced890c167d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accf40aeeabcd73e5aefa1ced890c167d">&#9670;&nbsp;</a></span>_deceleration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerMovement._deceleration = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00020">20</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3701c47b7350464da003c1cc53f1bf69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3701c47b7350464da003c1cc53f1bf69">&#9670;&nbsp;</a></span>_isCeiling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement._isCeiling = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <a id="af8ea9d72a49e01aecdf8cfd6d2b0b3cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8ea9d72a49e01aecdf8cfd6d2b0b3cf">&#9670;&nbsp;</a></span>_isClimbing</h2>
 
@@ -636,7 +972,7 @@ Private 멤버 함수</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -653,6 +989,22 @@ Private 멤버 함수</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a675cef6bf2bfaa54c290f2b73caf91cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675cef6bf2bfaa54c290f2b73caf91cb">&#9670;&nbsp;</a></span>_isWall</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerMovement._isWall = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a> 파일의 <a class="el" href="../../de/d53/_player_movement_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
@@ -769,7 +1121,7 @@ Private 멤버 함수</h2></td></tr>
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/New Scripts/Player/<a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a></li>
+<li>C:/Users/HookSSi/Desktop/개발/유니티/Someone-likes-you/Someone likes you/Assets/Scripts/Player/<a class="el" href="../../de/d53/_player_movement_8cs_source.html">PlayerMovement.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

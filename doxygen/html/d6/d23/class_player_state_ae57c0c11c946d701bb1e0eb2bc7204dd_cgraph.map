@@ -1,7 +1,7 @@
 <map id="PlayerState.HandleAnim" name="PlayerState.HandleAnim">
 <area shape="rect" id="node1" title="애니메이션을 처리하는 함수&#39; 땅위, 땅아님에 따라 처리" alt="" coords="5,81,169,108"/>
-<area shape="rect" id="node2" href="$d0/d8b/class_state.html#adc5e7be4e977f0a64b29b01171eda8af" title="땅위에서 애니메이션 처리" alt="" coords="243,5,390,32"/>
+<area shape="rect" id="node2" href="$d6/d23/class_player_state.html#a0601d37ab4c98941980ffaa4ec69b2c0" title="땅위에서 애니메이션 처리" alt="" coords="225,5,408,32"/>
 <area shape="rect" id="node3" href="$d0/d8b/class_state.html#a2909a234430fa7752fadf2bb993ab5e2" title="땅위아님에서 애니메이션 처리" alt="" coords="244,56,389,83"/>
-<area shape="rect" id="node4" href="$d6/d23/class_player_state.html#a2260a17e1f15130a40085be802737b0a" title="벽타기 애니메이션 처리" alt="" coords="221,107,412,133"/>
-<area shape="rect" id="node5" href="$d6/d23/class_player_state.html#a573debbcf99d98c57f82398924dc9924" title="플레이어 액션 애니메이션 처리" alt="" coords="217,157,416,184"/>
+<area shape="rect" id="node4" href="$d6/d23/class_player_state.html#a7e63f7318e2aea3c2e7612e8ccedf13b" title="벽타기 애니메이션 처리" alt="" coords="221,107,412,133"/>
+<area shape="rect" id="node5" href="$d6/d23/class_player_state.html#a112abec691914fd4e508cf27dd6b2b07" title="플레이어 액션 애니메이션 처리" alt="" coords="217,157,416,184"/>
 </map>

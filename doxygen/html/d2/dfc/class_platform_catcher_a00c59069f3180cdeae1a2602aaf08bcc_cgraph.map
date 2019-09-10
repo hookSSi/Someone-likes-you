@@ -1,0 +1,5 @@
+<map id="PlatformCatcher.GetRoot" name="PlatformCatcher.GetRoot">
+<area shape="rect" id="node1" title="오브젝트의 루트를 찾는다. @detail Player이거나 Object에 해당한다면 OK! Platform 오브젝트나 그 위까지는 찾지 않는다." alt="" coords="5,31,172,57"/>
+<area shape="rect" id="node2" href="$d2/dfc/class_platform_catcher.html#a7c9f254031850ad9d4777dd7f55a9089" title="해당 오브젝트가 플레이어인지 검사한다." alt="" coords="220,5,387,32"/>
+<area shape="rect" id="node3" href="$d2/dfc/class_platform_catcher.html#af3185a9c2d8369aa09e7f4d4bde12b96" title="해당 오브젝트가 움직일 수 있는 오브젝트인지 검사한다." alt="" coords="220,56,387,83"/>
+</map>

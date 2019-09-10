@@ -1,0 +1,5 @@
+<map id="PlatformCatcher.Filter" name="PlatformCatcher.Filter">
+<area shape="rect" id="node1" title="_Filter에 해당하는 콜라이더를 무시한다" alt="" coords="239,46,387,73"/>
+<area shape="rect" id="node2" href="$d2/dfc/class_platform_catcher.html#ac9a60991fc1368c0e63e52374e30b304" title="플랫폼 위에 있는 물체의 부모를 플랫폼으로 설정한다" alt="" coords="5,5,191,47"/>
+<area shape="rect" id="node3" href="$d2/dfc/class_platform_catcher.html#aca1e0783636e67b995dfb75c077fc9ef" title="플랫폼 위에 있는 물체의 부모를 해제한다" alt="" coords="5,71,191,112"/>
+</map>

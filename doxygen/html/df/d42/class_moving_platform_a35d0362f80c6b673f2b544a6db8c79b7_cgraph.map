@@ -1,0 +1,4 @@
+<map id="MovingPlatform.NextTo" name="MovingPlatform.NextTo">
+<area shape="rect" id="node1" title="다음 오브젝트로 넘어간다" alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title="이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다." alt="" coords="208,5,379,32"/>
+</map>

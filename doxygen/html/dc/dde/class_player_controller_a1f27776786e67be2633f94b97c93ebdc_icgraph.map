@@ -1,0 +1,4 @@
+<map id="PlayerController.Interact" name="PlayerController.Interact">
+<area shape="rect" id="node1" title="플레이어 상호작용" alt="" coords="211,5,372,32"/>
+<area shape="rect" id="node2" href="$dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1" title="플레이어 클래스를 초기화하는 함수" alt="" coords="5,5,163,32"/>
+</map>

@@ -3,7 +3,6 @@ var class_state =
     [ "OffGround", "d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56", [
       [ "NONE", "d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56ab50339a10e1de285ac99d4c3990b8693", null ],
       [ "JUMPING", "d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134", null ],
-      [ "ATTACK", "d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56ac6ddd0f72ff2fd344693b9ca8d483871", null ],
       [ "FALLING", "d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6", null ]
     ] ],
     [ "OnGround", "d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e", [

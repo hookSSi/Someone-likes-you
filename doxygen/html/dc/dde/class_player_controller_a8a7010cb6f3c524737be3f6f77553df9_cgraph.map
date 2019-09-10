@@ -1,5 +1,5 @@
 <map id="PlayerController.Jump" name="PlayerController.Jump">
-<area shape="rect" id="node1" title="플레이어 점프" alt="" coords="5,31,155,57"/>
-<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab" title="플레이어가 땅위에 있을 때만 점프할 수 있도록 조치" alt="" coords="205,5,359,32"/>
-<area shape="rect" id="node3" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="203,56,361,83"/>
+<area shape="rect" id="node1" title="플레이어 점프" alt="" coords="5,5,155,32"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a347d6bcd5389bbc6b115c2bdf33e8f29" title="플레이어가 땅위에 있을 때만 점프할 수 있도록 조치" alt="" coords="203,5,356,32"/>
+<area shape="rect" id="node3" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="404,5,563,32"/>
 </map>

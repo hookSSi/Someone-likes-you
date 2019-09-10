@@ -65,9 +65,10 @@ public class PlayerMovement : Movement
     }
     /**
      *  @brief 벽 타기를 위한 벽 체크 함수
-     *  @param 벽 체크 객체 위치
-     *  @param 벽 체크 범위
-     *  @param 벽으로 분류할 레이어 마스크
+     *  @param wallCheckPos 벽 체크 객체 위치
+     *  @param dir 플레이어의 이동 방향 (이동 방향으로 벽 체크)
+     *  @param wallDistance 벽 체크 범위
+     *  @param wallLayers 벽으로 분류할 레이어 마스크
      *  @return
      */
     public bool WallCheck(Vector2 wallCheckPos, float dir, float wallDistance,LayerMask wallLayers)

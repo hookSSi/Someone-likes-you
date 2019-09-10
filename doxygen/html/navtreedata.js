@@ -38,7 +38,11 @@ var NAVTREE =
       ] ]
     ] ],
     [ "파일들", "files.html", [
-      [ "파일 목록", "files.html", "files_dup" ]
+      [ "파일 목록", "files.html", "files_dup" ],
+      [ "파일 멤버", "globals.html", [
+        [ "모두", "globals.html", null ],
+        [ "열거형 타입", "globals_enum.html", null ]
+      ] ]
     ] ]
   ] ]
 ];

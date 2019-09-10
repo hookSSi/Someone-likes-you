@@ -1,4 +1,5 @@
 <map id="MovingPlatform.Act" name="MovingPlatform.Act">
 <area shape="rect" id="node1" title="상태에 따라서 벽이 움직이게 하는 함수" alt="" coords="5,5,140,32"/>
-<area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title="이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다." alt="" coords="188,5,359,32"/>
+<area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#a35d0362f80c6b673f2b544a6db8c79b7" title="다음 오브젝트로 넘어간다" alt="" coords="188,5,343,32"/>
+<area shape="rect" id="node3" href="$df/d42/class_moving_platform.html#a9150bceccb63034907ab3ec46216ae83" title="이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다." alt="" coords="391,5,561,32"/>
 </map>

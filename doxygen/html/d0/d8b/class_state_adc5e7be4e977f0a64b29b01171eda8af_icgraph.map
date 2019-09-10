@@ -1,6 +1,5 @@
 <map id="State.OnGroundAnim" name="State.OnGroundAnim">
-<area shape="rect" id="node1" title="땅위에서 애니메이션 처리" alt="" coords="387,31,533,57"/>
-<area shape="rect" id="node2" href="$d6/d23/class_player_state.html#ae57c0c11c946d701bb1e0eb2bc7204dd" title="애니메이션을 처리하는 함수&#39; 땅위, 땅아님에 따라 처리" alt="" coords="175,5,339,32"/>
-<area shape="rect" id="node3" href="$d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b" title="애니메이션을 처리하는 함수&#39; 땅위, 땅아님에 따라 처리" alt="" coords="193,56,320,83"/>
-<area shape="rect" id="node4" href="$d0/d8b/class_state.html#a989a27f9b711812d983344ee381da419" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="5,56,127,83"/>
+<area shape="rect" id="node1" title="땅위에서 애니메이션 처리" alt="" coords="349,5,496,32"/>
+<area shape="rect" id="node2" href="$d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b" title="애니메이션을 처리하는 함수&#39; 땅위, 땅아님에 따라 처리" alt="" coords="175,5,301,32"/>
+<area shape="rect" id="node3" href="$d0/d8b/class_state.html#a989a27f9b711812d983344ee381da419" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="5,5,127,32"/>
 </map>

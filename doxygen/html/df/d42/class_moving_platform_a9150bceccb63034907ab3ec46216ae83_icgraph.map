@@ -1,5 +1,6 @@
 <map id="MovingPlatform.MoveStop" name="MovingPlatform.MoveStop">
-<area shape="rect" id="node1" title="이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다." alt="" coords="423,5,593,32"/>
-<area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460" title="상태에 따라서 벽이 움직이게 하는 함수" alt="" coords="240,5,375,32"/>
-<area shape="rect" id="node3" href="$df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c" title=" " alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node1" title="이 함수를 통해 외부에서 해당 오브젝트를 비활성화(이동 중지)한다." alt="" coords="625,5,796,32"/>
+<area shape="rect" id="node2" href="$df/d42/class_moving_platform.html#a35d0362f80c6b673f2b544a6db8c79b7" title="다음 오브젝트로 넘어간다" alt="" coords="423,5,577,32"/>
+<area shape="rect" id="node3" href="$df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460" title="상태에 따라서 벽이 움직이게 하는 함수" alt="" coords="240,5,375,32"/>
+<area shape="rect" id="node4" href="$df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c" title=" " alt="" coords="5,5,192,32"/>
 </map>

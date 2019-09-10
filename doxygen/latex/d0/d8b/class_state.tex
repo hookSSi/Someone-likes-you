@@ -34,8 +34,7 @@ enum \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{On\+Ground}
 \item 
 enum \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{Off\+Ground}} \{ \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56ab50339a10e1de285ac99d4c3990b8693}{Off\+Ground.\+N\+O\+NE}} = 0, 
 \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134}{Off\+Ground.\+J\+U\+M\+P\+I\+NG}} = 1 $<$$<$ 0, 
-\mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56ac6ddd0f72ff2fd344693b9ca8d483871}{Off\+Ground.\+A\+T\+T\+A\+CK}} = 1 $<$$<$ 1, 
-\mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6}{Off\+Ground.\+F\+A\+L\+L\+I\+NG}} = 1 $<$$<$ 2
+\mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6}{Off\+Ground.\+F\+A\+L\+L\+I\+NG}} = 1 $<$$<$ 1
  \}
 \end{DoxyCompactItemize}
 \subsection*{Public 멤버 함수}
@@ -45,13 +44,6 @@ virtual void \mbox{\hyperlink{class_state_a989a27f9b711812d983344ee381da419}{Not
 \begin{DoxyCompactList}\small\item\em 객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_state_a4424d0f582fe05b9dc7cec2a0a7c735a}{Move}} (float x\+\_\+speed)
 \end{DoxyCompactItemize}
-\subsection*{Public 속성}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{On\+Ground}} \mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\+\_\+on\+Ground\+State}}
-\begin{DoxyCompactList}\small\item\em 땅위의 상태 \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{Off\+Ground}} \mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\+\_\+off\+Ground\+State}}
-\begin{DoxyCompactList}\small\item\em 땅안위의 상태 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
@@ -61,6 +53,13 @@ virtual void \mbox{\hyperlink{class_state_adc5e7be4e977f0a64b29b01171eda8af}{On\
 \begin{DoxyCompactList}\small\item\em 땅위에서 애니메이션 처리 \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_state_a2909a234430fa7752fadf2bb993ab5e2}{Off\+Ground\+Anim}} ()
 \begin{DoxyCompactList}\small\item\em 땅위아님에서 애니메이션 처리 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{On\+Ground}} \mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\+\_\+on\+Ground\+State}}
+\begin{DoxyCompactList}\small\item\em 땅위의 상태 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{Off\+Ground}} \mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\+\_\+off\+Ground\+State}}
+\begin{DoxyCompactList}\small\item\em 땅안위의 상태 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{속성}
 \begin{DoxyCompactItemize}
 \item 
@@ -102,10 +101,6 @@ N\+O\+NE&\\
 J\+U\+M\+P\+I\+NG&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{ATTACK@{ATTACK}!State@{State}}\index{State@{State}!ATTACK@{ATTACK}}}\mbox{\Hypertarget{class_state_a7d945e793324c017a973205564cf1a56ac6ddd0f72ff2fd344693b9ca8d483871}\label{class_state_a7d945e793324c017a973205564cf1a56ac6ddd0f72ff2fd344693b9ca8d483871}} 
-A\+T\+T\+A\+CK&\\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FALLING@{FALLING}!State@{State}}\index{State@{State}!FALLING@{FALLING}}}\mbox{\Hypertarget{class_state_a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6}\label{class_state_a7d945e793324c017a973205564cf1a56a4f9d4539ac1e11a251e2afe022eba4e6}} 
 F\+A\+L\+L\+I\+NG&\\
 \hline
@@ -120,9 +115,8 @@ State.\+cs 파일의 30 번째 라인에서 정의되었습니다.
 \DoxyCodeLine{31     \{}
 \DoxyCodeLine{32        NONE     = 0,}
 \DoxyCodeLine{33        JUMPING  = 1 << 0,}
-\DoxyCodeLine{34        ATTACK   = 1 << 1,}
-\DoxyCodeLine{35        FALLING  = 1 << 2}
-\DoxyCodeLine{36     \}}
+\DoxyCodeLine{34        FALLING  = 1 << 1}
+\DoxyCodeLine{35     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}\label{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}} 
@@ -182,25 +176,25 @@ State.\+cs 파일의 23 번째 라인에서 정의되었습니다.
 
 
 
-State.\+cs 파일의 53 번째 라인에서 정의되었습니다.
+State.\+cs 파일의 52 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{54     \{}
-\DoxyCodeLine{55         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}})}
-\DoxyCodeLine{56         \{}
-\DoxyCodeLine{57             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\_onGroundState}} != \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{OnGround}}.NONE)}
-\DoxyCodeLine{58             \{}
-\DoxyCodeLine{59                 \mbox{\hyperlink{class_state_adc5e7be4e977f0a64b29b01171eda8af}{OnGroundAnim}}();}
-\DoxyCodeLine{60             \}}
-\DoxyCodeLine{61             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\_offGroundState}} != \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.NONE)}
-\DoxyCodeLine{62             \{}
-\DoxyCodeLine{63                 \mbox{\hyperlink{class_state_a2909a234430fa7752fadf2bb993ab5e2}{OffGroundAnim}}();}
-\DoxyCodeLine{64             \}}
-\DoxyCodeLine{65         \}}
-\DoxyCodeLine{66         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{67             Debug.Log(\textcolor{stringliteral}{"애니메이션이 없어요!"});}
-\DoxyCodeLine{68     \}}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}})}
+\DoxyCodeLine{55         \{}
+\DoxyCodeLine{56             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\_onGroundState}} != \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{OnGround}}.NONE)}
+\DoxyCodeLine{57             \{}
+\DoxyCodeLine{58                 \mbox{\hyperlink{class_state_adc5e7be4e977f0a64b29b01171eda8af}{OnGroundAnim}}();}
+\DoxyCodeLine{59             \}}
+\DoxyCodeLine{60             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\_offGroundState}} != \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.NONE)}
+\DoxyCodeLine{61             \{}
+\DoxyCodeLine{62                 \mbox{\hyperlink{class_state_a2909a234430fa7752fadf2bb993ab5e2}{OffGroundAnim}}();}
+\DoxyCodeLine{63             \}}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{66             Debug.Log(\textcolor{stringliteral}{"애니메이션이 없어요!"});}
+\DoxyCodeLine{67     \}}
 
 \end{DoxyCode}
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
@@ -225,13 +219,13 @@ State.\+cs 파일의 53 번째 라인에서 정의되었습니다.
 
 
 
-State.\+cs 파일의 102 번째 라인에서 정의되었습니다.
+State.\+cs 파일의 92 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{103     \{}
-\DoxyCodeLine{104         \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetFloat(\textcolor{stringliteral}{"x\_speed"}, x\_speed);}
-\DoxyCodeLine{105     \}}
+\DoxyCodeLine{93     \{}
+\DoxyCodeLine{94         \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetFloat(\textcolor{stringliteral}{"x\_speed"}, x\_speed);}
+\DoxyCodeLine{95     \}}
 
 \end{DoxyCode}
 이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
@@ -239,7 +233,7 @@ State.\+cs 파일의 102 번째 라인에서 정의되었습니다.
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=295pt]{d0/d8b/class_state_a4424d0f582fe05b9dc7cec2a0a7c735a_icgraph}
+\includegraphics[width=350pt]{d0/d8b/class_state_a4424d0f582fe05b9dc7cec2a0a7c735a_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_state_a989a27f9b711812d983344ee381da419}\label{class_state_a989a27f9b711812d983344ee381da419}} 
@@ -258,15 +252,15 @@ State.\+cs 파일의 102 번째 라인에서 정의되었습니다.
 
 
 
-State.\+cs 파일의 42 번째 라인에서 정의되었습니다.
+State.\+cs 파일의 41 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{43     \{}
-\DoxyCodeLine{44         \mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\_onGroundState}}  = onGroundState;}
-\DoxyCodeLine{45         \mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\_offGroundState}} = offGroundState;}
-\DoxyCodeLine{46         \mbox{\hyperlink{class_state_aa064ec6cd84d4a09b2c72a536125c74b}{HandleAnim}}();}
-\DoxyCodeLine{47     \}}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         \mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\_onGroundState}}  = onGroundState;}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\_offGroundState}} = offGroundState;}
+\DoxyCodeLine{45         this.\mbox{\hyperlink{class_state_aa064ec6cd84d4a09b2c72a536125c74b}{HandleAnim}}();}
+\DoxyCodeLine{46     \}}
 
 \end{DoxyCode}
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
@@ -288,24 +282,21 @@ State.\+cs 파일의 42 번째 라인에서 정의되었습니다.
 
 
 
-State.\+cs 파일의 86 번째 라인에서 정의되었습니다.
+State.\+cs 파일의 79 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{87     \{}
-\DoxyCodeLine{88         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\_offGroundState}})}
-\DoxyCodeLine{89         \{}
-\DoxyCodeLine{90             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.NONE:}
-\DoxyCodeLine{91                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetBool(\textcolor{stringliteral}{"isGround"}, \textcolor{keyword}{true});}
-\DoxyCodeLine{92                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{93             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.JUMPING:}
-\DoxyCodeLine{94                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetTrigger(\textcolor{stringliteral}{"isJump"});}
-\DoxyCodeLine{95                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{96             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.FALLING:}
-\DoxyCodeLine{97                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetBool(\textcolor{stringliteral}{"isGround"}, \textcolor{keyword}{false});}
-\DoxyCodeLine{98                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{99         \}}
-\DoxyCodeLine{100     \}}
+\DoxyCodeLine{80     \{}
+\DoxyCodeLine{81         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_state_ad421039bfc35b46969f174c9617ab786}{\_offGroundState}})}
+\DoxyCodeLine{82         \{}
+\DoxyCodeLine{83             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.JUMPING:}
+\DoxyCodeLine{84                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetTrigger(\textcolor{stringliteral}{"isJump"});}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{86             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{OffGround}}.FALLING:}
+\DoxyCodeLine{87                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetBool(\textcolor{stringliteral}{"isGround"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{88                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90     \}}
 
 \end{DoxyCode}
 이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
@@ -328,28 +319,25 @@ State.\+cs 파일의 86 번째 라인에서 정의되었습니다.
 
 
 
-State.\+cs 파일의 70 번째 라인에서 정의되었습니다.
+\mbox{\hyperlink{class_player_state_a0601d37ab4c98941980ffaa4ec69b2c0}{Player\+State}}에서 재구현되었습니다.
+
+
+
+State.\+cs 파일의 69 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{71     \{}
-\DoxyCodeLine{72         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\_onGroundState}})}
-\DoxyCodeLine{73         \{}
-\DoxyCodeLine{74             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{OnGround}}.WALKING:}
-\DoxyCodeLine{75                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetFloat(\textcolor{stringliteral}{"x\_speed"}, 1);}
-\DoxyCodeLine{76                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{77             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{OnGround}}.IDLE:}
-\DoxyCodeLine{78                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetFloat(\textcolor{stringliteral}{"x\_speed"}, 0);}
-\DoxyCodeLine{79                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{80             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{OnGround}}.LANDING:}
-\DoxyCodeLine{81                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetBool(\textcolor{stringliteral}{"isGround"}, \textcolor{keyword}{true});}
-\DoxyCodeLine{82                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{83         \}}
-\DoxyCodeLine{84     \}}
+\DoxyCodeLine{70     \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_state_ab3170df5e58f541f39edff3c1278d443}{\_onGroundState}})}
+\DoxyCodeLine{72         \{}
+\DoxyCodeLine{73             \textcolor{keywordflow}{case} \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{OnGround}}.LANDING:}
+\DoxyCodeLine{74                 \mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}}.SetBool(\textcolor{stringliteral}{"isGround"}, \textcolor{keyword}{true});}
+\DoxyCodeLine{75                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77     \}}
 
 \end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
-\nopagebreak
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -363,7 +351,7 @@ State.\+cs 파일의 70 번째 라인에서 정의되었습니다.
 \index{State@{State}!\_offGroundState@{\_offGroundState}}
 \index{\_offGroundState@{\_offGroundState}!State@{State}}
 \subsubsection{\texorpdfstring{\_offGroundState}{\_offGroundState}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{Off\+Ground}} State.\+\_\+off\+Ground\+State}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state_a7d945e793324c017a973205564cf1a56}{Off\+Ground}} State.\+\_\+off\+Ground\+State\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -377,7 +365,7 @@ State.\+cs 파일의 22 번째 라인에서 정의되었습니다.
 \index{State@{State}!\_onGroundState@{\_onGroundState}}
 \index{\_onGroundState@{\_onGroundState}!State@{State}}
 \subsubsection{\texorpdfstring{\_onGroundState}{\_onGroundState}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{On\+Ground}} State.\+\_\+on\+Ground\+State}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state_ab9eb1c1d81f1903b8486d1275e78b68e}{On\+Ground}} State.\+\_\+on\+Ground\+State\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -413,4 +401,4 @@ State.\+cs 파일의 16 번째 라인에서 정의되었습니다.
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+New Scripts/\mbox{\hyperlink{_state_8cs}{State.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/개발/유니티/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_state_8cs}{State.\+cs}}\end{DoxyCompactItemize}

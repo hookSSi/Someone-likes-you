@@ -1,0 +1,7 @@
+<map id="PlatformCatcher.OnCollisionExit2D" name="PlatformCatcher.OnCollisionExit2D">
+<area shape="rect" id="node1" title="플랫폼 위에 있는 물체의 부모를 해제한다" alt="" coords="5,49,191,90"/>
+<area shape="rect" id="node2" href="$d2/dfc/class_platform_catcher.html#a00c59069f3180cdeae1a2602aaf08bcc" title="오브젝트의 루트를 찾는다. @detail Player이거나 Object에 해당한다면 OK! Platform 오브젝트나 그 위까지는 찾지 않는다." alt="" coords="239,31,405,57"/>
+<area shape="rect" id="node5" href="$d2/dfc/class_platform_catcher.html#a3c2f5ed62367fa897f370f36e2393751" title="_Filter에 해당하는 콜라이더를 무시한다" alt="" coords="248,81,396,108"/>
+<area shape="rect" id="node3" href="$d2/dfc/class_platform_catcher.html#a7c9f254031850ad9d4777dd7f55a9089" title="해당 오브젝트가 플레이어인지 검사한다." alt="" coords="453,5,620,32"/>
+<area shape="rect" id="node4" href="$d2/dfc/class_platform_catcher.html#af3185a9c2d8369aa09e7f4d4bde12b96" title="해당 오브젝트가 움직일 수 있는 오브젝트인지 검사한다." alt="" coords="453,56,620,83"/>
+</map>

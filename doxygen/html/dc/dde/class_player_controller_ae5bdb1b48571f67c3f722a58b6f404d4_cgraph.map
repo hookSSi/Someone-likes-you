@@ -1,5 +1,14 @@
 <map id="PlayerController.FixedUpdate" name="PlayerController.FixedUpdate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,196,57"/>
-<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="플레이어 땅 체크 함수" alt="" coords="244,5,445,32"/>
-<area shape="rect" id="node3" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="265,56,424,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,196,133"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#ae4905085466c9d84cc032807f704fb41" title=" " alt="" coords="267,56,422,83"/>
+<area shape="rect" id="node4" href="$d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161" title="벽 타기를 위한 벽 체크 함수" alt="" coords="252,157,437,184"/>
+<area shape="rect" id="node6" href="$d0/d3d/class_player_movement.html#a9a54ca25bbc57c10ddbd74d4a0b1e30f" title=" " alt="" coords="251,5,438,32"/>
+<area shape="rect" id="node7" href="$d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="플레이어 땅 체크 함수" alt="" coords="244,107,445,133"/>
+<area shape="rect" id="node9" href="$dc/dde/class_player_controller.html#a50157884365897164379b8bad7ee4722" title="입력 받은 방향에 따라 플레이어 이동을 담당하는 함수" alt="" coords="271,208,419,235"/>
+<area shape="rect" id="node3" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="517,56,676,83"/>
+<area shape="rect" id="node5" href="$d0/d3d/class_player_movement.html#a10abf2ced0397cbfa0cc29a0296023fb" title=" " alt="" coords="493,157,700,184"/>
+<area shape="rect" id="node8" href="$d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51" title=" " alt="" coords="501,107,693,133"/>
+<area shape="rect" id="node10" href="$d0/d3d/class_player_movement.html#a94c480a9aa5629d78b5fd16d9a814bb7" title="이동에 플레이어가 어느 방향을 향하는 지 판단하는 코드 추가 dir.x 가 0이 아니라면 _prevDir 업데이트" alt="" coords="521,259,673,285"/>
+<area shape="rect" id="node12" href="$dc/dde/class_player_controller.html#a4cc61bc6a9187892458138a1d0ffc207" title="플레이어 반전" alt="" coords="527,208,666,235"/>
+<area shape="rect" id="node11" href="$d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a" title=" " alt="" coords="748,259,835,285"/>
 </map>

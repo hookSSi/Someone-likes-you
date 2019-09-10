@@ -28,10 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="Rebeca_idle1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Rebeca_idle.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.1.1</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
   </td>
  </tr>
@@ -94,14 +94,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">PlayerController</a>
 , <a class="el" href="d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">State</a>
 </li>
-<li>_ArrayNotCatch
-: <a class="el" href="d2/dfc/class_platform_catcher.html#a78ef499926b824a8f831cce7f9a430d2">PlatformCatcher</a>
-</li>
 <li>_ceilingCheck
 : <a class="el" href="dc/dde/class_player_controller.html#a932dbf6c5cc4527856596dc1f9df1426">PlayerController</a>
 </li>
-<li>_cellingRadius
-: <a class="el" href="dc/dde/class_player_controller.html#a306070e77c6bcd09f4fed177c876684f">PlayerController</a>
+<li>_ceilingRadius
+: <a class="el" href="dc/dde/class_player_controller.html#a899075705a92c6e4831dc3276dcaebcf">PlayerController</a>
+</li>
+<li>_checkPointList
+: <a class="el" href="df/d42/class_moving_platform.html#aa67781ca68fc140906aa309c82f0d349">MovingPlatform</a>
 </li>
 <li>_collider
 : <a class="el" href="d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">PlatformCatcher</a>
@@ -112,8 +112,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_currentTime
 : <a class="el" href="df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">MovingPlatform</a>
 </li>
+<li>_deceleration
+: <a class="el" href="d0/d3d/class_player_movement.html#accf40aeeabcd73e5aefa1ced890c167d">PlayerMovement</a>
+</li>
+<li>_downForce
+: <a class="el" href="dc/dde/class_player_controller.html#a5a14806a0a5b00eb0fc55e071cc0bfc1">PlayerController</a>
+</li>
 <li>_event
 : <a class="el" href="d5/d6a/class_command.html#a04f1a7e0dc8e999e0fca2aa9210f73a3">Command</a>
+</li>
+<li>_Filter
+: <a class="el" href="d2/dfc/class_platform_catcher.html#a2e1f324ee414bf1f423d9ae7c61ed5c2">PlatformCatcher</a>
 </li>
 <li>_groundCheck
 : <a class="el" href="dc/dde/class_player_controller.html#ae4940f9e37dd5bf49788de933a833377">PlayerController</a>
@@ -121,17 +130,20 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_groundedRadius
 : <a class="el" href="dc/dde/class_player_controller.html#a81d04f96edabfd06d6ba1ecb26322f6a">PlayerController</a>
 </li>
+<li>_horizontalMove
+: <a class="el" href="dc/dde/class_player_controller.html#af8d3915645f93ede0aaedfdd343c33d1">PlayerController</a>
+</li>
 <li>_hungriness
 : <a class="el" href="dc/dde/class_player_controller.html#ab4fed78a016e8baca12e50bb3d7f034a">PlayerController</a>
-</li>
-<li>_idleTime
-: <a class="el" href="df/d42/class_moving_platform.html#a293066859b3576c931eb4b8c3f802397">MovingPlatform</a>
 </li>
 <li>_index
 : <a class="el" href="df/d42/class_moving_platform.html#a20948e50a50c338c4e62f84a633868ac">MovingPlatform</a>
 </li>
 <li>_indexDir
 : <a class="el" href="df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">MovingPlatform</a>
+</li>
+<li>_isCeiling
+: <a class="el" href="d0/d3d/class_player_movement.html#a3701c47b7350464da003c1cc53f1bf69">PlayerMovement</a>
 </li>
 <li>_isClimbing
 : <a class="el" href="d0/d3d/class_player_movement.html#af8ea9d72a49e01aecdf8cfd6d2b0b3cf">PlayerMovement</a>
@@ -141,6 +153,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_isOn
 : <a class="el" href="df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">MovingPlatform</a>
+</li>
+<li>_isWall
+: <a class="el" href="d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">PlayerMovement</a>
 </li>
 <li>_jumpForce
 : <a class="el" href="dc/dde/class_player_controller.html#aaec5e4333fe1c532900ca666c075261c">PlayerController</a>
@@ -160,6 +175,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_name
 : <a class="el" href="d5/d6a/class_command.html#a18a8a95d7f2c65bfa786fb525c42d0c4">Command</a>
 </li>
+<li>_objLayer
+: <a class="el" href="d2/dfc/class_platform_catcher.html#a59c46f8bc8af74dcf892f8b87b36fff1">PlatformCatcher</a>
+</li>
 <li>_offGroundState
 : <a class="el" href="d0/d8b/class_state.html#ad421039bfc35b46969f174c9617ab786">State</a>
 </li>
@@ -168,6 +186,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_onGroundState
 : <a class="el" href="d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">State</a>
+</li>
+<li>_parentDict
+: <a class="el" href="d2/dfc/class_platform_catcher.html#a6b2f5503fc0534fe9898c6bf3b32ec75">PlatformCatcher</a>
 </li>
 <li>_platform
 : <a class="el" href="df/d42/class_moving_platform.html#a2269ebd689de9ad6368f64b6b14cecb6">MovingPlatform</a>
@@ -178,8 +199,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_playerAction
 : <a class="el" href="d6/d23/class_player_state.html#a50343c632d4e11c55e97a58b4c9520ad">PlayerState</a>
 </li>
-<li>_posList
-: <a class="el" href="df/d42/class_moving_platform.html#a51c0ce96c3fc6ad9350dc0350216835b">MovingPlatform</a>
+<li>_playerLayer
+: <a class="el" href="d2/dfc/class_platform_catcher.html#ab82e88a61495d5965d1d8cc14e62a91e">PlatformCatcher</a>
 </li>
 <li>_prevDir
 : <a class="el" href="d0/d3d/class_player_movement.html#a802b794d028125d4e547a9caeb90d3d4">PlayerMovement</a>
@@ -206,17 +227,26 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d1/de2/class_movement.html#a6ea6768262f1dca968be8ee5c14a0cc1">Movement</a>
 , <a class="el" href="df/d42/class_moving_platform.html#a831cd24df75aa37f0897741d189686a7">MovingPlatform</a>
 </li>
+<li>_waitTime
+: <a class="el" href="df/d42/class_moving_platform.html#af1a2156a73b89603147dc4009679c738">MovingPlatform</a>
+</li>
 <li>_walkingSpeed
 : <a class="el" href="dc/dde/class_player_controller.html#a1ab6a7892eecf1a9fa7b1a49842a3dd2">PlayerController</a>
 </li>
 <li>_wallCheck
 : <a class="el" href="dc/dde/class_player_controller.html#a0f614194c904fe2b4e6d81dc0ec96da2">PlayerController</a>
 </li>
-<li>_wallRadius
-: <a class="el" href="dc/dde/class_player_controller.html#a74197aa3c628821b417fb62afec5aecc">PlayerController</a>
+<li>_wallDistance
+: <a class="el" href="dc/dde/class_player_controller.html#a07f0db2435a8eaeb68c30347135a7a17">PlayerController</a>
+</li>
+<li>_wallSlidingSpeed
+: <a class="el" href="dc/dde/class_player_controller.html#a20e9c123deaac078932a4def658c20bb">PlayerController</a>
 </li>
 <li>_whatIsGround
 : <a class="el" href="dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d">PlayerController</a>
+</li>
+<li>_whatIsWall
+: <a class="el" href="dc/dde/class_player_controller.html#a00e0ccedea38a9796587bcfc765d193e">PlayerController</a>
 </li>
 </ul>
 
@@ -225,17 +255,27 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>Act()
 : <a class="el" href="df/d42/class_moving_platform.html#ab4a3f15333f41ba4a3b9bc0227777460">MovingPlatform</a>
 </li>
+<li>AddButtonContent
+: <a class="el" href="df/d7a/class_editor_platform_list.html#a559a7c5291210aaca311116efb71b06f">EditorPlatformList</a>
+</li>
 <li>AddForce()
 : <a class="el" href="d1/de2/class_movement.html#a132e2f7bc0af811ff3b1ab86c8d1f090">Movement</a>
+</li>
+<li>Attack()
+: <a class="el" href="dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">PlayerController</a>
 </li>
 <li>Awake()
 : <a class="el" href="df/d42/class_moving_platform.html#aec6412bf79a5d4fdec57da2e3b390b93">MovingPlatform</a>
 , <a class="el" href="d2/dfc/class_platform_catcher.html#a85b586a2617a568e4201c3f3b3c4103f">PlatformCatcher</a>
+, <a class="el" href="dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1">PlayerController</a>
 </li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>CeilingCheck()
+: <a class="el" href="d0/d3d/class_player_movement.html#a6f9b40c6b4bb2fcb47c3c0b8f17a81b8">PlayerMovement</a>
+</li>
 <li>CheckKey()
 : <a class="el" href="d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721">Command</a>
 </li>
@@ -245,6 +285,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>DebugCircle()
 : <a class="el" href="d0/d3d/class_player_movement.html#a6f77ea4796901d5e2a476e2f8ec49b51">PlayerMovement</a>
+</li>
+<li>DebugRaycast()
+: <a class="el" href="d0/d3d/class_player_movement.html#a10abf2ced0397cbfa0cc29a0296023fb">PlayerMovement</a>
+</li>
+<li>deleteButtonContent
+: <a class="el" href="df/d7a/class_editor_platform_list.html#ab1bcf67efe880dd93508b5fbd2b3f9b2">EditorPlatformList</a>
+</li>
+<li>Down()
+: <a class="el" href="d0/d3d/class_player_movement.html#ae4905085466c9d84cc032807f704fb41">PlayerMovement</a>
+</li>
+<li>duplicateButtonContent
+: <a class="el" href="df/d7a/class_editor_platform_list.html#a6e8a9ff76288daab5d7e50864508c8ba">EditorPlatformList</a>
 </li>
 </ul>
 
@@ -257,13 +309,23 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
+<li>Filter()
+: <a class="el" href="d2/dfc/class_platform_catcher.html#a3c2f5ed62367fa897f370f36e2393751">PlatformCatcher</a>
+</li>
 <li>FixedUpdate()
 : <a class="el" href="df/d42/class_moving_platform.html#a935710333a3a0f0164dad887e8eb7d1c">MovingPlatform</a>
+, <a class="el" href="dc/dde/class_player_controller.html#ae5bdb1b48571f67c3f722a58b6f404d4">PlayerController</a>
+</li>
+<li>Flip()
+: <a class="el" href="dc/dde/class_player_controller.html#a4cc61bc6a9187892458138a1d0ffc207">PlayerController</a>
 </li>
 </ul>
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>GetRoot()
+: <a class="el" href="d2/dfc/class_platform_catcher.html#a00c59069f3180cdeae1a2602aaf08bcc">PlatformCatcher</a>
+</li>
 <li>GroundCheck()
 : <a class="el" href="d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70">PlayerMovement</a>
 </li>
@@ -275,6 +337,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d6/d23/class_player_state.html#ae57c0c11c946d701bb1e0eb2bc7204dd">PlayerState</a>
 , <a class="el" href="d0/d8b/class_state.html#aa064ec6cd84d4a09b2c72a536125c74b">State</a>
 </li>
+<li>HandleInput()
+: <a class="el" href="dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">PlayerController</a>
+</li>
 </ul>
 
 
@@ -284,13 +349,23 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="d1/de2/class_movement.html#a1c50c07edbe274e1cf55253e87506684">Movement</a>
 , <a class="el" href="d0/d3d/class_player_movement.html#a104a453051ca7b60d6862e4deb7475b4">PlayerMovement</a>
 </li>
+<li>Interact()
+: <a class="el" href="dc/dde/class_player_controller.html#a1f27776786e67be2633f94b97c93ebdc">PlayerController</a>
+</li>
+<li>IsObject()
+: <a class="el" href="d2/dfc/class_platform_catcher.html#af3185a9c2d8369aa09e7f4d4bde12b96">PlatformCatcher</a>
+</li>
+<li>IsPlayer()
+: <a class="el" href="d2/dfc/class_platform_catcher.html#a7c9f254031850ad9d4777dd7f55a9089">PlatformCatcher</a>
+</li>
 </ul>
 
 
 <h3><a id="index_j"></a>- j -</h3><ul>
 <li>Jump()
 : <a class="el" href="d1/de2/class_movement.html#a656604a80e3c1b86af6b7ce80932442d">Movement</a>
-, <a class="el" href="d0/d3d/class_player_movement.html#a64ce92029a6d91f12d23332bdd44a6ab">PlayerMovement</a>
+, <a class="el" href="dc/dde/class_player_controller.html#a8a7010cb6f3c524737be3f6f77553df9">PlayerController</a>
+, <a class="el" href="d0/d3d/class_player_movement.html#a347d6bcd5389bbc6b115c2bdf33e8f29">PlayerMovement</a>
 </li>
 </ul>
 
@@ -305,8 +380,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>Move()
 : <a class="el" href="d1/de2/class_movement.html#ad400f155e0556a5e22a74cb77858460a">Movement</a>
+, <a class="el" href="dc/dde/class_player_controller.html#a50157884365897164379b8bad7ee4722">PlayerController</a>
 , <a class="el" href="d0/d3d/class_player_movement.html#a94c480a9aa5629d78b5fd16d9a814bb7">PlayerMovement</a>
 , <a class="el" href="d0/d8b/class_state.html#a4424d0f582fe05b9dc7cec2a0a7c735a">State</a>
+</li>
+<li>MoveButtonContent
+: <a class="el" href="df/d7a/class_editor_platform_list.html#a49d984355385da84a591d38aae7514db">EditorPlatformList</a>
 </li>
 <li>MoveMode
 : <a class="el" href="df/d42/class_moving_platform.html#a7b3427d2906069ecf4c39d69eee53653">MovingPlatform</a>
@@ -324,6 +403,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a id="index_n"></a>- n -</h3><ul>
+<li>NextTo()
+: <a class="el" href="df/d42/class_moving_platform.html#a35d0362f80c6b673f2b544a6db8c79b7">MovingPlatform</a>
+</li>
 <li>Notify
 : <a class="el" href="dc/dde/class_player_controller.html#af13292e01756741118500035511fc88d">PlayerController</a>
 </li>
@@ -331,7 +413,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="dc/dde/class_player_controller.html#a934c7f80b80276620cd60eaaeea7520e">PlayerController</a>
 </li>
 <li>NotifyState()
-: <a class="el" href="d6/d23/class_player_state.html#a5fd8b8df346a045643621b312317de72">PlayerState</a>
+: <a class="el" href="d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0">PlayerState</a>
 , <a class="el" href="d0/d8b/class_state.html#a989a27f9b711812d983344ee381da419">State</a>
 </li>
 </ul>
@@ -348,22 +430,26 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d6/d23/class_player_state.html#a16e115e2b4c8d0420119d6ff2fe8b3bc">PlayerState</a>
 </li>
 <li>OnClimbingAnim()
-: <a class="el" href="d6/d23/class_player_state.html#a2260a17e1f15130a40085be802737b0a">PlayerState</a>
+: <a class="el" href="d6/d23/class_player_state.html#a7e63f7318e2aea3c2e7612e8ccedf13b">PlayerState</a>
 </li>
 <li>OnCollisionEnter2D()
-: <a class="el" href="d2/dfc/class_platform_catcher.html#ae55ceae7b20536053cc1dbb12a71041e">PlatformCatcher</a>
+: <a class="el" href="d2/dfc/class_platform_catcher.html#ac9a60991fc1368c0e63e52374e30b304">PlatformCatcher</a>
 </li>
 <li>OnCollisionExit2D()
-: <a class="el" href="d2/dfc/class_platform_catcher.html#a8d350fc36f8ebc200f8a769bf4d1df69">PlatformCatcher</a>
+: <a class="el" href="d2/dfc/class_platform_catcher.html#aca1e0783636e67b995dfb75c077fc9ef">PlatformCatcher</a>
 </li>
 <li>OnGround
 : <a class="el" href="d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68e">State</a>
 </li>
 <li>OnGroundAnim()
-: <a class="el" href="d0/d8b/class_state.html#adc5e7be4e977f0a64b29b01171eda8af">State</a>
+: <a class="el" href="d6/d23/class_player_state.html#a0601d37ab4c98941980ffaa4ec69b2c0">PlayerState</a>
+, <a class="el" href="d0/d8b/class_state.html#adc5e7be4e977f0a64b29b01171eda8af">State</a>
 </li>
 <li>OnGUI()
 : <a class="el" href="de/d59/class_enum_flags_attribute_drawer.html#a4eec6e021fd9909ff723dc6fcde93e74">EnumFlagsAttributeDrawer</a>
+</li>
+<li>OnInspectorGUI()
+: <a class="el" href="d4/d7d/class_moving_platform_inspector.html#aa060686c6b8aa6e2d3d854b1fb5b26d3">MovingPlatformInspector</a>
 </li>
 <li>OnInteract
 : <a class="el" href="d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">InteractableObject</a>
@@ -383,7 +469,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d6/d23/class_player_state.html#a2909421d9f22a750c1b0eacfc9bafb3d">PlayerState</a>
 </li>
 <li>PlayerActionAnim()
-: <a class="el" href="d6/d23/class_player_state.html#a573debbcf99d98c57f82398924dc9924">PlayerState</a>
+: <a class="el" href="d6/d23/class_player_state.html#a112abec691914fd4e508cf27dd6b2b07">PlayerState</a>
 </li>
 </ul>
 
@@ -392,10 +478,32 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>SetEvent()
 : <a class="el" href="d5/d6a/class_command.html#a306ef92268d70413bf59adaa36a35b07">Command</a>
 </li>
+<li>Show()
+: <a class="el" href="df/d7a/class_editor_platform_list.html#afa78a25fbabdf962ead1dfefbddf50fd">EditorPlatformList</a>
+</li>
+<li>ShowButtons()
+: <a class="el" href="df/d7a/class_editor_platform_list.html#ae482c7e2b601a4f6906ef4dccd25afab">EditorPlatformList</a>
+</li>
+<li>ShowElements()
+: <a class="el" href="df/d7a/class_editor_platform_list.html#a70c387e1de68662d17fae0513cdd7ae7">EditorPlatformList</a>
+</li>
+</ul>
+
+
+<h3><a id="index_u"></a>- u -</h3><ul>
+<li>Update()
+: <a class="el" href="dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43">PlayerController</a>
+</li>
 </ul>
 
 
 <h3><a id="index_w"></a>- w -</h3><ul>
+<li>WallCheck()
+: <a class="el" href="d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161">PlayerMovement</a>
+</li>
+<li>WallSliding()
+: <a class="el" href="d0/d3d/class_player_movement.html#a9a54ca25bbc57c10ddbd74d4a0b1e30f">PlayerMovement</a>
+</li>
 <li>WallState
 : <a class="el" href="df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901">MovingPlatform</a>
 </li>

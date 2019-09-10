@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
     /** 플레이어 이동
      * @brief
      * 입력 받은 방향에 따라 플레이어 이동을 담당하는 함수
-     * @param dir 이동 방향 Vector3(-1 ~ 1)
+     * @param move 이동 방향 Vector3(-1 ~ 1)
      * @return 가는 방향 vector 리턴
      */
     public Vector3 Move(float move)

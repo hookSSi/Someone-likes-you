@@ -11,7 +11,7 @@ Player\+Controller에 대한 상속 다이어그램 \+: \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=178pt]{d1/dc2/class_player_controller__inherit__graph}
+\includegraphics[width=173pt]{d1/dc2/class_player_controller__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -27,7 +27,19 @@ Player\+Controller에 대한 협력 다이어그램\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 delegate void \mbox{\hyperlink{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}{Notify\+Event}} (Game\+Object entity)
-\begin{DoxyCompactList}\small\item\em 플레이어는 Observer이자 Subject 부를 이벤트 형식을 delegate로 정의 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 플레이어는 Observer이자 Subject 부를 이벤트 형식을 delegate로 정의 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}{Handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_player_controller_a50157884365897164379b8bad7ee4722}{Move}} (float move)
+\begin{DoxyCompactList}\small\item\em 입력 받은 방향에 따라 플레이어 이동을 담당하는 함수 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a4cc61bc6a9187892458138a1d0ffc207}{Flip}} (float dir)
+\begin{DoxyCompactList}\small\item\em 플레이어 반전 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}{Attack}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 공격 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}{Jump}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 점프 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_a1f27776786e67be2633f94b97c93ebdc}{Interact}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 상호작용 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,6 +49,15 @@ float \mbox{\hyperlink{class_player_controller_ab4fed78a016e8baca12e50bb3d7f034a
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}{Notify\+Event}} \mbox{\hyperlink{class_player_controller_af13292e01756741118500035511fc88d}{Notify}}
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_controller_a050967f0e5c2340cb21861e4c8c788a1}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 플레이어 클래스를 초기화하는 함수 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}{Update}} ()
 \end{DoxyCompactItemize}
 \subsection*{Private 속성}
 \begin{DoxyCompactItemize}
@@ -59,15 +80,23 @@ List$<$ \mbox{\hyperlink{class_command}{Command}} $>$ \mbox{\hyperlink{class_pla
 \item 
 Layer\+Mask \mbox{\hyperlink{class_player_controller_a9e49eccbc78237a2355490b7df08368d}{\+\_\+what\+Is\+Ground}}
 \item 
+Layer\+Mask \mbox{\hyperlink{class_player_controller_a00e0ccedea38a9796587bcfc765d193e}{\+\_\+what\+Is\+Wall}}
+\item 
+float \mbox{\hyperlink{class_player_controller_af8d3915645f93ede0aaedfdd343c33d1}{\+\_\+horizontal\+Move}}
+\begin{DoxyCompactList}\small\item\em 플레이어의 이동 방향 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_player_controller_a1ab6a7892eecf1a9fa7b1a49842a3dd2}{\+\_\+walking\+Speed}}
 \begin{DoxyCompactList}\small\item\em 플레이어의 걷는 속도 \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_player_controller_aaec5e4333fe1c532900ca666c075261c}{\+\_\+jump\+Force}}
 \begin{DoxyCompactList}\small\item\em 플레이어의 점프 크기 \end{DoxyCompactList}\item 
-const float \mbox{\hyperlink{class_player_controller_a306070e77c6bcd09f4fed177c876684f}{\+\_\+celling\+Radius}} = .\+2f
+float \mbox{\hyperlink{class_player_controller_a5a14806a0a5b00eb0fc55e071cc0bfc1}{\+\_\+down\+Force}}
+\begin{DoxyCompactList}\small\item\em 플레이어의 하강 속도 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_player_controller_a20e9c123deaac078932a4def658c20bb}{\+\_\+wall\+Sliding\+Speed}}
+\begin{DoxyCompactList}\small\item\em 플레이어의 벽타기중 하강 속도 \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{class_player_controller_a899075705a92c6e4831dc3276dcaebcf}{\+\_\+ceiling\+Radius}} = .\+2f
 \begin{DoxyCompactList}\small\item\em 천장 \end{DoxyCompactList}\item 
-const float \mbox{\hyperlink{class_player_controller_a81d04f96edabfd06d6ba1ecb26322f6a}{\+\_\+grounded\+Radius}} = .\+2f
+const float \mbox{\hyperlink{class_player_controller_a81d04f96edabfd06d6ba1ecb26322f6a}{\+\_\+grounded\+Radius}} = .\+18f
 \begin{DoxyCompactList}\small\item\em 땅 \end{DoxyCompactList}\item 
-const float \mbox{\hyperlink{class_player_controller_a74197aa3c628821b417fb62afec5aecc}{\+\_\+wall\+Radius}}
+const float \mbox{\hyperlink{class_player_controller_a07f0db2435a8eaeb68c30347135a7a17}{\+\_\+wall\+Distance}} = .\+3f
 \begin{DoxyCompactList}\small\item\em 벽 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -90,6 +119,287 @@ Player\+Controller.\+cs 파일의 13 번째 라인에서 정의되었습니다.
 
 
 \subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}\label{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}} 
+\index{PlayerController@{PlayerController}!Attack@{Attack}}
+\index{Attack@{Attack}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 공격 
+
+
+
+Player\+Controller.\+cs 파일의 159 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{160     \{}
+\DoxyCodeLine{161         Debug.Log(\textcolor{stringliteral}{"공격!"});}
+\DoxyCodeLine{162     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a473a610cfe2a374d5cb39b3c44881d11_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_a050967f0e5c2340cb21861e4c8c788a1}\label{class_player_controller_a050967f0e5c2340cb21861e4c8c788a1}} 
+\index{PlayerController@{PlayerController}!Awake@{Awake}}
+\index{Awake@{Awake}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+플레이어 클래스를 초기화하는 함수 
+
+플레이어 클래스 초기화 이동, 마우스 위치 등 Axis를 제외한 키만 취급 
+
+Player\+Controller.\+cs 파일의 77 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78     \{}
+\DoxyCodeLine{79         \textcolor{comment}{// 필수적인 스크립트 자동추가}}
+\DoxyCodeLine{80         \textcolor{keywordflow}{if}(this.\mbox{\hyperlink{class_player_controller_addcd33a9c23c1b949964365390c7a6eb}{\_state}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{81         \{}
+\DoxyCodeLine{82             this.\mbox{\hyperlink{class_player_controller_addcd33a9c23c1b949964365390c7a6eb}{\_state}}    = this.gameObject.AddComponent<\mbox{\hyperlink{class_player_state}{PlayerState}}>();}
+\DoxyCodeLine{83             this.\mbox{\hyperlink{class_player_controller_addcd33a9c23c1b949964365390c7a6eb}{\_state}}.\mbox{\hyperlink{class_state_aff1dd03a1b3c63053b23371d6d70cd1a}{\_animator}} = this.\mbox{\hyperlink{class_player_controller_ada29d77d333483963257e51a6e15b8ae}{\_animator}};}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85         \textcolor{keywordflow}{if}(this.\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{86         \{}
+\DoxyCodeLine{87             this.\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}} = this.gameObject.AddComponent<\mbox{\hyperlink{class_player_movement}{PlayerMovement}}>();}
+\DoxyCodeLine{88             this.\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a104a453051ca7b60d6862e4deb7475b4}{Init}}(this.GetComponent<Rigidbody2D>(), this.\mbox{\hyperlink{class_player_controller_addcd33a9c23c1b949964365390c7a6eb}{\_state}});}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{93         \mbox{\hyperlink{class_player_controller_aab899fbdea369867174253d2efd978fe}{\_commands}}.Add(ScriptableObject.CreateInstance<\mbox{\hyperlink{class_command}{Command}}>().\mbox{\hyperlink{class_command_afc8d0350d5935d74a3685f427173d62e}{Init}}(KeyCode.Mouse0, \mbox{\hyperlink{class_player_controller_a473a610cfe2a374d5cb39b3c44881d11}{Attack}}));}
+\DoxyCodeLine{94         \mbox{\hyperlink{class_player_controller_aab899fbdea369867174253d2efd978fe}{\_commands}}.Add(ScriptableObject.CreateInstance<\mbox{\hyperlink{class_command}{Command}}>().\mbox{\hyperlink{class_command_afc8d0350d5935d74a3685f427173d62e}{Init}}(KeyCode.Space, \mbox{\hyperlink{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}{Jump}}));}
+\DoxyCodeLine{95         \mbox{\hyperlink{class_player_controller_aab899fbdea369867174253d2efd978fe}{\_commands}}.Add(ScriptableObject.CreateInstance<\mbox{\hyperlink{class_command}{Command}}>().\mbox{\hyperlink{class_command_afc8d0350d5935d74a3685f427173d62e}{Init}}(KeyCode.E, \mbox{\hyperlink{class_player_controller_a1f27776786e67be2633f94b97c93ebdc}{Interact}}));}
+\DoxyCodeLine{96     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a050967f0e5c2340cb21861e4c8c788a1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4}\label{class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4}} 
+\index{PlayerController@{PlayerController}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player\+Controller.\+cs 파일의 97 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98     \{}
+\DoxyCodeLine{99         \mbox{\hyperlink{class_player_controller_af8d3915645f93ede0aaedfdd343c33d1}{\_horizontalMove}} = Input.GetAxisRaw(\textcolor{stringliteral}{"Horizontal"}) * Time.deltaTime;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a3096725f76488ebfdc761c53e9fac852}{\_isGround}})}
+\DoxyCodeLine{102         \{}
+\DoxyCodeLine{103             \textcolor{comment}{// 벽 타지 않을때}}
+\DoxyCodeLine{104             \mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_ae4905085466c9d84cc032807f704fb41}{Down}}(\mbox{\hyperlink{class_player_controller_a5a14806a0a5b00eb0fc55e071cc0bfc1}{\_downForce}} * Time.deltaTime);}
+\DoxyCodeLine{105             }
+\DoxyCodeLine{106             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_ad878c661ddfc72890b353a01943f9161}{WallCheck}}(\mbox{\hyperlink{class_player_controller_a0f614194c904fe2b4e6d81dc0ec96da2}{\_wallCheck}}.position, \mbox{\hyperlink{class_player_controller_af8d3915645f93ede0aaedfdd343c33d1}{\_horizontalMove}}, \mbox{\hyperlink{class_player_controller_a07f0db2435a8eaeb68c30347135a7a17}{\_wallDistance}}, \mbox{\hyperlink{class_player_controller_a00e0ccedea38a9796587bcfc765d193e}{\_whatIsWall}}))}
+\DoxyCodeLine{107             \{}
+\DoxyCodeLine{108                 Debug.Log(\textcolor{stringliteral}{"벽 타는 중"});}
+\DoxyCodeLine{109                 \textcolor{comment}{// 벽 탈때}}
+\DoxyCodeLine{110                 \mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a9a54ca25bbc57c10ddbd74d4a0b1e30f}{WallSliding}}(\mbox{\hyperlink{class_player_controller_a20e9c123deaac078932a4def658c20bb}{\_wallSlidingSpeed}} * Time.deltaTime);}
+\DoxyCodeLine{111             \}}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a957f2e09268831052dbd00a9e8e4fa70}{GroundCheck}}(\mbox{\hyperlink{class_player_controller_ae4940f9e37dd5bf49788de933a833377}{\_groundCheck}}.position, \mbox{\hyperlink{class_player_controller_a81d04f96edabfd06d6ba1ecb26322f6a}{\_groundedRadius}}, \mbox{\hyperlink{class_player_controller_a9e49eccbc78237a2355490b7df08368d}{\_whatIsGround}}))}
+\DoxyCodeLine{115             Debug.Log(\textcolor{stringliteral}{"착지!"});}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117         \mbox{\hyperlink{class_player_controller_a50157884365897164379b8bad7ee4722}{Move}}(\mbox{\hyperlink{class_player_controller_af8d3915645f93ede0aaedfdd343c33d1}{\_horizontalMove}});}
+\DoxyCodeLine{118     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_ae5bdb1b48571f67c3f722a58b6f404d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_a4cc61bc6a9187892458138a1d0ffc207}\label{class_player_controller_a4cc61bc6a9187892458138a1d0ffc207}} 
+\index{PlayerController@{PlayerController}!Flip@{Flip}}
+\index{Flip@{Flip}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Flip()}{Flip()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Flip (\begin{DoxyParamCaption}\item[{float}]{dir }\end{DoxyParamCaption})}
+
+
+
+플레이어 반전 
+
+
+
+Player\+Controller.\+cs 파일의 151 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152     \{}
+\DoxyCodeLine{153         Vector3 dirToVector = \textcolor{keyword}{new} Vector3(transform.localScale.x * ((dir >= 0) ? 1:-1), transform.localScale.y, transform.localScale.z);}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155         \mbox{\hyperlink{class_player_controller_aeb0b2dc2ef34062f72afaf20899ce307}{\_sprite}}.transform.localScale                  = dirToVector; \textcolor{comment}{// 스프라이트 좌우 교체}}
+\DoxyCodeLine{156         \mbox{\hyperlink{class_player_controller_a932dbf6c5cc4527856596dc1f9df1426}{\_ceilingCheck}}.parent.transform.localScale     = dirToVector; \textcolor{comment}{// 천장 체커 좌우 교체}}
+\DoxyCodeLine{157     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a4cc61bc6a9187892458138a1d0ffc207_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}\label{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}} 
+\index{PlayerController@{PlayerController}!HandleInput@{HandleInput}}
+\index{HandleInput@{HandleInput}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{HandleInput()}{HandleInput()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다. 
+
+플레이어의 입력 처리 
+
+Player\+Controller.\+cs 파일의 129 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130     \{}
+\DoxyCodeLine{131         \textcolor{keywordflow}{foreach} (\mbox{\hyperlink{class_command}{Command}} command \textcolor{keywordflow}{in} \mbox{\hyperlink{class_player_controller_aab899fbdea369867174253d2efd978fe}{\_commands}})}
+\DoxyCodeLine{132         \{}
+\DoxyCodeLine{133             command.\mbox{\hyperlink{class_command_a1f9dcd759b1d51871f8a6efd30c3a721}{CheckKey}}();}
+\DoxyCodeLine{134         \}}
+\DoxyCodeLine{135     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a5ebfe098b2dc258ca8349e6951766883_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a5ebfe098b2dc258ca8349e6951766883_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_a1f27776786e67be2633f94b97c93ebdc}\label{class_player_controller_a1f27776786e67be2633f94b97c93ebdc}} 
+\index{PlayerController@{PlayerController}!Interact@{Interact}}
+\index{Interact@{Interact}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Interact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 상호작용 
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a1f27776786e67be2633f94b97c93ebdc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}\label{class_player_controller_a8a7010cb6f3c524737be3f6f77553df9}} 
+\index{PlayerController@{PlayerController}!Jump@{Jump}}
+\index{Jump@{Jump}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Jump()}{Jump()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+플레이어 점프 
+
+
+
+Player\+Controller.\+cs 파일의 164 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{165     \{}
+\DoxyCodeLine{166         this.\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a347d6bcd5389bbc6b115c2bdf33e8f29}{Jump}}(\mbox{\hyperlink{class_player_controller_aaec5e4333fe1c532900ca666c075261c}{\_jumpForce}});}
+\DoxyCodeLine{167         Debug.Log(\textcolor{stringliteral}{"점프!"});}
+\DoxyCodeLine{168     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{dc/dde/class_player_controller_a8a7010cb6f3c524737be3f6f77553df9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_controller_a50157884365897164379b8bad7ee4722}\label{class_player_controller_a50157884365897164379b8bad7ee4722}} 
+\index{PlayerController@{PlayerController}!Move@{Move}}
+\index{Move@{Move}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily Vector3 Player\+Controller.\+Move (\begin{DoxyParamCaption}\item[{float}]{move }\end{DoxyParamCaption})}
+
+
+
+입력 받은 방향에 따라 플레이어 이동을 담당하는 함수 
+
+플레이어 이동 
+\begin{DoxyParams}{매개변수}
+{\em move} & 이동 방향 Vector3(-\/1 $\sim$ 1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+가는 방향 vector 리턴 
+\end{DoxyReturn}
+
+
+Player\+Controller.\+cs 파일의 142 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143     \{}
+\DoxyCodeLine{144         Vector3 dir = Vector3.right * move * \mbox{\hyperlink{class_player_controller_a1ab6a7892eecf1a9fa7b1a49842a3dd2}{\_walkingSpeed}};}
+\DoxyCodeLine{145         this.\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a94c480a9aa5629d78b5fd16d9a814bb7}{Move}}(dir);}
+\DoxyCodeLine{146         \mbox{\hyperlink{class_player_controller_a4cc61bc6a9187892458138a1d0ffc207}{Flip}}(\mbox{\hyperlink{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}{\_movement}}.\mbox{\hyperlink{class_player_movement_a802b794d028125d4e547a9caeb90d3d4}{\_prevDir}});}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} dir;}
+\DoxyCodeLine{149     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a50157884365897164379b8bad7ee4722_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_a50157884365897164379b8bad7ee4722_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}\label{class_player_controller_a934c7f80b80276620cd60eaaeea7520e}} 
 \index{PlayerController@{PlayerController}!NotifyEvent@{NotifyEvent}}
 \index{NotifyEvent@{NotifyEvent}!PlayerController@{PlayerController}}
@@ -105,6 +415,30 @@ Player\+Controller.\+cs 파일의 13 번째 라인에서 정의되었습니다.
 
 \href{https://hyunity3d.tistory.com/528}{\texttt{ https\+://hyunity3d.\+tistory.\+com/528}} 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}\label{class_player_controller_ae8bc83dffb99867a04be016473ed2c43}} 
+\index{PlayerController@{PlayerController}!Update@{Update}}
+\index{Update@{Update}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Controller.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player\+Controller.\+cs 파일의 119 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{120     \{}
+\DoxyCodeLine{121         \mbox{\hyperlink{class_player_controller_a5ebfe098b2dc258ca8349e6951766883}{HandleInput}}();}
+\DoxyCodeLine{122     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dde/class_player_controller_ae8bc83dffb99867a04be016473ed2c43_cgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{멤버 데이터 문서화}
@@ -136,11 +470,11 @@ Player\+Controller.\+cs 파일의 32 번째 라인에서 정의되었습니다.
 
 Player\+Controller.\+cs 파일의 39 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{class_player_controller_a306070e77c6bcd09f4fed177c876684f}\label{class_player_controller_a306070e77c6bcd09f4fed177c876684f}} 
-\index{PlayerController@{PlayerController}!\_cellingRadius@{\_cellingRadius}}
-\index{\_cellingRadius@{\_cellingRadius}!PlayerController@{PlayerController}}
-\subsubsection{\texorpdfstring{\_cellingRadius}{\_cellingRadius}}
-{\footnotesize\ttfamily const float Player\+Controller.\+\_\+celling\+Radius = .\+2f\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_player_controller_a899075705a92c6e4831dc3276dcaebcf}\label{class_player_controller_a899075705a92c6e4831dc3276dcaebcf}} 
+\index{PlayerController@{PlayerController}!\_ceilingRadius@{\_ceilingRadius}}
+\index{\_ceilingRadius@{\_ceilingRadius}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_ceilingRadius}{\_ceilingRadius}}
+{\footnotesize\ttfamily const float Player\+Controller.\+\_\+ceiling\+Radius = .\+2f\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -148,7 +482,7 @@ Player\+Controller.\+cs 파일의 39 번째 라인에서 정의되었습니다.
 
 
 
-Player\+Controller.\+cs 파일의 59 번째 라인에서 정의되었습니다.
+Player\+Controller.\+cs 파일의 67 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_aab899fbdea369867174253d2efd978fe}\label{class_player_controller_aab899fbdea369867174253d2efd978fe}} 
 \index{PlayerController@{PlayerController}!\_commands@{\_commands}}
@@ -159,6 +493,20 @@ Player\+Controller.\+cs 파일의 59 번째 라인에서 정의되었습니다.
 
 
 Player\+Controller.\+cs 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_player_controller_a5a14806a0a5b00eb0fc55e071cc0bfc1}\label{class_player_controller_a5a14806a0a5b00eb0fc55e071cc0bfc1}} 
+\index{PlayerController@{PlayerController}!\_downForce@{\_downForce}}
+\index{\_downForce@{\_downForce}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_downForce}{\_downForce}}
+{\footnotesize\ttfamily float Player\+Controller.\+\_\+down\+Force\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+플레이어의 하강 속도 
+
+
+
+Player\+Controller.\+cs 파일의 62 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_ae4940f9e37dd5bf49788de933a833377}\label{class_player_controller_ae4940f9e37dd5bf49788de933a833377}} 
 \index{PlayerController@{PlayerController}!\_groundCheck@{\_groundCheck}}
@@ -178,7 +526,7 @@ Player\+Controller.\+cs 파일의 37 번째 라인에서 정의되었습니다.
 \index{PlayerController@{PlayerController}!\_groundedRadius@{\_groundedRadius}}
 \index{\_groundedRadius@{\_groundedRadius}!PlayerController@{PlayerController}}
 \subsubsection{\texorpdfstring{\_groundedRadius}{\_groundedRadius}}
-{\footnotesize\ttfamily const float Player\+Controller.\+\_\+grounded\+Radius = .\+2f\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily const float Player\+Controller.\+\_\+grounded\+Radius = .\+18f\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -186,7 +534,21 @@ Player\+Controller.\+cs 파일의 37 번째 라인에서 정의되었습니다.
 
 
 
-Player\+Controller.\+cs 파일의 61 번째 라인에서 정의되었습니다.
+Player\+Controller.\+cs 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_player_controller_af8d3915645f93ede0aaedfdd343c33d1}\label{class_player_controller_af8d3915645f93ede0aaedfdd343c33d1}} 
+\index{PlayerController@{PlayerController}!\_horizontalMove@{\_horizontalMove}}
+\index{\_horizontalMove@{\_horizontalMove}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_horizontalMove}{\_horizontalMove}}
+{\footnotesize\ttfamily float Player\+Controller.\+\_\+horizontal\+Move\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+플레이어의 이동 방향 
+
+
+
+Player\+Controller.\+cs 파일의 56 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_ab4fed78a016e8baca12e50bb3d7f034a}\label{class_player_controller_ab4fed78a016e8baca12e50bb3d7f034a}} 
 \index{PlayerController@{PlayerController}!\_hungriness@{\_hungriness}}
@@ -200,7 +562,7 @@ Player\+Controller.\+cs 파일의 61 번째 라인에서 정의되었습니다.
 
 
 
-Player\+Controller.\+cs 파일의 52 번째 라인에서 정의되었습니다.
+Player\+Controller.\+cs 파일의 54 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_aaec5e4333fe1c532900ca666c075261c}\label{class_player_controller_aaec5e4333fe1c532900ca666c075261c}} 
 \index{PlayerController@{PlayerController}!\_jumpForce@{\_jumpForce}}
@@ -214,7 +576,7 @@ Player\+Controller.\+cs 파일의 52 번째 라인에서 정의되었습니다.
 
 
 
-Player\+Controller.\+cs 파일의 56 번째 라인에서 정의되었습니다.
+Player\+Controller.\+cs 파일의 60 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}\label{class_player_controller_ad788cfe2e37318d22d52010dc0fecd57}} 
 \index{PlayerController@{PlayerController}!\_movement@{\_movement}}
@@ -270,7 +632,7 @@ Player\+Controller.\+cs 파일의 29 번째 라인에서 정의되었습니다.
 
 
 
-Player\+Controller.\+cs 파일의 54 번째 라인에서 정의되었습니다.
+Player\+Controller.\+cs 파일의 58 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_a0f614194c904fe2b4e6d81dc0ec96da2}\label{class_player_controller_a0f614194c904fe2b4e6d81dc0ec96da2}} 
 \index{PlayerController@{PlayerController}!\_wallCheck@{\_wallCheck}}
@@ -286,11 +648,11 @@ Player\+Controller.\+cs 파일의 54 번째 라인에서 정의되었습니다.
 
 Player\+Controller.\+cs 파일의 41 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{class_player_controller_a74197aa3c628821b417fb62afec5aecc}\label{class_player_controller_a74197aa3c628821b417fb62afec5aecc}} 
-\index{PlayerController@{PlayerController}!\_wallRadius@{\_wallRadius}}
-\index{\_wallRadius@{\_wallRadius}!PlayerController@{PlayerController}}
-\subsubsection{\texorpdfstring{\_wallRadius}{\_wallRadius}}
-{\footnotesize\ttfamily const float Player\+Controller.\+\_\+wall\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_player_controller_a07f0db2435a8eaeb68c30347135a7a17}\label{class_player_controller_a07f0db2435a8eaeb68c30347135a7a17}} 
+\index{PlayerController@{PlayerController}!\_wallDistance@{\_wallDistance}}
+\index{\_wallDistance@{\_wallDistance}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_wallDistance}{\_wallDistance}}
+{\footnotesize\ttfamily const float Player\+Controller.\+\_\+wall\+Distance = .\+3f\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -298,7 +660,21 @@ Player\+Controller.\+cs 파일의 41 번째 라인에서 정의되었습니다.
 
 
 
-Player\+Controller.\+cs 파일의 63 번째 라인에서 정의되었습니다.
+Player\+Controller.\+cs 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_player_controller_a20e9c123deaac078932a4def658c20bb}\label{class_player_controller_a20e9c123deaac078932a4def658c20bb}} 
+\index{PlayerController@{PlayerController}!\_wallSlidingSpeed@{\_wallSlidingSpeed}}
+\index{\_wallSlidingSpeed@{\_wallSlidingSpeed}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_wallSlidingSpeed}{\_wallSlidingSpeed}}
+{\footnotesize\ttfamily float Player\+Controller.\+\_\+wall\+Sliding\+Speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+플레이어의 벽타기중 하강 속도 
+
+
+
+Player\+Controller.\+cs 파일의 64 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_player_controller_a9e49eccbc78237a2355490b7df08368d}\label{class_player_controller_a9e49eccbc78237a2355490b7df08368d}} 
 \index{PlayerController@{PlayerController}!\_whatIsGround@{\_whatIsGround}}
@@ -309,6 +685,16 @@ Player\+Controller.\+cs 파일의 63 번째 라인에서 정의되었습니다.
 
 
 Player\+Controller.\+cs 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_player_controller_a00e0ccedea38a9796587bcfc765d193e}\label{class_player_controller_a00e0ccedea38a9796587bcfc765d193e}} 
+\index{PlayerController@{PlayerController}!\_whatIsWall@{\_whatIsWall}}
+\index{\_whatIsWall@{\_whatIsWall}!PlayerController@{PlayerController}}
+\subsubsection{\texorpdfstring{\_whatIsWall}{\_whatIsWall}}
+{\footnotesize\ttfamily Layer\+Mask Player\+Controller.\+\_\+what\+Is\+Wall\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Player\+Controller.\+cs 파일의 49 번째 라인에서 정의되었습니다.
 
 
 
@@ -327,4 +713,4 @@ Player\+Controller.\+cs 파일의 24 번째 라인에서 정의되었습니다.
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+New Scripts/\+Player/\mbox{\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/개발/유니티/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+Player/\mbox{\hyperlink{_player_controller_8cs}{Player\+Controller.\+cs}}\end{DoxyCompactItemize}

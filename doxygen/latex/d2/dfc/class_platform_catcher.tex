@@ -23,19 +23,36 @@ Platform\+Catcher에 대한 협력 다이어그램\+:\nopagebreak
 \includegraphics[width=193pt]{dc/db1/class_platform_catcher__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ Transform, Transform $>$ \mbox{\hyperlink{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}{\+\_\+parent\+Dict}}
+\end{DoxyCompactItemize}
 \subsection*{Private 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_platform_catcher_a85b586a2617a568e4201c3f3b3c4103f}{Awake}} ()
-\begin{DoxyCompactList}\small\item\em 컴포넌트 초기화 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_platform_catcher_ae55ceae7b20536053cc1dbb12a71041e}{On\+Collision\+Enter2D}} (Collision2D coll)
+\begin{DoxyCompactList}\small\item\em 기본 설정 초기화 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_platform_catcher_ac9a60991fc1368c0e63e52374e30b304}{On\+Collision\+Enter2D}} (Collision2D collision)
 \begin{DoxyCompactList}\small\item\em 플랫폼 위에 있는 물체의 부모를 플랫폼으로 설정한다 \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_platform_catcher_a8d350fc36f8ebc200f8a769bf4d1df69}{On\+Collision\+Exit2D}} (Collision2D coll)
-\begin{DoxyCompactList}\small\item\em 플랫폼 위에 있는 물체의 부모를 해제한다 \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_platform_catcher_aca1e0783636e67b995dfb75c077fc9ef}{On\+Collision\+Exit2D}} (Collision2D collision)
+\begin{DoxyCompactList}\small\item\em 플랫폼 위에 있는 물체의 부모를 해제한다 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_platform_catcher_a3c2f5ed62367fa897f370f36e2393751}{Filter}} (Collider2D coll)
+\begin{DoxyCompactList}\small\item\em \+\_\+\+Filter에 해당하는 콜라이더를 무시한다 \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc}{Get\+Root}} (Transform obj)
+\begin{DoxyCompactList}\small\item\em 오브젝트의 루트를 찾는다. @detail Player이거나 Object에 해당한다면 O\+K! Platform 오브젝트나 그 위까지는 찾지 않는다. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_platform_catcher_a7c9f254031850ad9d4777dd7f55a9089}{Is\+Player}} (Transform target)
+\begin{DoxyCompactList}\small\item\em 해당 오브젝트가 플레이어인지 검사한다. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_platform_catcher_af3185a9c2d8369aa09e7f4d4bde12b96}{Is\+Object}} (Transform target)
+\begin{DoxyCompactList}\small\item\em 해당 오브젝트가 움직일 수 있는 오브젝트인지 검사한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
-Layer\+Mask \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_platform_catcher_a78ef499926b824a8f831cce7f9a430d2}{\+\_\+\+Array\+Not\+Catch}}
+Layer\+Mask \mbox{\hyperlink{class_platform_catcher_ab82e88a61495d5965d1d8cc14e62a91e}{\+\_\+player\+Layer}} = 1 $<$$<$ 9
+\item 
+Layer\+Mask \mbox{\hyperlink{class_platform_catcher_a59c46f8bc8af74dcf892f8b87b36fff1}{\+\_\+obj\+Layer}} = 1 $<$$<$ 0
+\item 
+Layer\+Mask \mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_platform_catcher_a2e1f324ee414bf1f423d9ae7c61ed5c2}{\+\_\+\+Filter}}
 \item 
 Collider2D \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\+\_\+collider}}
 \item 
@@ -69,44 +86,195 @@ Platform\+Catcher.\+cs 파일의 9 번째 라인에서 정의되었습니다.
 
 
 
-컴포넌트 초기화 
+기본 설정 초기화 
 
 
 
-Platform\+Catcher.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+Platform\+Catcher.\+cs 파일의 23 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{18     \{}
-\DoxyCodeLine{19         \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}} = GetComponent<Collider2D>();}
-\DoxyCodeLine{20         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}})}
-\DoxyCodeLine{21         \{}
-\DoxyCodeLine{22             \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}} = (Collider2D)gameObject.AddComponent<BoxCollider2D>();}
-\DoxyCodeLine{23         \}}
-\DoxyCodeLine{24         \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}}.usedByEffector = \textcolor{keyword}{true};}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26         \mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}} = GetComponent<Rigidbody2D>();}
-\DoxyCodeLine{27         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}})}
-\DoxyCodeLine{28         \{}
-\DoxyCodeLine{29             \mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}} = gameObject.AddComponent<Rigidbody2D>();}
-\DoxyCodeLine{30         \}}
-\DoxyCodeLine{31         \mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}}.isKinematic = \textcolor{keyword}{true};}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33         \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}} = GetComponent<PlatformEffector2D>();}
-\DoxyCodeLine{34         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}})}
-\DoxyCodeLine{35         \{}
-\DoxyCodeLine{36             \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}} = gameObject.AddComponent<PlatformEffector2D>();}
-\DoxyCodeLine{37         \}}
-\DoxyCodeLine{38         \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}}.useColliderMask = \textcolor{keyword}{true};}
-\DoxyCodeLine{39         \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}}.useOneWay = \textcolor{keyword}{true};}
-\DoxyCodeLine{40     \}}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}{\_parentDict}} = \textcolor{keyword}{new} Dictionary<Transform, Transform>();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{comment}{// 컴포넌트 초기화}}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}} = GetComponent<Collider2D>();}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}})}
+\DoxyCodeLine{30         \{}
+\DoxyCodeLine{31             \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}} = (Collider2D)gameObject.AddComponent<BoxCollider2D>();}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33         \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}}.usedByEffector = \textcolor{keyword}{true};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}} = GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}})}
+\DoxyCodeLine{37         \{}
+\DoxyCodeLine{38             \mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}} = gameObject.AddComponent<Rigidbody2D>();}
+\DoxyCodeLine{39         \}}
+\DoxyCodeLine{40         \mbox{\hyperlink{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}{\_rigid}}.isKinematic = \textcolor{keyword}{true};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}} = GetComponent<PlatformEffector2D>();}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}})}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}} = gameObject.AddComponent<PlatformEffector2D>();}
+\DoxyCodeLine{46         \}}
+\DoxyCodeLine{47         \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}}.useColliderMask = \textcolor{keyword}{true};}
+\DoxyCodeLine{48         \mbox{\hyperlink{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}{\_platformEffector}}.useOneWay = \textcolor{keyword}{true};}
+\DoxyCodeLine{49     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_platform_catcher_ae55ceae7b20536053cc1dbb12a71041e}\label{class_platform_catcher_ae55ceae7b20536053cc1dbb12a71041e}} 
+\mbox{\Hypertarget{class_platform_catcher_a3c2f5ed62367fa897f370f36e2393751}\label{class_platform_catcher_a3c2f5ed62367fa897f370f36e2393751}} 
+\index{PlatformCatcher@{PlatformCatcher}!Filter@{Filter}}
+\index{Filter@{Filter}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{Filter()}{Filter()}}
+{\footnotesize\ttfamily bool Platform\+Catcher.\+Filter (\begin{DoxyParamCaption}\item[{Collider2D}]{coll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\+\_\+\+Filter에 해당하는 콜라이더를 무시한다 
+
+
+
+Platform\+Catcher.\+cs 파일의 100 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101     \{}
+\DoxyCodeLine{102         \textcolor{keywordflow}{foreach}(var layer \textcolor{keywordflow}{in} \mbox{\hyperlink{class_platform_catcher_a2e1f324ee414bf1f423d9ae7c61ed5c2}{\_Filter}})}
+\DoxyCodeLine{103         \{}
+\DoxyCodeLine{104             \textcolor{keywordflow}{if} (coll.gameObject.layer == layer)}
+\DoxyCodeLine{105             \{}
+\DoxyCodeLine{106                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{107             \}}
+\DoxyCodeLine{108         \}}
+\DoxyCodeLine{109         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{110     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_a3c2f5ed62367fa897f370f36e2393751_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc}\label{class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc}} 
+\index{PlatformCatcher@{PlatformCatcher}!GetRoot@{GetRoot}}
+\index{GetRoot@{GetRoot}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{GetRoot()}{GetRoot()}}
+{\footnotesize\ttfamily Transform Platform\+Catcher.\+Get\+Root (\begin{DoxyParamCaption}\item[{Transform}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+오브젝트의 루트를 찾는다. @detail Player이거나 Object에 해당한다면 O\+K! Platform 오브젝트나 그 위까지는 찾지 않는다. 
+
+
+
+Platform\+Catcher.\+cs 파일의 116 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117     \{}
+\DoxyCodeLine{118         Transform root = obj;}
+\DoxyCodeLine{119         \textcolor{keywordflow}{while}(root.parent)}
+\DoxyCodeLine{120         \{}
+\DoxyCodeLine{121             \textcolor{keywordflow}{if} (root.parent == \textcolor{keyword}{this}.transform || \mbox{\hyperlink{class_platform_catcher_a7c9f254031850ad9d4777dd7f55a9089}{IsPlayer}}(obj) || \mbox{\hyperlink{class_platform_catcher_af3185a9c2d8369aa09e7f4d4bde12b96}{IsObject}}(obj))}
+\DoxyCodeLine{122             \{}
+\DoxyCodeLine{123                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{124             \}}
+\DoxyCodeLine{125             root = root.parent;}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} root;}
+\DoxyCodeLine{128     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_platform_catcher_af3185a9c2d8369aa09e7f4d4bde12b96}\label{class_platform_catcher_af3185a9c2d8369aa09e7f4d4bde12b96}} 
+\index{PlatformCatcher@{PlatformCatcher}!IsObject@{IsObject}}
+\index{IsObject@{IsObject}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{IsObject()}{IsObject()}}
+{\footnotesize\ttfamily bool Platform\+Catcher.\+Is\+Object (\begin{DoxyParamCaption}\item[{Transform}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+해당 오브젝트가 움직일 수 있는 오브젝트인지 검사한다. 
+
+
+
+Platform\+Catcher.\+cs 파일의 144 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145     \{}
+\DoxyCodeLine{146         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_platform_catcher_a59c46f8bc8af74dcf892f8b87b36fff1}{\_objLayer}} != 0 \&\&}
+\DoxyCodeLine{147         \mbox{\hyperlink{class_platform_catcher_a59c46f8bc8af74dcf892f8b87b36fff1}{\_objLayer}} != LayerMask.NameToLayer(\textcolor{stringliteral}{"Default"}) \&\&}
+\DoxyCodeLine{148         target.gameObject.layer == \mbox{\hyperlink{class_platform_catcher_a59c46f8bc8af74dcf892f8b87b36fff1}{\_objLayer}})}
+\DoxyCodeLine{149         \{}
+\DoxyCodeLine{150             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{151         \}}
+\DoxyCodeLine{152         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{153     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_af3185a9c2d8369aa09e7f4d4bde12b96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_platform_catcher_a7c9f254031850ad9d4777dd7f55a9089}\label{class_platform_catcher_a7c9f254031850ad9d4777dd7f55a9089}} 
+\index{PlatformCatcher@{PlatformCatcher}!IsPlayer@{IsPlayer}}
+\index{IsPlayer@{IsPlayer}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{IsPlayer()}{IsPlayer()}}
+{\footnotesize\ttfamily bool Platform\+Catcher.\+Is\+Player (\begin{DoxyParamCaption}\item[{Transform}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+해당 오브젝트가 플레이어인지 검사한다. 
+
+
+
+Platform\+Catcher.\+cs 파일의 131 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{132     \{}
+\DoxyCodeLine{133         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_platform_catcher_ab82e88a61495d5965d1d8cc14e62a91e}{\_playerLayer}} != 0 \&\&}
+\DoxyCodeLine{134         \mbox{\hyperlink{class_platform_catcher_ab82e88a61495d5965d1d8cc14e62a91e}{\_playerLayer}} != LayerMask.NameToLayer(\textcolor{stringliteral}{"Default"}) \&\&}
+\DoxyCodeLine{135         target.gameObject.layer == \mbox{\hyperlink{class_platform_catcher_ab82e88a61495d5965d1d8cc14e62a91e}{\_playerLayer}})}
+\DoxyCodeLine{136         \{}
+\DoxyCodeLine{137             Debug.Log(\textcolor{stringliteral}{"Player 찾았다!"});}
+\DoxyCodeLine{138             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{139         \}}
+\DoxyCodeLine{140         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{141     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_a7c9f254031850ad9d4777dd7f55a9089_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_platform_catcher_ac9a60991fc1368c0e63e52374e30b304}\label{class_platform_catcher_ac9a60991fc1368c0e63e52374e30b304}} 
 \index{PlatformCatcher@{PlatformCatcher}!OnCollisionEnter2D@{OnCollisionEnter2D}}
 \index{OnCollisionEnter2D@{OnCollisionEnter2D}!PlatformCatcher@{PlatformCatcher}}
 \subsubsection{\texorpdfstring{OnCollisionEnter2D()}{OnCollisionEnter2D()}}
-{\footnotesize\ttfamily void Platform\+Catcher.\+On\+Collision\+Enter2D (\begin{DoxyParamCaption}\item[{Collision2D}]{coll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Platform\+Catcher.\+On\+Collision\+Enter2D (\begin{DoxyParamCaption}\item[{Collision2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -114,34 +282,48 @@ Platform\+Catcher.\+cs 파일의 17 번째 라인에서 정의되었습니다.
 
 
 
-Platform\+Catcher.\+cs 파일의 43 번째 라인에서 정의되었습니다.
+Platform\+Catcher.\+cs 파일의 52 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{44     \{}
-\DoxyCodeLine{45         \textcolor{comment}{// 플랫폼 위에 물체가 있지 않다면 return한다}}
-\DoxyCodeLine{46         \textcolor{keywordtype}{float} collY = coll.collider.bounds.min.y;}
-\DoxyCodeLine{47         \textcolor{keywordflow}{if} (collY < \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}}.bounds.max.y - 0.05f)}
-\DoxyCodeLine{48             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{49         }
-\DoxyCodeLine{50         \textcolor{comment}{// Debug.Log("들어온다.");}}
-\DoxyCodeLine{51         \textcolor{keywordflow}{foreach}(var layer \textcolor{keywordflow}{in} \mbox{\hyperlink{class_platform_catcher_a78ef499926b824a8f831cce7f9a430d2}{\_ArrayNotCatch}})}
-\DoxyCodeLine{52         \{}
-\DoxyCodeLine{53             \textcolor{keywordflow}{if} (coll.gameObject.layer == layer)}
-\DoxyCodeLine{54             \{}
-\DoxyCodeLine{55                 \textcolor{keywordflow}{return};}
-\DoxyCodeLine{56             \}}
-\DoxyCodeLine{57         \}}
-\DoxyCodeLine{58 }
-\DoxyCodeLine{59         coll.transform.SetParent(this.transform);}
-\DoxyCodeLine{60     \}}
+\DoxyCodeLine{53     \{}
+\DoxyCodeLine{54         Collider2D coll = collision.collider;}
+\DoxyCodeLine{55         Transform target;}
+\DoxyCodeLine{56         \textcolor{comment}{// 실제로 플레이어는 바닥에 약간 파묻혀 있으므로 이를 보정하기 위한 변수 delta를 둔다}}
+\DoxyCodeLine{57         \textcolor{keywordtype}{float} delta = 0.05f;}
+\DoxyCodeLine{58         \textcolor{keywordtype}{float} collY = coll.bounds.min.y;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \textcolor{comment}{// 플랫폼 위에 물체가 있지 않다면 거른다}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{if} (collY < \mbox{\hyperlink{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}{\_collider}}.bounds.max.y - delta)}
+\DoxyCodeLine{62             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{63         }
+\DoxyCodeLine{64         \textcolor{comment}{// 필터에 해당하는 오브젝트를 거른다.}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_platform_catcher_a3c2f5ed62367fa897f370f36e2393751}{Filter}}(coll))}
+\DoxyCodeLine{66             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{comment}{// 자식 오브젝트 혼자 납치하지 않게 하는 함수}}
+\DoxyCodeLine{69         target = \mbox{\hyperlink{class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc}{GetRoot}}(coll.transform);}
+\DoxyCodeLine{70         \textcolor{comment}{// 부모 오브젝트가 존재하면 이를 리스트에 올리고, 플랫폼을 부모로 설정한다}}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (target.parent != \textcolor{keyword}{null})}
+\DoxyCodeLine{72         \{}
+\DoxyCodeLine{73             \mbox{\hyperlink{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}{\_parentDict}}.Add(target, target.parent);}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75         target.SetParent(this.transform);}
+\DoxyCodeLine{76     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_platform_catcher_a8d350fc36f8ebc200f8a769bf4d1df69}\label{class_platform_catcher_a8d350fc36f8ebc200f8a769bf4d1df69}} 
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_ac9a60991fc1368c0e63e52374e30b304_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_platform_catcher_aca1e0783636e67b995dfb75c077fc9ef}\label{class_platform_catcher_aca1e0783636e67b995dfb75c077fc9ef}} 
 \index{PlatformCatcher@{PlatformCatcher}!OnCollisionExit2D@{OnCollisionExit2D}}
 \index{OnCollisionExit2D@{OnCollisionExit2D}!PlatformCatcher@{PlatformCatcher}}
 \subsubsection{\texorpdfstring{OnCollisionExit2D()}{OnCollisionExit2D()}}
-{\footnotesize\ttfamily void Platform\+Catcher.\+On\+Collision\+Exit2D (\begin{DoxyParamCaption}\item[{Collision2D}]{coll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Platform\+Catcher.\+On\+Collision\+Exit2D (\begin{DoxyParamCaption}\item[{Collision2D}]{collision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -149,32 +331,40 @@ Platform\+Catcher.\+cs 파일의 43 번째 라인에서 정의되었습니다.
 
 
 
-Platform\+Catcher.\+cs 파일의 63 번째 라인에서 정의되었습니다.
+Platform\+Catcher.\+cs 파일의 79 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64     \{}
-\DoxyCodeLine{65         \textcolor{comment}{// Debug.Log("나간다.");}}
-\DoxyCodeLine{66         \textcolor{keywordflow}{if} (coll.transform.parent == \textcolor{keyword}{this}.transform)}
-\DoxyCodeLine{67         \{}
-\DoxyCodeLine{68             coll.transform.SetParent(\textcolor{keyword}{null});}
-\DoxyCodeLine{69         \}}
-\DoxyCodeLine{70     \}}
+\DoxyCodeLine{80     \{}
+\DoxyCodeLine{81         Collider2D coll = collision.collider;}
+\DoxyCodeLine{82         Transform target = \mbox{\hyperlink{class_platform_catcher_a00c59069f3180cdeae1a2602aaf08bcc}{GetRoot}}(coll.transform);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_platform_catcher_a3c2f5ed62367fa897f370f36e2393751}{Filter}}(coll))}
+\DoxyCodeLine{85         \{}
+\DoxyCodeLine{86             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89         \textcolor{comment}{// 부모 오브젝트를 원래대로 되돌린다.}}
+\DoxyCodeLine{90         target.SetParent(\textcolor{keyword}{null});}
+\DoxyCodeLine{91         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}{\_parentDict}}.ContainsKey(target))}
+\DoxyCodeLine{92         \{}
+\DoxyCodeLine{93             target.SetParent(\mbox{\hyperlink{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}{\_parentDict}}[target]);}
+\DoxyCodeLine{94             \mbox{\hyperlink{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}{\_parentDict}}.Remove(target);}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \}}
 
 \end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dfc/class_platform_catcher_aca1e0783636e67b995dfb75c077fc9ef_cgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{멤버 데이터 문서화}
-\mbox{\Hypertarget{class_platform_catcher_a78ef499926b824a8f831cce7f9a430d2}\label{class_platform_catcher_a78ef499926b824a8f831cce7f9a430d2}} 
-\index{PlatformCatcher@{PlatformCatcher}!\_ArrayNotCatch@{\_ArrayNotCatch}}
-\index{\_ArrayNotCatch@{\_ArrayNotCatch}!PlatformCatcher@{PlatformCatcher}}
-\subsubsection{\texorpdfstring{\_ArrayNotCatch}{\_ArrayNotCatch}}
-{\footnotesize\ttfamily Layer\+Mask \mbox{[}$\,$\mbox{]} Platform\+Catcher.\+\_\+\+Array\+Not\+Catch\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Platform\+Catcher.\+cs 파일의 11 번째 라인에서 정의되었습니다.
-
 \mbox{\Hypertarget{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}\label{class_platform_catcher_aa301b8dfc4e4d2248eeee749691a85a6}} 
 \index{PlatformCatcher@{PlatformCatcher}!\_collider@{\_collider}}
 \index{\_collider@{\_collider}!PlatformCatcher@{PlatformCatcher}}
@@ -183,7 +373,37 @@ Platform\+Catcher.\+cs 파일의 11 번째 라인에서 정의되었습니다.
 
 
 
-Platform\+Catcher.\+cs 파일의 12 번째 라인에서 정의되었습니다.
+Platform\+Catcher.\+cs 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_platform_catcher_a2e1f324ee414bf1f423d9ae7c61ed5c2}\label{class_platform_catcher_a2e1f324ee414bf1f423d9ae7c61ed5c2}} 
+\index{PlatformCatcher@{PlatformCatcher}!\_Filter@{\_Filter}}
+\index{\_Filter@{\_Filter}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{\_Filter}{\_Filter}}
+{\footnotesize\ttfamily Layer\+Mask \mbox{[}$\,$\mbox{]} Platform\+Catcher.\+\_\+\+Filter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Platform\+Catcher.\+cs 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_platform_catcher_a59c46f8bc8af74dcf892f8b87b36fff1}\label{class_platform_catcher_a59c46f8bc8af74dcf892f8b87b36fff1}} 
+\index{PlatformCatcher@{PlatformCatcher}!\_objLayer@{\_objLayer}}
+\index{\_objLayer@{\_objLayer}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{\_objLayer}{\_objLayer}}
+{\footnotesize\ttfamily Layer\+Mask Platform\+Catcher.\+\_\+obj\+Layer = 1 $<$$<$ 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Platform\+Catcher.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}\label{class_platform_catcher_a6b2f5503fc0534fe9898c6bf3b32ec75}} 
+\index{PlatformCatcher@{PlatformCatcher}!\_parentDict@{\_parentDict}}
+\index{\_parentDict@{\_parentDict}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{\_parentDict}{\_parentDict}}
+{\footnotesize\ttfamily Dictionary$<$Transform, Transform$>$ Platform\+Catcher.\+\_\+parent\+Dict}
+
+
+
+Platform\+Catcher.\+cs 파일의 17 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}\label{class_platform_catcher_a9a76fa21f5f0843c1115e36e50eb33f6}} 
 \index{PlatformCatcher@{PlatformCatcher}!\_platformEffector@{\_platformEffector}}
@@ -193,7 +413,17 @@ Platform\+Catcher.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 
 
-Platform\+Catcher.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+Platform\+Catcher.\+cs 파일의 20 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_platform_catcher_ab82e88a61495d5965d1d8cc14e62a91e}\label{class_platform_catcher_ab82e88a61495d5965d1d8cc14e62a91e}} 
+\index{PlatformCatcher@{PlatformCatcher}!\_playerLayer@{\_playerLayer}}
+\index{\_playerLayer@{\_playerLayer}!PlatformCatcher@{PlatformCatcher}}
+\subsubsection{\texorpdfstring{\_playerLayer}{\_playerLayer}}
+{\footnotesize\ttfamily Layer\+Mask Platform\+Catcher.\+\_\+player\+Layer = 1 $<$$<$ 9\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Platform\+Catcher.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 \mbox{\Hypertarget{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}\label{class_platform_catcher_ae8627f8ac9558d21ee7b73eb5bb7d202}} 
 \index{PlatformCatcher@{PlatformCatcher}!\_rigid@{\_rigid}}
@@ -203,10 +433,10 @@ Platform\+Catcher.\+cs 파일의 14 번째 라인에서 정의되었습니다.
 
 
 
-Platform\+Catcher.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+Platform\+Catcher.\+cs 파일의 19 번째 라인에서 정의되었습니다.
 
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+New Scripts/\+Wall/\mbox{\hyperlink{_platform_catcher_8cs}{Platform\+Catcher.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/개발/유니티/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+Wall/\mbox{\hyperlink{_platform_catcher_8cs}{Platform\+Catcher.\+cs}}\end{DoxyCompactItemize}

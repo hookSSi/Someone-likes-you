@@ -1,0 +1,4 @@
+<map id="PlayerState.OnGroundAnim" name="PlayerState.OnGroundAnim">
+<area shape="rect" id="node1" title="땅위에서 애니메이션 처리" alt="" coords="217,5,400,32"/>
+<area shape="rect" id="node2" href="$d6/d23/class_player_state.html#ae57c0c11c946d701bb1e0eb2bc7204dd" title="애니메이션을 처리하는 함수&#39; 땅위, 땅아님에 따라 처리" alt="" coords="5,5,169,32"/>
+</map>

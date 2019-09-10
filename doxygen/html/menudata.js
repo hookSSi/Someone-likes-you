@@ -45,6 +45,7 @@ var menudata={children:[
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
 {text:"s",url:"functions.html#index_s"},
+{text:"u",url:"functions.html#index_u"},
 {text:"w",url:"functions.html#index_w"}]},
 {text:"함수",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
@@ -61,11 +62,19 @@ var menudata={children:[
 {text:"n",url:"functions_func.html#index_n"},
 {text:"o",url:"functions_func.html#index_o"},
 {text:"p",url:"functions_func.html#index_p"},
-{text:"s",url:"functions_func.html#index_s"}]},
+{text:"s",url:"functions_func.html#index_s"},
+{text:"u",url:"functions_func.html#index_u"},
+{text:"w",url:"functions_func.html#index_w"}]},
 {text:"변수",url:"functions_vars.html",children:[
-{text:"_",url:"functions_vars.html#index__5F"}]},
+{text:"_",url:"functions_vars.html#index__5F"},
+{text:"a",url:"functions_vars.html#index_a"},
+{text:"d",url:"functions_vars.html#index_d"},
+{text:"m",url:"functions_vars.html#index_m"}]},
 {text:"열거형 타입",url:"functions_enum.html"},
 {text:"속성",url:"functions_prop.html"},
 {text:"이벤트",url:"functions_evnt.html"}]}]},
 {text:"파일들",url:"files.html",children:[
-{text:"파일 목록",url:"files.html"}]}]}
+{text:"파일 목록",url:"files.html"},
+{text:"파일 멤버",url:"globals.html",children:[
+{text:"모두",url:"globals.html"},
+{text:"열거형 타입",url:"globals_enum.html"}]}]}]}

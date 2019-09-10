@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['move',['Move',['../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901a6bc362dbf494c61ea117fe3c71ca48a5',1,'MovingPlatform']]]
+  ['jumping',['JUMPING',['../d0/d8b/class_state.html#a7d945e793324c017a973205564cf1a56a6de49bfda8068b7bc3b0c0e3d2e43134',1,'State']]]
 ];

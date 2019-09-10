@@ -1,5 +1,9 @@
 var hierarchy =
 [
+    [ "Editor", null, [
+      [ "MovingPlatformInspector", "d4/d7d/class_moving_platform_inspector.html", null ]
+    ] ],
+    [ "EditorPlatformList", "df/d7a/class_editor_platform_list.html", null ],
     [ "MonoBehaviour", null, [
       [ "InteractableObject", "d9/d55/class_interactable_object.html", null ],
       [ "Manager", "d8/d3d/class_manager.html", null ],
