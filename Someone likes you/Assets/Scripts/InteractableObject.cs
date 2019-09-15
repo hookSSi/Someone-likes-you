@@ -15,5 +15,8 @@ public abstract class InteractableObject : MonoBehaviour
     /// 상호작용시 발생할 이벤트
     public event OnInteractEvent OnInteract;
     /// 상호작용시 부르는 함수
-    public virtual void OnNotify(){}
+    public virtual void OnNotify()
+    {
+        OnInteract(gameObject);
+    }
 }
