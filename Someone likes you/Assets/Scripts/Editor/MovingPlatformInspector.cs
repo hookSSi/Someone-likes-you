@@ -11,7 +11,7 @@ public class MovingPlatformInspector : Editor
 
         serializedObject.Update();
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_platform"));
-        EditorPlatformList.Show(serializedObject.FindProperty("_checkPointList"), EditorListOption.All);
+        EditorPlatformList.Show(serializedObject.FindProperty("_wayPointList"), EditorListOption.All);
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_moveMode"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_velocity"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_waitTime"));
@@ -28,6 +28,12 @@ public class MovingPlatformInspector : Editor
         if (_script.gameObject.layer != LayerMask.NameToLayer("Ground"))
         {
             EditorGUILayout.HelpBox("Moving Platform의 LayerMask가 Ground가 아닙니다.", MessageType.Warning);
+        }
+        // MovingPlatform의 _wayPoint가 비어있을 경우 권고문을 띄운다.
+        if (_script._wayPointList.Count == 0)
+        {
+            EditorGUILayout.HelpBox("MovingPlatform의 Way Point가 설정되지 않았습니다.\n"
+            + "Way Point List에 새 Way Point를 생성하고 설정해주세요.", MessageType.Warning);
         }
     }
 }

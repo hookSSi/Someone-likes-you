@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour
     
     /// 도착지의 위치, 빈 게임 오브젝트를 목적지로 삼을 것임!
     [Header("목적지")]
-    public List<Transform> _checkPointList;
+    public List<Transform> _wayPointList;
     /// 현재 목표로 하고 있는 posList의 인덱스
     protected int _index = 0;
     /// 인덱스(_index)가 어떻게 변할지를 결정, -1은 역순, 1은 순방향
@@ -124,7 +124,7 @@ public class MovingPlatform : MonoBehaviour
     private void NextTo()
     {
         // 정방향 순회시 발동
-        if (_indexDir == 1 && _index >= _checkPointList.Count - 1)
+        if (_indexDir == 1 && _index >= _wayPointList.Count - 1)
         {
             switch(_moveMode)
             {
@@ -146,7 +146,7 @@ public class MovingPlatform : MonoBehaviour
             switch(_moveMode)
             {
                 case MoveMode.LOOP:
-                    _index = _checkPointList.Count;                                
+                    _index = _wayPointList.Count;                                
                     break;
                 case MoveMode.BACK_FORTH:
                     _indexDir *= -1;
@@ -171,7 +171,7 @@ public class MovingPlatform : MonoBehaviour
             yield break;
         
         Transform _curOrigin = _platform.transform;
-        Transform _curDest = _checkPointList[_index];
+        Transform _curDest = _wayPointList[_index];
 
         Vector3 _dir = (_curDest.position - _curOrigin.position).normalized;
 

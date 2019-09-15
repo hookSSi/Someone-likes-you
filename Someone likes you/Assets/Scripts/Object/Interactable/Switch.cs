@@ -117,7 +117,7 @@ public class Switch : InteractableObject
         }
     }
 
-    /// 상호작용시 스위치를 조작할 수 있게 한다(Interact 구현 후에나 버그가 없는지 확인할 수 있겠다...)
+    /// 상호작용시 스위치를 조작할 수 있게 한다
     public override void OnNotify()
     {
         if (!_isUsable)
