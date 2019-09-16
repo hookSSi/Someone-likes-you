@@ -28,10 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
   </td>
  </tr>
@@ -89,7 +89,7 @@ $(document).ready(function(){initNavTree('da/d30/class_door.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
-<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#events">이벤트</a> &#124;
 <a href="#pri-methods">Private 멤버 함수</a> &#124;
 <a href="#pri-attribs">Private 속성</a> &#124;
 <a href="../../d9/dd9/class_door-members.html">모든 멤버 목록</a>  </div>
@@ -97,14 +97,18 @@ $(document).ready(function(){initNavTree('da/d30/class_door.html','../../');});
 <div class="title">Door 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>열고 닫을 수 있는 문 @detail 설정(_isInteractable)에 따라 상호작용할 수도 있고 아닐 수도 있다.<br />
+Open과 Close로 문을 열고 닫을 수 있으며 상호작용을 위한 OnNotify가 있다.  
+ <a href="../../da/d30/class_door.html#details">더 자세히 ...</a></p>
 <div class="dynheader">
 Door에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
 <div class="center"><img src="../../d0/d5d/class_door__inherit__graph.png" border="0" usemap="#_door_inherit__map" alt="Inheritance graph"/></div>
 <map name="_door_inherit__map" id="_door_inherit__map">
-<area shape="rect"  title=" " alt="" coords="66,131,181,296"/>
-<area shape="rect"  title=" " alt="" coords="5,5,116,83"/>
-<area shape="rect"  href="../../d2/df1/interface_i_interactable.html" title=" " alt="" coords="140,5,232,83"/>
+<area shape="rect"  title="ì´ê³  ë«ì ì ìë ë¬¸ @detail ì¤ì (_isInteractable)ì ë°ë¼ ìí¸ìì©í  ìë ìê³  ìë ìë ìë¤. Openê³¼ Closeë¡ ë¬¸ì ì´ê³  ë«ì ì ìì¼ë©° ìí¸ìì©ì ..." alt="" coords="15,271,130,421"/>
+<area shape="rect"  href="../../d9/d55/class_interactable_object.html" title="ìí¸ìì© ê°ë¥í ì¤ë¸ì í¸ë¥¼ ìí ì¶ìí´ëì¤ ìí¸ìì©íë ì¤ë¸ì í¸ë¤ì ëª¨ë ì´ í´ëì¤ë¥¼ ììë°ì ê²!" alt="" coords="5,131,140,223"/>
+<area shape="rect"  title=" " alt="" coords="17,5,128,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -112,46 +116,102 @@ Door에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/ddf/class_door__coll__graph.png" border="0" usemap="#_door_coll__map" alt="Collaboration graph"/></div>
 <map name="_door_coll__map" id="_door_coll__map">
-<area shape="rect"  title=" " alt="" coords="66,131,181,296"/>
-<area shape="rect"  title=" " alt="" coords="5,5,116,83"/>
-<area shape="rect"  href="../../d2/df1/interface_i_interactable.html" title=" " alt="" coords="140,5,232,83"/>
+<area shape="rect"  title="ì´ê³  ë«ì ì ìë ë¬¸ @detail ì¤ì (_isInteractable)ì ë°ë¼ ìí¸ìì©í  ìë ìê³  ìë ìë ìë¤. Openê³¼ Closeë¡ ë¬¸ì ì´ê³  ë«ì ì ìì¼ë©° ìí¸ìì©ì ..." alt="" coords="15,271,130,421"/>
+<area shape="rect"  href="../../d9/d55/class_interactable_object.html" title="ìí¸ìì© ê°ë¥í ì¤ë¸ì í¸ë¥¼ ìí ì¶ìí´ëì¤ ìí¸ìì©íë ì¤ë¸ì í¸ë¤ì ëª¨ë ì´ í´ëì¤ë¥¼ ììë°ì ê²!" alt="" coords="5,131,140,223"/>
+<area shape="rect"  title=" " alt="" coords="17,5,128,83"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a79629ef728511bbce03ebd1a3a133581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a79629ef728511bbce03ebd1a3a133581">Open</a> ()</td></tr>
-<tr class="separator:a79629ef728511bbce03ebd1a3a133581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee490d221509a60073df05c186df9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a4ee490d221509a60073df05c186df9e6">Close</a> ()</td></tr>
-<tr class="separator:a4ee490d221509a60073df05c186df9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8fed06499c3e6ffe6d993b5b341c54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#af8fed06499c3e6ffe6d993b5b341c54f">Interact</a> ()</td></tr>
-<tr class="separator:af8fed06499c3e6ffe6d993b5b341c54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b8ff949e85dddb2585afa106fa5d05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05">Open</a> (GameObject door)</td></tr>
+<tr class="memdesc:a31b8ff949e85dddb2585afa106fa5d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">문을 여는 함수  <a href="#a31b8ff949e85dddb2585afa106fa5d05">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a31b8ff949e85dddb2585afa106fa5d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d854b8fb1c977551051f03cea151ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce">Close</a> (GameObject door)</td></tr>
+<tr class="memdesc:aa7d854b8fb1c977551051f03cea151ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">문을 닫는 함수  <a href="#aa7d854b8fb1c977551051f03cea151ce">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aa7d854b8fb1c977551051f03cea151ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12cc0e80dc33ddd336dccc52466c2c50"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50">OnNotify</a> ()</td></tr>
+<tr class="memdesc:a12cc0e80dc33ddd336dccc52466c2c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">상호작용(상호작용 가능한 문(_isInteractable)일 경우에 발동)  <a href="#a12cc0e80dc33ddd336dccc52466c2c50">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a12cc0e80dc33ddd336dccc52466c2c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a579e4b09d53e6cb77b5222189d5eb"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a> (GameObject obj)</td></tr>
+<tr class="separator:a70a579e4b09d53e6cb77b5222189d5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public 속성</h2></td></tr>
-<tr class="memitem:a79ba14bf651c273978299f42e93edd9f"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a79ba14bf651c273978299f42e93edd9f">spriteClosed</a></td></tr>
-<tr class="separator:a79ba14bf651c273978299f42e93edd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb3ee74035b7cafa7c9e64f76d035c8b"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#abb3ee74035b7cafa7c9e64f76d035c8b">spriteOpened</a></td></tr>
-<tr class="separator:abb3ee74035b7cafa7c9e64f76d035c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e16ffccc799c6f70e5540124df53f64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a8e16ffccc799c6f70e5540124df53f64">isOpenByKey</a></td></tr>
-<tr class="separator:a8e16ffccc799c6f70e5540124df53f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
+이벤트</h2></td></tr>
+<tr class="memitem:afe5e0b16d86c2ed4abf4a71a1995f7ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">OnInteract</a></td></tr>
+<tr class="memdesc:afe5e0b16d86c2ed4abf4a71a1995f7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">상호작용시 발생할 이벤트  <a href="#afe5e0b16d86c2ed4abf4a71a1995f7ae">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:afe5e0b16d86c2ed4abf4a71a1995f7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 멤버 함수</h2></td></tr>
-<tr class="memitem:a67f37254b23f6f8770549a7e5a51f15b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a67f37254b23f6f8770549a7e5a51f15b">Start</a> ()</td></tr>
-<tr class="separator:a67f37254b23f6f8770549a7e5a51f15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516f170e7be1fccf24a8286cdda4f8cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf">Awake</a> ()</td></tr>
+<tr class="memdesc:a516f170e7be1fccf24a8286cdda4f8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">OnInteract 델리게이트 초기화용  <a href="#a516f170e7be1fccf24a8286cdda4f8cf">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a516f170e7be1fccf24a8286cdda4f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac518336e578c8c5f447da92d427716fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#ac518336e578c8c5f447da92d427716fc">Update</a> ()</td></tr>
+<tr class="memdesc:ac518336e578c8c5f447da92d427716fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">테스트 및 디버그용  <a href="#ac518336e578c8c5f447da92d427716fc">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:ac518336e578c8c5f447da92d427716fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 속성</h2></td></tr>
-<tr class="memitem:a0e15249011da5cb777aa49235edba8db"><td class="memItemLeft" align="right" valign="top">SpriteRenderer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">spriteRenderer</a></td></tr>
-<tr class="separator:a0e15249011da5cb777aa49235edba8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b7b3e47b01336511c2e4a986d584e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">_isOpen</a> = false</td></tr>
+<tr class="separator:a12b7b3e47b01336511c2e4a986d584e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36402db70ad8e766d282355921c3f525"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d30/class_door.html#a36402db70ad8e766d282355921c3f525">_isInteractable</a> = false</td></tr>
+<tr class="memdesc:a36402db70ad8e766d282355921c3f525"><td class="mdescLeft">&#160;</td><td class="mdescRight">상호작용으로 열리는 문인지 아닌지를 결정하는 변수  <a href="#a36402db70ad8e766d282355921c3f525">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:a36402db70ad8e766d282355921c3f525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
-<div class="textblock">
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
+<div class="textblock"><p>열고 닫을 수 있는 문 @detail 설정(_isInteractable)에 따라 상호작용할 수도 있고 아닐 수도 있다.<br />
+Open과 Close로 문을 열고 닫을 수 있으며 상호작용을 위한 OnNotify가 있다. </p>
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
 </div><h2 class="groupheader">멤버 함수 문서화</h2>
-<a id="a4ee490d221509a60073df05c186df9e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ee490d221509a60073df05c186df9e6">&#9670;&nbsp;</a></span>Close()</h2>
+<a id="a516f170e7be1fccf24a8286cdda4f8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516f170e7be1fccf24a8286cdda4f8cf">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Door.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OnInteract 델리게이트 초기화용 </p>
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">OnInteract</a> += <span class="keyword">new</span> <a class="code" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a>(</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            (GameObject door)=&gt;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">_isOpen</a>)</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <a class="code" href="../../da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05">Open</a>(door);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">else</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <a class="code" href="../../da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce">Close</a>(door);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            });</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div><div class="ttc" id="class_interactable_object_html_afe5e0b16d86c2ed4abf4a71a1995f7ae"><div class="ttname"><a href="../../d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">InteractableObject.OnInteract</a></div><div class="ttdeci">OnInteractEvent OnInteract</div><div class="ttdoc">상호작용시 발생할 이벤트</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df5/_interactable_object_8cs_source.html#l00016">InteractableObject.cs:16</a></div></div>
+<div class="ttc" id="class_interactable_object_html_a70a579e4b09d53e6cb77b5222189d5eb"><div class="ttname"><a href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">InteractableObject.OnInteractEvent</a></div><div class="ttdeci">delegate void OnInteractEvent(GameObject obj)</div></div>
+<div class="ttc" id="class_door_html_aa7d854b8fb1c977551051f03cea151ce"><div class="ttname"><a href="../../da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce">Door.Close</a></div><div class="ttdeci">void Close(GameObject door)</div><div class="ttdoc">문을 닫는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00058">InteractableDoor.cs:58</a></div></div>
+<div class="ttc" id="class_door_html_a12b7b3e47b01336511c2e4a986d584e2"><div class="ttname"><a href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">Door._isOpen</a></div><div class="ttdeci">bool _isOpen</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00014">InteractableDoor.cs:14</a></div></div>
+<div class="ttc" id="class_door_html_a31b8ff949e85dddb2585afa106fa5d05"><div class="ttname"><a href="../../da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05">Door.Open</a></div><div class="ttdeci">void Open(GameObject door)</div><div class="ttdoc">문을 여는 함수</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00051">InteractableDoor.cs:51</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d30/class_door_a516f170e7be1fccf24a8286cdda4f8cf_cgraph.png" border="0" usemap="#da/d30/class_door_a516f170e7be1fccf24a8286cdda4f8cf_cgraph" alt=""/></div>
+<map name="da/d30/class_door_a516f170e7be1fccf24a8286cdda4f8cf_cgraph" id="da/d30/class_door_a516f170e7be1fccf24a8286cdda4f8cf_cgraph">
+<area shape="rect"  title="OnInteract ë¸ë¦¬ê²ì´í¸ ì´ê¸°íì©" alt="" coords="5,71,97,98"/>
+<area shape="rect"  href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb" title=" " alt="" coords="145,5,336,47"/>
+<area shape="rect"  href="../../da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05" title="ë¬¸ì ì¬ë í¨ì" alt="" coords="199,71,283,98"/>
+<area shape="rect"  href="../../da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce" title="ë¬¸ì ë«ë í¨ì" alt="" coords="197,122,284,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa7d854b8fb1c977551051f03cea151ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d854b8fb1c977551051f03cea151ce">&#9670;&nbsp;</a></span>Close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,58 +219,107 @@ Private 속성</h2></td></tr>
         <tr>
           <td class="memname">void Door.Close </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>door</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">spriteRenderer</a>.sprite = <a class="code" href="../../da/d30/class_door.html#a79ba14bf651c273978299f42e93edd9f">spriteClosed</a>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// isOpen = false;</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        gameObject.SetActive(<span class="keyword">true</span>);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="ttc" id="class_door_html_a0e15249011da5cb777aa49235edba8db"><div class="ttname"><a href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">Door.spriteRenderer</a></div><div class="ttdeci">SpriteRenderer spriteRenderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00013">Door.cs:13</a></div></div>
-<div class="ttc" id="class_door_html_a79ba14bf651c273978299f42e93edd9f"><div class="ttname"><a href="../../da/d30/class_door.html#a79ba14bf651c273978299f42e93edd9f">Door.spriteClosed</a></div><div class="ttdeci">Sprite spriteClosed</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00010">Door.cs:10</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="af8fed06499c3e6ffe6d993b5b341c54f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8fed06499c3e6ffe6d993b5b341c54f">&#9670;&nbsp;</a></span>Interact()</h2>
+<p>문을 닫는 함수 </p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Door.Interact </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="../../d2/df1/interface_i_interactable.html#a6e8c9bc1f27bc2a5c81f674ceeac024c">IInteractable</a>를 구현.</p>
-
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../da/d30/class_door.html#a8e16ffccc799c6f70e5540124df53f64">isOpenByKey</a> == <span class="keyword">true</span>)</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="comment">// 오브젝트 찾기</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            List&lt;Item&gt; items = <a class="code" href="../../d0/dc6/class_item_database.html">ItemDatabase</a>.<a class="code" href="../../d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b">GetInstance</a>().<a class="code" href="../../d0/dc6/class_item_database.html#aae8743202dc6def3345a1a6b400e70e4">items</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; items.Count; i++)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">if</span> (items[i].itemType == <a class="code" href="../../dc/d32/class_item.html">Item</a>.<a class="code" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a>.Key)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                {</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    items.RemoveAt(i);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <a class="code" href="../../da/d30/class_door.html#a79629ef728511bbce03ebd1a3a133581">Open</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                }</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            Debug.Log(<span class="stringliteral">&quot;열 수 없는 문이다.&quot;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div><div class="ttc" id="class_door_html_a8e16ffccc799c6f70e5540124df53f64"><div class="ttname"><a href="../../da/d30/class_door.html#a8e16ffccc799c6f70e5540124df53f64">Door.isOpenByKey</a></div><div class="ttdeci">bool isOpenByKey</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00015">Door.cs:15</a></div></div>
-<div class="ttc" id="class_item_html_ab5eeb575e9d66ebcfef9b58b667fad05"><div class="ttname"><a href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">Item.ItemType</a></div><div class="ttdeci">ItemType</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00015">Item.cs:15</a></div></div>
-<div class="ttc" id="class_item_database_html_aae8743202dc6def3345a1a6b400e70e4"><div class="ttname"><a href="../../d0/dc6/class_item_database.html#aae8743202dc6def3345a1a6b400e70e4">ItemDatabase.items</a></div><div class="ttdeci">List&lt; Item &gt; items</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/_item_database_8cs_source.html#l00011">ItemDatabase.cs:11</a></div></div>
-<div class="ttc" id="class_item_html"><div class="ttname"><a href="../../dc/d32/class_item.html">Item</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00006">Item.cs:6</a></div></div>
-<div class="ttc" id="class_door_html_a79629ef728511bbce03ebd1a3a133581"><div class="ttname"><a href="../../da/d30/class_door.html#a79629ef728511bbce03ebd1a3a133581">Door.Open</a></div><div class="ttdeci">void Open()</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00024">Door.cs:24</a></div></div>
-<div class="ttc" id="class_item_database_html_a5312023347462b5af9c545c42934d26b"><div class="ttname"><a href="../../d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b">ItemDatabase.GetInstance</a></div><div class="ttdeci">static ItemDatabase GetInstance()</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/_item_database_8cs_source.html#l00018">ItemDatabase.cs:18</a></div></div>
-<div class="ttc" id="class_item_database_html"><div class="ttname"><a href="../../d0/dc6/class_item_database.html">ItemDatabase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d2b/_item_database_8cs_source.html#l00007">ItemDatabase.cs:7</a></div></div>
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">_isOpen</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        Debug.Log(<span class="stringliteral">&quot;문이 닫혔다.&quot;</span>);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div><div class="ttc" id="class_door_html_a12b7b3e47b01336511c2e4a986d584e2"><div class="ttname"><a href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">Door._isOpen</a></div><div class="ttdeci">bool _isOpen</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00014">InteractableDoor.cs:14</a></div></div>
 </div><!-- fragment --><div class="dynheader">
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d30/class_door_af8fed06499c3e6ffe6d993b5b341c54f_cgraph.png" border="0" usemap="#da/d30/class_door_af8fed06499c3e6ffe6d993b5b341c54f_cgraph" alt=""/></div>
-<map name="da/d30/class_door_af8fed06499c3e6ffe6d993b5b341c54f_cgraph" id="da/d30/class_door_af8fed06499c3e6ffe6d993b5b341c54f_cgraph">
-<area shape="rect"  title=" " alt="" coords="5,31,101,57"/>
-<area shape="rect"  href="../../d0/dc6/class_item_database.html#a5312023347462b5af9c545c42934d26b" title=" " alt="" coords="149,5,325,32"/>
-<area shape="rect"  href="../../da/d30/class_door.html#a79629ef728511bbce03ebd1a3a133581" title=" " alt="" coords="195,56,279,83"/>
+<div class="center"><img src="../../da/d30/class_door_aa7d854b8fb1c977551051f03cea151ce_icgraph.png" border="0" usemap="#da/d30/class_door_aa7d854b8fb1c977551051f03cea151ce_icgraph" alt=""/></div>
+<map name="da/d30/class_door_aa7d854b8fb1c977551051f03cea151ce_icgraph" id="da/d30/class_door_aa7d854b8fb1c977551051f03cea151ce_icgraph">
+<area shape="rect"  title="ë¬¸ì ë«ë í¨ì" alt="" coords="145,5,232,32"/>
+<area shape="rect"  href="../../da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf" title="OnInteract ë¸ë¦¬ê²ì´í¸ ì´ê¸°íì©" alt="" coords="5,5,97,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a79629ef728511bbce03ebd1a3a133581"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79629ef728511bbce03ebd1a3a133581">&#9670;&nbsp;</a></span>Open()</h2>
+<a id="a70a579e4b09d53e6cb77b5222189d5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a579e4b09d53e6cb77b5222189d5eb">&#9670;&nbsp;</a></span>OnInteractEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void InteractableObject.OnInteractEvent </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph.png" border="0" usemap="#d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph" alt=""/></div>
+<map name="d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph" id="d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph">
+<area shape="rect"  title=" " alt="" coords="145,5,336,47"/>
+<area shape="rect"  href="../../da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf" title="OnInteract ë¸ë¦¬ê²ì´í¸ ì´ê¸°íì©" alt="" coords="5,13,97,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a12cc0e80dc33ddd336dccc52466c2c50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cc0e80dc33ddd336dccc52466c2c50">&#9670;&nbsp;</a></span>OnNotify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Door.OnNotify </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>상호작용(상호작용 가능한 문(_isInteractable)일 경우에 발동) </p>
+
+<p><a class="el" href="../../d9/d55/class_interactable_object.html#aa5c752d17471fe0daf58a4d00c218a29">InteractableObject</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="../../da/d30/class_door.html#a36402db70ad8e766d282355921c3f525">_isInteractable</a>)</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//Activate();</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        base.OnNotify();</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="ttc" id="class_door_html_a36402db70ad8e766d282355921c3f525"><div class="ttname"><a href="../../da/d30/class_door.html#a36402db70ad8e766d282355921c3f525">Door._isInteractable</a></div><div class="ttdeci">bool _isInteractable</div><div class="ttdoc">상호작용으로 열리는 문인지 아닌지를 결정하는 변수</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00017">InteractableDoor.cs:17</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d30/class_door_a12cc0e80dc33ddd336dccc52466c2c50_icgraph.png" border="0" usemap="#da/d30/class_door_a12cc0e80dc33ddd336dccc52466c2c50_icgraph" alt=""/></div>
+<map name="da/d30/class_door_a12cc0e80dc33ddd336dccc52466c2c50_icgraph" id="da/d30/class_door_a12cc0e80dc33ddd336dccc52466c2c50_icgraph">
+<area shape="rect"  title="ìí¸ìì©(ìí¸ìì© ê°ë¥í ë¬¸(_isInteractable)ì¼ ê²½ì°ì ë°ë)" alt="" coords="148,5,251,32"/>
+<area shape="rect"  href="../../da/d30/class_door.html#ac518336e578c8c5f447da92d427716fc" title="íì¤í¸ ë° ëë²ê·¸ì©" alt="" coords="5,5,100,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a31b8ff949e85dddb2585afa106fa5d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b8ff949e85dddb2585afa106fa5d05">&#9670;&nbsp;</a></span>Open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,29 +327,31 @@ Private 속성</h2></td></tr>
         <tr>
           <td class="memname">void Door.Open </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>door</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00024">24</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">spriteRenderer</a>.sprite = <a class="code" href="../../da/d30/class_door.html#abb3ee74035b7cafa7c9e64f76d035c8b">spriteOpened</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// isOpen = true;</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        gameObject.SetActive(<span class="keyword">false</span>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div><div class="ttc" id="class_door_html_abb3ee74035b7cafa7c9e64f76d035c8b"><div class="ttname"><a href="../../da/d30/class_door.html#abb3ee74035b7cafa7c9e64f76d035c8b">Door.spriteOpened</a></div><div class="ttdeci">Sprite spriteOpened</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00011">Door.cs:11</a></div></div>
-<div class="ttc" id="class_door_html_a0e15249011da5cb777aa49235edba8db"><div class="ttname"><a href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">Door.spriteRenderer</a></div><div class="ttdeci">SpriteRenderer spriteRenderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00013">Door.cs:13</a></div></div>
+<p>문을 여는 함수 </p>
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">_isOpen</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        Debug.Log(<span class="stringliteral">&quot;문이 열렸다.&quot;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div><div class="ttc" id="class_door_html_a12b7b3e47b01336511c2e4a986d584e2"><div class="ttname"><a href="../../da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">Door._isOpen</a></div><div class="ttdeci">bool _isOpen</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00014">InteractableDoor.cs:14</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../da/d30/class_door_a79629ef728511bbce03ebd1a3a133581_icgraph.png" border="0" usemap="#da/d30/class_door_a79629ef728511bbce03ebd1a3a133581_icgraph" alt=""/></div>
-<map name="da/d30/class_door_a79629ef728511bbce03ebd1a3a133581_icgraph" id="da/d30/class_door_a79629ef728511bbce03ebd1a3a133581_icgraph">
-<area shape="rect"  title=" " alt="" coords="149,5,233,32"/>
-<area shape="rect"  href="../../da/d30/class_door.html#af8fed06499c3e6ffe6d993b5b341c54f" title=" " alt="" coords="5,5,101,32"/>
+<div class="center"><img src="../../da/d30/class_door_a31b8ff949e85dddb2585afa106fa5d05_icgraph.png" border="0" usemap="#da/d30/class_door_a31b8ff949e85dddb2585afa106fa5d05_icgraph" alt=""/></div>
+<map name="da/d30/class_door_a31b8ff949e85dddb2585afa106fa5d05_icgraph" id="da/d30/class_door_a31b8ff949e85dddb2585afa106fa5d05_icgraph">
+<area shape="rect"  title="ë¬¸ì ì¬ë í¨ì" alt="" coords="145,5,229,32"/>
+<area shape="rect"  href="../../da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf" title="OnInteract ë¸ë¦¬ê²ì´í¸ ì´ê¸°íì©" alt="" coords="5,5,97,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a67f37254b23f6f8770549a7e5a51f15b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67f37254b23f6f8770549a7e5a51f15b">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="ac518336e578c8c5f447da92d427716fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac518336e578c8c5f447da92d427716fc">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +360,7 @@ Private 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Door.Start </td>
+          <td class="memname">void Door.Update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -262,63 +373,25 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">// isOpen = false;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">spriteRenderer</a> = gameObject.GetComponent&lt;SpriteRenderer&gt;();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">spriteRenderer</a>.sprite = <a class="code" href="../../da/d30/class_door.html#a79ba14bf651c273978299f42e93edd9f">spriteClosed</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div><div class="ttc" id="class_door_html_a0e15249011da5cb777aa49235edba8db"><div class="ttname"><a href="../../da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db">Door.spriteRenderer</a></div><div class="ttdeci">SpriteRenderer spriteRenderer</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00013">Door.cs:13</a></div></div>
-<div class="ttc" id="class_door_html_a79ba14bf651c273978299f42e93edd9f"><div class="ttname"><a href="../../da/d30/class_door.html#a79ba14bf651c273978299f42e93edd9f">Door.spriteClosed</a></div><div class="ttdeci">Sprite spriteClosed</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d32/_door_8cs_source.html#l00010">Door.cs:10</a></div></div>
-</div><!-- fragment -->
+<p>테스트 및 디버그용 </p>
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">        #if DEBUG</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (_testTrigger)</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _testTrigger = <span class="keyword">false</span>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="../../da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50">OnNotify</a>();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">        #endif</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div><div class="ttc" id="class_door_html_a12cc0e80dc33ddd336dccc52466c2c50"><div class="ttname"><a href="../../da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50">Door.OnNotify</a></div><div class="ttdeci">override void OnNotify()</div><div class="ttdoc">상호작용(상호작용 가능한 문(_isInteractable)일 경우에 발동)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d08/_interactable_door_8cs_source.html#l00065">InteractableDoor.cs:65</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d30/class_door_ac518336e578c8c5f447da92d427716fc_cgraph.png" border="0" usemap="#da/d30/class_door_ac518336e578c8c5f447da92d427716fc_cgraph" alt=""/></div>
+<map name="da/d30/class_door_ac518336e578c8c5f447da92d427716fc_cgraph" id="da/d30/class_door_ac518336e578c8c5f447da92d427716fc_cgraph">
+<area shape="rect"  title="íì¤í¸ ë° ëë²ê·¸ì©" alt="" coords="5,5,100,32"/>
+<area shape="rect"  href="../../da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50" title="ìí¸ìì©(ìí¸ìì© ê°ë¥í ë¬¸(_isInteractable)ì¼ ê²½ì°ì ë°ë)" alt="" coords="148,5,251,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">멤버 데이터 문서화</h2>
-<a id="a8e16ffccc799c6f70e5540124df53f64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e16ffccc799c6f70e5540124df53f64">&#9670;&nbsp;</a></span>isOpenByKey</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Door.isOpenByKey</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a79ba14bf651c273978299f42e93edd9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79ba14bf651c273978299f42e93edd9f">&#9670;&nbsp;</a></span>spriteClosed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite Door.spriteClosed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="abb3ee74035b7cafa7c9e64f76d035c8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb3ee74035b7cafa7c9e64f76d035c8b">&#9670;&nbsp;</a></span>spriteOpened</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite Door.spriteOpened</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00011">11</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a0e15249011da5cb777aa49235edba8db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e15249011da5cb777aa49235edba8db">&#9670;&nbsp;</a></span>spriteRenderer</h2>
+<a id="a36402db70ad8e766d282355921c3f525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36402db70ad8e766d282355921c3f525">&#9670;&nbsp;</a></span>_isInteractable</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +400,7 @@ Private 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SpriteRenderer Door.spriteRenderer</td>
+          <td class="memname">bool Door._isInteractable = false</td>
         </tr>
       </table>
   </td>
@@ -337,12 +410,65 @@ Private 속성</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a> 파일의 <a class="el" href="../../d8/d32/_door_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
+<p>상호작용으로 열리는 문인지 아닌지를 결정하는 변수 </p>
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00017">17</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a12b7b3e47b01336511c2e4a986d584e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b7b3e47b01336511c2e4a986d584e2">&#9670;&nbsp;</a></span>_isOpen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Door._isOpen = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a> 파일의 <a class="el" href="../../d4/d08/_interactable_door_8cs_source.html#l00014">14</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">이벤트 문서화</h2>
+<a id="afe5e0b16d86c2ed4abf4a71a1995f7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5e0b16d86c2ed4abf4a71a1995f7ae">&#9670;&nbsp;</a></span>OnInteract</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a> InteractableObject.OnInteract</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>상호작용시 발생할 이벤트 </p>
+
+<p class="definition"><a class="el" href="../../d1/df5/_interactable_object_8cs_source.html">InteractableObject.cs</a> 파일의 <a class="el" href="../../d1/df5/_interactable_object_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/Scripts/<a class="el" href="../../d8/d32/_door_8cs_source.html">Door.cs</a></li>
+<li>C:/Users/HookSSi/Desktop/개발/유니티/Someone-likes-you/Someone likes you/Assets/Scripts/Object/Interactable/<a class="el" href="../../d4/d08/_interactable_door_8cs_source.html">InteractableDoor.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

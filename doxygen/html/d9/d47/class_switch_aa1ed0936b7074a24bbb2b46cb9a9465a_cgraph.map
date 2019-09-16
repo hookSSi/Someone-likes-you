@@ -1,0 +1,5 @@
+<map id="Switch.SwitchAct" name="Switch.SwitchAct">
+<area shape="rect" id="node1" title="스위치 작동" alt="" coords="5,31,129,57"/>
+<area shape="rect" id="node2" href="$d9/d47/class_switch.html#ad2aa17a4a56cc1fe70a96dc94371c388" title="스위치가 켜질 때 스위치의 스프라이트(또는 애니메이션)나 사운드 따위를 재생하는 함수" alt="" coords="177,5,299,32"/>
+<area shape="rect" id="node3" href="$d9/d47/class_switch.html#a1923f31d7df5390e442cf2ffa9d3292a" title="스위치가 꺼질 때 스위치의 스프라이트(또는 애니메이션)나 사운드 따위를 재생하는 함수" alt="" coords="178,56,298,83"/>
+</map>

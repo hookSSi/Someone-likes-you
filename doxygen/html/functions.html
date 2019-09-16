@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="Rebeca_idle.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
   </td>
  </tr>
@@ -94,29 +94,30 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="dc/dde/class_player_controller.html#ada29d77d333483963257e51a6e15b8ae">PlayerController</a>
 , <a class="el" href="d0/d8b/class_state.html#aff1dd03a1b3c63053b23371d6d70cd1a">State</a>
 </li>
+<li>_buttonDelay
+: <a class="el" href="d9/d47/class_switch.html#aa48b86d0289cb6ec86a63798760739ba">Switch</a>
+</li>
 <li>_ceilingCheck
 : <a class="el" href="dc/dde/class_player_controller.html#a932dbf6c5cc4527856596dc1f9df1426">PlayerController</a>
 </li>
 <li>_ceilingRadius
 : <a class="el" href="dc/dde/class_player_controller.html#a899075705a92c6e4831dc3276dcaebcf">PlayerController</a>
 </li>
-<li>_checkPointList
-: <a class="el" href="df/d42/class_moving_platform.html#aa67781ca68fc140906aa309c82f0d349">MovingPlatform</a>
-</li>
 <li>_collider
 : <a class="el" href="d2/dfc/class_platform_catcher.html#aa301b8dfc4e4d2248eeee749691a85a6">PlatformCatcher</a>
 </li>
-<li>_commands
-: <a class="el" href="dc/dde/class_player_controller.html#aab899fbdea369867174253d2efd978fe">PlayerController</a>
+<li>_commandsGetKey
+: <a class="el" href="dc/dde/class_player_controller.html#ab66639be3aea728b512abeb05c21396e">PlayerController</a>
+</li>
+<li>_commandsGetKeyDown
+: <a class="el" href="dc/dde/class_player_controller.html#a5418f7d3731c414ed28502afd16850bc">PlayerController</a>
 </li>
 <li>_currentTime
 : <a class="el" href="df/d42/class_moving_platform.html#a5c9c4e39da03c1aef1abde75a137831c">MovingPlatform</a>
+, <a class="el" href="d9/d47/class_switch.html#a24a92f60741278f45ea7d4ba0b5e1ce7">Switch</a>
 </li>
 <li>_deceleration
 : <a class="el" href="d0/d3d/class_player_movement.html#accf40aeeabcd73e5aefa1ced890c167d">PlayerMovement</a>
-</li>
-<li>_downForce
-: <a class="el" href="dc/dde/class_player_controller.html#a5a14806a0a5b00eb0fc55e071cc0bfc1">PlayerController</a>
 </li>
 <li>_event
 : <a class="el" href="d5/d6a/class_command.html#a04f1a7e0dc8e999e0fca2aa9210f73a3">Command</a>
@@ -142,6 +143,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_indexDir
 : <a class="el" href="df/d42/class_moving_platform.html#a885973335ac91f8c34289d38f2d88d93">MovingPlatform</a>
 </li>
+<li>_isActive
+: <a class="el" href="d9/d47/class_switch.html#aba91cb75ae6b195cdbddf65ea843370a">Switch</a>
+</li>
 <li>_isCeiling
 : <a class="el" href="d0/d3d/class_player_movement.html#a3701c47b7350464da003c1cc53f1bf69">PlayerMovement</a>
 </li>
@@ -151,8 +155,20 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_isGround
 : <a class="el" href="d0/d3d/class_player_movement.html#a3096725f76488ebfdc761c53e9fac852">PlayerMovement</a>
 </li>
+<li>_isInteractable
+: <a class="el" href="da/d30/class_door.html#a36402db70ad8e766d282355921c3f525">Door</a>
+</li>
+<li>_isKeepHoldingJump
+: <a class="el" href="d0/d3d/class_player_movement.html#a7f5487a5ea2c26c405c0bd2c8c795db6">PlayerMovement</a>
+</li>
 <li>_isOn
 : <a class="el" href="df/d42/class_moving_platform.html#a6721f91607e56294fb807a00ccfaafad">MovingPlatform</a>
+</li>
+<li>_isOpen
+: <a class="el" href="da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2">Door</a>
+</li>
+<li>_isUsable
+: <a class="el" href="d9/d47/class_switch.html#a6cc73d0665cf08c9a43b10029a652b31">Switch</a>
 </li>
 <li>_isWall
 : <a class="el" href="d0/d3d/class_player_movement.html#a675cef6bf2bfaa54c290f2b73caf91cb">PlayerMovement</a>
@@ -162,6 +178,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_key
 : <a class="el" href="d5/d6a/class_command.html#a85e9adc5f9994f8da6b21bbad6dfb13d">Command</a>
+</li>
+<li>_lowFallMultipler
+: <a class="el" href="dc/dde/class_player_controller.html#a22c8d9bc37fc9e2e9adb147bdf8867ef">PlayerController</a>
+</li>
+<li>_mode
+: <a class="el" href="d9/d47/class_switch.html#a763af35d8442209649d2a1db2f3aa0cc">Switch</a>
 </li>
 <li>_movement
 : <a class="el" href="dc/dde/class_player_controller.html#ad788cfe2e37318d22d52010dc0fecd57">PlayerController</a>
@@ -175,14 +197,23 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_name
 : <a class="el" href="d5/d6a/class_command.html#a18a8a95d7f2c65bfa786fb525c42d0c4">Command</a>
 </li>
+<li>_normalFallMultipler
+: <a class="el" href="dc/dde/class_player_controller.html#aa38f479e2486aa4a84a9281e4788dd0c">PlayerController</a>
+</li>
 <li>_objLayer
 : <a class="el" href="d2/dfc/class_platform_catcher.html#a59c46f8bc8af74dcf892f8b87b36fff1">PlatformCatcher</a>
+</li>
+<li>_OffEvent
+: <a class="el" href="d9/d47/class_switch.html#a7618e6c742dd3b2e6bb3fe4f56255896">Switch</a>
 </li>
 <li>_offGroundState
 : <a class="el" href="d0/d8b/class_state.html#ad421039bfc35b46969f174c9617ab786">State</a>
 </li>
 <li>_onClimbing
 : <a class="el" href="d6/d23/class_player_state.html#a779507cee79095e3bbd9e6e1f7f8b8a8">PlayerState</a>
+</li>
+<li>_OnEvent
+: <a class="el" href="d9/d47/class_switch.html#a8485f562cae8388cc00614d3d0327405">Switch</a>
 </li>
 <li>_onGroundState
 : <a class="el" href="d0/d8b/class_state.html#ab3170df5e58f541f39edff3c1278d443">State</a>
@@ -212,16 +243,28 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_sprite
 : <a class="el" href="dc/dde/class_player_controller.html#aeb0b2dc2ef34062f72afaf20899ce307">PlayerController</a>
 </li>
+<li>_spriteActive
+: <a class="el" href="d9/d47/class_switch.html#afa73947391c220a1a6649ebfde9b3f29">Switch</a>
+</li>
+<li>_spriteDeactive
+: <a class="el" href="d9/d47/class_switch.html#a07fa9da72f21c271622813fe9fafa40f">Switch</a>
+</li>
 <li>_state
 : <a class="el" href="df/d42/class_moving_platform.html#abd03a1d4800fd5fa8ab4ef8ce5a688db">MovingPlatform</a>
 , <a class="el" href="dc/dde/class_player_controller.html#addcd33a9c23c1b949964365390c7a6eb">PlayerController</a>
 , <a class="el" href="d0/d3d/class_player_movement.html#af88a64a22da9ba3a831b0fe31bd8e7db">PlayerMovement</a>
+</li>
+<li>_testTrigger
+: <a class="el" href="d9/d47/class_switch.html#ad88a45b17c0618e096db2eede7eebd72">Switch</a>
 </li>
 <li>_timeForStop
 : <a class="el" href="df/d42/class_moving_platform.html#a69791dc347a05d5513e82cd445640cf4">MovingPlatform</a>
 </li>
 <li>_trigger
 : <a class="el" href="df/d42/class_moving_platform.html#a98e69f4b8bfe702ef2bc6a8d77a03b8a">MovingPlatform</a>
+</li>
+<li>_type
+: <a class="el" href="d9/d47/class_switch.html#a8e2af94ed2134ec3d42860bcbf60de66">Switch</a>
 </li>
 <li>_velocity
 : <a class="el" href="d1/de2/class_movement.html#a6ea6768262f1dca968be8ee5c14a0cc1">Movement</a>
@@ -241,6 +284,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_wallSlidingSpeed
 : <a class="el" href="dc/dde/class_player_controller.html#a20e9c123deaac078932a4def658c20bb">PlayerController</a>
+</li>
+<li>_wayPointList
+: <a class="el" href="df/d42/class_moving_platform.html#a59ac15d3e2b4bff0df981fa4839e5f61">MovingPlatform</a>
 </li>
 <li>_whatIsGround
 : <a class="el" href="dc/dde/class_player_controller.html#a9e49eccbc78237a2355490b7df08368d">PlayerController</a>
@@ -265,9 +311,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="dc/dde/class_player_controller.html#a473a610cfe2a374d5cb39b3c44881d11">PlayerController</a>
 </li>
 <li>Awake()
-: <a class="el" href="df/d42/class_moving_platform.html#aec6412bf79a5d4fdec57da2e3b390b93">MovingPlatform</a>
+: <a class="el" href="da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf">Door</a>
+, <a class="el" href="df/d42/class_moving_platform.html#aec6412bf79a5d4fdec57da2e3b390b93">MovingPlatform</a>
 , <a class="el" href="d2/dfc/class_platform_catcher.html#a85b586a2617a568e4201c3f3b3c4103f">PlatformCatcher</a>
 , <a class="el" href="dc/dde/class_player_controller.html#a050967f0e5c2340cb21861e4c8c788a1">PlayerController</a>
+, <a class="el" href="d9/d47/class_switch.html#a9988b93ae4cd0954c17f4f4bee3ef247">Switch</a>
 </li>
 </ul>
 
@@ -276,8 +324,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>CeilingCheck()
 : <a class="el" href="d0/d3d/class_player_movement.html#a6f9b40c6b4bb2fcb47c3c0b8f17a81b8">PlayerMovement</a>
 </li>
-<li>CheckKey()
-: <a class="el" href="d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721">Command</a>
+<li>CheckGetKey()
+: <a class="el" href="d5/d6a/class_command.html#aae2d7670c9ee25e629d3702579416095">Command</a>
+</li>
+<li>CheckGetKeyDown()
+: <a class="el" href="d5/d6a/class_command.html#ac35514f10fbf789814e9ce5431a26562">Command</a>
+</li>
+<li>Close()
+: <a class="el" href="da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce">Door</a>
 </li>
 </ul>
 
@@ -293,7 +347,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="df/d7a/class_editor_platform_list.html#ab1bcf67efe880dd93508b5fbd2b3f9b2">EditorPlatformList</a>
 </li>
 <li>Down()
-: <a class="el" href="d0/d3d/class_player_movement.html#ae4905085466c9d84cc032807f704fb41">PlayerMovement</a>
+: <a class="el" href="d0/d3d/class_player_movement.html#aa93c724e750d78276b1ef3df18ee2383">PlayerMovement</a>
 </li>
 <li>duplicateButtonContent
 : <a class="el" href="df/d7a/class_editor_platform_list.html#a6e8a9ff76288daab5d7e50864508c8ba">EditorPlatformList</a>
@@ -339,6 +393,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>HandleInput()
 : <a class="el" href="dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883">PlayerController</a>
+</li>
+<li>HoldJumpKey()
+: <a class="el" href="dc/dde/class_player_controller.html#ad5c697ec9c26fbd98bdd028e06ca3ae2">PlayerController</a>
+, <a class="el" href="d0/d3d/class_player_movement.html#af1a6cc9394844b2ef84773900f315fb9">PlayerMovement</a>
 </li>
 </ul>
 
@@ -458,8 +516,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">InteractableObject</a>
 </li>
 <li>OnNotify()
-: <a class="el" href="d9/d55/class_interactable_object.html#aa5c752d17471fe0daf58a4d00c218a29">InteractableObject</a>
+: <a class="el" href="da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50">Door</a>
+, <a class="el" href="d9/d55/class_interactable_object.html#aa5c752d17471fe0daf58a4d00c218a29">InteractableObject</a>
 , <a class="el" href="d8/d3d/class_manager.html#af8f781331eb3451725d6b0a78131de19">Manager</a>
+, <a class="el" href="d9/d47/class_switch.html#a19366c58c24da5801977ecc108270c5a">Switch</a>
+</li>
+<li>Open()
+: <a class="el" href="da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05">Door</a>
 </li>
 </ul>
 
@@ -470,6 +533,16 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>PlayerActionAnim()
 : <a class="el" href="d6/d23/class_player_state.html#a112abec691914fd4e508cf27dd6b2b07">PlayerState</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>render
+: <a class="el" href="d9/d47/class_switch.html#a91fdd02a949dd741f026a21104ab50dc">Switch</a>
+</li>
+<li>ReusableMode
+: <a class="el" href="d9/d47/class_switch.html#ab6cd06c871c19ba8fbe1765515a828cc">Switch</a>
 </li>
 </ul>
 
@@ -487,12 +560,26 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>ShowElements()
 : <a class="el" href="df/d7a/class_editor_platform_list.html#a70c387e1de68662d17fae0513cdd7ae7">EditorPlatformList</a>
 </li>
+<li>SwitchAct()
+: <a class="el" href="d9/d47/class_switch.html#aa1ed0936b7074a24bbb2b46cb9a9465a">Switch</a>
+</li>
+<li>SwitchOff()
+: <a class="el" href="d9/d47/class_switch.html#a1923f31d7df5390e442cf2ffa9d3292a">Switch</a>
+</li>
+<li>SwitchOn()
+: <a class="el" href="d9/d47/class_switch.html#ad2aa17a4a56cc1fe70a96dc94371c388">Switch</a>
+</li>
+<li>SwitchType
+: <a class="el" href="d9/d47/class_switch.html#aa3d83cf921138e9b74aa9a28f1970a3f">Switch</a>
+</li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>Update()
-: <a class="el" href="dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43">PlayerController</a>
+: <a class="el" href="da/d30/class_door.html#ac518336e578c8c5f447da92d427716fc">Door</a>
+, <a class="el" href="dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43">PlayerController</a>
+, <a class="el" href="d9/d47/class_switch.html#a7aa3b2489c41c573dc34ef3014faf4a4">Switch</a>
 </li>
 </ul>
 

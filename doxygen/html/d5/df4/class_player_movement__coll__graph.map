@@ -1,5 +1,5 @@
 <map id="PlayerMovement" name="PlayerMovement">
-<area shape="rect" id="node1" title="플레이어 움직임 담당 클래스" alt="" coords="43,739,165,1021"/>
+<area shape="rect" id="node1" title="플레이어 움직임 담당 클래스" alt="" coords="27,739,181,1051"/>
 <area shape="rect" id="node2" href="$d1/de2/class_movement.html" title="공통적인 움직임을 정의할 함수를 담는 클래스" alt="" coords="5,321,168,487"/>
 <area shape="rect" id="node3" title=" " alt="" coords="66,5,177,83"/>
 <area shape="rect" id="node5" href="$d0/d8b/class_state.html" title="애니메이션이 달린 객체의 상태 표시겸 애니메이션 처리 클래스" alt="" coords="125,132,256,297"/>

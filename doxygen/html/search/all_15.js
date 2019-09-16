@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['wait',['WAIT',['../d0/d9d/class_dialogue.html#a4fc50ccc0dec0191d8e89bb8cf1b9431ad5cc6a0064b5c25ba37826aa3fda910c',1,'Dialogue']]],
-  ['waitidletime',['WaitIdleTime',['../df/d42/class_moving_platform.html#abb283e05e71fe1fd320d051fdd580b33',1,'MovingPlatform']]],
-  ['worldtocanvas',['worldToCanvas',['../d2/d94/class_conversation.html#aaf0ecb8e30c248e7f8bf29cc7fe14678',1,'Conversation']]]
+  ['walking',['WALKING',['../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3',1,'State']]],
+  ['wallcheck',['WallCheck',['../d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161',1,'PlayerMovement']]],
+  ['wallsliding',['WallSliding',['../d0/d3d/class_player_movement.html#a9a54ca25bbc57c10ddbd74d4a0b1e30f',1,'PlayerMovement']]],
+  ['wallstate',['WallState',['../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901',1,'MovingPlatform']]]
 ];

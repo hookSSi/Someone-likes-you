@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sliding',['SLIDING',['../d6/d23/class_player_state.html#a2909421d9f22a750c1b0eacfc9bafb3da15443de7dd780091e8dd910b110bd99e',1,'PlayerState']]]
+  ['reusable',['REUSABLE',['../d9/d47/class_switch.html#ab6cd06c871c19ba8fbe1765515a828ccaa9dc406f543aa119dd64d44539c1d621',1,'Switch']]]
 ];

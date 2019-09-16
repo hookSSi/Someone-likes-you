@@ -2,8 +2,8 @@ var dir_f1ece73058bd159467cee7546f4c1ce5 =
 [
     [ "Editor", "dir_32eed866be0a2fad0abf6c7304db194a.html", "dir_32eed866be0a2fad0abf6c7304db194a" ],
     [ "Etc", "dir_ac5a54130b8382f78ebbebbaa37f3a20.html", "dir_ac5a54130b8382f78ebbebbaa37f3a20" ],
+    [ "Object", "dir_0e6cb450223f7ab1e65c3b85acb771c9.html", "dir_0e6cb450223f7ab1e65c3b85acb771c9" ],
     [ "Player", "dir_740df43ee5042900635ac9930a17d382.html", "dir_740df43ee5042900635ac9930a17d382" ],
-    [ "Wall", "dir_6a93360253aee4df48a5cfbaafbc5948.html", "dir_6a93360253aee4df48a5cfbaafbc5948" ],
     [ "InteractableObject.cs", "d1/df5/_interactable_object_8cs.html", [
       [ "InteractableObject", "d9/d55/class_interactable_object.html", "d9/d55/class_interactable_object" ]
     ] ],

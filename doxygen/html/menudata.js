@@ -23,6 +23,7 @@ for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"메인 페이지",url:"index.html"},
+{text:"관련된 페이지",url:"pages.html"},
 {text:"클래스",url:"annotated.html",children:[
 {text:"클래스 목록",url:"annotated.html"},
 {text:"클래스 색인",url:"classes.html"},
@@ -44,6 +45,7 @@ var menudata={children:[
 {text:"n",url:"functions.html#index_n"},
 {text:"o",url:"functions.html#index_o"},
 {text:"p",url:"functions.html#index_p"},
+{text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"u",url:"functions.html#index_u"},
 {text:"w",url:"functions.html#index_w"}]},
@@ -69,7 +71,8 @@ var menudata={children:[
 {text:"_",url:"functions_vars.html#index__5F"},
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"d",url:"functions_vars.html#index_d"},
-{text:"m",url:"functions_vars.html#index_m"}]},
+{text:"m",url:"functions_vars.html#index_m"},
+{text:"r",url:"functions_vars.html#index_r"}]},
 {text:"열거형 타입",url:"functions_enum.html"},
 {text:"속성",url:"functions_prop.html"},
 {text:"이벤트",url:"functions_evnt.html"}]}]},
@@ -77,4 +80,5 @@ var menudata={children:[
 {text:"파일 목록",url:"files.html"},
 {text:"파일 멤버",url:"globals.html",children:[
 {text:"모두",url:"globals.html"},
-{text:"열거형 타입",url:"globals_enum.html"}]}]}]}
+{text:"열거형 타입",url:"globals_enum.html"},
+{text:"매크로",url:"globals_defs.html"}]}]}]}

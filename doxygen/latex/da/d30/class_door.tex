@@ -2,212 +2,299 @@
 \label{class_door}\index{Door@{Door}}
 
 
-Door에 대한 상속 다이어그램 \+: \nopagebreak
+열고 닫을 수 있는 문 @detail 설정(\+\_\+is\+Interactable)에 따라 상호작용할 수도 있고 아닐 수도 있다.~\newline
+Open과 Close로 문을 열고 닫을 수 있으며 상호작용을 위한 On\+Notify가 있다.  
+
+
+
+
+Door에 대한 상속 다이어그램 \+: 
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=250pt]{d0/d5d/class_door__inherit__graph}
+\includegraphics[width=181pt]{d0/d5d/class_door__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Door에 대한 협력 다이어그램\+:\nopagebreak
+Door에 대한 협력 다이어그램\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=250pt]{dc/ddf/class_door__coll__graph}
+\includegraphics[width=181pt]{dc/ddf/class_door__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_door_a79629ef728511bbce03ebd1a3a133581}{Open}} ()
-\item 
-void \mbox{\hyperlink{class_door_a4ee490d221509a60073df05c186df9e6}{Close}} ()
-\item 
-void \mbox{\hyperlink{class_door_af8fed06499c3e6ffe6d993b5b341c54f}{Interact}} ()
+void \mbox{\hyperlink{class_door_a31b8ff949e85dddb2585afa106fa5d05}{Open}} (Game\+Object door)
+\begin{DoxyCompactList}\small\item\em 문을 여는 함수 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_door_aa7d854b8fb1c977551051f03cea151ce}{Close}} (Game\+Object door)
+\begin{DoxyCompactList}\small\item\em 문을 닫는 함수 \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_door_a12cc0e80dc33ddd336dccc52466c2c50}{On\+Notify}} ()
+\begin{DoxyCompactList}\small\item\em 상호작용(상호작용 가능한 문(\+\_\+is\+Interactable)일 경우에 발동) \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb}{On\+Interact\+Event}} (Game\+Object obj)
 \end{DoxyCompactItemize}
-\subsection*{Public 속성}
+\subsection*{이벤트}
 \begin{DoxyCompactItemize}
 \item 
-Sprite \mbox{\hyperlink{class_door_a79ba14bf651c273978299f42e93edd9f}{sprite\+Closed}}
-\item 
-Sprite \mbox{\hyperlink{class_door_abb3ee74035b7cafa7c9e64f76d035c8b}{sprite\+Opened}}
-\item 
-bool \mbox{\hyperlink{class_door_a8e16ffccc799c6f70e5540124df53f64}{is\+Open\+By\+Key}}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb}{On\+Interact\+Event}} \mbox{\hyperlink{class_interactable_object_afe5e0b16d86c2ed4abf4a71a1995f7ae}{On\+Interact}}
+\begin{DoxyCompactList}\small\item\em 상호작용시 발생할 이벤트 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_door_a67f37254b23f6f8770549a7e5a51f15b}{Start}} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_door_a516f170e7be1fccf24a8286cdda4f8cf}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em On\+Interact 델리게이트 초기화용 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_door_ac518336e578c8c5f447da92d427716fc}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 테스트 및 디버그용 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
-Sprite\+Renderer \mbox{\hyperlink{class_door_a0e15249011da5cb777aa49235edba8db}{sprite\+Renderer}}
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_door_a12b7b3e47b01336511c2e4a986d584e2}{\+\_\+is\+Open}} = false
+\item 
+bool \mbox{\hyperlink{class_door_a36402db70ad8e766d282355921c3f525}{\+\_\+is\+Interactable}} = false
+\begin{DoxyCompactList}\small\item\em 상호작용으로 열리는 문인지 아닌지를 결정하는 변수 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{상세한 설명}
+열고 닫을 수 있는 문 @detail 설정(\+\_\+is\+Interactable)에 따라 상호작용할 수도 있고 아닐 수도 있다.~\newline
+Open과 Close로 문을 열고 닫을 수 있으며 상호작용을 위한 On\+Notify가 있다. 
 
-
-Door.\+cs 파일의 8 번째 라인에서 정의되었습니다.
+Interactable\+Door.\+cs 파일의 12 번째 라인에서 정의되었습니다.
 
 
 
 \subsection{멤버 함수 문서화}
-\mbox{\Hypertarget{class_door_a4ee490d221509a60073df05c186df9e6}\label{class_door_a4ee490d221509a60073df05c186df9e6}} 
+\mbox{\Hypertarget{class_door_a516f170e7be1fccf24a8286cdda4f8cf}\label{class_door_a516f170e7be1fccf24a8286cdda4f8cf}} 
+\index{Door@{Door}!Awake@{Awake}}
+\index{Awake@{Awake}!Door@{Door}}
+\subsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Door.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+On\+Interact 델리게이트 초기화용 
+
+
+
+Interactable\+Door.\+cs 파일의 26 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_interactable_object_afe5e0b16d86c2ed4abf4a71a1995f7ae}{OnInteract}} += \textcolor{keyword}{new} \mbox{\hyperlink{class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb}{OnInteractEvent}}(}
+\DoxyCodeLine{29             (GameObject door)=>}
+\DoxyCodeLine{30             \{}
+\DoxyCodeLine{31                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_door_a12b7b3e47b01336511c2e4a986d584e2}{\_isOpen}})}
+\DoxyCodeLine{32                     \mbox{\hyperlink{class_door_a31b8ff949e85dddb2585afa106fa5d05}{Open}}(door);}
+\DoxyCodeLine{33                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{34                     \mbox{\hyperlink{class_door_aa7d854b8fb1c977551051f03cea151ce}{Close}}(door);}
+\DoxyCodeLine{35             \});}
+\DoxyCodeLine{36     \}}
+
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{da/d30/class_door_a516f170e7be1fccf24a8286cdda4f8cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_door_aa7d854b8fb1c977551051f03cea151ce}\label{class_door_aa7d854b8fb1c977551051f03cea151ce}} 
 \index{Door@{Door}!Close@{Close}}
 \index{Close@{Close}!Door@{Door}}
 \subsubsection{\texorpdfstring{Close()}{Close()}}
-{\footnotesize\ttfamily void Door.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Door.\+Close (\begin{DoxyParamCaption}\item[{Game\+Object}]{door }\end{DoxyParamCaption})}
 
 
 
-Door.\+cs 파일의 30 번째 라인에서 정의되었습니다.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{31     \{}
-\DoxyCodeLine{32         \mbox{\hyperlink{class_door_a0e15249011da5cb777aa49235edba8db}{spriteRenderer}}.sprite = \mbox{\hyperlink{class_door_a79ba14bf651c273978299f42e93edd9f}{spriteClosed}};}
-\DoxyCodeLine{33         \textcolor{comment}{// isOpen = false;}}
-\DoxyCodeLine{34         gameObject.SetActive(\textcolor{keyword}{true});}
-\DoxyCodeLine{35     \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_door_af8fed06499c3e6ffe6d993b5b341c54f}\label{class_door_af8fed06499c3e6ffe6d993b5b341c54f}} 
-\index{Door@{Door}!Interact@{Interact}}
-\index{Interact@{Interact}!Door@{Door}}
-\subsubsection{\texorpdfstring{Interact()}{Interact()}}
-{\footnotesize\ttfamily void Door.\+Interact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+문을 닫는 함수 
 
 
 
-\mbox{\hyperlink{interface_i_interactable_a6e8c9bc1f27bc2a5c81f674ceeac024c}{I\+Interactable}}를 구현.
-
-
-
-Door.\+cs 파일의 37 번째 라인에서 정의되었습니다.
+Interactable\+Door.\+cs 파일의 58 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38     \{}
-\DoxyCodeLine{39         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_door_a8e16ffccc799c6f70e5540124df53f64}{isOpenByKey}} == \textcolor{keyword}{true})}
-\DoxyCodeLine{40         \{}
-\DoxyCodeLine{41             \textcolor{comment}{// 오브젝트 찾기}}
-\DoxyCodeLine{42             List<Item> items = \mbox{\hyperlink{class_item_database}{ItemDatabase}}.\mbox{\hyperlink{class_item_database_a5312023347462b5af9c545c42934d26b}{GetInstance}}().\mbox{\hyperlink{class_item_database_aae8743202dc6def3345a1a6b400e70e4}{items}};}
-\DoxyCodeLine{43             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < items.Count; i++)}
-\DoxyCodeLine{44             \{}
-\DoxyCodeLine{45                 \textcolor{keywordflow}{if} (items[i].itemType == \mbox{\hyperlink{class_item}{Item}}.\mbox{\hyperlink{class_item_ab5eeb575e9d66ebcfef9b58b667fad05}{ItemType}}.Key)}
-\DoxyCodeLine{46                 \{}
-\DoxyCodeLine{47                     items.RemoveAt(i);}
-\DoxyCodeLine{48                     \mbox{\hyperlink{class_door_a79629ef728511bbce03ebd1a3a133581}{Open}}();}
-\DoxyCodeLine{49                     \textcolor{keywordflow}{return};}
-\DoxyCodeLine{50                 \}}
-\DoxyCodeLine{51             \}}
-\DoxyCodeLine{52         \}}
-\DoxyCodeLine{53         \textcolor{keywordflow}{else}}
-\DoxyCodeLine{54             Debug.Log(\textcolor{stringliteral}{"열 수 없는 문이다."});}
-\DoxyCodeLine{55     \}}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         \mbox{\hyperlink{class_door_a12b7b3e47b01336511c2e4a986d584e2}{\_isOpen}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{61         Debug.Log(\textcolor{stringliteral}{"문이 닫혔다."});}
+\DoxyCodeLine{62     \}}
 
 \end{DoxyCode}
-이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=320pt]{da/d30/class_door_af8fed06499c3e6ffe6d993b5b341c54f_cgraph}
+\includegraphics[width=250pt]{da/d30/class_door_aa7d854b8fb1c977551051f03cea151ce_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_door_a79629ef728511bbce03ebd1a3a133581}\label{class_door_a79629ef728511bbce03ebd1a3a133581}} 
+\mbox{\Hypertarget{class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb}\label{class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb}} 
+\index{Door@{Door}!OnInteractEvent@{OnInteractEvent}}
+\index{OnInteractEvent@{OnInteractEvent}!Door@{Door}}
+\subsubsection{\texorpdfstring{OnInteractEvent()}{OnInteractEvent()}}
+{\footnotesize\ttfamily delegate void Interactable\+Object.\+On\+Interact\+Event (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_door_a12cc0e80dc33ddd336dccc52466c2c50}\label{class_door_a12cc0e80dc33ddd336dccc52466c2c50}} 
+\index{Door@{Door}!OnNotify@{OnNotify}}
+\index{OnNotify@{OnNotify}!Door@{Door}}
+\subsubsection{\texorpdfstring{OnNotify()}{OnNotify()}}
+{\footnotesize\ttfamily override void Door.\+On\+Notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+상호작용(상호작용 가능한 문(\+\_\+is\+Interactable)일 경우에 발동) 
+
+
+
+\mbox{\hyperlink{class_interactable_object_aa5c752d17471fe0daf58a4d00c218a29}{Interactable\+Object}}(으)로부터 재구현되었습니다.
+
+
+
+Interactable\+Door.\+cs 파일의 65 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66     \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_door_a36402db70ad8e766d282355921c3f525}{\_isInteractable}})}
+\DoxyCodeLine{68             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{69         }
+\DoxyCodeLine{70         \textcolor{comment}{//Activate();}}
+\DoxyCodeLine{71         base.OnNotify();}
+\DoxyCodeLine{72     \}}
+
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{da/d30/class_door_a12cc0e80dc33ddd336dccc52466c2c50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_door_a31b8ff949e85dddb2585afa106fa5d05}\label{class_door_a31b8ff949e85dddb2585afa106fa5d05}} 
 \index{Door@{Door}!Open@{Open}}
 \index{Open@{Open}!Door@{Door}}
 \subsubsection{\texorpdfstring{Open()}{Open()}}
-{\footnotesize\ttfamily void Door.\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Door.\+Open (\begin{DoxyParamCaption}\item[{Game\+Object}]{door }\end{DoxyParamCaption})}
 
 
 
-Door.\+cs 파일의 24 번째 라인에서 정의되었습니다.
+문을 여는 함수 
+
+
+
+Interactable\+Door.\+cs 파일의 51 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25     \{}
-\DoxyCodeLine{26         \mbox{\hyperlink{class_door_a0e15249011da5cb777aa49235edba8db}{spriteRenderer}}.sprite = \mbox{\hyperlink{class_door_abb3ee74035b7cafa7c9e64f76d035c8b}{spriteOpened}};}
-\DoxyCodeLine{27         \textcolor{comment}{// isOpen = true;}}
-\DoxyCodeLine{28         gameObject.SetActive(\textcolor{keyword}{false});}
-\DoxyCodeLine{29     \}}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53         \mbox{\hyperlink{class_door_a12b7b3e47b01336511c2e4a986d584e2}{\_isOpen}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{54         Debug.Log(\textcolor{stringliteral}{"문이 열렸다."});}
+\DoxyCodeLine{55     \}}
 
 \end{DoxyCode}
-이 함수를 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=251pt]{da/d30/class_door_a79629ef728511bbce03ebd1a3a133581_icgraph}
+\includegraphics[width=248pt]{da/d30/class_door_a31b8ff949e85dddb2585afa106fa5d05_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_door_a67f37254b23f6f8770549a7e5a51f15b}\label{class_door_a67f37254b23f6f8770549a7e5a51f15b}} 
-\index{Door@{Door}!Start@{Start}}
-\index{Start@{Start}!Door@{Door}}
-\subsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily void Door.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_door_ac518336e578c8c5f447da92d427716fc}\label{class_door_ac518336e578c8c5f447da92d427716fc}} 
+\index{Door@{Door}!Update@{Update}}
+\index{Update@{Update}!Door@{Door}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Door.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Door.\+cs 파일의 17 번째 라인에서 정의되었습니다.
+테스트 및 디버그용 
+
+
+
+Interactable\+Door.\+cs 파일의 39 번째 라인에서 정의되었습니다.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{18     \{}
-\DoxyCodeLine{19         \textcolor{comment}{// isOpen = false;}}
-\DoxyCodeLine{20         \mbox{\hyperlink{class_door_a0e15249011da5cb777aa49235edba8db}{spriteRenderer}} = gameObject.GetComponent<SpriteRenderer>();}
-\DoxyCodeLine{21         \mbox{\hyperlink{class_door_a0e15249011da5cb777aa49235edba8db}{spriteRenderer}}.sprite = \mbox{\hyperlink{class_door_a79ba14bf651c273978299f42e93edd9f}{spriteClosed}};}
-\DoxyCodeLine{22     \}}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41 \textcolor{preprocessor}{        \#if DEBUG}}
+\DoxyCodeLine{42         \textcolor{keywordflow}{if} (\_testTrigger)}
+\DoxyCodeLine{43         \{}
+\DoxyCodeLine{44             \_testTrigger = \textcolor{keyword}{false};}
+\DoxyCodeLine{45             \mbox{\hyperlink{class_door_a12cc0e80dc33ddd336dccc52466c2c50}{OnNotify}}();}
+\DoxyCodeLine{46         \}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{48     \}}
 
 \end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{da/d30/class_door_ac518336e578c8c5f447da92d427716fc_cgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{멤버 데이터 문서화}
-\mbox{\Hypertarget{class_door_a8e16ffccc799c6f70e5540124df53f64}\label{class_door_a8e16ffccc799c6f70e5540124df53f64}} 
-\index{Door@{Door}!isOpenByKey@{isOpenByKey}}
-\index{isOpenByKey@{isOpenByKey}!Door@{Door}}
-\subsubsection{\texorpdfstring{isOpenByKey}{isOpenByKey}}
-{\footnotesize\ttfamily bool Door.\+is\+Open\+By\+Key}
+\mbox{\Hypertarget{class_door_a36402db70ad8e766d282355921c3f525}\label{class_door_a36402db70ad8e766d282355921c3f525}} 
+\index{Door@{Door}!\_isInteractable@{\_isInteractable}}
+\index{\_isInteractable@{\_isInteractable}!Door@{Door}}
+\subsubsection{\texorpdfstring{\_isInteractable}{\_isInteractable}}
+{\footnotesize\ttfamily bool Door.\+\_\+is\+Interactable = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Door.\+cs 파일의 15 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_door_a79ba14bf651c273978299f42e93edd9f}\label{class_door_a79ba14bf651c273978299f42e93edd9f}} 
-\index{Door@{Door}!spriteClosed@{spriteClosed}}
-\index{spriteClosed@{spriteClosed}!Door@{Door}}
-\subsubsection{\texorpdfstring{spriteClosed}{spriteClosed}}
-{\footnotesize\ttfamily Sprite Door.\+sprite\+Closed}
+상호작용으로 열리는 문인지 아닌지를 결정하는 변수 
 
 
 
-Door.\+cs 파일의 10 번째 라인에서 정의되었습니다.
+Interactable\+Door.\+cs 파일의 17 번째 라인에서 정의되었습니다.
 
-\mbox{\Hypertarget{class_door_abb3ee74035b7cafa7c9e64f76d035c8b}\label{class_door_abb3ee74035b7cafa7c9e64f76d035c8b}} 
-\index{Door@{Door}!spriteOpened@{spriteOpened}}
-\index{spriteOpened@{spriteOpened}!Door@{Door}}
-\subsubsection{\texorpdfstring{spriteOpened}{spriteOpened}}
-{\footnotesize\ttfamily Sprite Door.\+sprite\+Opened}
-
-
-
-Door.\+cs 파일의 11 번째 라인에서 정의되었습니다.
-
-\mbox{\Hypertarget{class_door_a0e15249011da5cb777aa49235edba8db}\label{class_door_a0e15249011da5cb777aa49235edba8db}} 
-\index{Door@{Door}!spriteRenderer@{spriteRenderer}}
-\index{spriteRenderer@{spriteRenderer}!Door@{Door}}
-\subsubsection{\texorpdfstring{spriteRenderer}{spriteRenderer}}
-{\footnotesize\ttfamily Sprite\+Renderer Door.\+sprite\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_door_a12b7b3e47b01336511c2e4a986d584e2}\label{class_door_a12b7b3e47b01336511c2e4a986d584e2}} 
+\index{Door@{Door}!\_isOpen@{\_isOpen}}
+\index{\_isOpen@{\_isOpen}!Door@{Door}}
+\subsubsection{\texorpdfstring{\_isOpen}{\_isOpen}}
+{\footnotesize\ttfamily bool Door.\+\_\+is\+Open = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Door.\+cs 파일의 13 번째 라인에서 정의되었습니다.
+Interactable\+Door.\+cs 파일의 14 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{이벤트 문서화}
+\mbox{\Hypertarget{class_interactable_object_afe5e0b16d86c2ed4abf4a71a1995f7ae}\label{class_interactable_object_afe5e0b16d86c2ed4abf4a71a1995f7ae}} 
+\index{Door@{Door}!OnInteract@{OnInteract}}
+\index{OnInteract@{OnInteract}!Door@{Door}}
+\subsubsection{\texorpdfstring{OnInteract}{OnInteract}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb}{On\+Interact\+Event}} Interactable\+Object.\+On\+Interact\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+상호작용시 발생할 이벤트 
+
+
+
+Interactable\+Object.\+cs 파일의 16 번째 라인에서 정의되었습니다.
 
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/파티/게임잼/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\mbox{\hyperlink{_door_8cs}{Door.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Hook\+S\+Si/\+Desktop/개발/유니티/\+Someone-\/likes-\/you/\+Someone likes you/\+Assets/\+Scripts/\+Object/\+Interactable/\mbox{\hyperlink{_interactable_door_8cs}{Interactable\+Door.\+cs}}\end{DoxyCompactItemize}

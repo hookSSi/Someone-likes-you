@@ -1,0 +1,6 @@
+<map id="Door.Awake" name="Door.Awake">
+<area shape="rect" id="node1" title="OnInteract 델리게이트 초기화용" alt="" coords="5,71,97,98"/>
+<area shape="rect" id="node2" href="$d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb" title=" " alt="" coords="145,5,336,47"/>
+<area shape="rect" id="node3" href="$da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05" title="문을 여는 함수" alt="" coords="199,71,283,98"/>
+<area shape="rect" id="node4" href="$da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce" title="문을 닫는 함수" alt="" coords="197,122,284,149"/>
+</map>

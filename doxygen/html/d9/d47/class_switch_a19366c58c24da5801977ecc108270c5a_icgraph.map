@@ -1,0 +1,4 @@
+<map id="Switch.OnNotify" name="Switch.OnNotify">
+<area shape="rect" id="node1" title="상호작용시 스위치를 조작할 수 있게 한다" alt="" coords="160,5,275,32"/>
+<area shape="rect" id="node2" href="$d9/d47/class_switch.html#a7aa3b2489c41c573dc34ef3014faf4a4" title="테스트 및 디버그용" alt="" coords="5,5,112,32"/>
+</map>

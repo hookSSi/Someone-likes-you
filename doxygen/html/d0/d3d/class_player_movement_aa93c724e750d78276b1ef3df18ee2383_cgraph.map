@@ -1,0 +1,4 @@
+<map id="PlayerMovement.Down" name="PlayerMovement.Down">
+<area shape="rect" id="node1" title="버튼을 오래 누를수록 중력을 작게해서 높게 점프하게 한다." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$d6/d23/class_player_state.html#a59f3f64c24ba1b6e34e34cb23746ecb0" title="객체에게 데이터를 받는 함수 단, 데이터는 애니메이션을 위한 값" alt="" coords="208,5,367,32"/>
+</map>

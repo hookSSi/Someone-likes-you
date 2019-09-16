@@ -28,10 +28,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle1.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="../../Rebeca_idle.gif"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SomeoneLikesYouUnityScript
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
   </td>
  </tr>
@@ -88,56 +88,54 @@ $(document).ready(function(){initNavTree('dc/d32/class_item.html','../../');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public 타입</a> &#124;
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
-<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="#events">이벤트</a> &#124;
 <a href="../../d3/dc2/class_item-members.html">모든 멤버 목록</a>  </div>
   <div class="headertitle">
 <div class="title">Item 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
+Item에 대한 상속 다이어그램 : </div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/dc7/class_item__inherit__graph.png" border="0" usemap="#_item_inherit__map" alt="Inheritance graph"/></div>
+<map name="_item_inherit__map" id="_item_inherit__map">
+<area shape="rect"  title=" " alt="" coords="49,271,96,348"/>
+<area shape="rect"  href="../../d9/d55/class_interactable_object.html" title="ìí¸ìì© ê°ë¥í ì¤ë¸ì í¸ë¥¼ ìí ì¶ìí´ëì¤ ìí¸ìì©íë ì¤ë¸ì í¸ë¤ì ëª¨ë ì´ í´ëì¤ë¥¼ ììë°ì ê²!" alt="" coords="5,131,140,223"/>
+<area shape="rect"  title=" " alt="" coords="17,5,128,83"/>
+</map>
+</div>
+<div class="dynheader">
 Item에 대한 협력 다이어그램:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d2/d8b/class_item__coll__graph.png" border="0" usemap="#_item_coll__map" alt="Collaboration graph"/></div>
 <map name="_item_coll__map" id="_item_coll__map">
-<area shape="rect"  title=" " alt="" coords="5,5,129,141"/>
+<area shape="rect"  title=" " alt="" coords="49,271,96,348"/>
+<area shape="rect"  href="../../d9/d55/class_interactable_object.html" title="ìí¸ìì© ê°ë¥í ì¤ë¸ì í¸ë¥¼ ìí ì¶ìí´ëì¤ ìí¸ìì©íë ì¤ë¸ì í¸ë¤ì ëª¨ë ì´ í´ëì¤ë¥¼ ììë°ì ê²!" alt="" coords="5,131,140,223"/>
+<area shape="rect"  title=" " alt="" coords="17,5,128,83"/>
 </map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public 타입</h2></td></tr>
-<tr class="memitem:ab5eeb575e9d66ebcfef9b58b667fad05"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a> { <a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05a897356954c2cd3d41b221e3f24f99bba">ItemType.Key</a>, 
-<a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05a56fed3bd1057fee3027e20901d42f19e">ItemType.Consumable</a>, 
-<a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05a0a38e7286ebbb560354992b3ce62be67">ItemType.Food</a>, 
-<a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05a7fe00998fa483a8ddbf6ed3fc10b9939">ItemType.StoryItem</a>
- }</td></tr>
-<tr class="separator:ab5eeb575e9d66ebcfef9b58b667fad05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:af80ecbe70d40d1fe662e9e2d507b68b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#af80ecbe70d40d1fe662e9e2d507b68b3">Item</a> (string <a class="el" href="../../dc/d32/class_item.html#a8c54f77a262b1ffd78c1cd8cbed86ae0">itemName</a>, string <a class="el" href="../../dc/d32/class_item.html#a1e47deb8739893cbfa26460cf4be4f00">itemDescription</a>, int <a class="el" href="../../dc/d32/class_item.html#abc2de92b7661dbc05ff5b7d445cae487">gainHungry</a>, <a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a> <a class="el" href="../../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d">itemType</a>, Sprite <a class="el" href="../../dc/d32/class_item.html#aa189431b0e859890a3b9118da64cc484">itemImage</a>)</td></tr>
-<tr class="separator:af80ecbe70d40d1fe662e9e2d507b68b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a579e4b09d53e6cb77b5222189d5eb"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a> (GameObject obj)</td></tr>
+<tr class="separator:a70a579e4b09d53e6cb77b5222189d5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c752d17471fe0daf58a4d00c218a29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/class_interactable_object.html#aa5c752d17471fe0daf58a4d00c218a29">OnNotify</a> ()</td></tr>
+<tr class="memdesc:aa5c752d17471fe0daf58a4d00c218a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">상호작용시 부르는 함수  <a href="#aa5c752d17471fe0daf58a4d00c218a29">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:aa5c752d17471fe0daf58a4d00c218a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public 속성</h2></td></tr>
-<tr class="memitem:a8c54f77a262b1ffd78c1cd8cbed86ae0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#a8c54f77a262b1ffd78c1cd8cbed86ae0">itemName</a></td></tr>
-<tr class="separator:a8c54f77a262b1ffd78c1cd8cbed86ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e47deb8739893cbfa26460cf4be4f00"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#a1e47deb8739893cbfa26460cf4be4f00">itemDescription</a></td></tr>
-<tr class="separator:a1e47deb8739893cbfa26460cf4be4f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc2de92b7661dbc05ff5b7d445cae487"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#abc2de92b7661dbc05ff5b7d445cae487">gainHungry</a></td></tr>
-<tr class="separator:abc2de92b7661dbc05ff5b7d445cae487"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbecc774c576b08f57f32655acf7363d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d">itemType</a></td></tr>
-<tr class="separator:adbecc774c576b08f57f32655acf7363d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa189431b0e859890a3b9118da64cc484"><td class="memItemLeft" align="right" valign="top">Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d32/class_item.html#aa189431b0e859890a3b9118da64cc484">itemImage</a></td></tr>
-<tr class="separator:aa189431b0e859890a3b9118da64cc484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
+이벤트</h2></td></tr>
+<tr class="memitem:afe5e0b16d86c2ed4abf4a71a1995f7ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">OnInteract</a></td></tr>
+<tr class="memdesc:afe5e0b16d86c2ed4abf4a71a1995f7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">상호작용시 발생할 이벤트  <a href="#afe5e0b16d86c2ed4abf4a71a1995f7ae">더 자세히 ...</a><br /></td></tr>
+<tr class="separator:afe5e0b16d86c2ed4abf4a71a1995f7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
 <div class="textblock">
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00006">6</a> 번째 라인에서 정의되었습니다.</p>
-</div><h2 class="groupheader">멤버 열거형 문서화</h2>
-<a id="ab5eeb575e9d66ebcfef9b58b667fad05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5eeb575e9d66ebcfef9b58b667fad05">&#9670;&nbsp;</a></span>ItemType</h2>
+<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00005">5</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a70a579e4b09d53e6cb77b5222189d5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a579e4b09d53e6cb77b5222189d5eb">&#9670;&nbsp;</a></span>OnInteractEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,164 +144,92 @@ Public 속성</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">Item.ItemType</a></td>
+          <td class="memname">delegate void InteractableObject.OnInteractEvent </td>
+          <td>(</td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ab5eeb575e9d66ebcfef9b58b667fad05a897356954c2cd3d41b221e3f24f99bba"></a>Key&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab5eeb575e9d66ebcfef9b58b667fad05a56fed3bd1057fee3027e20901d42f19e"></a>Consumable&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab5eeb575e9d66ebcfef9b58b667fad05a0a38e7286ebbb560354992b3ce62be67"></a>Food&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab5eeb575e9d66ebcfef9b58b667fad05a7fe00998fa483a8ddbf6ed3fc10b9939"></a>StoryItem&#160;</td><td class="fielddoc"></td></tr>
-</table>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph.png" border="0" usemap="#d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph" alt=""/></div>
+<map name="d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph" id="d9/d55/class_interactable_object_a70a579e4b09d53e6cb77b5222189d5eb_icgraph">
+<area shape="rect"  title=" " alt="" coords="145,5,336,47"/>
+<area shape="rect"  href="../../da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf" title="OnInteract ë¸ë¦¬ê²ì´í¸ ì´ê¸°íì©" alt="" coords="5,13,97,39"/>
+</map>
+</div>
 
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00015">15</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Key,</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        Consumable,</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        Food,</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        StoryItem</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
-<a id="af80ecbe70d40d1fe662e9e2d507b68b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af80ecbe70d40d1fe662e9e2d507b68b3">&#9670;&nbsp;</a></span>Item()</h2>
+<a id="aa5c752d17471fe0daf58a4d00c218a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5c752d17471fe0daf58a4d00c218a29">&#9670;&nbsp;</a></span>OnNotify()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Item.Item </td>
+          <td class="memname">virtual void InteractableObject.OnNotify </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>itemName</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>itemDescription</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>gainHungry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a>&#160;</td>
-          <td class="paramname"><em>itemType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Sprite&#160;</td>
-          <td class="paramname"><em>itemImage</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this.<a class="code" href="../../dc/d32/class_item.html#a8c54f77a262b1ffd78c1cd8cbed86ae0">itemName</a> = <a class="code" href="../../dc/d32/class_item.html#a8c54f77a262b1ffd78c1cd8cbed86ae0">itemName</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this.<a class="code" href="../../dc/d32/class_item.html#a1e47deb8739893cbfa26460cf4be4f00">itemDescription</a> = <a class="code" href="../../dc/d32/class_item.html#a1e47deb8739893cbfa26460cf4be4f00">itemDescription</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this.<a class="code" href="../../dc/d32/class_item.html#abc2de92b7661dbc05ff5b7d445cae487">gainHungry</a> = 0;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d">itemType</a> == <a class="code" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a>.Food) <span class="comment">// 음식 타입이 아닐 경우 gainHungry는 0으로 설정함.</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            this.<a class="code" href="../../dc/d32/class_item.html#abc2de92b7661dbc05ff5b7d445cae487">gainHungry</a> = <a class="code" href="../../dc/d32/class_item.html#abc2de92b7661dbc05ff5b7d445cae487">gainHungry</a>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this.<a class="code" href="../../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d">itemType</a> = <a class="code" href="../../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d">itemType</a>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this.<a class="code" href="../../dc/d32/class_item.html#aa189431b0e859890a3b9118da64cc484">itemImage</a> = <a class="code" href="../../dc/d32/class_item.html#aa189431b0e859890a3b9118da64cc484">itemImage</a>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div><div class="ttc" id="class_item_html_ab5eeb575e9d66ebcfef9b58b667fad05"><div class="ttname"><a href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">Item.ItemType</a></div><div class="ttdeci">ItemType</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00015">Item.cs:15</a></div></div>
-<div class="ttc" id="class_item_html_abc2de92b7661dbc05ff5b7d445cae487"><div class="ttname"><a href="../../dc/d32/class_item.html#abc2de92b7661dbc05ff5b7d445cae487">Item.gainHungry</a></div><div class="ttdeci">int gainHungry</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00010">Item.cs:10</a></div></div>
-<div class="ttc" id="class_item_html_adbecc774c576b08f57f32655acf7363d"><div class="ttname"><a href="../../dc/d32/class_item.html#adbecc774c576b08f57f32655acf7363d">Item.itemType</a></div><div class="ttdeci">ItemType itemType</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00012">Item.cs:12</a></div></div>
-<div class="ttc" id="class_item_html_a1e47deb8739893cbfa26460cf4be4f00"><div class="ttname"><a href="../../dc/d32/class_item.html#a1e47deb8739893cbfa26460cf4be4f00">Item.itemDescription</a></div><div class="ttdeci">string itemDescription</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00009">Item.cs:9</a></div></div>
-<div class="ttc" id="class_item_html_a8c54f77a262b1ffd78c1cd8cbed86ae0"><div class="ttname"><a href="../../dc/d32/class_item.html#a8c54f77a262b1ffd78c1cd8cbed86ae0">Item.itemName</a></div><div class="ttdeci">string itemName</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00008">Item.cs:8</a></div></div>
-<div class="ttc" id="class_item_html_aa189431b0e859890a3b9118da64cc484"><div class="ttname"><a href="../../dc/d32/class_item.html#aa189431b0e859890a3b9118da64cc484">Item.itemImage</a></div><div class="ttdeci">Sprite itemImage</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d01/_item_8cs_source.html#l00013">Item.cs:13</a></div></div>
+<p>상호작용시 부르는 함수 </p>
+
+<p><a class="el" href="../../d9/d47/class_switch.html#a19366c58c24da5801977ecc108270c5a">Switch</a>, <a class="el" href="../../da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50">Door</a>에서 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="../../d1/df5/_interactable_object_8cs_source.html">InteractableObject.cs</a> 파일의 <a class="el" href="../../d1/df5/_interactable_object_8cs_source.html#l00018">18</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="../../d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">OnInteract</a>(gameObject);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="ttc" id="class_interactable_object_html_afe5e0b16d86c2ed4abf4a71a1995f7ae"><div class="ttname"><a href="../../d9/d55/class_interactable_object.html#afe5e0b16d86c2ed4abf4a71a1995f7ae">InteractableObject.OnInteract</a></div><div class="ttdeci">OnInteractEvent OnInteract</div><div class="ttdoc">상호작용시 발생할 이벤트</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df5/_interactable_object_8cs_source.html#l00016">InteractableObject.cs:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<h2 class="groupheader">멤버 데이터 문서화</h2>
-<a id="abc2de92b7661dbc05ff5b7d445cae487"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc2de92b7661dbc05ff5b7d445cae487">&#9670;&nbsp;</a></span>gainHungry</h2>
+<h2 class="groupheader">이벤트 문서화</h2>
+<a id="afe5e0b16d86c2ed4abf4a71a1995f7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5e0b16d86c2ed4abf4a71a1995f7ae">&#9670;&nbsp;</a></span>OnInteract</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Item.gainHungry</td>
+          <td class="memname"><a class="el" href="../../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb">OnInteractEvent</a> InteractableObject.OnInteract</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00010">10</a> 번째 라인에서 정의되었습니다.</p>
+<p>상호작용시 발생할 이벤트 </p>
 
-</div>
-</div>
-<a id="a1e47deb8739893cbfa26460cf4be4f00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e47deb8739893cbfa26460cf4be4f00">&#9670;&nbsp;</a></span>itemDescription</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Item.itemDescription</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00009">9</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="aa189431b0e859890a3b9118da64cc484"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa189431b0e859890a3b9118da64cc484">&#9670;&nbsp;</a></span>itemImage</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Sprite Item.itemImage</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00013">13</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="a8c54f77a262b1ffd78c1cd8cbed86ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c54f77a262b1ffd78c1cd8cbed86ae0">&#9670;&nbsp;</a></span>itemName</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Item.itemName</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00008">8</a> 번째 라인에서 정의되었습니다.</p>
-
-</div>
-</div>
-<a id="adbecc774c576b08f57f32655acf7363d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbecc774c576b08f57f32655acf7363d">&#9670;&nbsp;</a></span>itemType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../dc/d32/class_item.html#ab5eeb575e9d66ebcfef9b58b667fad05">ItemType</a> Item.itemType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"><a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a> 파일의 <a class="el" href="../../df/d01/_item_8cs_source.html#l00012">12</a> 번째 라인에서 정의되었습니다.</p>
+<p class="definition"><a class="el" href="../../d1/df5/_interactable_object_8cs_source.html">InteractableObject.cs</a> 파일의 <a class="el" href="../../d1/df5/_interactable_object_8cs_source.html#l00016">16</a> 번째 라인에서 정의되었습니다.</p>
 
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>C:/Users/HookSSi/Desktop/파티/게임잼/Someone-likes-you/Someone likes you/Assets/Scripts/<a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a></li>
+<li>C:/Users/HookSSi/Desktop/개발/유니티/Someone-likes-you/Someone likes you/Assets/Scripts/Object/Interactable/<a class="el" href="../../df/d01/_item_8cs_source.html">Item.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

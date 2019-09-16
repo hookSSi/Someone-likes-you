@@ -1,4 +1,9 @@
 <map id="InteractableObject" name="InteractableObject">
-<area shape="rect" id="node1" title="상호작용 가능한 오브젝트를 위한 추상클래스 상호작용하는 오브젝트들은 모두 이 클래스를 상속받을 것!" alt="" coords="5,131,140,223"/>
-<area shape="rect" id="node2" title=" " alt="" coords="17,5,128,83"/>
+<area shape="rect" id="node1" title="상호작용 가능한 오브젝트를 위한 추상클래스 상호작용하는 오브젝트들은 모두 이 클래스를 상속받을 것!" alt="" coords="198,131,333,223"/>
+<area shape="rect" id="node3" href="$da/d30/class_door.html" title="열고 닫을 수 있는 문 @detail 설정(_isInteractable)에 따라 상호작용할 수도 있고 아닐 수도 있다. Open과 Close로 문을 열고 닫을 수 있으며 상호작용을 ..." alt="" coords="5,351,120,502"/>
+<area shape="rect" id="node4" href="$df/d0a/class_gainable.html" title=" " alt="" coords="145,388,218,465"/>
+<area shape="rect" id="node5" href="$dc/d32/class_item.html" title=" " alt="" coords="242,388,289,465"/>
+<area shape="rect" id="node6" href="$df/df7/class_key.html" title=" " alt="" coords="313,388,359,465"/>
+<area shape="rect" id="node7" href="$d9/d47/class_switch.html" title="상호작용할 수 있는 스위치 @detail 어떤 스위치냐에 따라 실행하는 함수가 달라지기 때문에, 인스펙터에서 실행할 함수를 정할 수 있도록 UnityEvent를 사용함...." alt="" coords="383,271,505,583"/>
+<area shape="rect" id="node2" title=" " alt="" coords="210,5,321,83"/>
 </map>
