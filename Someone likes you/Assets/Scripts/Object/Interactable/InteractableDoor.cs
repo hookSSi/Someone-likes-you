@@ -9,7 +9,7 @@ using UnityEngine;
  *  @detail 설정(_isInteractable)에 따라 상호작용할 수도 있고 아닐 수도 있다.@n
  *  Open과 Close로 문을 열고 닫을 수 있으며 상호작용을 위한 OnNotify가 있다.
  */
-public class Door : InteractableObject
+public class InteractableDoor : InteractableObject
 {
     [SerializeField] private bool _isOpen = false;
     /// 상호작용으로 열리는 문인지 아닌지를 결정하는 변수
