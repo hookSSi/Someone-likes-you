@@ -42,7 +42,10 @@ public class PlayerController : MonoBehaviour
 
     [Space(10)]
     [Header("플레이어 조작커맨드 목록")]
-    [SerializeField] private List<Command> _commands;
+    /// 키 입력 한번만 처리
+    [SerializeField] private List<Command> _commandsGetKeyDown;
+    /// 키 입력 누르고 있을 경우 처리
+    [SerializeField] private List<Command> _commandsGetKey;
     [Header("플레이어에게 땅인 레이어")]
     [SerializeField] private LayerMask _whatIsGround;
     [Header("플레이어에게 벽인 레이어")]
@@ -58,8 +61,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _walkingSpeed; 
     /// 플레이어의 점프 크기
     [SerializeField] private float _jumpForce;
-    /// 플레이어의 하강 속도
-    [SerializeField] private float _downForce;
+    /// 플레이어 일반 중력 저항
+    [SerializeField] private float _normalFallMultipler;
+    /// 플레이어가 점프키를 길게 누르는 동안 중력 저항
+    [SerializeField] private float _lowFallMultipler;
     /// 플레이어의 벽타기중 하강 속도
     [SerializeField] private float _wallSlidingSpeed;
 
@@ -90,9 +95,10 @@ public class PlayerController : MonoBehaviour
 
         /// @brief
         /// 이동, 마우스 위치 등 Axis를 제외한 키만 취급
-        _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Mouse0, Attack));
-        _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, Jump));
-        _commands.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.E, Interact));
+        _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Mouse0, Attack));
+        _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, Jump)); // 단점프
+        _commandsGetKey.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, HoldJumpKey)); // 장점프
+        _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.E, Interact));
     }
     private void FixedUpdate() 
     {
@@ -101,7 +107,7 @@ public class PlayerController : MonoBehaviour
         if(!_movement._isGround)
         {
             // 벽 타지 않을때
-            _movement.Down(_downForce * Time.deltaTime);
+            _movement.Down(_normalFallMultipler, _lowFallMultipler);
             
             if(_movement.WallCheck(_wallCheck.position, _horizontalMove, _wallDistance, _whatIsWall))
             {
@@ -128,9 +134,13 @@ public class PlayerController : MonoBehaviour
      */
     public void HandleInput()
     {
-        foreach (Command command in _commands)
+        foreach (Command command in _commandsGetKeyDown)
         {
-            command.CheckKey();
+            command.CheckGetKeyDown();
+        }
+        foreach (Command command in _commandsGetKey)
+        {
+            command.CheckGetKey();
         }
     }
     /** 플레이어 이동
@@ -165,6 +175,10 @@ public class PlayerController : MonoBehaviour
     {
         this._movement.Jump(_jumpForce);
         Debug.Log("점프!");
+    }
+    public void HoldJumpKey()
+    {
+        _movement.HoldJumpKey();
     }
     /// 플레이어 상호작용
     public void Interact() => Debug.Log("상호작용!");

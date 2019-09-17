@@ -1,5 +1,5 @@
 <map id="Switch" name="Switch">
-<area shape="rect" id="node1" title=" " alt="" coords="74,131,173,296"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,116,83"/>
-<area shape="rect" id="node3" href="$d2/df1/interface_i_interactable.html" title=" " alt="" coords="140,5,232,83"/>
+<area shape="rect" id="node1" title="상호작용할 수 있는 스위치 @detail 어떤 스위치냐에 따라 실행하는 함수가 달라지기 때문에, 인스펙터에서 실행할 함수를 정할 수 있도록 UnityEvent를 사용함...." alt="" coords="11,271,134,583"/>
+<area shape="rect" id="node2" href="$d9/d55/class_interactable_object.html" title="상호작용 가능한 오브젝트를 위한 추상클래스 상호작용하는 오브젝트들은 모두 이 클래스를 상속받을 것!" alt="" coords="5,131,140,223"/>
+<area shape="rect" id="node3" title=" " alt="" coords="17,5,128,83"/>
 </map>

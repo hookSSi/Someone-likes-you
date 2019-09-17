@@ -8,5 +8,6 @@ var searchData=
   ['ongui',['OnGUI',['../de/d59/class_enum_flags_attribute_drawer.html#a4eec6e021fd9909ff723dc6fcde93e74',1,'EnumFlagsAttributeDrawer']]],
   ['oninspectorgui',['OnInspectorGUI',['../d4/d7d/class_moving_platform_inspector.html#aa060686c6b8aa6e2d3d854b1fb5b26d3',1,'MovingPlatformInspector']]],
   ['oninteractevent',['OnInteractEvent',['../d9/d55/class_interactable_object.html#a70a579e4b09d53e6cb77b5222189d5eb',1,'InteractableObject']]],
-  ['onnotify',['OnNotify',['../d9/d55/class_interactable_object.html#aa5c752d17471fe0daf58a4d00c218a29',1,'InteractableObject.OnNotify()'],['../d8/d3d/class_manager.html#af8f781331eb3451725d6b0a78131de19',1,'Manager.OnNotify()']]]
+  ['onnotify',['OnNotify',['../d9/d55/class_interactable_object.html#aa5c752d17471fe0daf58a4d00c218a29',1,'InteractableObject.OnNotify()'],['../d8/d3d/class_manager.html#af8f781331eb3451725d6b0a78131de19',1,'Manager.OnNotify()'],['../da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50',1,'Door.OnNotify()'],['../d9/d47/class_switch.html#a19366c58c24da5801977ecc108270c5a',1,'Switch.OnNotify()']]],
+  ['open',['Open',['../da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05',1,'Door']]]
 ];

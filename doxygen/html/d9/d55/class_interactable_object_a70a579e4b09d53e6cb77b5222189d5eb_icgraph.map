@@ -1,0 +1,4 @@
+<map id="InteractableObject.OnInteractEvent" name="InteractableObject.OnInteractEvent">
+<area shape="rect" id="node1" title=" " alt="" coords="145,5,336,47"/>
+<area shape="rect" id="node2" href="$da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf" title="OnInteract 델리게이트 초기화용" alt="" coords="5,13,97,39"/>
+</map>

@@ -5,7 +5,13 @@ var hierarchy =
     ] ],
     [ "EditorPlatformList", "df/d7a/class_editor_platform_list.html", null ],
     [ "MonoBehaviour", null, [
-      [ "InteractableObject", "d9/d55/class_interactable_object.html", null ],
+      [ "InteractableObject", "d9/d55/class_interactable_object.html", [
+        [ "Door", "da/d30/class_door.html", null ],
+        [ "Gainable", "df/d0a/class_gainable.html", null ],
+        [ "Item", "dc/d32/class_item.html", null ],
+        [ "Key", "df/df7/class_key.html", null ],
+        [ "Switch", "d9/d47/class_switch.html", null ]
+      ] ],
       [ "Manager", "d8/d3d/class_manager.html", null ],
       [ "Movement", "d1/de2/class_movement.html", [
         [ "PlayerMovement", "d0/d3d/class_player_movement.html", null ]

@@ -1,0 +1,4 @@
+<map id="Door.Open" name="Door.Open">
+<area shape="rect" id="node1" title="문을 여는 함수" alt="" coords="145,5,229,32"/>
+<area shape="rect" id="node2" href="$da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf" title="OnInteract 델리게이트 초기화용" alt="" coords="5,5,97,32"/>
+</map>

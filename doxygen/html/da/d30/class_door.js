@@ -1,11 +1,12 @@
 var class_door =
 [
-    [ "Close", "da/d30/class_door.html#a4ee490d221509a60073df05c186df9e6", null ],
-    [ "Interact", "da/d30/class_door.html#af8fed06499c3e6ffe6d993b5b341c54f", null ],
-    [ "Open", "da/d30/class_door.html#a79629ef728511bbce03ebd1a3a133581", null ],
-    [ "Start", "da/d30/class_door.html#a67f37254b23f6f8770549a7e5a51f15b", null ],
-    [ "isOpenByKey", "da/d30/class_door.html#a8e16ffccc799c6f70e5540124df53f64", null ],
-    [ "spriteClosed", "da/d30/class_door.html#a79ba14bf651c273978299f42e93edd9f", null ],
-    [ "spriteOpened", "da/d30/class_door.html#abb3ee74035b7cafa7c9e64f76d035c8b", null ],
-    [ "spriteRenderer", "da/d30/class_door.html#a0e15249011da5cb777aa49235edba8db", null ]
+    [ "Awake", "da/d30/class_door.html#a516f170e7be1fccf24a8286cdda4f8cf", null ],
+    [ "Close", "da/d30/class_door.html#aa7d854b8fb1c977551051f03cea151ce", null ],
+    [ "OnInteractEvent", "da/d30/class_door.html#a70a579e4b09d53e6cb77b5222189d5eb", null ],
+    [ "OnNotify", "da/d30/class_door.html#a12cc0e80dc33ddd336dccc52466c2c50", null ],
+    [ "Open", "da/d30/class_door.html#a31b8ff949e85dddb2585afa106fa5d05", null ],
+    [ "Update", "da/d30/class_door.html#ac518336e578c8c5f447da92d427716fc", null ],
+    [ "_isInteractable", "da/d30/class_door.html#a36402db70ad8e766d282355921c3f525", null ],
+    [ "_isOpen", "da/d30/class_door.html#a12b7b3e47b01336511c2e4a986d584e2", null ],
+    [ "OnInteract", "da/d30/class_door.html#afe5e0b16d86c2ed4abf4a71a1995f7ae", null ]
 ];

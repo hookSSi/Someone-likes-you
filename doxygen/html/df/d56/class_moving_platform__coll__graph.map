@@ -1,5 +1,5 @@
 <map id="MovingPlatform" name="MovingPlatform">
-<area shape="rect" id="node1" title="뺀돌뺀돌 혼자서도 잘 움직이는 벽" alt="" coords="5,448,132,760"/>
-<area shape="rect" id="node2" title=" " alt="" coords="28,5,139,83"/>
-<area shape="rect" id="node3" href="$d2/dfc/class_platform_catcher.html" title="움직이는 플랫폼이 위에 있는 물체와 함께 움직이게 하는 클래스" alt="" coords="85,132,236,385"/>
+<area shape="rect" id="node1" title="뺀돌뺀돌 혼자서도 잘 움직이는 벽" alt="" coords="5,448,120,760"/>
+<area shape="rect" id="node2" title=" " alt="" coords="22,5,133,83"/>
+<area shape="rect" id="node3" href="$d2/dfc/class_platform_catcher.html" title="움직이는 플랫폼이 위에 있는 물체와 함께 움직이게 하는 클래스" alt="" coords="79,132,230,385"/>
 </map>

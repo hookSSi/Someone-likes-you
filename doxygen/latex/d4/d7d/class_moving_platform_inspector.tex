@@ -51,7 +51,7 @@ Moving\+Platform\+Inspector.\+cs 파일의 7 번째 라인에서 정의되었습
 \DoxyCodeLine{11 }
 \DoxyCodeLine{12         serializedObject.Update();}
 \DoxyCodeLine{13         EditorGUILayout.PropertyField(serializedObject.FindProperty(\textcolor{stringliteral}{"\_platform"}));}
-\DoxyCodeLine{14         \mbox{\hyperlink{class_editor_platform_list}{EditorPlatformList}}.\mbox{\hyperlink{class_editor_platform_list_afa78a25fbabdf962ead1dfefbddf50fd}{Show}}(serializedObject.FindProperty(\textcolor{stringliteral}{"\_checkPointList"}), \mbox{\hyperlink{_editor_list_option_8cs_a5da45ed8a8d189e2c165cf7e1c6ceb29}{EditorListOption}}.All);}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_editor_platform_list}{EditorPlatformList}}.\mbox{\hyperlink{class_editor_platform_list_afa78a25fbabdf962ead1dfefbddf50fd}{Show}}(serializedObject.FindProperty(\textcolor{stringliteral}{"\_wayPointList"}), \mbox{\hyperlink{_editor_list_option_8cs_a5da45ed8a8d189e2c165cf7e1c6ceb29}{EditorListOption}}.All);}
 \DoxyCodeLine{15         EditorGUILayout.PropertyField(serializedObject.FindProperty(\textcolor{stringliteral}{"\_moveMode"}));}
 \DoxyCodeLine{16         EditorGUILayout.PropertyField(serializedObject.FindProperty(\textcolor{stringliteral}{"\_velocity"}));}
 \DoxyCodeLine{17         EditorGUILayout.PropertyField(serializedObject.FindProperty(\textcolor{stringliteral}{"\_waitTime"}));}
@@ -69,7 +69,13 @@ Moving\+Platform\+Inspector.\+cs 파일의 7 번째 라인에서 정의되었습
 \DoxyCodeLine{29         \{}
 \DoxyCodeLine{30             EditorGUILayout.HelpBox(\textcolor{stringliteral}{"Moving Platform의 LayerMask가 Ground가 아닙니다."}, MessageType.Warning);}
 \DoxyCodeLine{31         \}}
-\DoxyCodeLine{32     \}}
+\DoxyCodeLine{32         \textcolor{comment}{// MovingPlatform의 \_wayPoint가 비어있을 경우 권고문을 띄운다.}}
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} (\_script.\mbox{\hyperlink{class_moving_platform_a59ac15d3e2b4bff0df981fa4839e5f61}{\_wayPointList}}.Count == 0)}
+\DoxyCodeLine{34         \{}
+\DoxyCodeLine{35             EditorGUILayout.HelpBox(\textcolor{stringliteral}{"MovingPlatform의 Way Point가 설정되지 않았습니다.\(\backslash\)n"}}
+\DoxyCodeLine{36             + \textcolor{stringliteral}{"Way Point List에 새 Way Point를 생성하고 설정해주세요."}, MessageType.Warning);}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38     \}}
 
 \end{DoxyCode}
 이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:\nopagebreak

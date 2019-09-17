@@ -85,12 +85,12 @@ public class Movement : MonoBehaviour
      *  점프하는 함수
      *  @param amount 힘의 크기
      *  @param obj 점프하는 게임 오브젝트
+     *  @todo 장점프를 구현해야함 (getkey입력시)
      */
     public virtual void Jump(float amount, GameObject obj = null)
     {
         if(_rigid)
         {
-            //_rigid.velocity = new Vector2(_rigid.velocity.x,  0);
             _rigid.AddForce(Vector2.up * amount);
         }
         else

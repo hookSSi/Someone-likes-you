@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['walking',['WALKING',['../d0/d8b/class_state.html#ab9eb1c1d81f1903b8486d1275e78b68ea606c114184493a665cf1f6a12fbab9d3',1,'State']]],
-  ['wallcheck',['WallCheck',['../d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161',1,'PlayerMovement']]],
-  ['wallsliding',['WallSliding',['../d0/d3d/class_player_movement.html#a9a54ca25bbc57c10ddbd74d4a0b1e30f',1,'PlayerMovement']]],
-  ['wallstate',['WallState',['../df/d42/class_moving_platform.html#ac47e764b71989317aab0bad26d82a901',1,'MovingPlatform']]]
+  ['update',['Update',['../da/d30/class_door.html#ac518336e578c8c5f447da92d427716fc',1,'Door.Update()'],['../d9/d47/class_switch.html#a7aa3b2489c41c573dc34ef3014faf4a4',1,'Switch.Update()'],['../dc/dde/class_player_controller.html#ae8bc83dffb99867a04be016473ed2c43',1,'PlayerController.Update()']]],
+  ['use_5fand_5fbreak',['USE_AND_BREAK',['../d9/d47/class_switch.html#ab6cd06c871c19ba8fbe1765515a828cca811a058adb2f2ff94e6a43f7df8cd027',1,'Switch']]]
 ];

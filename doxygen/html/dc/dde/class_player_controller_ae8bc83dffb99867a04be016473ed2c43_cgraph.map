@@ -1,5 +1,6 @@
 <map id="PlayerController.Update" name="PlayerController.Update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,164,32"/>
-<area shape="rect" id="node2" href="$dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883" title="플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다." alt="" coords="212,5,399,32"/>
-<area shape="rect" id="node3" href="$d5/d6a/class_command.html#a1f9dcd759b1d51871f8a6efd30c3a721" title="키 입력 체크하는 함수" alt="" coords="447,5,592,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,164,57"/>
+<area shape="rect" id="node2" href="$dc/dde/class_player_controller.html#a5ebfe098b2dc258ca8349e6951766883" title="플레이어의 입력을 처리하는 함수로 자유롭게 키를 변경할 수 있도록 중간 클래스를 만들어서 사용한다." alt="" coords="212,31,399,57"/>
+<area shape="rect" id="node3" href="$d5/d6a/class_command.html#ac35514f10fbf789814e9ce5431a26562" title="키 입력 체크하는 함수" alt="" coords="447,5,645,32"/>
+<area shape="rect" id="node4" href="$d5/d6a/class_command.html#aae2d7670c9ee25e629d3702579416095" title=" " alt="" coords="463,56,629,83"/>
 </map>

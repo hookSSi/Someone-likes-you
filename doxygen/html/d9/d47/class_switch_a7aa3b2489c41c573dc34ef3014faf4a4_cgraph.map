@@ -1,0 +1,7 @@
+<map id="Switch.Update" name="Switch.Update">
+<area shape="rect" id="node1" title="테스트 및 디버그용" alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node2" href="$d9/d47/class_switch.html#a19366c58c24da5801977ecc108270c5a" title="상호작용시 스위치를 조작할 수 있게 한다" alt="" coords="160,5,275,32"/>
+<area shape="rect" id="node3" href="$d9/d47/class_switch.html#aa1ed0936b7074a24bbb2b46cb9a9465a" title="스위치 작동" alt="" coords="323,31,447,57"/>
+<area shape="rect" id="node4" href="$d9/d47/class_switch.html#ad2aa17a4a56cc1fe70a96dc94371c388" title="스위치가 켜질 때 스위치의 스프라이트(또는 애니메이션)나 사운드 따위를 재생하는 함수" alt="" coords="495,5,616,32"/>
+<area shape="rect" id="node5" href="$d9/d47/class_switch.html#a1923f31d7df5390e442cf2ffa9d3292a" title="스위치가 꺼질 때 스위치의 스프라이트(또는 애니메이션)나 사운드 따위를 재생하는 함수" alt="" coords="495,56,615,83"/>
+</map>

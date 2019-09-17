@@ -1,6 +1,6 @@
 <map id="PlayerController.FixedUpdate" name="PlayerController.FixedUpdate">
 <area shape="rect" id="node1" title=" " alt="" coords="5,107,196,133"/>
-<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#ae4905085466c9d84cc032807f704fb41" title=" " alt="" coords="267,56,422,83"/>
+<area shape="rect" id="node2" href="$d0/d3d/class_player_movement.html#aa93c724e750d78276b1ef3df18ee2383" title="버튼을 오래 누를수록 중력을 작게해서 높게 점프하게 한다." alt="" coords="267,56,422,83"/>
 <area shape="rect" id="node4" href="$d0/d3d/class_player_movement.html#ad878c661ddfc72890b353a01943f9161" title="벽 타기를 위한 벽 체크 함수" alt="" coords="252,157,437,184"/>
 <area shape="rect" id="node6" href="$d0/d3d/class_player_movement.html#a9a54ca25bbc57c10ddbd74d4a0b1e30f" title=" " alt="" coords="251,5,438,32"/>
 <area shape="rect" id="node7" href="$d0/d3d/class_player_movement.html#a957f2e09268831052dbd00a9e8e4fa70" title="플레이어 땅 체크 함수" alt="" coords="244,107,445,133"/>

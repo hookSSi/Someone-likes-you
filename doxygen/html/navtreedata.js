@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "SomeoneLikesYouUnityScript", "index.html", [
+    [ "할일 목록", "dd/da0/todo.html", null ],
     [ "클래스", "annotated.html", [
       [ "클래스 목록", "annotated.html", "annotated_dup" ],
       [ "클래스 색인", "classes.html", null ],
@@ -41,7 +42,8 @@ var NAVTREE =
       [ "파일 목록", "files.html", "files_dup" ],
       [ "파일 멤버", "globals.html", [
         [ "모두", "globals.html", null ],
-        [ "열거형 타입", "globals_enum.html", null ]
+        [ "열거형 타입", "globals_enum.html", null ],
+        [ "매크로", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -49,7 +51,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"df/d0a/class_gainable.html"
 ];
 
 var SYNCONMSG = '패널 동기화를 비활성화하기 위해 클릭하십시오';

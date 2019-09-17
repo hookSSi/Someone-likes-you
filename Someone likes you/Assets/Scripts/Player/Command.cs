@@ -44,9 +44,19 @@ public class Command : ScriptableObject
      * @brief
      * 키 입력 체크하는 함수
      */
-    public bool CheckKey()
+    public bool CheckGetKeyDown()
     {   
         if(Input.GetKeyDown(_key))
+        {
+            _event();
+            return true;
+        }
+        return false;
+    }
+
+    public bool CheckGetKey()
+    {
+        if(Input.GetKey(_key))
         {
             _event();
             return true;

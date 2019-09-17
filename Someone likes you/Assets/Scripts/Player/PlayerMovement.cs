@@ -17,6 +17,7 @@ public class PlayerMovement : Movement
     public bool _isCeiling = false;
     public bool _isClimbing = false;
 
+    protected bool _isKeepHoldingJump = false;
     protected float _deceleration = 0.5f;
 
     public virtual void Init(Rigidbody2D rigid, PlayerState state)
@@ -123,9 +124,23 @@ public class PlayerMovement : Movement
             base.Jump(amount, obj);
         }
     }
-    public virtual void Down(float amount)
+    public void HoldJumpKey()
     {
-        _rigid.velocity = new Vector2(_rigid.velocity.x, _rigid.velocity.y - amount);
+        _isKeepHoldingJump = true;
+    }
+    /// 버튼을 오래 누를수록 중력을 작게해서 높게 점프하게 한다.
+    public virtual void Down(float normalFallMultiplier, float lowFallMultiplier)
+    {
+        if(_rigid.velocity.y > 0 && _isKeepHoldingJump)
+        {
+            _rigid.velocity += Vector2.up * Physics2D.gravity * lowFallMultiplier * Time.deltaTime;
+            _isKeepHoldingJump = false;
+        }
+        else
+        {
+            _rigid.velocity += Vector2.up * Physics2D.gravity * normalFallMultiplier * Time.deltaTime;
+        }
+    
         _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING, PlayerState.OnClimbing.NONE, PlayerState.PlayerAction.NONE);
     }
 
