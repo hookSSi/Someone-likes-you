@@ -97,8 +97,9 @@ public class PlayerController : MonoBehaviour
         /// 이동, 마우스 위치 등 Axis를 제외한 키만 취급
         _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Mouse0, Attack));
         _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, Jump)); // 단점프
-        _commandsGetKey.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, HoldJumpKey)); // 장점프
         _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.E, Interact));
+
+        _commandsGetKey.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, HoldJumpKey)); // 장점프
     }
     private void FixedUpdate() 
     {

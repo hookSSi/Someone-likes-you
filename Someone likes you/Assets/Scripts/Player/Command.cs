@@ -53,7 +53,7 @@ public class Command : ScriptableObject
         }
         return false;
     }
-
+    
     public bool CheckGetKey()
     {
         if(Input.GetKey(_key))

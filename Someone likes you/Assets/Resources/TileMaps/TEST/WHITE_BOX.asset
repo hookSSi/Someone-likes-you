@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WHITE_BOX
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 69ee174586dc2244da82b74214c4bf1e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
   m_Transform:
     e00: 1
     e01: 0
