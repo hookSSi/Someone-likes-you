@@ -47,9 +47,11 @@ public class PlayerState : State
      */
     public virtual void NotifyState(OnGround onGroundState, OffGround offGroundState, OnClimbing onClimbing, PlayerAction playerAction)
     {
-        base.NotifyState(onGroundState, offGroundState);
+        _onGroundState = onGroundState;
+        _offGroundState = offGroundState;
         _onClimbing = onClimbing;
         _playerAction = playerAction;
+        HandleAnim();
     }
     protected override void OnGroundAnim()
     {
@@ -78,8 +80,11 @@ public class PlayerState : State
     /// 플레이어 액션 애니메이션 처리
     protected virtual void PlayerActionAnim()
     {
-          switch(_playerAction)
+        switch(_playerAction)
         {
+            case PlayerAction.NONE:
+                _animator.SetBool("isSliding", false);
+                break;
             case PlayerAction.SLIDING:
                 _animator.SetBool("isSliding", true);
                 break;
@@ -89,22 +94,10 @@ public class PlayerState : State
     {
          if(_animator)
         {
-            if(_onGroundState != OnGround.NONE)
-            {
-                OnGroundAnim();
-            }
-            if(_offGroundState != OffGround.NONE)
-            {
-                OffGroundAnim();
-            }
-            if(_onClimbing != OnClimbing.NONE)
-            {
-                OnClimbingAnim();
-            }
-            if(_playerAction != PlayerAction.NONE)
-            {
-                PlayerActionAnim();
-            }
+            OnGroundAnim();
+            OffGroundAnim();
+            OnClimbingAnim();
+            PlayerActionAnim();
         }
         else
             Debug.Log("애니메이션이 없어요!");

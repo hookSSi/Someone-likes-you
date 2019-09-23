@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
     /// 땅
     const float _groundedRadius = .18f;
     /// 벽
-    const float _wallDistance = .3f;
+    const float _wallDistance = .1f;
     /**
      * 플레이어 클래스 초기화
      * @brief

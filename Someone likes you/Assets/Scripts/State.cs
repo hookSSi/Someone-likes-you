@@ -53,14 +53,8 @@ public class State : MonoBehaviour
     {
         if(_animator)
         {
-            if(_onGroundState != OnGround.NONE)
-            {
-                OnGroundAnim();
-            }
-            if(_offGroundState != OffGround.NONE)
-            {
-                OffGroundAnim();
-            }
+            OnGroundAnim();
+            OffGroundAnim();
         }
         else
             Debug.Log("애니메이션이 없어요!");
