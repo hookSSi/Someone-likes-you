@@ -67,6 +67,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _lowFallMultipler;
     /// 플레이어의 벽타기중 하강 속도
     [SerializeField] private float _wallSlidingSpeed;
+    /// 플레이어의 웅크림 여부
+    [SerializeField] private bool _isCrouch = false;
+    
+    [Space(10)]
+    [Header("플레이어 콜라이더")]
+    /// 평소 서 있을 떄 콜라이더
+    [SerializeField] private GameObject _normalStandCol;
+    /// 웅크릴 때 콜라이더
+    [SerializeField] private GameObject _crouchCol;
 
     /// 천장
     const float _ceilingRadius = .2f;
@@ -99,6 +108,7 @@ public class PlayerController : MonoBehaviour
         _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, Jump)); // 단점프
         _commandsGetKeyDown.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.E, Interact));
 
+        _commandsGetKey.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.DownArrow, Crouch));
         _commandsGetKey.Add(ScriptableObject.CreateInstance<Command>().Init(KeyCode.Space, HoldJumpKey)); // 장점프
     }
     private void FixedUpdate() 
@@ -125,7 +135,12 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        _isCrouch = false;
+
         HandleInput();
+
+        _normalStandCol.SetActive(!_isCrouch);
+        _crouchCol.SetActive(_isCrouch);
     }
     /**
      * 플레이어의 입력 처리
@@ -180,6 +195,13 @@ public class PlayerController : MonoBehaviour
     public void HoldJumpKey()
     {
         _movement.HoldJumpKey();
+    }
+    public void Crouch()
+    {
+        if(_movement.Crouch())
+            _isCrouch = true;
+        else
+            _isCrouch = false;
     }
     /// 플레이어 상호작용
     public void Interact() => Debug.Log("상호작용!");

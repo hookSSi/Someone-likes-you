@@ -247,6 +247,9 @@ MonoBehaviour:
   _normalFallMultipler: 4.5
   _lowFallMultipler: 0.5
   _wallSlidingSpeed: 40
+  _isCrouch: 0
+  _normalStandCol: {fileID: 889317170}
+  _crouchCol: {fileID: 2020257483}
 --- !u!50 &207306603
 Rigidbody2D:
   serializedVersion: 4

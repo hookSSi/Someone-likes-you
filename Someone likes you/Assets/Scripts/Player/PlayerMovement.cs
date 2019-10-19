@@ -124,6 +124,16 @@ public class PlayerMovement : Movement
             base.Jump(amount, obj);
         }
     }
+    public bool Crouch()
+    {
+        if(_isGround)
+        {
+            _state.NotifyState(PlayerState.OnGround.NONE, PlayerState.OffGround.FALLING);
+            return true;
+        }
+        
+        return false;
+    }
     public void HoldJumpKey()
     {
         _isKeepHoldingJump = true;
